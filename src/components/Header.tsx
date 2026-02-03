@@ -1,126 +1,129 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Évite les erreurs d'hydratation pour le thème
-  React.useEffect(() => {
-    setMounted(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   const navLinks = [
-    { href: "/", label: "Accueil" },
-    { href: "/services", label: "Services" },
-    { href: "/portfolio", label: "Réalisations" },
-    { href: "/blog", label: "Blog" },
-    { href: "/a-propos", label: "À Propos" },
+    { name: "Accueil", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "Réalisations", href: "/#portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "À Propos", href: "/#about" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-10 h-10">
-            <Image
-              src="/logos/logo-primary.png"
-              alt="Logo La Forge Digitale"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <span className="font-bold text-lg hidden sm:inline-block text-gray-900 dark:text-white">
-            La Forge Digitale
-          </span>
-        </Link>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#020617]/80 backdrop-blur-md border-b border-white/10 py-3"
+          : "bg-transparent py-5"
+      }`}
+    >
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-[#C5A059]/20 border border-white/5 transition-transform group-hover:scale-105">
+              <Image
+                src="/logos/Logo1rond.png"
+                alt="Forge Digitale Logo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+            <div className="flex flex-col justify-center">
+              <div className="flex items-baseline gap-1.5 leading-none">
+                <span className="text-slate-500 text-xs font-medium translate-y-[-1px]">
+                  La
+                </span>
+                <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#C5A059] transition-colors">
+                  FORGE DIGITALE
+                </span>
+              </div>
 
-        {/* Actions (Theme + CTA) */}
-        <div className="flex items-center gap-4">
-          {/* Theme Toggle */}
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Changer le thème"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5 text-yellow-500" />
-              ) : (
-                <Moon className="h-5 w-5 text-gray-700" />
-              )}
-            </button>
-          )}
-
-          {/* CTA Desktop */}
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-          >
-            Demander un devis
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-[18px] mt-0.5">
+                SOLUTIONS
+              </span>
+            </div>
           </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-gray-700 dark:text-gray-300"
-            onClick={toggleMenu}
-            aria-label="Menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
-          <nav className="flex flex-col p-4 space-y-4">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
+                key={link.name}
                 href={link.href}
-                className="text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
               >
-                {link.label}
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C5A059] transition-all group-hover:w-full"></span>
               </Link>
             ))}
+
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
-              onClick={() => setIsMenuOpen(false)}
+              href="#contact"
+              className="bg-[#C5A059] hover:bg-[#D4B475] text-[#020617] font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
             >
               Demander un devis
             </Link>
           </nav>
+
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
         </div>
-      )}
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 md:hidden flex flex-col p-6 gap-4 shadow-2xl"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-slate-300 hover:text-[#C5A059] py-2 text-lg font-medium border-b border-white/5"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="bg-[#C5A059] text-[#020617] font-bold py-3 text-center rounded-lg mt-4"
+            >
+              Me contacter
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

@@ -1,10 +1,16 @@
+import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
+import { Portfolio } from "@/components/sections/Portfolio";
+import { Services } from "@/components/sections/Services";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-[#020617]">
+      {" "}
       <Hero />
-      {/* Other sections will be added here */}
+      <Services />
+      <Portfolio />
+      <Contact />
     </main>
   );
 }

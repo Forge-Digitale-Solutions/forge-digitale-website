@@ -1,45 +1,55 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-gold: #c5a059;
+  --color-gold-light: #e5c585;
+  --color-gold-dark: #8a6d32;
+  --color-dark-base: #020617; /* Slate 950 */
+  --font-inter: var(--font-inter);
+
+  --radius: 0.5rem;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Blanc */
-    --foreground: 222.2 84% 4.9%; /* Noir/Gris */
-
-    --primary: 40 48% 56%; /* #C5A059 - Or */
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 222.2 47.4% 11.2%; /* #1A1A1A */
-    --secondary-foreground: 210 40% 98%;
-
-    --radius: 0.5rem;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 40 48% 56%; /* Gold */
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --border: 217.2 32.6% 17.5%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%; /* Fond sombre */
-    --foreground: 210 40% 98%; /* Texte clair */
+  * {
+    @apply border-white/10;
+  }
 
-    --primary: 40 48% 56%; /* L'Or reste l'Or */
-    --primary-foreground: 222.2 47.4% 11.2%;
+  body {
+    @apply bg-dark-base text-slate-300 font-sans;
+  }
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-white font-bold tracking-tight;
   }
 }
 
-@layer base {
-  * {
-    @apply border-gray-200 dark:border-gray-800;
+@layer utilities {
+  .glass {
+    @apply bg-[#020617]/80 backdrop-blur-md border-b border-white/10;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-gold-light via-gold to-gold-dark;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-white text-black font-medium transition-all hover:bg-gray-200 hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-full bg-gold text-dark-base font-bold transition-all hover:bg-gold-light hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] hover:scale-[1.02] active:scale-[0.98];
   }
 }
