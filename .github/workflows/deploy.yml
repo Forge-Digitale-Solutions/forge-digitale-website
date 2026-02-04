@@ -1,21 +1,37 @@
-name: OVH FTP Deploy
+name: Mise en ligne OVH
+
 on:
   push:
     branches:
       - main
+
 jobs:
   web-deploy:
-    name: Deployment
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Code retrieval
+      - name: Récupération du code
         uses: actions/checkout@v4
 
-      - name: Upload to OVH
+      - name: Installation de Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      - name: Construction du site (Build)
+        run: npm run build
+        env:
+          NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
+
+      - name: 📂 Envoi vers OVH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
+          local-dir: ./out/
           server-dir: ./www/

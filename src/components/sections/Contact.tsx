@@ -48,11 +48,6 @@ export function Contact() {
       return;
     }
 
-    formData.append(
-      "access_key",
-      process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
-    );
-
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -177,6 +172,13 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}
+                />
+                {/* ------------------------- */}
+
                 <input
                   type="hidden"
                   name="subject"
