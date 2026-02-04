@@ -7,9 +7,9 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[#020617]">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px]" />
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-[#C5A059] opacity-20 blur-[100px]" />
+      <div className="absolute inset-0 -z-10 h-full w-full bg-dark-base">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[50px_50px]" />
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-77.5 w-77.5 rounded-full bg-[#C5A059] opacity-20 blur-[100px]" />
       </div>
 
       <div className="container mx-auto px-4 text-center">

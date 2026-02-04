@@ -5,12 +5,11 @@ import { Services } from "@/components/sections/Services";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#020617]">
-      {" "}
+    <div className="min-h-screen bg-dark-base">
       <Hero />
       <Services />
       <Portfolio />
       <Contact />
-    </main>
+    </div>
   );
 }

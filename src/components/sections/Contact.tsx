@@ -16,8 +16,8 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#020617] relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+    <section id="contact" className="py-24 bg-dark-base relative">
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -100,7 +100,7 @@ export function Contact() {
             className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm"
           >
             {formState === "success" ? (
-              <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
+              <div className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-4">
                 <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-4">
                   <Send size={32} />
                 </div>
@@ -131,7 +131,7 @@ export function Contact() {
                       type="text"
                       id="name"
                       required
-                      className="w-full bg-[#020617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
+                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -145,7 +145,7 @@ export function Contact() {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full bg-[#020617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
+                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
                       placeholder="06..."
                     />
                   </div>
@@ -162,7 +162,7 @@ export function Contact() {
                     type="email"
                     id="email"
                     required
-                    className="w-full bg-[#020617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
+                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
                     placeholder="vous@exemple.com"
                   />
                 </div>
@@ -176,7 +176,7 @@ export function Contact() {
                   </label>
                   <select
                     id="subject"
-                    className="w-full bg-[#020617] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors appearance-none"
+                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors appearance-none"
                   >
                     <option>Demande de Devis Web</option>
                     <option>Montage PC</option>
@@ -196,7 +196,7 @@ export function Contact() {
                     id="message"
                     required
                     rows={4}
-                    className="w-full bg-[#020617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
+                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
                     placeholder="Décrivez brièvement votre besoin..."
                   />
                 </div>
@@ -204,7 +204,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={formState === "submitting"}
-                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] text-[#020617] font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                 >
                   {formState === "submitting" ? (
                     "Envoi en cours..."

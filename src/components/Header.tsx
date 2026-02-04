@@ -30,7 +30,7 @@ export function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#020617]/80 backdrop-blur-md border-b border-white/10 py-3"
+          ? "bg-dark-base/80 backdrop-blur-md border-b border-white/10 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -50,7 +50,7 @@ export function Header() {
 
             <div className="flex flex-col justify-center">
               <div className="flex items-baseline gap-1.5 leading-none">
-                <span className="text-slate-500 text-xs font-medium translate-y-[-1px]">
+                <span className="text-slate-500 text-xs font-medium -translate-y-px">
                   La
                 </span>
                 <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#C5A059] transition-colors">
@@ -58,7 +58,7 @@ export function Header() {
                 </span>
               </div>
 
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-[18px] mt-0.5">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-4.5 mt-0.5">
                 SOLUTIONS
               </span>
             </div>
@@ -79,7 +79,7 @@ export function Header() {
 
             <Link
               href="#contact"
-              className="bg-[#C5A059] hover:bg-[#D4B475] text-[#020617] font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+              className="bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
             >
               Demander un devis
             </Link>
@@ -102,7 +102,7 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 md:hidden flex flex-col p-6 gap-4 shadow-2xl"
+            className="absolute top-full left-0 w-full bg-dark-base border-b border-white/10 md:hidden flex flex-col p-6 gap-4 shadow-2xl"
           >
             {navLinks.map((link) => (
               <Link
@@ -117,7 +117,7 @@ export function Header() {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-[#C5A059] text-[#020617] font-bold py-3 text-center rounded-lg mt-4"
+              className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4"
             >
               Me contacter
             </Link>

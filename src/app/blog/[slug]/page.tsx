@@ -19,7 +19,7 @@ export default async function Post({
   const postData = await getPostData(slug);
 
   return (
-    <article className="min-h-screen bg-[#020617] pt-32 pb-24">
+    <article className="min-h-screen bg-dark-base pt-32 pb-24">
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <Link
           href="/blog"
@@ -63,7 +63,7 @@ export default async function Post({
           </h3>
           <Link
             href="/#contact"
-            className="inline-block bg-[#C5A059] text-[#020617] font-bold px-6 py-3 rounded-full hover:bg-[#D4B475] transition-colors"
+            className="inline-block bg-[#C5A059] text-dark-base font-bold px-6 py-3 rounded-full hover:bg-[#D4B475] transition-colors"
           >
             Contactez La Forge
           </Link>

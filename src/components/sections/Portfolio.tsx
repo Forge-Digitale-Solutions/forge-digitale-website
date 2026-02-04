@@ -43,7 +43,7 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-[#020617] relative">
+    <section id="portfolio" className="py-24 bg-dark-base relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
@@ -77,7 +77,7 @@ export function Portfolio() {
               className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col h-full"
             >
               <div
-                className={`h-48 w-full bg-gradient-to-br ${project.gradient} relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}
+                className={`h-48 w-full bg-linear-to-br ${project.gradient} relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}
               >
                 {/* Picture later when available */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-30 text-4xl font-bold text-white/20">
@@ -94,7 +94,7 @@ export function Portfolio() {
                   </Link>
                   <Link
                     href={project.github}
-                    className="p-3 bg-[#020617] text-white border border-white/20 rounded-full hover:scale-110 transition-transform"
+                    className="p-3 bg-dark-base text-white border border-white/20 rounded-full hover:scale-110 transition-transform"
                     title="Voir le code"
                   >
                     <Github size={20} />
@@ -102,7 +102,7 @@ export function Portfolio() {
                 </div>
               </div>
 
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <span className="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-2 block">
@@ -114,7 +114,7 @@ export function Portfolio() {
                   </div>
                 </div>
 
-                <p className="text-slate-400 text-sm mb-6 flex-grow">
+                <p className="text-slate-400 text-sm mb-6 grow">
                   {project.description}
                 </p>
 

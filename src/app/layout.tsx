@@ -42,7 +42,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className={`${inter.className} bg-[#020617] text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
+        className={`${inter.className} bg-dark-base text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
       >
         <ThemeProvider
           attribute="class"

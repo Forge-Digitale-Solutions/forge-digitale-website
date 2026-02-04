@@ -2,20 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  ExternalLink,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#020617] border-t border-white/5 pt-16 pb-8 text-sm">
+    <footer className="bg-dark-base border-t border-white/5 pt-16 pb-8 text-sm">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
@@ -41,13 +34,13 @@ export function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-[#020617] transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-dark-base transition-all"
               >
                 <Linkedin size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-[#020617] transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-dark-base transition-all"
               >
                 <Github size={18} />
               </a>
@@ -55,7 +48,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-white mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
+            <h3 className="font-bold mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
               Services
             </h3>
             <ul className="space-y-3">
@@ -99,7 +92,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-white mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
+            <h3 className="font-bold mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
               Contact
             </h3>
             <ul className="space-y-4">

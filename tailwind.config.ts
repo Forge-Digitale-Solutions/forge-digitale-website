@@ -20,6 +20,7 @@ const config: Config = {
         },
         background: "#FFFFFF",
         foreground: "#1A1A1A",
+        "dark-base": "#020617", // Slate 950 - used throughout the site
       },
     },
   },

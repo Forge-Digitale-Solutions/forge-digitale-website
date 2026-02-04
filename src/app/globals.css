@@ -38,11 +38,11 @@
 
 @layer utilities {
   .glass {
-    @apply bg-[#020617]/80 backdrop-blur-md border-b border-white/10;
+    @apply bg-dark-base/80 backdrop-blur-md border-b border-white/10;
   }
 
   .text-gold-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-gold-light via-gold to-gold-dark;
+    @apply bg-clip-text text-transparent bg-linear-to-br from-gold-light via-gold to-gold-dark;
   }
 
   .btn-primary {

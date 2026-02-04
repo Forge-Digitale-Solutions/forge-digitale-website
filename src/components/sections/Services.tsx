@@ -16,7 +16,7 @@ const services = [
     description:
       "Sites vitrines ultra-rapides et applications métiers pour artisans et PME du Médoc.",
     price: "À partir de 1500€",
-    icon: <Code2 className="w-6 h-6 text-[#020617]" />,
+    icon: <Code2 className="w-6 h-6 text-dark-base" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
     features: ["Next.js & React", "SEO Optimisé", "Design Sur Mesure"],
@@ -46,7 +46,7 @@ const services = [
     description:
       "Ne jetez pas votre vieux PC. On le nettoie et on installe un système léger.",
     price: "Forfait 70€",
-    icon: <Wrench className="w-6 h-6 text-[#020617]" />,
+    icon: <Wrench className="w-6 h-6 text-dark-base" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
     features: ["Nettoyage complet", "Installation Linux Mint", "Formation 1h"],
@@ -56,7 +56,7 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C5A059]/5 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#C5A059]/5 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -82,11 +82,11 @@ export function Services() {
               className={`
                 ${service.colSpan} 
                 group relative p-8 rounded-3xl 
-                bg-[#020617] border border-white/5 hover:border-[#C5A059]/30 
+                bg-dark-base border border-white/5 hover:border-[#C5A059]/30 
                 transition-all duration-300 overflow-hidden
               `}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div
                 className={`w-12 h-12 rounded-2xl ${service.bgIcon} flex items-center justify-center mb-6`}
