@@ -7,8 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
     },
-    sitemap: "https://laforgesolutions.fr/sitemap.xml",
+    sitemap: "https://forgedigitalesolutions.com/sitemap.xml",
   };
 }

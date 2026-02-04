@@ -52,4 +52,12 @@
   .btn-gold {
     @apply inline-flex items-center justify-center rounded-full bg-gold text-dark-base font-bold transition-all hover:bg-gold-light hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] hover:scale-[1.02] active:scale-[0.98];
   }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .break-words-custom {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
 }

@@ -7,8 +7,14 @@ import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://forgedigitalesolutions.com";
+
 export const metadata: Metadata = {
-  title: "La Forge Digitale Solutions | Création Site Web & Dépannage Médoc",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Forge Digitale Solutions | Création Site Web & Dépannage Médoc",
+    template: "%s | Forge Digitale Solutions",
+  },
   description:
     "L'artisanat numérique au service du Médoc. Création de sites web, applications sur mesure et dépannage informatique à Saint-Laurent-Médoc.",
   keywords: [
@@ -17,15 +23,20 @@ export const metadata: Metadata = {
     "Montage PC sur mesure",
     "Réparation ordinateur 33",
     "Développeur web Gironde",
+    "Next.js",
   ],
   authors: [{ name: "Anthony Marcelin" }],
   openGraph: {
-    title: "La Forge Digitale Solutions",
+    title: "Forge Digitale Solutions",
     description: "L'artisanat numérique au service du Médoc.",
-    url: "https://laforgedigitale.fr",
-    siteName: "La Forge Digitale Solutions",
+    url: SITE_URL,
+    siteName: "Forge Digitale Solutions",
     locale: "fr_FR",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

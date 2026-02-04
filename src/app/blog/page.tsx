@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
-import { ArrowRight, Calendar, Tag } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 export default function BlogIndex() {
   const posts = getSortedPostsData();

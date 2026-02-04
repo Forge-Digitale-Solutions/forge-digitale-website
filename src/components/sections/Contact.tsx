@@ -1,19 +1,79 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
-  const [formState, setFormState] = useState<"idle" | "submitting" | "success">(
-    "idle",
-  );
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [resultMessage, setResultMessage] = useState("");
+  const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setFormState("submitting");
-    setTimeout(() => setFormState("success"), 1500);
-  };
+    setErrors({});
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const newErrors: { email?: string; phone?: string } = {};
+
+    if (!emailRegex.test(email)) {
+      newErrors.email = "Invalid email address.";
+    }
+
+    if (phone && !phoneRegex.test(phone)) {
+      newErrors.phone = "Invalid phone number (ex: 06 12 34 56 78).";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setStatus("idle");
+      return;
+    }
+
+    formData.append(
+      "access_key",
+      process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        setResultMessage("Message received! I'll get back to you within 24h.");
+        form.reset();
+      } else {
+        setStatus("error");
+        setResultMessage(data.message || "Technical error.");
+      }
+    } catch {
+      setStatus("error");
+      setResultMessage("Connection failed.");
+    }
+  }
 
   return (
     <section id="contact" className="py-24 bg-dark-base relative">
@@ -28,64 +88,60 @@ export function Contact() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Parlons de votre{" "}
-                <span className="text-gold-gradient">projet.</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance">
+                Parlons de votre <span className="text-[#C5A059]">projet.</span>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed">
-                Vous avez un vieux PC à rénover ? Besoin d&rsquo;un site web
-                pour votre activité ? Ou simplement une question technique ?
+                Un projet web ? Un PC à monter ?
                 <br />
-                <br />
-                Je suis basé à Saint-Laurent-Médoc et je réponds généralement
-                sous 24h.
+                Je suis disponible et réactif.
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-[#C5A059]/30 transition-colors">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059]">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
                   <Phone size={24} />
                 </div>
-                <div>
+                <div className="break-words-custom">
                   <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
                     Téléphone
                   </p>
                   <a
-                    href="tel:+33645569696"
-                    className="text-white font-medium hover:text-[#C5A059] transition-colors text-lg"
+                    href="tel:+33645659696"
+                    className="text-white hover:text-[#C5A059] transition-colors text-lg font-medium"
                   >
                     06 45 65 96 96
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-[#C5A059]/30 transition-colors">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059]">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
                   <Mail size={24} />
                 </div>
-                <div>
+                <div className="break-words-custom w-full">
                   <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
                     Email
                   </p>
                   <a
                     href="mailto:contact@forgedigitalesolutions.com"
-                    className="text-white font-medium hover:text-[#C5A059] transition-colors text-lg"
+                    className="text-white hover:text-[#C5A059] transition-colors text-lg font-medium break-all block"
                   >
                     contact@forgedigitalesolutions.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-[#C5A059]/30 transition-colors">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059]">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
                     Atelier
                   </p>
-                  <p className="text-white font-medium text-lg">
+                  <p className="text-white text-lg font-medium">
                     Saint-Laurent-Médoc (33112)
                   </p>
                 </div>
@@ -99,90 +155,156 @@ export function Contact() {
             viewport={{ once: true }}
             className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm"
           >
-            {formState === "success" ? (
-              <div className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-4">
-                <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-4">
-                  <Send size={32} />
+            {status === "success" ? (
+              <div className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
+                <div className="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-2">
+                  <CheckCircle size={40} />
                 </div>
-                <h3 className="text-2xl font-bold text-white">
-                  Message envoyé !
-                </h3>
-                <p className="text-slate-400">
-                  Je reviens vers vous très rapidement.
-                </p>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Message envoyé !
+                  </h3>
+                  <p className="text-slate-400 max-w-xs mx-auto">
+                    Merci. Je vous recontacte très rapidement.
+                  </p>
+                </div>
                 <button
-                  onClick={() => setFormState("idle")}
-                  className="mt-6 text-[#C5A059] hover:text-white text-sm font-medium underline underline-offset-4"
+                  onClick={() => setStatus("idle")}
+                  className="mt-4 text-[#C5A059] hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
                 >
                   Envoyer un autre message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Nouveau contact - Site Web La Forge"
+                />
+                <input type="hidden" name="from_name" value="Site Web" />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
                       className="text-sm font-medium text-slate-300"
                     >
-                      Nom
+                      Nom *
                     </label>
                     <input
-                      type="text"
+                      name="name"
                       id="name"
+                      type="text"
                       required
-                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
                       placeholder="Votre nom"
+                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-slate-600"
                     />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="company"
+                      className="text-sm font-medium text-slate-300"
+                    >
+                      Société{" "}
+                      <span className="text-slate-600 text-xs">
+                        (Optionnel)
+                      </span>
+                    </label>
+                    <input
+                      name="company"
+                      id="company"
+                      type="text"
+                      placeholder="Nom de l'entreprise"
+                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-slate-600"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-medium text-slate-300"
+                    >
+                      Email *
+                    </label>
+                    <input
+                      name="email"
+                      id="email"
+                      type="email"
+                      required
+                      placeholder="vous@exemple.com"
+                      className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.email ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
+                    />
+                    {errors.email && (
+                      <p className="text-red-400 text-xs mt-1">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <label
                       htmlFor="phone"
                       className="text-sm font-medium text-slate-300"
                     >
-                      Téléphone
+                      Téléphone *
                     </label>
                     <input
-                      type="tel"
+                      name="phone"
                       id="phone"
-                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
+                      type="tel"
+                      required
                       placeholder="06..."
+                      className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.phone ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
                     />
+                    {errors.phone && (
+                      <p className="text-red-400 text-xs mt-1">
+                        {errors.phone}
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label
-                    htmlFor="email"
-                    className="text-sm font-medium text-slate-300"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors"
-                    placeholder="vous@exemple.com"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="subject"
+                    htmlFor="service-select"
                     className="text-sm font-medium text-slate-300"
                   >
                     Sujet
                   </label>
-                  <select
-                    id="subject"
-                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors appearance-none"
-                  >
-                    <option>Demande de Devis Web</option>
-                    <option>Montage PC</option>
-                    <option>Dépannage / Maintenance</option>
-                    <option>Autre</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      name="service"
+                      id="service-select"
+                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] appearance-none cursor-pointer"
+                    >
+                      <option>Demande de Devis Web</option>
+                      <option>Montage PC</option>
+                      <option>Dépannage / Maintenance</option>
+                      <option>Autre demande</option>
+                    </select>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-2">
@@ -190,28 +312,37 @@ export function Contact() {
                     htmlFor="message"
                     className="text-sm font-medium text-slate-300"
                   >
-                    Message
+                    Message *
                   </label>
                   <textarea
+                    name="message"
                     id="message"
                     required
                     rows={4}
-                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
-                    placeholder="Décrivez brièvement votre besoin..."
+                    placeholder="Décrivez votre besoin..."
+                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] resize-none placeholder:text-slate-600"
                   />
                 </div>
 
+                {status === "error" && (
+                  <div className="flex items-center gap-2 text-red-400 text-sm bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                    <AlertCircle size={16} />
+                    <span>{resultMessage}</span>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  disabled={formState === "submitting"}
-                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                  disabled={status === "submitting"}
+                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {formState === "submitting" ? (
-                    "Envoi en cours..."
+                  {status === "submitting" ? (
+                    <>
+                      <Loader2 className="animate-spin" size={20} /> Checking...
+                    </>
                   ) : (
                     <>
-                      Envoyer ma demande
-                      <ArrowRight size={18} />
+                      Envoyer ma demande <ArrowRight size={18} />
                     </>
                   )}
                 </button>

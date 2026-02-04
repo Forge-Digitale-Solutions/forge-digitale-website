@@ -1,151 +1,152 @@
-"use client";
-
 import Link from "next/link";
-import Image from "next/image";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-dark-base border-t border-white/5 pt-16 pb-8 text-sm">
+    <footer className="bg-dark-base border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/10">
-                <Image
-                  src="/logos/Logo1rond.png"
-                  alt="Logo Footer"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <span className="font-bold text-lg text-white tracking-tight">
-                FORGE DIGITALE
-              </span>
-            </Link>
-            <p className="text-slate-400 leading-relaxed max-w-sm mb-6">
-              L&rsquo;Artisanat Numérique au service du Médoc.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-white">
+              Forge <span className="text-[#C5A059]">Digitale.</span>
+            </h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              L&apos;artisanat numérique au service du Médoc.
               <br />
-              Développement web sur-mesure, maintenance et montage PC pour
-              particuliers et professionnels.
+              Sites web sur-mesure et montage PC gamer.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-dark-base transition-all"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#C5A059] hover:text-dark-base transition-all"
-              >
-                <Github size={18} />
-              </a>
-            </div>
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
-              Services
-            </h3>
-            <ul className="space-y-3">
+            <h4 className="text-white font-bold mb-6">Services</h4>
+            <ul className="space-y-3 text-sm text-slate-400">
               <li>
                 <Link
-                  href="#web"
-                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                  href="/#services"
+                  className="hover:text-[#C5A059] transition-colors"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#C5A059]"></span>
-                  Création Sites Web
+                  Création Site Web
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#web"
-                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                  href="/#services"
+                  className="hover:text-[#C5A059] transition-colors"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#C5A059]"></span>
-                  Applications Métier
+                  Montage PC Gamer
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#montage"
-                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                  href="/#services"
+                  className="hover:text-[#C5A059] transition-colors"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#C5A059]"></span>
-                  Montage PC Sur Mesure
+                  Dépannage & Linux
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#maintenance"
-                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                  href="/#portfolio"
+                  className="hover:text-[#C5A059] transition-colors"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#C5A059]"></span>
-                  Maintenance & Linux
+                  Réalisations
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 tracking-wide uppercase text-xs text-[#C5A059]">
-              Contact
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-slate-400">
-                <MapPin size={18} className="text-[#C5A059] mt-0.5 shrink-0" />
+            <h4 className="text-white font-bold mb-6">Liens Utiles</h4>
+            <ul className="space-y-3 text-sm text-slate-400">
+              <li>
+                <Link
+                  href="/blog"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  Le Blog Tech
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#about"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  À Propos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#contact"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  Demander un Devis
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/confidentialite"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  Confidentialité
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#C5A059] shrink-0 mt-0.5" />
                 <span>
-                  6 Rue Saint Julien
+                  Saint-Laurent-Médoc
                   <br />
-                  33112 Saint-Laurent-Médoc
+                  (33112)
                 </span>
               </li>
-              <li className="flex items-center gap-3 text-slate-400">
+              <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#C5A059] shrink-0" />
                 <a
-                  href="tel:+33645569696"
+                  href="tel:+33645659696"
                   className="hover:text-white transition-colors"
                 >
                   06 45 65 96 96
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-slate-400">
+              <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#C5A059] shrink-0" />
                 <a
                   href="mailto:contact@forgedigitalesolutions.com"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors break-all"
                 >
-                  contact@forgedigitalesolutions.com{" "}
+                  contact@forgedigitalesolutions.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 text-xs">
-            © {currentYear} La Forge Digitale Solutions. Tous droits réservés.
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p>
+            © {new Date().getFullYear()} Forge Digitale Solutions. Tous droits
+            réservés.
           </p>
-          <div className="flex gap-6 text-xs text-slate-500">
-            <Link
-              href="/mentions-legales"
-              className="hover:text-[#C5A059] transition-colors"
-            >
-              Mentions Légales
-            </Link>
+          <div className="flex gap-6">
             <Link
               href="/cgv"
-              className="hover:text-[#C5A059] transition-colors"
+              className="hover:text-slate-300 transition-colors"
             >
               CGV
             </Link>
             <Link
+              href="/mentions-legales"
+              className="hover:text-slate-300 transition-colors"
+            >
+              Mentions Légales
+            </Link>
+            <Link
               href="/confidentialite"
-              className="hover:text-[#C5A059] transition-colors"
+              className="hover:text-slate-300 transition-colors"
             >
               Politique de Confidentialité
             </Link>
