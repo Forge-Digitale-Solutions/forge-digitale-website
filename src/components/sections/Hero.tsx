@@ -23,7 +23,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A059] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5A059]"></span>
           </span>
-          Disponible pour nouveaux projets
+          Lancement en Avril 2026
         </motion.div>
 
         <motion.h1
@@ -43,7 +43,7 @@ export function Hero() {
           className="mx-auto max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed"
         >
           Forge Digitale crée des sites web performants pour les pros et redonne
-          vie à votre matériel informatique. Une expertise locale, sans jargon.
+          vie à votre matériel informatique. Une expertise locale, à vos côtés.
         </motion.p>
 
         <motion.div

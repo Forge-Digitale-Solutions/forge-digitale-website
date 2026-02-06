@@ -1,55 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Monitor,
-  Wrench,
-  Code2,
-  Smartphone,
-  ShieldCheck,
-  Cpu,
-} from "lucide-react";
+import { Wrench, Code2, ShieldCheck, Cpu } from "lucide-react";
 
 const services = [
   {
     title: "Création Web & Applications",
     description:
       "Sites vitrines ultra-rapides et applications métiers pour artisans et PME du Médoc.",
-    price: "À partir de 1500€",
+    price: "Devis Gratuit",
     icon: <Code2 className="w-6 h-6 text-dark-base" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
-    features: ["Next.js & React", "SEO Optimisé", "Design Sur Mesure"],
+    features: [
+      "Performance & Vitesse",
+      "Référencement & Visibilité",
+      "Design Sur Mesure",
+    ],
   },
   {
-    title: "Maintenance Web",
+    title: "Gestion & Suivi",
     description:
-      "Hébergement, sécurité et mises à jour mensuelles. Dormez tranquille.",
-    price: "49€ / mois",
+      "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
+    price: "Sur devis",
     icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
-    features: ["Sauvegardes", "Monitoring 24/7"],
+    features: ["Hébergement & Domaine", "Support & Mises à jour"],
   },
   {
     title: "Montage PC Sur Mesure",
     description:
-      "Conception et assemblage minutieux de votre machine de guerre ou de travail.",
-    price: "Forfait 150€",
+      "Travail, Gaming ou Familial : on définit ensemble la configuration idéale, 100% adaptée à votre besoin et votre budget.",
+    price: "Forfait 149€",
     icon: <Cpu className="w-6 h-6 text-[#C5A059]" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
-    features: ["Cable Management", "Optimisation BIOS", "Tests Stress"],
+    features: [
+      "Conseil & Choix des pièces",
+      "Montage soigné",
+      "Installation système",
+      "Remise et prise en main",
+    ],
   },
   {
-    title: "Seconde Vie & Linux",
+    title: "Forfait Renaissance : Seconde Vie",
     description:
-      "Ne jetez pas votre vieux PC. On le nettoie et on installe un système léger.",
-    price: "Forfait 70€",
+      "Votre ordinateur est lent ? Ne le jetez pas. On le nettoie et on installe un système léger pour lui redonner sa rapidité.",
+    price: "Forfait 69€",
     icon: <Wrench className="w-6 h-6 text-dark-base" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
-    features: ["Nettoyage complet", "Installation Linux Mint", "Formation 1h"],
+    features: [
+      "Nettoyage complet",
+      "Installation Linux simple",
+      "Prise en main 1h comprise",
+      "Mise à jour de sécurité",
+      "Approche économique et écologique",
+    ],
   },
 ];
 
@@ -66,7 +74,7 @@ export function Services() {
           </h2>
           <p className="text-slate-400">
             Une expertise technique pointue au service de votre activité et de
-            votre matériel. Pas de jargon, juste des résultats.
+            votre matériel. Des solutions claires et durables.
           </p>
         </div>
 

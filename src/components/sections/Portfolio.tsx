@@ -1,49 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Artisan du Médoc",
+    title: "Forge Digitale (Ce site)",
     category: "Site Vitrine",
     description:
-      "Conception complète de l'identité visuelle et du site web pour un ébéniste local. Performance score: 100/100.",
-    tags: ["Next.js", "Tailwind", "SEO"],
-    image: "/projects/project1.jpg",
-    gradient: "from-blue-900 to-slate-900",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Médoc Vins Prestige",
-    category: "E-Commerce",
-    description:
-      "Plateforme de vente en ligne avec gestion de stock et paiement sécurisé Stripe.",
-    tags: ["React", "Stripe", "Node.js"],
-    image: "/projects/project2.jpg",
+      "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
+    tags: ["Chargement Instantané", "Design Unique", "Optimisé Google"],
+    image: "/projects/forge.jpeg",
     gradient: "from-[#C5A059]/20 to-slate-900",
     link: "#",
-    github: "#",
   },
   {
-    title: "Gestion Atelier",
-    category: "App Métier",
+    title: "GoSportNow (En cours)",
+    category: "Application Mobile",
     description:
-      "Application interne pour la gestion des réparations et du suivi client (CRM simplifié).",
-    tags: ["TypeScript", "Supabase", "Dashboard"],
-    image: "/projects/project3.jpg",
-    gradient: "from-purple-900 to-slate-900",
+      "Plateforme de mise en relation pour sportifs. Une interface fluide et simple pour gérer des profils et des événements en temps réel.",
+    tags: ["Application Mobile", "Compte Utilisateur", "Carte Interactive"],
+    image: "/projects/gosportnow.png",
+    gradient: "from-blue-900/40 to-slate-900",
     link: "#",
-    github: "#",
+  },
+  {
+    title: "Atelier Hardware",
+    category: "Montage PC",
+    description:
+      "Assemblage manuel de précision. Cable Management et ventilation optimisée pour un silence total.",
+    tags: ["Silencieux", "Performance", "Esthétique Soignée"],
+    image: "/projects/pc.png",
+    gradient: "from-purple-900/40 to-slate-900",
+    link: "#contact",
   },
 ];
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-dark-base relative">
+    <section id="realisations" className="py-24 bg-dark-base relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
@@ -51,19 +48,10 @@ export function Portfolio() {
               Réalisations <span className="text-gold-gradient">récentes.</span>
             </h2>
             <p className="text-slate-400">
-              Chaque projet est une opportunité de créer de la valeur. Voici
-              quelques exemples de solutions déployées.
+              Du développement web au montage hardware : voici des exemples
+              concrets de mon savoir-faire.
             </p>
           </div>
-
-          <Link
-            href="https://github.com"
-            target="_blank"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-[#C5A059] hover:text-white transition-colors"
-          >
-            <Github size={16} />
-            Voir plus de code sur GitHub
-          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -77,27 +65,21 @@ export function Portfolio() {
               className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col h-full"
             >
               <div
-                className={`h-48 w-full bg-linear-to-br ${project.gradient} relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}
+                className={`h-48 w-full bg-linear-to-br ${project.gradient} relative overflow-hidden`}
               >
-                {/* Picture later when available */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-30 text-4xl font-bold text-white/20">
-                  Projet {index + 1}
-                </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                />
 
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Link
                     href={project.link}
-                    className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform"
-                    title="Voir le site"
+                    className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold text-sm hover:bg-[#C5A059] hover:text-white transition-colors shadow-xl"
                   >
-                    <ExternalLink size={20} />
-                  </Link>
-                  <Link
-                    href={project.github}
-                    className="p-3 bg-dark-base text-white border border-white/20 rounded-full hover:scale-110 transition-transform"
-                    title="Voir le code"
-                  >
-                    <Github size={20} />
+                    Voir le projet <ExternalLink size={16} />
                   </Link>
                 </div>
               </div>

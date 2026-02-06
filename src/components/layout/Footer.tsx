@@ -13,7 +13,7 @@ export function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed">
               L&apos;artisanat numérique au service du Médoc.
               <br />
-              Sites web sur-mesure et montage PC gamer.
+              Solutions web sur-mesure et expertise hardware haute performance.
             </p>
           </div>
 

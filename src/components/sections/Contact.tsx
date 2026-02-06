@@ -87,7 +87,8 @@ export function Contact() {
                 Parlons de votre <span className="text-[#C5A059]">projet.</span>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed">
-                Un projet web ? Un PC à monter ?
+                Un projet web ? Un PC à monter ou une seconde vie à donner à
+                votre matériel ?
                 <br />
                 Je suis disponible et réactif.
               </p>
