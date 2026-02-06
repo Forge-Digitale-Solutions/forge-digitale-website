@@ -9,7 +9,7 @@ const services = [
     description:
       "Sites vitrines ultra-rapides et applications métiers pour artisans et PME du Médoc.",
     price: "Devis Gratuit",
-    icon: <Code2 className="w-6 h-6 text-dark-base" />,
+    icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
     features: [
@@ -23,7 +23,7 @@ const services = [
     description:
       "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
     price: "Sur devis",
-    icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />,
+    icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
     features: ["Hébergement & Domaine", "Support & Mises à jour"],
@@ -33,7 +33,7 @@ const services = [
     description:
       "Travail, Gaming ou Familial : on définit ensemble la configuration idéale, 100% adaptée à votre besoin et votre budget.",
     price: "Forfait 149€",
-    icon: <Cpu className="w-6 h-6 text-[#C5A059]" />,
+    icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
     features: [
@@ -48,7 +48,7 @@ const services = [
     description:
       "Votre ordinateur est lent ? Ne le jetez pas. On le nettoie et on installe un système léger pour lui redonner sa rapidité.",
     price: "Forfait 69€",
-    icon: <Wrench className="w-6 h-6 text-dark-base" />,
+    icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
     features: [
@@ -63,16 +63,23 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section
+      id="services"
+      className="py-24 relative overflow-hidden"
+      aria-labelledby="services-heading"
+    >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#C5A059]/5 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+          <h2
+            id="services-heading"
+            className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
+          >
             Des solutions forgées pour{" "}
             <span className="text-gold-gradient">durer.</span>
           </h2>
-          <p className="text-slate-400">
+          <p className="text-slate-300">
             Une expertise technique pointue au service de votre activité et de
             votre matériel. Des solutions claires et durables.
           </p>

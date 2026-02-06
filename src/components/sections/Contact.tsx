@@ -71,7 +71,11 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-dark-base relative">
+    <section
+      id="contact"
+      className="py-24 bg-dark-base relative"
+      aria-labelledby="contact-heading"
+    >
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
@@ -83,10 +87,13 @@ export function Contact() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance">
+              <h2
+                id="contact-heading"
+                className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance"
+              >
                 Parlons de votre <span className="text-[#C5A059]">projet.</span>
               </h2>
-              <p className="text-slate-400 text-lg leading-relaxed">
+              <p className="text-slate-300 text-lg leading-relaxed">
                 Un projet web ? Un PC à monter ou une seconde vie à donner à
                 votre matériel ?
                 <br />
@@ -96,7 +103,10 @@ export function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
+                <div
+                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                >
                   <Phone size={24} />
                 </div>
                 <div className="break-words-custom">
@@ -113,7 +123,10 @@ export function Contact() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
+                <div
+                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                >
                   <Mail size={24} />
                 </div>
                 <div className="break-words-custom w-full">
@@ -130,7 +143,10 @@ export function Contact() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <div className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0">
+                <div
+                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                >
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -152,8 +168,15 @@ export function Contact() {
             className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm"
           >
             {status === "success" ? (
-              <div className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
-                <div className="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-2">
+              <div
+                className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300"
+                role="status"
+                aria-live="polite"
+              >
+                <div
+                  className="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-2"
+                  aria-hidden="true"
+                >
                   <CheckCircle size={40} />
                 </div>
                 <div>
@@ -247,7 +270,11 @@ export function Contact() {
                       className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.email ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
                     />
                     {errors.email && (
-                      <p className="text-red-400 text-xs mt-1">
+                      <p
+                        className="text-red-400 text-xs mt-1"
+                        role="alert"
+                        aria-live="polite"
+                      >
                         {errors.email}
                       </p>
                     )}
@@ -268,7 +295,11 @@ export function Contact() {
                       className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.phone ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
                     />
                     {errors.phone && (
-                      <p className="text-red-400 text-xs mt-1">
+                      <p
+                        className="text-red-400 text-xs mt-1"
+                        role="alert"
+                        aria-live="polite"
+                      >
                         {errors.phone}
                       </p>
                     )}
@@ -328,8 +359,12 @@ export function Contact() {
                 </div>
 
                 {status === "error" && (
-                  <div className="flex items-center gap-2 text-red-400 text-sm bg-red-500/10 p-3 rounded-lg border border-red-500/20">
-                    <AlertCircle size={16} />
+                  <div
+                    className="flex items-center gap-2 text-red-400 text-sm bg-red-500/10 p-3 rounded-lg border border-red-500/20"
+                    role="alert"
+                    aria-live="assertive"
+                  >
+                    <AlertCircle size={16} aria-hidden="true" />
                     <span>{resultMessage}</span>
                   </div>
                 )}
@@ -337,15 +372,22 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-busy={status === "submitting"}
+                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? (
                     <>
-                      <Loader2 className="animate-spin" size={20} /> Checking...
+                      <Loader2
+                        className="animate-spin"
+                        size={20}
+                        aria-hidden="true"
+                      />{" "}
+                      Envoi en cours...
                     </>
                   ) : (
                     <>
-                      Envoyer ma demande <ArrowRight size={18} />
+                      Envoyer ma demande{" "}
+                      <ArrowRight size={18} aria-hidden="true" />
                     </>
                   )}
                 </button>

@@ -70,7 +70,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+                className="text-sm font-medium text-slate-300 hover:text-white focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-4 rounded transition-colors relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C5A059] transition-all group-hover:w-full"></span>
@@ -79,7 +79,7 @@ export function Header() {
 
             <Link
               href="#contact"
-              className="bg-[#C5A059] hover:bg-[#D4B475] text-dark-base font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+              className="bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
             >
               Demander un devis
             </Link>
@@ -87,8 +87,11 @@ export function Header() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-2 rounded-lg"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X /> : <Menu />}
           </button>
@@ -99,6 +102,7 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -108,7 +112,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-slate-300 hover:text-[#C5A059] py-2 text-lg font-medium border-b border-white/5"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] py-2 text-lg font-medium border-b border-white/5 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -117,7 +121,7 @@ export function Header() {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4"
+              className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
             >
               Me contacter
             </Link>

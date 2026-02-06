@@ -23,7 +23,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Création Site Web
                 </Link>
@@ -31,7 +31,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Montage PC Gamer
                 </Link>
@@ -39,7 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Dépannage & Linux
                 </Link>
@@ -47,7 +47,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#portfolio"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Réalisations
                 </Link>
@@ -97,7 +97,11 @@ export function Footer() {
             <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#C5A059] shrink-0 mt-0.5" />
+                <MapPin
+                  size={18}
+                  className="text-[#C5A059] shrink-0 mt-0.5"
+                  aria-hidden="true"
+                />
                 <span>
                   Saint-Laurent-Médoc
                   <br />
@@ -105,7 +109,11 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={18} className="text-[#C5A059] shrink-0" />
+                <Phone
+                  size={18}
+                  className="text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                />
                 <a
                   href="tel:+33645659696"
                   className="hover:text-white transition-colors"
@@ -114,7 +122,11 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={18} className="text-[#C5A059] shrink-0" />
+                <Mail
+                  size={18}
+                  className="text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                />
                 <a
                   href="mailto:contact@forgedigitalesolutions.com"
                   className="hover:text-white transition-colors break-all"

@@ -6,7 +6,11 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-dark-base">
+    <section
+      id="about"
+      className="py-24 relative overflow-hidden bg-dark-base"
+      aria-labelledby="about-heading"
+    >
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#C5A059]/5 blur-[120px] -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
@@ -21,7 +25,10 @@ export function About() {
               <span className="text-[#C5A059] font-bold tracking-widest uppercase text-sm">
                 À Propos
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
+              <h2
+                id="about-heading"
+                className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6"
+              >
                 L&apos;expertise technique,
                 <br />
                 <span className="text-gold-gradient">
@@ -29,7 +36,7 @@ export function About() {
                 </span>
               </h2>
 
-              <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
+              <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
                 <p>
                   Basé au cœur du <strong>Médoc</strong>, je combine deux
                   passions qui sont pour moi indissociables : le{" "}
@@ -55,22 +62,25 @@ export function About() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <Award className="text-[#C5A059] shrink-0" />
+                <Award className="text-[#C5A059] shrink-0" aria-hidden="true" />
                 <div>
-                  <h4 className="text-white font-bold text-sm">Certifié</h4>
-                  <p className="text-slate-500 text-xs mt-1">
+                  <h3 className="text-white font-bold text-sm">Certifié</h3>
+                  <p className="text-slate-400 text-xs mt-1">
                     Titre Professionnel &quot; Concepteur Développeur
                     d&apos;Applications &quot;
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <MapPin className="text-[#C5A059] shrink-0" />
+                <MapPin
+                  className="text-[#C5A059] shrink-0"
+                  aria-hidden="true"
+                />
                 <div>
-                  <h4 className="text-white font-bold text-sm">
+                  <h3 className="text-white font-bold text-sm">
                     Ancrage Local
-                  </h4>
-                  <p className="text-slate-500 text-xs mt-1">
+                  </h3>
+                  <p className="text-slate-400 text-xs mt-1">
                     Atelier basé à St Laurent Medoc
                   </p>
                 </div>
@@ -84,10 +94,10 @@ export function About() {
             viewport={{ once: true }}
             className="relative w-full lg:max-w-md mx-auto"
           >
-            <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-base">
+            <div className="relative aspect-square md:aspect-4/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-base">
               <Image
                 src="/images/about_picture.png"
-                alt="Expertise Hardware, Linux et Développement Web"
+                alt="Anthony Marcelin dans son atelier de développement web et montage PC à Saint-Laurent-Médoc"
                 fill
                 className="object-cover"
                 priority
