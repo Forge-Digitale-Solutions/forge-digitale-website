@@ -214,8 +214,10 @@ export function Contact() {
                 <input
                   type="checkbox"
                   name="botcheck"
+                  aria-label="Bot verification field"
                   className="hidden"
                   style={{ display: "none" }}
+                  tabIndex={-1}
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

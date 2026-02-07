@@ -11,6 +11,8 @@ export function LocalBusinessSchema() {
     telephone: "+33645659696",
     email: "contact@forgedigitalesolutions.com",
     priceRange: "€€",
+    image: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
+    logo: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Saint-Laurent-Médoc",
@@ -63,10 +65,6 @@ export function LocalBusinessSchema() {
             name: "Création de site web & applications",
             description:
               "Sites vitrines ultra-rapides et applications métiers sur mesure pour artisans et PME",
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Forge Digitale Solutions",
-            },
           },
         },
         {
@@ -76,10 +74,6 @@ export function LocalBusinessSchema() {
             name: "Montage PC sur mesure",
             description:
               "Assemblage de PC gaming, workstation ou familial avec conseil personnalisé",
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Forge Digitale Solutions",
-            },
           },
           priceSpecification: {
             "@type": "PriceSpecification",
@@ -95,10 +89,6 @@ export function LocalBusinessSchema() {
             name: "Forfait Renaissance - Seconde vie Linux",
             description:
               "Nettoyage complet et installation Linux pour redonner vie à votre ordinateur",
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Forge Digitale Solutions",
-            },
           },
           priceSpecification: {
             "@type": "PriceSpecification",

@@ -144,6 +144,7 @@ export function Services() {
           </p>
           <Link
             href="/#faq"
+            aria-label="Consulter la foire aux questions"
             className="inline-flex items-center gap-2 text-[#C5A059] hover:text-[#D4B475] font-medium transition-colors"
           >
             Voir la FAQ

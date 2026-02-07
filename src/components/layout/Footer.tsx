@@ -30,6 +30,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
+                  aria-label="Voir les services de création de site web"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Création Site Web
@@ -38,6 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
+                  aria-label="Voir les services de montage PC gamer"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Montage PC Gamer
@@ -46,6 +48,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#services"
+                  aria-label="Voir les services de dépannage et Linux"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Dépannage & Linux

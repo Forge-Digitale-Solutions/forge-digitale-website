@@ -19,7 +19,6 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Accueil", href: "/" },
     { name: "Services", href: "/#services" },
     { name: "Réalisations", href: "/#realisations" },
     { name: "Blog", href: "/blog" },
@@ -51,7 +50,10 @@ export function Header() {
 
             <div className="flex flex-col justify-center">
               <div className="flex items-baseline gap-1.5 leading-none">
-                <span className="text-slate-500 text-xs font-medium -translate-y-px">
+                <span
+                  className="text-slate-500 text-xs font-medium -translate-y-px"
+                  aria-hidden="true"
+                >
                   La
                 </span>
                 <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#C5A059] transition-colors">
@@ -59,7 +61,10 @@ export function Header() {
                 </span>
               </div>
 
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-4.5 mt-0.5">
+              <span
+                className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-4.5 mt-0.5"
+                aria-hidden="true"
+              >
                 SOLUTIONS
               </span>
             </div>
