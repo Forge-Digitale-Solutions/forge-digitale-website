@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getSortedPostsData } from "@/lib/posts";
 import { ArrowRight, Calendar } from "lucide-react";
 
@@ -25,9 +26,16 @@ export default function BlogIndex() {
               href={`/blog/${post.id}`}
               className="group flex flex-col h-full bg-white/5 border border-white/5 rounded-3xl overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="h-48 bg-linear-to-br from-slate-800 to-black relative">
-                {/* <Image /> if needed */}
-                <div className="absolute top-4 left-4">
+              <div className="h-48 bg-linear-to-br from-slate-800 to-black relative overflow-hidden">
+                {post.image && (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                )}
+                <div className="absolute top-4 left-4 z-10">
                   <span className="px-3 py-1 text-xs font-bold text-dark-base bg-[#C5A059] rounded-full uppercase tracking-wider">
                     {post.category}
                   </span>

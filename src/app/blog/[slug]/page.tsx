@@ -1,5 +1,6 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -64,11 +65,22 @@ export default async function Post({
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {postData.title}
           </h1>
-          <div className="flex items-center gap-4 text-slate-500 text-sm border-l-2 border-[#C5A059] pl-4">
+          <div className="flex items-center gap-4 text-slate-500 text-sm border-l-2 border-[#C5A059] pl-4 mb-8">
             <p>Publié le {postData.date}</p>
             <span>•</span>
             <p>Par Anthony Marcelin</p>
           </div>
+          {postData.image && (
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Image
+                src={postData.image}
+                alt={postData.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </header>
 
         <div
