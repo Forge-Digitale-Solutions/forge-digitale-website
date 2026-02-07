@@ -71,12 +71,9 @@ export function Portfolio() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col h-full"
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-colors duration-300 flex flex-col h-full"
             >
               <div
                 className={`h-48 w-full bg-linear-to-br ${project.gradient} relative overflow-hidden`}
