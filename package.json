@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.31.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.563.0",
@@ -18,7 +19,8 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
