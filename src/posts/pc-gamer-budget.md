@@ -1,6 +1,6 @@
 ---
 title: "PC Gamer en 2026 : Comment jouer sans se ruiner ?"
-date: "07-02-2026"
+date: "2026-02-07"
 category: "Hardware"
 excerpt: "Les prix des composants explosent. Voici ma stratégie d'artisan pour monter une machine performante aujourd'hui et évolutive demain."
 image: "/blog/pc-build.jpg"
