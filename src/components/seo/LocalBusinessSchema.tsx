@@ -15,6 +15,7 @@ export function LocalBusinessSchema() {
     logo: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "rue St Julien",
       addressLocality: "Saint-Laurent-Médoc",
       postalCode: "33112",
       addressRegion: "Nouvelle-Aquitaine",
