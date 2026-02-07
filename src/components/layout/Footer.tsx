@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -15,6 +17,11 @@ export function Footer() {
               <br />
               Solutions web sur-mesure et expertise hardware haute performance.
             </p>
+
+            <div className="pt-4 mt-4 border-t border-white/5 text-xs text-slate-500">
+              <p>EI Anthony Marcelin</p>
+              <p>SIREN : 100 857 838</p>
+            </div>
           </div>
 
           <div>
@@ -46,7 +53,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#portfolio"
+                  href="/#realisations"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Réalisations
@@ -61,7 +68,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Le Blog Tech
                 </Link>
@@ -69,7 +76,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#about"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   À Propos
                 </Link>
@@ -77,7 +84,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#contact"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Demander un Devis
                 </Link>
@@ -85,7 +92,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/confidentialite"
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Confidentialité
                 </Link>
@@ -146,19 +153,19 @@ export function Footer() {
           <div className="flex gap-6">
             <Link
               href="/cgv"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-slate-300 focus-visible:text-slate-300 focus-visible:outline-1 focus-visible:outline-slate-300 rounded transition-colors"
             >
               CGV
             </Link>
             <Link
               href="/mentions-legales"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-slate-300 focus-visible:text-slate-300 focus-visible:outline-1 focus-visible:outline-slate-300 rounded transition-colors"
             >
               Mentions Légales
             </Link>
             <Link
               href="/confidentialite"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-slate-300 focus-visible:text-slate-300 focus-visible:outline-1 focus-visible:outline-slate-300 rounded transition-colors"
             >
               Politique de Confidentialité
             </Link>

@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/layout/Footer";
+import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,27 +14,45 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Forge Digitale Solutions | Création Site Web & Dépannage Médoc",
+    default:
+      "Forge Digitale Solutions | Création Web & Dépannage (Médoc - Bordeaux)",
     template: "%s | Forge Digitale Solutions",
   },
   description:
-    "L'artisanat numérique au service du Médoc. Création de sites web, applications sur mesure et dépannage informatique à Saint-Laurent-Médoc.",
+    "Votre expert numérique en Gironde. Création de sites internet sur-mesure et solutions informatiques (Dépannage, Linux, PC Gamer). Basé dans le Médoc, j'accompagne les pros de Bordeaux au Bassin d'Arcachon.",
   keywords: [
+    // Géographie (Cercle concentrique)
+    "Informaticien Saint-Laurent-Médoc",
     "Création site web Médoc",
-    "Dépannage informatique Saint-Laurent",
-    "Montage PC sur mesure",
-    "Réparation ordinateur 33",
-    "Développeur web Gironde",
-    "Next.js",
+    "Développeur freelance Bordeaux",
+    "Agence web Bassin d'Arcachon",
+    "Dépannage informatique Gironde",
+    // Services Web
+    "Site internet artisan",
+    "Application web sur-mesure",
+    "Refonte site vitrine",
+    // Services Hardware
+    "Montage PC Gamer Bordeaux",
+    "Installation Linux Mint",
+    "Réparation ordinateur Médoc",
   ],
   authors: [{ name: "Anthony Marcelin" }],
   openGraph: {
-    title: "Forge Digitale Solutions",
-    description: "L'artisanat numérique au service du Médoc.",
-    url: SITE_URL,
-    siteName: "Forge Digitale Solutions",
-    locale: "fr_FR",
     type: "website",
+    locale: "fr_FR",
+    url: SITE_URL,
+    title: "Forge Digitale | L'Artisanat Numérique en Gironde",
+    description:
+      "Web & Hardware. Solutions sur-mesure pour les professionnels et particuliers du Médoc à Bordeaux.",
+    siteName: "Forge Digitale Solutions",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Forge Digitale Solutions - Web & PC",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -55,6 +75,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-dark-base text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
       >
+        <LocalBusinessSchema />
+        <FAQSchema />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

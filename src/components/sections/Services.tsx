@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Wrench, Code2, ShieldCheck, Cpu } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     title: "Création Web & Applications",
     description:
-      "Sites vitrines ultra-rapides et applications métiers pour artisans et PME du Médoc.",
+      "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
     price: "Devis Gratuit",
     icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
@@ -31,7 +32,7 @@ const services = [
   {
     title: "Montage PC Sur Mesure",
     description:
-      "Travail, Gaming ou Familial : on définit ensemble la configuration idéale, 100% adaptée à votre besoin et votre budget.",
+      "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
     price: "Forfait 149€",
     icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
@@ -46,7 +47,7 @@ const services = [
   {
     title: "Forfait Renaissance : Seconde Vie",
     description:
-      "Votre ordinateur est lent ? Ne le jetez pas. On le nettoie et on installe un système léger pour lui redonner sa rapidité.",
+      "Votre ordinateur est lent ? Ne le jetez pas. Je le nettoie et j'installe un système léger pour lui redonner sa rapidité.",
     price: "Forfait 69€",
     icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
@@ -135,6 +136,34 @@ export function Services() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-slate-300 mb-6">
+            Des questions sur mes services ?{" "}
+            <span className="text-white font-medium">
+              Consultez ma FAQ pour tout savoir sur mes méthodes de travail.
+            </span>
+          </p>
+          <Link
+            href="/#faq"
+            className="inline-flex items-center gap-2 text-[#C5A059] hover:text-[#D4B475] font-medium transition-colors"
+          >
+            Voir la FAQ
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

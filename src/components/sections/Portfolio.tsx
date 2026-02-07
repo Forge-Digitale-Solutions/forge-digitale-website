@@ -12,7 +12,7 @@ const projects = [
     description:
       "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
     tags: ["Chargement Instantané", "Design Unique", "Optimisé Google"],
-    image: "/projects/forge.jpeg",
+    image: "/projects/forge.jpg",
     imageAlt:
       "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
     gradient: "from-[#C5A059]/20 to-slate-900",
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Assemblage manuel de précision. Cable Management et ventilation optimisée pour un silence total.",
     tags: ["Silencieux", "Performance", "Esthétique Soignée"],
-    image: "/projects/pc.png",
+    image: "/projects/pc.jpg",
     imageAlt:
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
     gradient: "from-purple-900/40 to-slate-900",
@@ -87,7 +87,8 @@ export function Portfolio() {
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
 
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                {/* TODO: Décommenter quand les pages projets seront créées */}
+                {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Link
                     href={project.link}
                     aria-label={`Voir le projet ${project.title}`}
@@ -95,7 +96,7 @@ export function Portfolio() {
                   >
                     Voir le projet <ExternalLink size={16} aria-hidden="true" />
                   </Link>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-6 flex flex-col grow">

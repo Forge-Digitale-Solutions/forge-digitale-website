@@ -96,7 +96,7 @@ export function About() {
           >
             <div className="relative aspect-square md:aspect-4/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-base">
               <Image
-                src="/images/about_picture.png"
+                src="/images/about_picture.jpg"
                 alt="Anthony Marcelin dans son atelier de développement web et montage PC à Saint-Laurent-Médoc"
                 fill
                 className="object-cover"

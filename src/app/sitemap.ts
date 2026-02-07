@@ -6,12 +6,28 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://forgedigitalesolutions.com";
 
-  const routes = ["", "/blog"].map((route) => ({
-    url: `${baseUrl}${route}`,
+  const mainRoute = {
+    url: `${baseUrl}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: route === "" ? 1 : 0.8,
-  }));
+    priority: 1,
+  };
+
+  const blogRoute = {
+    url: `${baseUrl}/blog`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  };
+
+  const legalRoutes = ["/cgv", "/mentions-legales", "/confidentialite"].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    }),
+  );
 
   const posts = getSortedPostsData();
   const blogRoutes = posts.map((post) => ({
@@ -21,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...blogRoutes];
+  return [mainRoute, blogRoute, ...legalRoutes, ...blogRoutes];
 }

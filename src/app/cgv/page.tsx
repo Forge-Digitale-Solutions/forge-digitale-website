@@ -6,7 +6,7 @@ export default function CGV() {
           Conditions Générales de Vente (CGV)
         </h1>
         <p className="lead text-lg text-slate-300">
-          En vigueur au février 2026
+          En vigueur au 07 février 2026
         </p>
 
         <section className="mb-10">
@@ -188,7 +188,52 @@ export default function CGV() {
         </section>
 
         <section className="mb-10">
-          <h2>10. Droit applicable</h2>
+          <h2>10. Médiation de la consommation</h2>
+          <p>
+            Conformément aux articles L.616-1 et R.616-1 du code de la
+            consommation, notre société a mis en place un dispositif de
+            médiation de la consommation. L&apos;entité de médiation retenue est
+            :{" "}
+            <strong>
+              MÉDIATION CONSOMMATION DÉVELOPPEMENT / MED CONSO DEV
+            </strong>
+          </p>
+          <p>
+            En cas de litige, vous pouvez déposer votre réclamation sur son site
+            :{" "}
+            <a
+              href="https://www.medconsodev.eu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.medconsodev.eu
+            </a>
+          </p>
+          <p>Ou par voie postale en écrivant à :</p>
+          <p>
+            MÉDIATION CONSOMMATION DÉVELOPPEMENT
+            <br />
+            C/O Centre d’Affaires Stéphanois SAS
+            <br />
+            IMMEUBLE L’HORIZON – ESPLANADE DE FRANCE
+            <br />
+            3, RUE J. CONSTANT MILLERET
+            <br />
+            42000 SAINT-ÉTIENNE
+          </p>
+          <p>
+            Si vous n’êtes pas parvenu à résoudre votre litige après nous avoir
+            adressé une réclamation écrite (courrier ou courriel), datée,
+            rappelant les circonstances qui ont donné lieu au différend et ce
+            que vous réclamez, vous pourrez saisir le médiateur de la
+            consommation désigné ci-dessus si vous avez reçu une réponse écrite
+            négative de notre part ou si vous n&apos;avez pas reçu de réponse
+            deux mois après l’envoi de votre réclamation.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2>11. Droit applicable</h2>
           <p>
             Les présentes CGV sont soumises au droit français. En cas de litige,
             une solution amiable sera recherchée avant toute action judiciaire.

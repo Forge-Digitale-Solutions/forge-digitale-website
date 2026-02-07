@@ -24,6 +24,7 @@ export function Header() {
     { name: "Réalisations", href: "/#realisations" },
     { name: "Blog", href: "/blog" },
     { name: "À Propos", href: "/#about" },
+    { name: "FAQ", href: "/#faq" },
   ];
 
   return (

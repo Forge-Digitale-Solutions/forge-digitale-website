@@ -1,12 +1,37 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
   return posts.map((post) => ({
     slug: post.id,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const postData = await getPostData(slug);
+
+  return {
+    title: postData.title,
+    description:
+      postData.excerpt ||
+      `Article sur ${postData.category} - ${postData.title}`,
+    openGraph: {
+      title: postData.title,
+      description: postData.excerpt || `Article sur ${postData.category}`,
+      type: "article",
+      publishedTime: postData.date,
+      authors: ["Anthony Marcelin"],
+      url: `https://forgedigitalesolutions.com/blog/${slug}`,
+    },
+  };
 }
 
 export default async function Post({
