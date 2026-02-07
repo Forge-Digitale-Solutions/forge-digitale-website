@@ -69,8 +69,13 @@ export function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -4 }}
               className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col h-full"
             >
               <div
@@ -122,7 +127,7 @@ export function Portfolio() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

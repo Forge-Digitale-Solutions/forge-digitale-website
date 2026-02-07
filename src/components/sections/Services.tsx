@@ -90,7 +90,11 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.01 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
               className={`
                 ${service.colSpan} 
                 group relative p-8 rounded-3xl 
