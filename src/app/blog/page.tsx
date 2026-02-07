@@ -15,7 +15,8 @@ export default function BlogIndex() {
           </h1>
           <p className="text-slate-400 text-lg">
             Décryptage tech, conseils hardware et coulisses du développement
-            web. Vulgarisé pour tous, sans jargon inutile.
+            web. Des analyses concrètes pour optimiser votre matériel et votre
+            stratégie digitale.
           </p>
         </div>
 
