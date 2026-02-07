@@ -34,6 +34,7 @@ const services = [
     description:
       "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
     price: "Forfait 149€",
+    badge: "Offre de Lancement 🚀",
     icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
@@ -49,6 +50,7 @@ const services = [
     description:
       "Votre ordinateur est lent ? Ne le jetez pas. Je le nettoie et j'installe un système léger pour lui redonner sa rapidité.",
     price: "Forfait 69€",
+    badge: "Tarif 2026 ✨",
     icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
@@ -126,10 +128,15 @@ export function Services() {
                 ))}
               </ul>
 
-              <div className="absolute bottom-8 right-8">
-                <span className="text-lg font-bold text-[#C5A059]">
+              <div className="absolute bottom-8 right-8 text-right">
+                {service.badge && (
+                  <span className="inline-block bg-[#C5A059]/10 text-[#C5A059] text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 border border-[#C5A059]/20">
+                    {service.badge}
+                  </span>
+                )}
+                <div className="text-lg font-bold text-[#C5A059]">
                   {service.price}
-                </span>
+                </div>
               </div>
             </motion.div>
           ))}
