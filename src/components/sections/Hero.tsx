@@ -16,45 +16,25 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 px-4 py-1.5 text-sm font-medium text-[#C5A059] mb-8"
-        >
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 px-4 py-1.5 text-sm font-medium text-[#C5A059] mb-8">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A059] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5A059]"></span>
           </span>
           Lancement en Avril 2026
-        </motion.div>
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mx-auto max-w-4xl text-4xl sm:text-5xl font-bold tracking-tight text-white md:text-7xl mb-6"
-        >
+        <h1 className="mx-auto max-w-4xl text-4xl sm:text-5xl font-bold tracking-tight text-white md:text-7xl mb-6">
           L&rsquo;Artisanat Numérique <br />
           <span className="text-gold-gradient">au service du Médoc.</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto max-w-2xl text-lg text-slate-300 mb-10 leading-relaxed"
-        >
+        <p className="mx-auto max-w-2xl text-lg text-slate-300 mb-10 leading-relaxed">
           Forge Digitale crée des sites web performants pour les pros et redonne
           vie à votre matériel informatique. Une expertise locale, à vos côtés.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="#contact"
             className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#C5A059] px-8 font-medium text-black transition-all duration-300 hover:bg-[#d4be85] hover:scale-105 hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] focus-visible:bg-[#d4be85] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
@@ -76,14 +56,9 @@ export function Hero() {
               aria-hidden="true"
             />
           </Link>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-slate-300"
-        >
+        <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-slate-300">
           <div className="flex items-center gap-2">
             <CheckCircle2
               className="h-4 w-4 text-[#C5A059]"
@@ -105,7 +80,7 @@ export function Hero() {
             />{" "}
             Maintenance Locale
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

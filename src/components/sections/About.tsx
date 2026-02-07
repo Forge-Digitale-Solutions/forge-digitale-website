@@ -15,12 +15,7 @@ export function About() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div>
               <span className="text-[#C5A059] font-bold tracking-widest uppercase text-sm">
                 À Propos
@@ -86,14 +81,9 @@ export function About() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative w-full lg:max-w-md mx-auto"
-          >
+          <div className="relative w-full lg:max-w-md mx-auto">
             <div className="relative aspect-square md:aspect-4/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-base">
               <Image
                 src="/images/about_picture.jpg"
@@ -119,7 +109,7 @@ export function About() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

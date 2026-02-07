@@ -80,12 +80,7 @@ export function Contact() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div>
               <h2
                 id="contact-heading"
@@ -159,14 +154,9 @@ export function Contact() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm"
-          >
+          <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
             {status === "success" ? (
               <div
                 className="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300"
@@ -393,7 +383,7 @@ export function Contact() {
                 </button>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
