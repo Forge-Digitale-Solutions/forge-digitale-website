@@ -99,6 +99,7 @@ export function Services() {
                 group relative p-8 rounded-3xl 
                 bg-dark-base border border-white/5 hover:border-[#C5A059]/30 
                 transition-all duration-300 overflow-hidden
+                flex flex-col
               `}
             >
               <div className="absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -116,7 +117,7 @@ export function Services() {
                 {service.description}
               </p>
 
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-2 mb-6">
                 {service.features.map((feature, i) => (
                   <li
                     key={i}
@@ -128,7 +129,7 @@ export function Services() {
                 ))}
               </ul>
 
-              <div className="absolute bottom-8 right-8 text-right">
+              <div className="mt-auto text-right">
                 {service.badge && (
                   <span className="inline-block bg-[#C5A059]/10 text-[#C5A059] text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 border border-[#C5A059]/20">
                     {service.badge}
