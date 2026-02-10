@@ -21,17 +21,17 @@ export const metadata: Metadata = {
   description:
     "Votre expert numérique en Gironde. Création de sites internet sur-mesure et solutions informatiques (Dépannage, Linux, PC Gamer). Basé dans le Médoc, j'accompagne les pros de Bordeaux au Bassin d'Arcachon.",
   keywords: [
-    // Géographie (Cercle concentrique)
+    // Geographic Keywords
     "Informaticien Saint-Laurent-Médoc",
     "Création site web Médoc",
     "Développeur freelance Bordeaux",
     "Agence web Bassin d'Arcachon",
     "Dépannage informatique Gironde",
-    // Services Web
+    // Web
     "Site internet artisan",
     "Application web sur-mesure",
     "Refonte site vitrine",
-    // Services Hardware
+    // Hardware
     "Montage PC Gamer Bordeaux",
     "Installation Linux Mint",
     "Réparation ordinateur Médoc",
