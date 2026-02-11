@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Création site web Médoc",
     "Développeur freelance Bordeaux",
     "Agence web Bassin d'Arcachon",
-    "Dépannage informatique Gironde",
+    "Maintenance informatique Gironde",
     "Site internet artisan",
     "Application web sur-mesure",
     "Montage PC Gamer Bordeaux",
