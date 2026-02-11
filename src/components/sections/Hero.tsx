@@ -55,8 +55,8 @@ export function Hero() {
           className="mx-auto max-w-2xl text-lg text-slate-300 mb-10 leading-relaxed"
         >
           Forge Digitale crée des sites web performants pour les pros et redonne
-          vie à votre matériel informatique. Une expertise locale, à vos côtés{" "}
-          <strong className="text-white font-semibold">en Gironde</strong>.
+          vie à votre matériel informatique. Une expertise locale, à vos côtés
+          en <strong className="text-white font-semibold">Gironde</strong>.
         </motion.p>
 
         <motion.div

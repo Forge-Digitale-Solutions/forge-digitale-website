@@ -15,7 +15,7 @@ export function LocalBusinessSchema() {
     logo: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "rue St Julien",
+      streetAddress: "36 chemin de la Mienne",
       addressLocality: "Saint-Laurent-Médoc",
       postalCode: "33112",
       addressRegion: "Nouvelle-Aquitaine",
@@ -23,7 +23,7 @@ export function LocalBusinessSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 45.1432,
+      latitude: 45.15,
       longitude: -0.8242,
     },
     areaServed: [
@@ -32,10 +32,18 @@ export function LocalBusinessSchema() {
         name: "Saint-Laurent-Médoc",
       },
       {
+        "@type": "City",
+        name: "Bordeaux",
+      },
+      {
+        "@type": "City",
+        name: "Arcachon",
+      },
+      {
         "@type": "GeoCircle",
         geoMidpoint: {
           "@type": "GeoCoordinates",
-          latitude: 45.1432,
+          latitude: 45.15,
           longitude: -0.8242,
         },
         geoRadius: "50000",
@@ -99,11 +107,6 @@ export function LocalBusinessSchema() {
           },
         },
       ],
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "1",
     },
   };
 
