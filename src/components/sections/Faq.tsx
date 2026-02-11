@@ -16,7 +16,7 @@ type FaqCategory = {
 
 const faqData: FaqCategory[] = [
   {
-    title: "🌐 Création Web",
+    title: "Création Web",
     items: [
       {
         question: "Combien coûte la création d'un site internet ?",
@@ -75,7 +75,7 @@ const faqData: FaqCategory[] = [
     ],
   },
   {
-    title: "🖥️ Hardware & Montage PC",
+    title: "Hardware & Montage PC",
     items: [
       {
         question:
@@ -201,7 +201,7 @@ const faqData: FaqCategory[] = [
     ],
   },
   {
-    title: "🐧 Linux & Forfait Renaissance",
+    title: "Linux & Forfait Renaissance",
     items: [
       {
         question: "Pourquoi passer sous Linux (Forfait Renaissance) ?",
@@ -245,7 +245,7 @@ const faqData: FaqCategory[] = [
     ],
   },
   {
-    title: "📍 Logistique & Intervention",
+    title: "Logistique & Intervention",
     items: [
       {
         question: "Intervenez-vous à domicile ?",
