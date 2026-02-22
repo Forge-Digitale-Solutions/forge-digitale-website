@@ -40,7 +40,7 @@ const projects = [
     imageAlt:
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
     gradient: "from-purple-900/40 to-slate-900",
-    link: "#contact",
+    link: "/#contact",
   },
 ];
 

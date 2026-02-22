@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-dark-base border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,39 +30,43 @@ export function Footer() {
             <h4 className="text-white font-bold mb-6">Services</h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#services"
                   aria-label="Voir les services de création de site web"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Création Site Web
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#services"
                   aria-label="Voir les services de montage PC gamer"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Montage PC Gamer
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#services"
                   aria-label="Voir les services de dépannage et Linux"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Dépannage & Linux
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#realisations"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Réalisations
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -77,20 +83,22 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#about"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   À Propos
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                <a
                   href="/#contact"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Demander un Devis
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
@@ -149,10 +157,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>
-            © {new Date().getFullYear()} Forge Digitale Solutions. Tous droits
-            réservés.
-          </p>
+          <p>© {currentYear} Forge Digitale Solutions. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link
               href="/cgv"

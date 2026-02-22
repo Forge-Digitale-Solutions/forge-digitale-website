@@ -1,6 +1,5 @@
 "use client";
 
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/Header";
 
 export default function MentionsLegales() {
@@ -130,8 +129,6 @@ export default function MentionsLegales() {
           </section>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

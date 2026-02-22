@@ -98,12 +98,13 @@ export default async function Post({
           <h3 className="text-white font-bold mb-4">
             Une question sur cet article ?
           </h3>
-          <Link
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
             href="/#contact"
             className="inline-block bg-[#C5A059] text-dark-base font-bold px-6 py-3 rounded-full hover:bg-[#D4B475] transition-colors"
           >
             Contactez La Forge
-          </Link>
+          </a>
         </div>
       </div>
     </article>

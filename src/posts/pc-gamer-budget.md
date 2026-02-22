@@ -31,4 +31,4 @@ Avec mon forfait montage à 150€, je m'occupe de :
 - Le "Cable Management" : un PC bien ordonné chauffe moins.
 - Un profil de ventilation optimisé.
 
-Envie d'une config sur-mesure ? [Contactez-moi](/contact) pour en discuter.
+Envie d'une config sur-mesure ? [Contactez-moi](/#contact) pour en discuter.
