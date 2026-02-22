@@ -66,7 +66,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href="/contact"
+            href="/#contact"
             className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#C5A059] px-8 font-medium text-black transition-all duration-300 hover:bg-[#d4be85] hover:scale-105 hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] focus-visible:bg-[#d4be85] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             <span className="mr-2">Lancer mon projet</span>
@@ -77,7 +77,7 @@ export function Hero() {
           </Link>
 
           <Link
-            href="/services"
+            href="/#services"
             className="group inline-flex h-12 items-center justify-center rounded-full border border-slate-700 bg-transparent px-8 font-medium text-slate-200 transition-all hover:bg-slate-800 hover:text-white focus-visible:bg-slate-800 focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-2"
           >
             Voir les services

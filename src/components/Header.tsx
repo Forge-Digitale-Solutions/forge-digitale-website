@@ -84,7 +84,7 @@ export function Header() {
             ))}
 
             <Link
-              href="#contact"
+              href="/#contact"
               className="bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
             >
               Demander un devis
@@ -125,7 +125,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
             >

@@ -47,4 +47,4 @@ Un site web est votre **showroom numérique**. Il prouve votre sérieux, votre e
 
 Dans le Médoc, la concurrence est parfois rude. Le but n'est pas de devenir une multinationale, mais simplement de capter la clientèle qui vous cherche déjà.
 
-Vous voulez savoir combien coûterait un site adapté à votre activité ? N'hésitez pas à [me contacter](/contact) pour un devis gratuit.
+Vous voulez savoir combien coûterait un site adapté à votre activité ? N'hésitez pas à [me contacter](/#contact) pour un devis gratuit.
