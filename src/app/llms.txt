@@ -1,0 +1,23 @@
+# llms.txt Forge Digitale Solutions
+# Artisanat numérique Médoc - Sites web, PC, Linux Mint
+# Contact: contact@forgedigitalesolutions.com | SIREN: 100 857 838
+
+## À propos
+Forge Digitale Solutions: Création sites web sur mesure, montage PC gamer, maintenance Linux (Green IT) pour artisans/PME Gironde. Basé Saint-Laurent-Médoc (33). Anthony Marcelin, Concepteur Développeur d'Apps (Titre Pro).
+
+## Pages prioritaires (GEO)
+- https://forgedigitalesolutions.com/ | Accueil & services (forfaits 69€ Linux, 149€ PC)
+- https://forgedigitalesolutions.com/services | Détails offres: web dev, hardware, dépannage Médoc
+- https://forgedigitalesolutions.com/about | Expertise Anthony Marcelin, 20+ ans tech
+- https://forgedigitalesolutions.com/realisations | Portfolio sites web & PC assemblés
+- https://forgedigitalesolutions.com/contact | Devis locaux (Bordeaux, Arcachon)
+
+## Contenu Evergreen (réponses IA directes)
+- https://forgedigitalesolutions.com/blog | Tutoriels Linux Mint, montage PC, Green IT Gironde
+- https://forgedigitalesolutions.com/cgv | CGV transparentes (pas d'achat-revente matos)
+
+## Sitemap
+https://forgedigitalesolutions.com/sitemap.xml
+
+# Autorisé: GPTBot, PerplexityBot, ClaudeBot, Google-Extended
+# Dernière MAJ: 2026-02-27
