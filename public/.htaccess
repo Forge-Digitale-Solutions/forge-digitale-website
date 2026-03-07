@@ -1,12 +1,22 @@
 Options -Indexes
-
 RewriteEngine On
 
+# 1. Forcer non-www (à mettre EN PREMIER)
+RewriteCond %{HTTP_HOST} ^www\.forgedigitalesolutions\.com [NC]
+RewriteRule ^ https://forgedigitalesolutions.com%{REQUEST_URI} [L,R=301]
+
+# 2. Forcer HTTPS
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule . https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Redirect 301 /services /
+Redirect 301 /about /
+Redirect 301 /contact /
+Redirect 301 /realisations /
+Redirect 301 /faq /
 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule . %{REQUEST_FILENAME}%1.html [NC,L]
 
 ErrorDocument 404 /404.html
