@@ -25,16 +25,25 @@ export default function Confidentialite() {
         </section>
 
         <section className="mb-10">
-          <h2>2. Absence de Cookies</h2>
+          <h2>2. Mesure d&apos;audience (sans cookie)</h2>
           <p>
-            Notre site <strong>n&apos;utilise aucun cookie</strong> de traçage,
-            publicitaire ou analytique tiers (type Google Analytics, Facebook
-            Pixel).
+            Notre site utilise <strong>Umami Analytics</strong>, un outil de
+            mesure d&apos;audience <strong>auto-hébergé, sans cookie</strong> et
+            sans transmission de données à des tiers. Aucune donnée personnelle
+            identifiable n&apos;est collectée à des fins publicitaires ou de
+            profilage.
           </p>
           <p>
-            Vous pouvez naviguer sur l&apos;ensemble du site sans qu&apos;aucune
-            donnée technique ne soit stockée sur votre appareil à votre insu.
-            Aucun bandeau de consentement n&apos;est donc nécessaire.
+            Umami collecte uniquement des données anonymes et agrégées (pages
+            visitées, pays d&apos;origine approximatif, type d&apos;appareil).
+            Ces données sont hébergées sur notre propre infrastructure et ne
+            quittent jamais nos serveurs.
+            <strong>
+              {" "}
+              Aucun bandeau de consentement n&apos;est requis
+            </strong>{" "}
+            conformément aux recommandations de la CNIL pour les outils de
+            mesure exemptés.
           </p>
         </section>
 
