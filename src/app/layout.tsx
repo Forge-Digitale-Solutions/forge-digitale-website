@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -68,6 +69,14 @@ export default function RootLayout({
       style={{ colorScheme: "dark" }}
       suppressHydrationWarning
     >
+      <head>
+        <Script
+          defer
+          src="https://stats.forgedigitalesolutions.com/script.js"
+          data-website-id="e45a87dd-4a11-425c-9ff7-779a722575ba"
+          strategy="afterInteractive"
+        ></Script>
+      </head>
       <body
         className={`${inter.className} bg-dark-base text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
       >

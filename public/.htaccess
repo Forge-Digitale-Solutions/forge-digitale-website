@@ -1,11 +1,9 @@
 Options -Indexes
 RewriteEngine On
 
-# 1. Forcer non-www (à mettre EN PREMIER)
 RewriteCond %{HTTP_HOST} ^www\.forgedigitalesolutions\.com [NC]
 RewriteRule ^ https://forgedigitalesolutions.com%{REQUEST_URI} [L,R=301]
 
-# 2. Forcer HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule . https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
