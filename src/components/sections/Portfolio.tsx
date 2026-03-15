@@ -22,13 +22,13 @@ const projects = [
     title: "GoSportNow (En cours)",
     category: "Application Mobile",
     description:
-      "Plateforme de mise en relation pour sportifs. Une interface fluide et simple pour gérer des profils et des événements en temps réel.",
+      "Application de mise en relation pour sportifs pour iOs et Android. Design moderne, interface intuitive et fonctionnalités sur-mesure pour les passionnés de sport.",
     tags: ["Application Mobile", "Compte Utilisateur", "Carte Interactive"],
-    image: "/projects/gosportnow.png",
+    image: "/projects/gosportnow-og.png",
     imageAlt:
       "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
     gradient: "from-blue-900/40 to-slate-900",
-    link: "#",
+    link: "https://gosportnow.fr",
   },
   {
     title: "Atelier Hardware",
@@ -85,7 +85,23 @@ export function Portfolio() {
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
 
-                {/* TODO: Décommenter quand les pages projets seront créées */}
+                {/* GoSportNow: lien actif vers la landing page */}
+                {project.title === "GoSportNow (En cours)" && (
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Voir le projet ${project.title}`}
+                      className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold text-sm hover:bg-[#C5A059] hover:text-white focus-visible:bg-[#C5A059] focus-visible:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition-colors shadow-xl"
+                    >
+                      Voir le projet{" "}
+                      <ExternalLink size={16} aria-hidden="true" />
+                    </Link>
+                  </div>
+                )}
+
+                {/* TODO: Décommenter quand les pages projets seront créées pour les autres projets */}
                 {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Link
                     href={project.link}
