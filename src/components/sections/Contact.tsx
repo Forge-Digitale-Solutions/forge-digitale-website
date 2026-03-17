@@ -11,6 +11,10 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { useState } from "react";
+import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
+
+const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function Contact() {
   const [status, setStatus] = useState<
@@ -19,27 +23,24 @@ export function Contact() {
   const [resultMessage, setResultMessage] = useState("");
   const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
 
-  const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrors({});
-    setStatus("submitting");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const email = formData.get("email") as string;
-    const phone = formData.get("phone") as string;
+    const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
     const newErrors: { email?: string; phone?: string } = {};
 
     if (!emailRegex.test(email)) {
-      newErrors.email = "Invalid email address.";
+      newErrors.email = "Veuillez saisir une adresse e-mail valide.";
     }
 
-    if (phone && !phoneRegex.test(phone)) {
-      newErrors.phone = "Invalid phone number (ex: 06 12 34 56 78).";
+    if (!phoneRegex.test(phone)) {
+      newErrors.phone =
+        "Veuillez saisir un numéro valide, par exemple 06 12 34 56 78.";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -47,6 +48,10 @@ export function Contact() {
       setStatus("idle");
       return;
     }
+
+    formData.set("email", email);
+    formData.set("phone", phone);
+    setStatus("submitting");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -58,15 +63,21 @@ export function Contact() {
 
       if (data.success) {
         setStatus("success");
-        setResultMessage("Message received! I'll get back to you within 24h.");
+        setResultMessage(
+          "Message bien reçu. Je vous recontacte sous 24 heures.",
+        );
         form.reset();
       } else {
         setStatus("error");
-        setResultMessage(data.message || "Technical error.");
+        setResultMessage(
+          data.message || "Une erreur technique a empêché l'envoi du message.",
+        );
       }
     } catch {
       setStatus("error");
-      setResultMessage("Connection failed.");
+      setResultMessage(
+        "La connexion a échoué. Merci de réessayer dans un instant.",
+      );
     }
   }
 
@@ -395,6 +406,30 @@ export function Contact() {
                     </>
                   )}
                 </button>
+
+                <div
+                  className="rounded-2xl border border-white/10 bg-dark-base/60 p-5 space-y-4"
+                  aria-labelledby="contact-rdv-heading"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex-1 h-px bg-white/10" />
+                    <span
+                      id="contact-rdv-heading"
+                      className="text-slate-400 text-sm font-medium"
+                    >
+                      Ou prendre rendez-vous directement
+                    </span>
+                    <div className="flex-1 h-px bg-white/10" />
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-slate-400 text-center">
+                    Pour un échange rapide sur votre demande de site, votre
+                    maintenance ou votre configuration PC, choisissez un créneau
+                    qui vous convient.
+                  </p>
+
+                  <CalendlyPopupButton />
+                </div>
               </form>
             )}
           </motion.div>
