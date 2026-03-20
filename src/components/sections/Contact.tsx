@@ -90,7 +90,7 @@ export function Contact() {
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -171,6 +171,34 @@ export function Contact() {
                 </div>
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="rounded-2xl border border-white/10 bg-dark-base/60 p-5 space-y-4"
+              aria-labelledby="contact-rdv-heading"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex-1 h-px bg-white/10" />
+                <span
+                  id="contact-rdv-heading"
+                  className="text-slate-400 text-sm font-medium"
+                >
+                  Prendre rendez-vous directement
+                </span>
+                <div className="flex-1 h-px bg-white/10" />
+              </div>
+
+              <p className="text-sm leading-relaxed text-slate-400 text-center">
+                Pour un échange rapide sur votre demande de site, votre
+                maintenance ou votre configuration PC, choisissez un créneau qui
+                vous convient.
+              </p>
+
+              <CalendlyPopupButton />
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -214,7 +242,6 @@ export function Contact() {
                   name="access_key"
                   value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}
                 />
-                {/* ------------------------- */}
 
                 <input
                   type="hidden"
@@ -406,30 +433,6 @@ export function Contact() {
                     </>
                   )}
                 </button>
-
-                <div
-                  className="rounded-2xl border border-white/10 bg-dark-base/60 p-5 space-y-4"
-                  aria-labelledby="contact-rdv-heading"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="flex-1 h-px bg-white/10" />
-                    <span
-                      id="contact-rdv-heading"
-                      className="text-slate-400 text-sm font-medium"
-                    >
-                      Ou prendre rendez-vous directement
-                    </span>
-                    <div className="flex-1 h-px bg-white/10" />
-                  </div>
-
-                  <p className="text-sm leading-relaxed text-slate-400 text-center">
-                    Pour un échange rapide sur votre demande de site, votre
-                    maintenance ou votre configuration PC, choisissez un créneau
-                    qui vous convient.
-                  </p>
-
-                  <CalendlyPopupButton />
-                </div>
               </form>
             )}
           </motion.div>

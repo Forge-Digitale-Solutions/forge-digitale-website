@@ -59,7 +59,7 @@ export function CalendlyPopupButton() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
-          className="w-full border border-[#C5A059] hover:bg-[#C5A059]/10 focus-visible:bg-[#C5A059]/10 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-[#C5A059] font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-center"
+          className="w-full bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-center"
           aria-label="Réserver un appel de 30 minutes"
         >
           <CalendarDays size={18} aria-hidden="true" />
