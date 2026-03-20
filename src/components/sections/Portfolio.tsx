@@ -19,7 +19,7 @@ const projects = [
     link: "#",
   },
   {
-    title: "GoSportNow (En cours)",
+    title: "GoSportNow",
     category: "Application Mobile",
     description:
       "Application de mise en relation pour sportifs pour iOs et Android. Design moderne, interface intuitive et fonctionnalités sur-mesure pour les passionnés de sport.",
@@ -86,7 +86,7 @@ export function Portfolio() {
                 />
 
                 {/* GoSportNow: lien actif vers la landing page */}
-                {project.title === "GoSportNow (En cours)" && (
+                {project.title === "GoSportNow" && (
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Link
                       href={project.link}
