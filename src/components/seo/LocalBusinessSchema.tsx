@@ -85,7 +85,7 @@ export function LocalBusinessSchema() {
           "Thursday",
           "Friday"
         ],
-        opens: "09:00",
+        opens: "08:30",
         closes: "18:00",
       },
     ],
@@ -154,9 +154,7 @@ export function LocalBusinessSchema() {
         },
       ],
     },
-    sameAs: [
-      "https://forgedigitalesolutions.com/mentions-legales",
-    ],
+    // sameAs: [], // À remplir avec GBP URL + LinkedIn une fois la fiche validée
     knowsAbout: [
       "Linux Mint",
       "Next.js",
@@ -164,11 +162,11 @@ export function LocalBusinessSchema() {
       "Green IT",
       "Développement web Gironde"
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "X",
-    },
+    // aggregateRating: {
+    //   "@type": "AggregateRating",
+    //   ratingValue: "5.0",
+    //   reviewCount: "0",
+    // },
   };
 
   return (
