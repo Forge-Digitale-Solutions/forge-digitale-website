@@ -9,7 +9,7 @@ const services = [
     title: "Création Web & Applications",
     description:
       "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
-    price: "Devis Gratuit",
+    price: "À partir de 800€",
     icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
