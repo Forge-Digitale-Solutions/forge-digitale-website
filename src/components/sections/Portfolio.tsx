@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Forge Digitale (Ce site)",
+    title: "Forge Digitale",
     category: "Site Vitrine",
     description:
       "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
@@ -41,6 +41,18 @@ const projects = [
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
     gradient: "from-purple-900/40 to-slate-900",
     link: "/#contact",
+  },
+  {
+    title: "Charcuterie Campagnarde",
+    category: "Site Vitrine",
+    description:
+      "Site web professionnel pour un commerçant artisanal. Présentation élégante des produits, informations pratiques et optimisation pour le référencement local.",
+    tags: ["Artisanat", "Référencement Local", "Design Responsive", "Présentation Produits"],
+    image: "/projects/charcuterie.jpg",
+    imageAlt:
+      "Capture d'écran du site web Charcuterie Campagnarde avec présentation des produits artisanaux",
+    gradient: "from-red-900/40 to-slate-900",
+    link: "https://charcuterie-campagnarde.pages.dev",
   },
 ];
 
@@ -85,8 +97,8 @@ export function Portfolio() {
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
 
-                {/* GoSportNow: lien actif vers la landing page */}
-                {project.title === "GoSportNow" && (
+                {/* GoSportNow et Charcuterie Campagnarde: liens actifs vers les sites */}
+                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde") && (
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Link
                       href={project.link}
