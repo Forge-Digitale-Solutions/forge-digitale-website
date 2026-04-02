@@ -157,45 +157,37 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Suivez-moi</h4>
-            <ul className="space-y-3 flex flex-col gap-3">
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61577431918424"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Page Facebook de Forge Digitale Solutions"
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
-                >
-                  <Facebook size={18} aria-hidden="true" />
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/anthony-marcelin/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Profil LinkedIn d'Anthony Marcelin"
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
-                >
-                  <Linkedin size={18} aria-hidden="true" />
-                  LinkedIn (Personnel)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/forge-digitale-solutions/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Page LinkedIn de Forge Digitale Solutions"
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
-                >
-                  <Linkedin size={18} aria-hidden="true" />
-                  LinkedIn (Entreprise)
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-white font-bold mb-6">Réseaux Sociaux</h4>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61577431918424"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page Facebook de Forge Digitale Solutions"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+              >
+                <Facebook size={24} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anthony-marcelin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil LinkedIn d'Anthony Marcelin"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+              >
+                <Linkedin size={24} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/forge-digitale-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page LinkedIn de Forge Digitale Solutions"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                title="LinkedIn Entreprise"
+              >
+                <Linkedin size={24} aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
 
