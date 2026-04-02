@@ -105,7 +105,7 @@ export function Contact() {
               >
                 Parlons de votre <span className="text-[#C5A059]">projet.</span>
               </h2>
-              <p className="text-slate-300 text-lg leading-relaxed">
+              <p className="text-slate-200 text-lg leading-relaxed">
                 Un projet web ? Un PC à monter ou une seconde vie à donner à
                 votre matériel ?
                 <br />
@@ -359,12 +359,16 @@ export function Contact() {
                     <select
                       name="service"
                       id="service-select"
+                      defaultValue=""
                       className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] appearance-none cursor-pointer"
                     >
-                      <option>Demande de Devis Web</option>
-                      <option>Montage PC</option>
-                      <option>Dépannage / Maintenance</option>
-                      <option>Autre demande</option>
+                      <option value="" disabled>
+                        Sélectionnez un sujet
+                      </option>
+                      <option value="Demande de Devis Web">Demande de Devis Web</option>
+                      <option value="Montage PC">Montage PC</option>
+                      <option value="Dépannage / Maintenance">Dépannage / Maintenance</option>
+                      <option value="Autre demande">Autre demande</option>
                     </select>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                       <svg

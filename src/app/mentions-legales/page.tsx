@@ -127,6 +127,24 @@ export default function MentionsLegales() {
               informations.
             </p>
           </section>
+
+          <section className="mb-10">
+            <h2>6. Assurance Responsabilité Civile Professionnelle</h2>
+            <p>
+              Forge Digitale Solutions dispose d&apos;une assurance Responsabilité Civile Professionnelle auprès de :
+            </p>
+            <ul className="list-none pl-0 space-y-2">
+              <li>
+                <strong>Assureur :</strong> AXA
+              </li>
+              <li>
+                <strong>Agence :</strong> AXA Agence Martin
+              </li>
+              <li>
+                <strong>Localisation :</strong> Saint-Laurent-Médoc, 33112
+              </li>
+            </ul>
+          </section>
         </div>
       </section>
     </main>

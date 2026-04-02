@@ -233,7 +233,17 @@ export default function CGV() {
         </section>
 
         <section className="mb-10">
-          <h2>11. Droit applicable</h2>
+          <h2>11. Assurance Responsabilité Civile Professionnelle</h2>
+          <p>
+            Forge Digitale Solutions dispose d&apos;une assurance Responsabilité Civile Professionnelle auprès de <strong>AXA</strong> (Agence Martin, Saint-Laurent-Médoc).
+          </p>
+          <p>
+            Cette assurance couvre les dommages susceptibles d&apos;être causés dans l&apos;exercice de l&apos;activité professionnelle.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2>12. Droit applicable</h2>
           <p>
             Les présentes CGV sont soumises au droit français. En cas de litige,
             une solution amiable sera recherchée avant toute action judiciaire.
