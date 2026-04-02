@@ -185,7 +185,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/forge-digitale-solutions/?viewAsMember=true"
+                  href="https://www.linkedin.com/company/forge-digitale-solutions/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Page LinkedIn de Forge Digitale Solutions"
