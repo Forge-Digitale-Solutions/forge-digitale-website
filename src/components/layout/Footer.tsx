@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -154,6 +154,40 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-6">Réseaux Sociaux</h4>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61577431918424"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page Facebook de Forge Digitale Solutions"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+              >
+                <Facebook size={24} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anthony-marcelin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil LinkedIn d'Anthony Marcelin"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+              >
+                <Linkedin size={24} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/forge-digitale-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page LinkedIn de Forge Digitale Solutions"
+                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                title="LinkedIn Entreprise"
+              >
+                <Linkedin size={24} aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
 

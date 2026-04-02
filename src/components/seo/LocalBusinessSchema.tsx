@@ -154,7 +154,11 @@ export function LocalBusinessSchema() {
         },
       ],
     },
-    // sameAs: [], // À remplir avec GBP URL + LinkedIn une fois la fiche validée
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61577431918424",
+      "https://www.linkedin.com/in/anthony-marcelin/",
+      "https://www.linkedin.com/company/forge-digitale-solutions/",
+    ],
     knowsAbout: [
       "Linux Mint",
       "Next.js",
