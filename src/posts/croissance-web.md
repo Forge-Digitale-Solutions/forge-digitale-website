@@ -2,7 +2,7 @@
 title: "Artisans du Médoc : Un site web est-il vraiment rentable ?"
 date: "2026-02-18"
 category: "Web"
-excerpt: "54% des TPE constatent une hausse de chiffre d'affaires grâce à leur site. Analyse des chiffres officiels et pourquoi le bouche-à-oreille ne suffit plus."
+excerpt: "54% des TPE constatent une hausse de chiffre d'affaires après avoir créé leur site. Les chiffres officiels prouvent que le bouche-à-oreille ne suffit plus. Pour les artisans du Médoc et Bassin d'Arcachon, un site web accessible coûte 500-2000€ et génère de vrais clients."
 image: "/blog/croissance-web.jpg"
 ---
 

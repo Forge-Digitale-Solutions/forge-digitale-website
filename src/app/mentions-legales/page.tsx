@@ -1,6 +1,35 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
+
+const SITE_URL = "https://forgedigitalesolutions.com";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: "Mentions Légales | Forge Digitale Solutions",
+  description:
+    "Mentions légales de Forge Digitale Solutions. Coordonnées SIREN, hébergeur, propriété intellectuelle et responsabilité civile professionnelle.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: `${SITE_URL}/mentions-legales`,
+    title: "Mentions Légales - Forge Digitale Solutions",
+    description:
+      "EI Anthony Marcelin - SIREN 100 857 838 - Saint-Laurent-Médoc (Gironde) - Hébergeur OVH",
+    siteName: "Forge Digitale Solutions",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Forge Digitale Solutions - Mentions Légales",
+      },
+    ],
+  },
+};
 
 export default function MentionsLegales() {
   return (

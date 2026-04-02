@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+const SITE_URL = "https://forgedigitalesolutions.com";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: "Conditions Générales de Vente | Forge Digitale Solutions",
+  description:
+    "Conditions générales de vente de Forge Digitale Solutions. Services web et hardware, tarifs, paiement, garanties et mentions légales.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: `${SITE_URL}/cgv`,
+    title: "Conditions Générales de Vente - Forge Digitale Solutions",
+    description:
+      "CGV Forge Digitale. Création web, montage PC, forfait Renaissance. En vigueur depuis le 07 février 2026.",
+    siteName: "Forge Digitale Solutions",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Forge Digitale Solutions - CGV",
+      },
+    ],
+  },
+};
+
 export default function CGV() {
   return (
     <div className="min-h-screen bg-dark-base pt-32 pb-24 px-4">

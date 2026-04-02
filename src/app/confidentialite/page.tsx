@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+const SITE_URL = "https://forgedigitalesolutions.com";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: "Politique de Confidentialité | Forge Digitale Solutions",
+  description:
+    "Politique de confidentialité et RGPD de Forge Digitale Solutions. Aucun cookie publicitaire, analytics éthique Umami, Web3Forms sécurisé.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: `${SITE_URL}/confidentialite`,
+    title: "Politique de Confidentialité - Forge Digitale Solutions",
+    description:
+      "RGPD et protection des données. Umami auto-hébergé sans cookies. Votre vie privée est sacrée.",
+    siteName: "Forge Digitale Solutions",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Forge Digitale Solutions - Confidentialité",
+      },
+    ],
+  },
+};
+
 export default function Confidentialite() {
   return (
     <div className="min-h-screen bg-dark-base pt-32 pb-24 px-4">

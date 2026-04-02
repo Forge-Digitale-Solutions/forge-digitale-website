@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { ArticleSchema } from "@/components/seo/ArticleSchema";
+
+const SITE_URL = "https://forgedigitalesolutions.com";
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -19,18 +22,55 @@ export async function generateMetadata({
   const { slug } = await params;
   const postData = await getPostData(slug);
 
+  const articleUrl = `${SITE_URL}/blog/${slug}`;
+  const articleImage = postData.image
+    ? `${SITE_URL}${postData.image}`
+    : `${SITE_URL}/images/og-image.jpg`;
+
   return {
+    metadataBase: new URL(SITE_URL),
     title: postData.title,
     description:
       postData.excerpt ||
       `Article sur ${postData.category} - ${postData.title}`,
+    keywords: [
+      postData.title,
+      postData.category,
+      "blog",
+      "Forge Digitale",
+      "Médoc",
+    ],
+    authors: [{ name: "Anthony Marcelin" }],
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
-      title: postData.title,
-      description: postData.excerpt || `Article sur ${postData.category}`,
       type: "article",
+      locale: "fr_FR",
+      url: articleUrl,
+      title: postData.title,
+      description:
+        postData.excerpt || `Article sur ${postData.category}`,
+      siteName: "Forge Digitale Solutions",
       publishedTime: postData.date,
       authors: ["Anthony Marcelin"],
-      url: `https://forgedigitalesolutions.com/blog/${slug}`,
+      images: [
+        {
+          url: articleImage,
+          width: 1200,
+          height: 630,
+          alt: postData.title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: postData.title,
+      description:
+        postData.excerpt || `Article sur ${postData.category}`,
+      images: [articleImage],
     },
   };
 }
@@ -46,6 +86,17 @@ export default async function Post({
 
   return (
     <article className="min-h-screen bg-dark-base pt-32 pb-24">
+      <ArticleSchema
+        title={postData.title}
+        description={postData.excerpt || postData.title}
+        datePublished={postData.date}
+        image={
+          postData.image ? `https://forgedigitalesolutions.com${postData.image}` : undefined
+        }
+        slug={slug}
+        category={postData.category}
+      />
+
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <Link
           href="/blog"
