@@ -14,7 +14,7 @@ export function Footer() {
             <h3 className="text-2xl font-bold text-white">
               Forge <span className="text-[#C5A059]">Digitale.</span>
             </h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               L&apos;artisanat numérique au service du Médoc.
               <br />
               Solutions web sur-mesure et expertise hardware haute performance.
@@ -28,7 +28,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-white font-bold mb-6">Services</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
+            <ul className="space-y-3 text-sm text-slate-300">
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
@@ -63,6 +63,7 @@ export function Footer() {
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
                   href="/#realisations"
+                  aria-label="Voir les réalisations et projets complétés"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Réalisations
@@ -73,7 +74,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-white font-bold mb-6">Liens Utiles</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
+            <ul className="space-y-3 text-sm text-slate-300">
               <li>
                 <Link
                   href="/blog"
@@ -113,7 +114,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
-            <ul className="space-y-4 text-sm text-slate-400">
+            <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-start gap-3">
                 <MapPin
                   size={18}
