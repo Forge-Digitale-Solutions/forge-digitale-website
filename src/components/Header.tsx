@@ -37,7 +37,11 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link
+            href="/"
+            className="flex items-center gap-3 group"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-[#C5A059]/20 border border-white/5 transition-transform group-hover:scale-105">
               <Image
                 src="/logos/Logo1rond.png"
