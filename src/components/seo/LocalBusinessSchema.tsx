@@ -166,11 +166,29 @@ export function LocalBusinessSchema() {
       "Green IT",
       "Développement web Gironde"
     ],
-    // aggregateRating: {
-    //   "@type": "AggregateRating",
-    //   ratingValue: "5.0",
-    //   reviewCount: "0",
-    // },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "2",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Zilya" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "J'ai fait appel à ses services pour une remise à neuf de mon ordinateur pour mes études. J'avais un vieil ordinateur sous Windows 7 qui était lent. Je suis maintenant sur Linux Mint, l'ordinateur a repris une seconde jeunesse, fluide et simple à utiliser. Ce monsieur a été très pédagogue pour la prise en main prévue dans la prestation. Je recommande chaudement.",
+        datePublished: "2026-05-19",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Stéphanie Cornut" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "À l'écoute, réactif, sérieux.",
+        datePublished: "2026-05-19",
+      },
+    ],
   };
 
   return (

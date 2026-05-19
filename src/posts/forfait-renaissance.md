@@ -1,5 +1,5 @@
 ---
-title: "Forfait Renaissance : Sauvez Votre Vieux PC de la Fin de Windows 10"
+title: "Forfait Renaissance : sauvez votre vieux PC de la fin de Windows 10"
 date: "2026-03-15"
 category: "Hardware"
 excerpt: "Windows 10 n'est bientôt plus à jour. Avec mon forfait Renaissance à 69€, installez Linux Mint (interface Windows) et votre ancien PC repart pour 5 ans de sécurité gratuite. Économisez 400-600€ vs un PC neuf. En Saint-Laurent-Médoc et alentours."
