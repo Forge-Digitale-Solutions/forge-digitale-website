@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: SITE_URL,
-    title: "Forge Digitale | L'Artisanat Numérique en Gironde",
+    title: "Forge Digitale Solutions | Création Web & Dépannage (Médoc - Gironde)",
     description:
       "Web & Hardware. Solutions sur-mesure pour les professionnels et particuliers du Médoc au Bassin d'Arcachon.",
     siteName: "Forge Digitale Solutions",
