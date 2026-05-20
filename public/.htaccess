@@ -1,4 +1,5 @@
 Options -Indexes
+DirectoryIndex index.html
 RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^www\.forgedigitalesolutions\.com [NC]
