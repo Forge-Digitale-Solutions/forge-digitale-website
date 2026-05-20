@@ -62,8 +62,10 @@ export function Reviews({ data }: ReviewsProps) {
           <div className="flex items-center justify-center gap-3 mt-6">
             <StarRating rating={Math.round(data.rating)} />
             <span className="text-slate-300 text-lg">
-              <span className="text-white font-bold">{data.rating.toFixed(1)}</span>
-              {" "}/ 5 · {data.totalRatings} avis Google
+              <span className="text-white font-bold">
+                {data.rating.toFixed(1)}
+              </span>{" "}
+              / 5 · {data.totalRatings} avis Google
             </span>
           </div>
         </motion.div>
@@ -82,7 +84,7 @@ export function Reviews({ data }: ReviewsProps) {
                 className="absolute top-6 right-8 text-[#C5A059]/20 text-7xl font-serif leading-none select-none"
                 aria-hidden="true"
               >
-                "
+                &ldquo;
               </span>
 
               <StarRating rating={review.rating} />
@@ -102,8 +104,12 @@ export function Reviews({ data }: ReviewsProps) {
                   />
                 )}
                 <div>
-                  <p className="text-white font-semibold">{review.authorName}</p>
-                  <p className="text-slate-500 text-sm">{review.relativeTime}</p>
+                  <p className="text-white font-semibold">
+                    {review.authorName}
+                  </p>
+                  <p className="text-slate-500 text-sm">
+                    {review.relativeTime}
+                  </p>
                 </div>
               </div>
             </motion.div>
