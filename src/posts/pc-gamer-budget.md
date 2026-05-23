@@ -2,7 +2,7 @@
 title: "PC gamer en 2026 : comment jouer sans se ruiner ?"
 date: "2026-02-07"
 category: "Hardware"
-excerpt: "Les prix des composants explosent, mais construire un bon PC gamer n'est pas hors de budget. Je vous partage ma stratégie d'artisan : composants intelligents, bon rapport qualité-prix, et une machine évolutive pour 1000-1500€ instead de 2500€."
+excerpt: "Les prix des composants explosent, mais construire un bon PC gamer n'est pas hors de budget. Je vous partage ma stratégie : composants intelligents, bon rapport qualité-prix, et une machine évolutive pour 1000-1500€ au lieu de 2500€. Assemblage sur mesure en Gironde."
 image: "/blog/pc-build.jpg"
 ---
 
