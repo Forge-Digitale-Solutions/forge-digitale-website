@@ -54,6 +54,18 @@ const projects = [
     gradient: "from-red-900/40 to-slate-900",
     link: "https://charcuterie-campagnarde.pages.dev",
   },
+  {
+    title: "Rugby Handi Sud Bassin",
+    category: "Site Associatif",
+    description:
+      "Site web pour le club de rugby fauteuil de La Teste-de-Buch. Interface d'administration Statamic pour une gestion autonome du contenu par les bénévoles.",
+    tags: ["Association Sportive", "Rugby Fauteuil", "Back-office", "Bassin d'Arcachon"],
+    image: "/projects/rhsb-og.png",
+    imageAlt:
+      "Capture d'écran du site web Rugby Handi Sud Bassin, club de rugby fauteuil du Bassin d'Arcachon",
+    gradient: "from-blue-900/50 to-slate-900",
+    link: "https://rhsb.fr",
+  },
 ];
 
 export function Portfolio() {
@@ -98,7 +110,7 @@ export function Portfolio() {
                 />
 
                 {/* GoSportNow et Charcuterie Campagnarde: liens actifs vers les sites */}
-                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde") && (
+                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde" || project.title === "Rugby Handi Sud Bassin") && (
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Link
                       href={project.link}
