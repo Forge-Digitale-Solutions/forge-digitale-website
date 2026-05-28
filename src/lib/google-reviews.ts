@@ -16,7 +16,7 @@ export type PlaceInfo = {
 const STATIC_FALLBACK: PlaceInfo = {
   placeId: "",
   rating: 5,
-  totalRatings: 2,
+  totalRatings: 3,
   reviews: [
     {
       authorName: "Zilya",
@@ -31,6 +31,13 @@ const STATIC_FALLBACK: PlaceInfo = {
       rating: 5,
       text: "À l'écoute, réactif, sérieux.",
       relativeTime: "il y a 3 heures",
+    },
+    {
+      authorName: "David Moussiron",
+      authorPhotoUrl: "",
+      rating: 5,
+      text: "Très pro et très réactif. Merci pour votre travail.",
+      relativeTime: "il y a 38 minutes",
     },
   ],
 };

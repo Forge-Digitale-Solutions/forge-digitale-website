@@ -169,7 +169,7 @@ export function LocalBusinessSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "2",
+      reviewCount: "3",
       bestRating: "5",
       worstRating: "1",
     },
@@ -187,6 +187,13 @@ export function LocalBusinessSchema() {
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         reviewBody: "À l'écoute, réactif, sérieux.",
         datePublished: "2026-05-19",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "David Moussiron" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Très pro et très réactif. Merci pour votre travail.",
+        datePublished: "2026-05-28",
       },
     ],
   };
