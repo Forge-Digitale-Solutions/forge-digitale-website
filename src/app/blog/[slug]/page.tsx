@@ -104,6 +104,7 @@ export default async function Post({
         >
           <ArrowLeft
             size={16}
+            aria-hidden="true"
             className="mr-2 transition-transform group-hover:-translate-x-1"
           />
           Retour au blog

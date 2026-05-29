@@ -45,7 +45,7 @@ export default function BlogIndex() {
 
               <div className="p-8 flex flex-col grow">
                 <div className="flex items-center gap-2 text-slate-500 text-xs mb-4">
-                  <Calendar size={14} />
+                  <Calendar size={14} aria-hidden="true" />
                   {post.date}
                 </div>
 
@@ -61,6 +61,7 @@ export default function BlogIndex() {
                   Lire l&apos;article{" "}
                   <ArrowRight
                     size={16}
+                    aria-hidden="true"
                     className="ml-2 transition-transform group-hover:translate-x-1"
                   />
                 </div>
