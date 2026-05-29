@@ -172,8 +172,6 @@ image: "/blog/filename.jpg"
 ```
 ✓ Parser: `gray-matter` + `remark` (HTML)
 
-> **⚠️ Règle obligatoire pour chaque nouvel article** : toujours fournir une image réelle dans `public/blog/` correspondant au champ `image` du frontmatter. Chercher une photo libre de droits (Unsplash, Pexels) en rapport avec le sujet et la sauvegarder sous `public/blog/nom-article.jpg` avant de considérer l'article comme terminé.
-
 ---
 
 ## 📊 Analytics & Monitoring
@@ -228,4 +226,4 @@ image: "/blog/filename.jpg"
 ---
 
 **Dernière mise à jour**: 2 avril 2026  
-**Mainteneur**: Claude Code
+**Mainteneur**: Codex
