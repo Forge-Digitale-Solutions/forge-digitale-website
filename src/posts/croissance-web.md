@@ -1,50 +1,37 @@
 ---
-title: "Artisans du Médoc : un site web est-il vraiment rentable ?"
+title: "Un site web est-il utile à un artisan ? Ce que disent les études"
 date: "2026-02-18"
 category: "Web"
-excerpt: "54% des TPE constatent une hausse de chiffre d'affaires après avoir créé leur site. Les chiffres officiels prouvent que le bouche-à-oreille ne suffit plus. Pour les artisans du Médoc et Bassin d'Arcachon, un site web accessible coûte 500-2000€ et génère de vrais clients."
+excerpt: "Pour une TPE locale, la présence en ligne n'est plus un supplément. Les enquêtes de France Num et de l'AFNIC montrent que la recherche en ligne précède le contact et qu'un site contribue à l'activité. Le point sur les chiffres, et sur ce qu'un site apporte concrètement à un artisan du Médoc."
 image: "/blog/croissance-web.jpg"
 ---
 
-"Je n'ai pas besoin de site, le bouche-à-oreille suffit."
+« Le bouche-à-oreille me suffit. » L'argument se tenait il y a une quinzaine d'années. Il résiste mal à l'évolution des usages : aujourd'hui, le premier réflexe d'un client, y compris pour un service de proximité, est de chercher en ligne. Plutôt que d'opposer des convictions, regardons ce que mesurent les enquêtes publiques sur le sujet.
 
-C'est une phrase que j'entends souvent chez mes voisins artisans à Saint-Laurent ou Pauillac. Et c'était vrai... il y a 10 ans. Aujourd'hui, se priver d'une présence en ligne, c'est laisser de l'argent sur la table.
+## La recherche en ligne précède le contact
 
-Voici pourquoi, chiffres à l'appui.
+Le baromètre 2024 de **France Num**, le programme de l'État pour la transformation numérique des TPE-PME, le mesure côté entreprises : **56 % des TPE-PME déclarent qu'au moins 5 % de leurs clients viennent d'internet**, en hausse de cinq points en un an et de treize points depuis 2022. La part des entreprises tirant une clientèle du web progresse donc nettement et régulièrement. L'enquête, menée auprès de plus de 10 000 entreprises, indique aussi que 65 % d'entre elles disposent désormais d'un site internet.
 
-## 1. Vos clients vous cherchent d'abord sur Google
+La conséquence est directe : une entreprise absente des résultats au moment où l'on cherche son service laisse la place à un concurrent visible. La visibilité ne remplace pas la qualité du travail, mais elle conditionne la mise en relation.
 
-C'est le changement majeur de ces dernières années. Avant d'appeler un plombier, un électricien ou de visiter une boutique, le réflexe est numérique.
+*Source : [Baromètre France Num 2024](https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/comprendre-le-numerique/barometre-france-num-2024-perception)*
 
-Selon le baromètre **France Num / IFOP**, **92% des Français effectuent une recherche en ligne** pour se renseigner sur des professionnels locaux avant de se déplacer ou de prendre contact.
+## Un effet mesurable sur l'activité
 
-> **Le constat est simple :** Si vous n'êtes pas visible quand ils cherchent, c'est votre concurrent qui prend l'appel.
+L'AFNIC, l'association qui gère le domaine `.fr`, publie chaque année l'étude *Réussir avec le web* sur l'usage d'internet par les TPE-PME. Dans son édition 2024, **24 % des entreprises dotées d'un site estiment qu'internet représente plus de la moitié de leur chiffre d'affaires**, contre 19 % de celles présentes uniquement sur les réseaux sociaux. Le site reste ainsi un canal plus structurant qu'une simple page sociale.
 
-_Source : [Baromètre France Num](https://www.francenum.gouv.fr/ma-priorite/etre-visible-sur-internet)_
+L'explication est simple : un site bien référencé reste accessible en continu. Il présente l'activité, les réalisations et les coordonnées à toute heure, y compris lorsque l'atelier est fermé — là où une fiche d'annuaire se limite à un numéro.
 
-## 2. Un impact direct sur le Chiffre d'Affaires
+*Source : [AFNIC – étude « Réussir avec le web » 2024](https://www.afnic.fr/observatoire-ressources/)*
 
-Avoir un site n'est pas une dépense, c'est un investissement. L'étude de l'**AFNIC** ("Réussir avec le Web") est formelle sur le sujet.
+## Au-delà des chiffres : la crédibilité
 
-Sur les TPE/PME interrogées possédant un site internet :
+Un site joue aussi un rôle de réassurance. Face à un prestataire qui ne laisse qu'un numéro de portable et un autre qui présente ses réalisations, ses prestations et ses mentions légales sur un site soigné, le second inspire davantage confiance. Le site matérialise l'existence légale de l'entreprise, son sérieux et son domaine d'expertise — autant d'éléments qu'un client évalue avant de confier un chantier.
 
-- **54%** déclarent que cela leur a permis d'augmenter leur chiffre d'affaires.
-- **73%** estiment que c'est indispensable pour être trouvé localement.
+## Quel budget pour un artisan
 
-Ce n'est pas de la magie, c'est de la visibilité. Un site vitrine bien référencé travaille pour vous 24h/24, même quand votre atelier est fermé.
+Pour une TPE, l'enjeu n'est pas de viser un site complexe, mais un site vitrine clair, rapide et bien référencé localement. Selon le périmètre (nombre de pages, formulaire de devis, blog, référencement local), un tel projet se situe le plus souvent dans une fourchette de quelques centaines à quelques milliers d'euros — un investissement à mettre en regard de la clientèle qui cherche déjà ce service dans la zone.
 
-_Source : [Observatoire de l'AFNIC](https://www.afnic.fr/observatoire-ressources/)_
+---
 
-## 3. La crédibilité face aux "bricoleurs"
-
-Au-delà des chiffres, un site internet professionnel rassure.
-
-Entre un artisan qui n'a qu'un numéro de portable sur un annuaire et un autre qui présente ses réalisations, ses tarifs et ses mentions légales sur un site propre, lequel choisissez-vous ?
-
-Un site web est votre **showroom numérique**. Il prouve votre sérieux, votre existence légale et votre expertise.
-
-## Conclusion
-
-Dans le Médoc, la concurrence est parfois rude. Le but n'est pas de devenir une multinationale, mais simplement de capter la clientèle qui vous cherche déjà.
-
-Vous voulez savoir combien coûterait un site adapté à votre activité ? N'hésitez pas à [me contacter](/#contact) pour un devis gratuit.
+*En pratique :* pour estimer le coût d'un site adapté à votre activité dans le Médoc ou le Bassin d'Arcachon, je propose un devis gratuit — [me contacter](/#contact).

@@ -1,58 +1,49 @@
 ---
-title: "Forfait Renaissance : sauvez votre vieux PC de la fin de Windows 10"
+title: "Fin de Windows 10 : passer son ancien PC sous Linux plutôt que le remplacer"
 date: "2026-03-15"
 category: "Hardware"
-excerpt: "Windows 10 n'est bientôt plus à jour. Avec mon forfait Renaissance à 69€, installez Linux Mint (interface Windows) et votre ancien PC repart pour 5 ans de sécurité gratuite. Économisez 400-600€ vs un PC neuf. En Saint-Laurent-Médoc et alentours."
+excerpt: "Le support de Windows 10 a pris fin le 14 octobre 2025. Pour un PC jugé trop ancien pour Windows 11, Linux Mint offre une alternative durable et gratuite, sans achat de matériel. Comment fonctionne cette transition, ce qu'elle change à l'usage, et ce que couvre le forfait Renaissance."
 image: "/blog/pc-mint.png"
 ---
 
-“Mon PC est trop vieux, je vais devoir en racheter un.”
+Le **support de Windows 10 a pris fin le 14 octobre 2025** : Microsoft ne fournit plus de mises à jour de sécurité gratuites pour le grand public. Un PC qui reste sous Windows 10 sans protection s'expose progressivement aux failles non corrigées.
 
-Phrase classique que j'entends chez beaucoup de particuliers autour de chez moi. Surtout depuis la fin des mises à jour de Windows 10 qui arrive dans quelques semaines. D'où la nécessité de posséder un ordinateur récent pour installer Windows 11.
+Microsoft propose bien une année supplémentaire de mises à jour de sécurité étendues (ESU), rendue gratuite pour les particuliers de l'Espace économique européen sous la pression des associations de consommateurs — à condition de se connecter avec un compte Microsoft au moins tous les 60 jours. Mais cette rallonge est temporaire : elle s'achève le 13 octobre 2026. Reste alors l'alternative habituelle : passer à Windows 11. Or beaucoup de machines encore fonctionnelles ne remplissent pas ses prérequis matériels (puce TPM 2.0, processeur récent). D'où l'équation que rencontrent beaucoup de particuliers : racheter un ordinateur, ou prolonger l'existant.
 
-Bonne nouvelle : ce n'est pas obligatoire ! Avec mon forfait Renaissance à 69€, on installe Linux Mint et votre machine repart pour 5 ans minimum.
+*Source : [Microsoft – Fin du support de Windows 10](https://www.microsoft.com/fr-fr/windows/end-of-support)*
 
-## 1. Adieu les Mises à Jour Windows : Bonjour la Sécurité Gratuite
+## Une troisième voie : Linux Mint
 
-Microsoft a coupé le support gratuit de Windows 10 en 2025. Une prolongation d'un an a été imposée par l'UE mais l'échéance approche. Sans patchs de sécurité, c'est la porte ouverte aux virus et ransomwares.
+Remplacer un PC qui fonctionne encore pour de la bureautique et de la navigation n'a souvent rien d'indispensable. Installer une distribution Linux à la place de Windows redonne plusieurs années d'usage à la machine, pour trois raisons :
 
-Linux Mint change la donne :
+- **Des mises à jour gratuites et continues.** Linux Mint est maintenu sans abonnement ni date de péremption imposée au matériel.
+- **Une exposition réduite aux logiciels malveillants** conçus pour Windows : les exécutables `.exe` et `.msi` ne s'y lancent pas, et le système ne fonctionne pas en administrateur par défaut.
+- **Une faible consommation de ressources.** Mint reste fluide sur des configurations anciennes ; 4 Go de mémoire vive suffisent pour la bureautique et le web.
 
-- Mises à jour à vie, gratuites, automatiques.
-- Moins de virus (architecture solide, pas de "privilèges admin" par défaut).
-- Léger : tourne sur des PC de 2010 (4Go RAM suffisent pour bureautique/web).
+Côté licence, le coût est nul, là où une mise à niveau Windows représente un achat — pour un matériel souvent jugé incompatible de toute façon.
 
-Économie immédiate : 0€ de licence contre 100-150€ pour Windows 11 (souvent incompatible matériel ancien).
+## Une interface proche de Windows
 
-## 2. Économique : 69€ vs. 500€ Neuf
+La crainte la plus répandue concerne le dépaysement. Linux Mint a précisément été conçu pour limiter la rupture : menu de démarrage en bas à gauche, barre des tâches, fenêtres classiques, glisser-déposer. Les usages courants trouvent leur équivalent direct — LibreOffice pour les documents et tableurs, Firefox ou Chrome pour le web, un client de messagerie intégré.
 
-Racheter un PC neuf pour les emails et les factures ? Inutile et polluant.
+La compatibilité des fichiers est assurée : `.docx`, `.pdf`, photos et autres formats courants s'ouvrent sans conversion. En pratique, un PC d'une dizaine d'années retrouve une navigation fluide et un poste bureautique complet.
 
-Mon forfait Renaissance (Saint-Laurent-Médoc et environs) inclut :
+## Ce que couvre le forfait Renaissance
 
-- Nettoyage complet extérieur.
-- Installation Linux Mint (interface proche de Windows).
-- Optimisation drivers (WiFi, imprimante, son).
-- 1h prise en main personnalisée.
-- Vous sauvegardez vos fichiers personnels avant le changement pour des raisons de sécurité et d'intimité de vos données.
+Pour ceux qui ne souhaitent pas réaliser l'opération eux-mêmes, je propose une prestation clé en main, le **forfait Renaissance (69 €)**, à Saint-Laurent-Médoc et alentours. Il comprend :
 
-Exemple concret : PC Dell 2012 sous Linux Mint → navigation fluide, LibreOffice, Firefox, Chrome, messagerie mail. Vous économisez 400-600€, et c'est écomomique et écologique.
+- la sauvegarde préalable des fichiers personnels ;
+- le nettoyage de la machine ;
+- l'installation de Linux Mint ;
+- la configuration des périphériques (Wi-Fi, imprimante, son) ;
+- une heure de prise en main.
 
-## 3. Une Interface Qui Ressemble à Windows ( Pas de Panique ! )
+L'intervention dure environ deux heures, à domicile selon la localité ou en atelier.
 
-Beaucoup craignent le "changement radical". Faux pour Linux Mint :
+## Quand cette solution n'est pas adaptée
 
-- On garde la facilité et le côté intuitif de Windows.
-- Menu Démarrer en bas-gauche, barre des tâches.
-- Fenêtres redimensionnables, glisser-déposer.
-- Logiciels familiers : LibreOffice = Word/Excel, Firefox = Internet Explorer/Edge.
+Linux Mint convient à la bureautique, au web, à la messagerie et au multimédia. En revanche, certains logiciels professionnels spécifiques (métiers, comptabilité propriétaire) ou des jeux récents avec anti-triche peuvent ne pas fonctionner sous Linux. Un diagnostic préalable des usages permet de vérifier la compatibilité avant toute migration.
 
-> "C'est Windows, mais sans les bugs et pubs !" dixit un client de Saint Laurent Médoc après migration.
+---
 
-Compatible 100% avec vos fichiers (.docx, .pdf, photos).
-
-## Prêt pour la Renaissance ?
-
-Dans le Médoc, et plus généralement en Gironde, on recycle le bon matériel au lieu de le jeter. Votre PC a encore de beaux jours devant lui.
-
-Curieux ? [Contactez-moi](/#contact) pour un diagnostic gratuit à domicile ou sur site. La prestation prend environ 2h, à votre domicile ( en fonction de votre localité ) ou dans mon atelier !
+*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit à domicile ou en atelier dans le Médoc — [me contacter](/#contact).

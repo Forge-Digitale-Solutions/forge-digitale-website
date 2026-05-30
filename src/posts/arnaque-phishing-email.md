@@ -1,89 +1,72 @@
 ---
-title: "Arnaques par email : comment les reconnaître et ne pas se faire avoir"
+title: "Hameçonnage : reconnaître un email frauduleux et réagir au bon moment"
 date: "2026-05-29"
 category: "Sécurité"
-excerpt: "En 2025, le phishing a coûté 1,2 milliard d'euros aux Français. Artisans, commerçants et particuliers du Médoc : voici comment reconnaître un email frauduleux en 30 secondes — qu'il imite les impôts, La Poste ou votre banque — sur Windows comme sur Linux."
+excerpt: "L'hameçonnage figure chaque année en tête des menaces recensées par Cybermalveillance.gouv.fr, le dispositif public d'assistance aux victimes. Comment fonctionne un email frauduleux, à quels signaux le repérer et que faire en cas de clic — pour les particuliers comme pour les professionnels, sous Windows comme sous Linux."
 image: "/blog/arnaque-phishing.jpg"
 ---
 
-"J'ai cliqué sur un email des impôts. Maintenant mon PC fait des trucs bizarres."
+L'hameçonnage — *phishing* en anglais — consiste à usurper l'identité d'un organisme de confiance pour obtenir des informations sensibles ou faire installer un logiciel malveillant. La technique est ancienne, mais elle reste la menace n° 1 en France : selon le rapport d'activité 2024 de la plateforme publique Cybermalveillance.gouv.fr, elle représente à elle seule **33,7 % des demandes d'assistance des particuliers**, et demeure la première menace tous publics confondus.
 
-C'est le message qu'a reçu un commerçant de Lesparre-Médoc, en janvier dernier. Un email parfaitement imité, un logo officiel, un lien cliqué en deux secondes. Résultat : ses identifiants bancaires volés et deux jours de galère avec sa banque.
+Sa force ne tient pas à la sophistication, souvent rudimentaire, mais à la mise en scène : un logo officiel, un ton administratif et un motif crédible suffisent à faire baisser la garde.
 
-Il n'est pas naïf. Il a juste été pris de cours, comme 15 millions de Français chaque année.
+*Source : [Cybermalveillance.gouv.fr – Rapport d'activité 2024](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/rapport-activite-2024)*
 
-Bonne nouvelle : reconnaître une arnaque, ça s'apprend. Et ça prend 30 secondes par email.
+## Comment fonctionne une attaque
 
-## 1. C'est quoi le phishing, exactement ?
+Le scénario varie peu. La victime reçoit un message — email, SMS (on parle alors de *smishing*), parfois appel — imitant une organisation connue : banque, administration fiscale, Assurance maladie, La Poste, opérateur télécom, plateforme de commerce. Ce message l'invite à agir vite :
 
-Le **phishing** (ou "hameçonnage") est simple : quelqu'un se fait passer pour un organisme de confiance — votre banque, la Sécurité sociale, La Poste, Amazon, les impôts — pour vous pousser à :
+- cliquer sur un lien menant à un faux site, copie fidèle du site officiel ;
+- y saisir des identifiants, des coordonnées bancaires ou des données personnelles ;
+- ou ouvrir une pièce jointe qui installe un logiciel malveillant.
 
-- Cliquer sur un lien frauduleux.
-- Saisir votre mot de passe ou vos coordonnées bancaires.
-- Télécharger un fichier infecté.
+Les informations récoltées sont ensuite utilisées pour vider un compte, souscrire un crédit, ou revendues pour alimenter d'autres attaques.
 
-Le but est toujours le même : **voler vos identifiants ou votre argent**.
+## Cinq signaux qui doivent alerter
 
-Et les arnaques sont de mieux en mieux faites. En 2026, certains emails frauduleux sont quasi-identiques aux vrais. Même logo, même ton, même mise en page.
+Aucun de ces indices ne constitue une preuve à lui seul, mais leur présence appelle la prudence.
 
-> En France, **53% des internautes** ont reçu au moins un email de phishing en 2024. *(Source : ANSSI, Panorama de la menace informatique 2025)*
+**L'adresse réelle de l'expéditeur.** Le nom affiché peut être falsifié ; l'adresse, plus difficilement. Une adresse du type `support@amaz0n-service.com` ou `impots@no-reply-france.net` est frauduleuse. L'administration fiscale, par exemple, n'écrit que depuis des adresses en `@dgfip.finances.gouv.fr` ou `@impots.gouv.fr`.
 
-## 2. Les 5 signaux qui trahissent une arnaque
+**L'urgence.** « Compte suspendu sous 24 h », « colis bloqué », « remboursement à valider avant ce soir » : la pression temporelle sert à court-circuiter la réflexion.
 
-Avant de cliquer sur quoi que ce soit, regardez ces cinq points. Ils suffisent à démasquer 90% des tentatives.
+**La destination réelle des liens.** En survolant un lien sans cliquer, son adresse apparaît. Si elle ne correspond pas au domaine officiel de l'organisme, il ne faut pas la suivre.
 
-**L'adresse de l'expéditeur est bizarre.** Passez votre souris sur le nom de l'expéditeur (sans cliquer). Si le vrai email ressemble à `support@amaz0n-service-client.com` ou `impots@no-reply-france.net`, c'est une arnaque. Un email officiel des impôts vient de `@impots.gouv.fr`. Rien d'autre.
+**Une demande d'informations déjà connues.** Une banque ne réclame jamais un code de carte par message ; l'administration ne demande pas de mot de passe ni de RIB par email. Ces organismes disposent déjà de ces données.
 
-**L'email crée une urgence artificielle.** "Votre compte sera suspendu dans 24h", "Votre colis sera retourné demain", "Remboursement disponible seulement jusqu'à ce soir." Ce sentiment de pression est fabriqué exprès pour vous faire agir vite, sans réfléchir.
+**Des formulations approximatives.** Fautes, tournures maladroites, formules génériques (« Cher client ») restent fréquentes, même si la qualité des messages progresse.
 
-**Le lien ne correspond pas à ce qu'il prétend être.** Avant de cliquer, survolez le lien avec votre souris. L'adresse réelle apparaît en bas de votre écran ou dans une info-bulle. Si le lien d'un email "Amazon" vous envoie vers `tracking-colis.ru`, ne cliquez pas.
+## Les campagnes les plus répandues
 
-**On vous demande des informations que l'organisme a déjà.** Votre banque ne vous demandera jamais votre numéro de carte par email. La CAF ne vous demande pas votre mot de passe. Les impôts ne réclament pas votre RIB par message. Ces organismes ont déjà tout ça.
+Les mêmes familles d'arnaques reviennent régulièrement dans les alertes de Cybermalveillance.gouv.fr et de la DGCCRF :
 
-**Il y a des fautes ou un style étrange.** "Cher(e) client(e)", des espaces manquants, des formulations approximatives. Les arnaques viennent souvent d'autres pays, et même si les traductions s'améliorent, le ton reste parfois mécanique.
+- **Le faux remboursement** (impôts, Assurance maladie, fournisseur d'énergie). Un remboursement réel est versé automatiquement sur un compte déjà connu de l'organisme ; il n'est jamais « à confirmer » par email.
+- **La fausse facture**, qui vise particulièrement les professionnels : un message imite un fournisseur ou un client et joint un document piégé.
+- **Le colis en attente** (La Poste, Chronopost, transporteurs), qui réclame quelques euros de « frais » pour capter une carte bancaire.
+- **Le faux support technique** (Microsoft, Apple) : ni l'un ni l'autre ne contacte spontanément un particulier par téléphone ou par fenêtre surgissante.
 
-## 3. Les arnaques les plus courantes en 2026
+## Le cas de Linux
 
-**L'email des impôts avec un remboursement.** Trop beau pour être vrai — et c'est le cas. Les remboursements fiscaux se font directement sur votre compte enregistré. Jamais on ne vous contacte par email pour vous demander de "valider" un virement.
+Sous Linux — notamment Linux Mint, que je déploie dans le cadre du forfait Renaissance — les fichiers exécutables conçus pour Windows (`.exe`, `.msi`) ne s'exécutent pas. Une pièce jointe malveillante prévue pour Windows y est donc inopérante.
 
-**La facture impayée (pour les artisans).** Un email qui ressemble à une relance client ou fournisseur, avec une pièce jointe `.pdf` ou `.docx` à ouvrir. Cette pièce jointe contient souvent un malware. Si vous ne reconnaissez pas l'expéditeur, n'ouvrez rien.
+Cela ne protège pas de l'hameçonnage lui-même : si l'utilisateur saisit ses identifiants bancaires sur un faux site, le système d'exploitation n'a aucun rôle. La vigilance reste la principale protection, quel que soit l'appareil.
 
-**Le "colis non livré" de La Poste ou Colissimo.** Surtout si vous n'attendez aucun colis. Le lien demande de "payer les frais de douane" — quelques euros — pour récolter vos coordonnées bancaires.
+## Que faire après un clic
 
-**Le support Microsoft ou Apple.** "Votre PC a été infecté, appelez-nous immédiatement." Microsoft et Apple n'appellent pas, n'envoient pas d'email et n'affichent pas de pop-up vous demandant de téléphoner. Si vous voyez ça, c'est une arnaque.
+En cas de doute ou d'erreur, l'ordre des priorités compte.
 
-## 4. Et si vous utilisez Linux ?
+1. **Ne rien saisir** et fermer la page si rien n'a encore été communiqué.
+2. **Changer le mot de passe** du service concerné, en passant par le site officiel et non par le lien reçu.
+3. **Contacter sa banque** si des données bancaires ont été transmises, pour faire opposition.
+4. **Signaler** le message : sur [signal-spam.fr](https://www.signal-spam.fr), [phishing-initiative.fr](https://www.phishing-initiative.fr) ou via Cybermalveillance.gouv.fr. Les SMS frauduleux se transfèrent au **33700**.
+5. **Si une pièce jointe a été ouverte**, déconnecter la machine du réseau et la faire examiner avant de poursuivre.
 
-**Bonne nouvelle** : sous Linux (et notamment sous Linux Mint que j'installe avec le forfait Renaissance), les malwares classiques attachés aux emails ne s'exécutent pas. Les fichiers `.exe` ou `.msi` sont inoffensifs sur un système Linux.
+## Une mesure de fond : un mot de passe unique par service
 
-**Mauvaise nouvelle** : le phishing reste dangereux. Si vous cliquez sur un faux lien et saisissez votre mot de passe bancaire, Linux n'y peut rien. Le problème est entre la chaise et le clavier, comme on dit.
+Beaucoup d'attaques réussissent parce qu'un même mot de passe est réutilisé partout : une fuite sur un site permet alors d'ouvrir les autres comptes. Cette technique, le *credential stuffing*, est largement automatisée.
 
-La protection principale, c'est toujours votre jugement — sur n'importe quel système.
-
-## 5. Que faire si vous avez cliqué ?
-
-Ne paniquez pas, mais agissez vite.
-
-1. **Ne saisissez rien.** Si vous avez cliqué mais pas encore rempli de formulaire, fermez l'onglet et ne retournez pas sur ce lien.
-
-2. **Changez votre mot de passe immédiatement** sur le service concerné (depuis le vrai site, pas depuis le lien de l'email).
-
-3. **Contactez votre banque** si vous avez saisi des coordonnées bancaires. Ils peuvent bloquer votre carte et surveiller les transactions suspectes.
-
-4. **Signalez l'arnaque** sur [signal-spam.fr](https://www.signal-spam.fr) ou [phishing-initiative.fr](https://www.phishing-initiative.fr). Ça prend deux minutes et ça protège d'autres personnes.
-
-5. **Si un fichier a été téléchargé et ouvert**, éteignez le PC et appelez un technicien. Ne continuez pas à l'utiliser le temps d'un diagnostic.
+Un gestionnaire de mots de passe — Bitwarden et KeePass sont gratuits et reconnus — génère et mémorise un mot de passe distinct par service. Activer la double authentification, lorsqu'elle est proposée, ajoute une protection même si le mot de passe est compromis.
 
 ---
 
-## Pour aller plus loin : protégez vos comptes
-
-Un dernier conseil, valable pour tout le monde : utilisez **un mot de passe différent sur chaque site**. Si un seul mot de passe est volé, les pirates essaient de l'utiliser partout (votre email, votre banque, votre espace impôts…). C'est ce qu'on appelle le "credential stuffing".
-
-Un gestionnaire de mots de passe (Bitwarden est gratuit et open-source) retient tout à votre place. Vous n'avez plus qu'un seul mot de passe à retenir.
-
----
-
-Vous avez un doute sur un email, une pop-up suspecte ou pensez avoir cliqué sur quelque chose de douteux ? [Contactez-moi](/#contact) pour un diagnostic. J'interviens à domicile ou en atelier à Saint-Laurent-Médoc et dans tout le Médoc.
-
-Parce qu'un clic de trop ne devrait pas coûter une journée de travail.
+*En pratique :* un doute sur un message, une fenêtre suspecte ou un clic regretté ? Je réalise des diagnostics à domicile ou en atelier à Saint-Laurent-Médoc et dans le Médoc — [me contacter](/#contact).
