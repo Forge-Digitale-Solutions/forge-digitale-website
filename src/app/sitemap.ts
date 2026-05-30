@@ -29,7 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const servicePages = ["/creation-site-web", "/developpeur-medoc"].map(
+  const servicePages = [
+    "/creation-site-web",
+    "/developpeur-medoc",
+    "/installation-linux",
+    "/montage-pc",
+  ].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),

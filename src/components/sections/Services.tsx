@@ -35,6 +35,7 @@ const services = [
     description:
       "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
     price: "Forfait 149€",
+    href: "/montage-pc",
     badge: "Offre de Lancement 🚀",
     icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
@@ -51,6 +52,7 @@ const services = [
     description:
       "Votre ordinateur est lent ? Ne le jetez pas. Je le nettoie et j'installe un système léger pour lui redonner sa rapidité.",
     price: "Forfait 69€",
+    href: "/installation-linux",
     badge: "Tarif 2026 ✨",
     icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",

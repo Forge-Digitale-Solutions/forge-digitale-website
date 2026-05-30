@@ -47,4 +47,4 @@ Linux Mint convient à la bureautique, au web, à la messagerie et au multimédi
 
 ---
 
-*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit en atelier à Saint-Laurent-Médoc (Médoc) — [me contacter](/#contact).
+*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit en atelier à Saint-Laurent-Médoc (Médoc). Voir le détail de la prestation [installation Linux](/installation-linux) ou [me contacter](/#contact).

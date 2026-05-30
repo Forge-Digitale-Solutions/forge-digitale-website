@@ -9,6 +9,8 @@ Forge Digitale Solutions : création de sites web et d'applications sur-mesure, 
 - https://forgedigitalesolutions.com/ — Accueil : services et présentation (forfait Linux 69 €, montage PC 149 €)
 - https://forgedigitalesolutions.com/creation-site-web — Création de sites web et d'applications sur-mesure (à partir de 800 €)
 - https://forgedigitalesolutions.com/developpeur-medoc — Développeur web indépendant en Médoc et Bassin d'Arcachon
+- https://forgedigitalesolutions.com/installation-linux — Installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
+- https://forgedigitalesolutions.com/montage-pc — Montage PC sur-mesure, gaming et bureautique (forfait 149 €)
 - https://forgedigitalesolutions.com/blog — Articles : web, sécurité, montage PC, Linux
 
 ## Sections de l'accueil (ancres)

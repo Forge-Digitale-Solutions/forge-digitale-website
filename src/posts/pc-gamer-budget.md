@@ -39,4 +39,4 @@ Mon forfait montage (150 €) couvre l'assemblage complet et ces réglages, pour
 
 ---
 
-*En pratique :* pour une configuration sur-mesure adaptée à votre budget et à votre écran, en Gironde, je propose un montage et des conseils personnalisés — [me contacter](/#contact).
+*En pratique :* pour une configuration sur-mesure adaptée à votre budget et à votre écran, en Gironde, je propose un [montage PC](/montage-pc) et des conseils personnalisés — [me contacter](/#contact).
