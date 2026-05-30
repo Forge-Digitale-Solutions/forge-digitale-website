@@ -10,9 +10,19 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
-        userAgent: "GPTBot, PerplexityBot, ClaudeBot, Google-Extended",
+        userAgent: [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "PerplexityBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "Google-Extended",
+          "Applebot-Extended",
+          "CCBot",
+        ],
         allow: "/",
-      }
+      },
     ],
     sitemap: "https://forgedigitalesolutions.com/sitemap.xml",
   };

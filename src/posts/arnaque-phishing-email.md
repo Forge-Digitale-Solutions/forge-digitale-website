@@ -1,6 +1,7 @@
 ---
 title: "Hameçonnage : reconnaître un email frauduleux et réagir au bon moment"
 date: "2026-05-29"
+lastModified: "2026-05-30"
 category: "Sécurité"
 excerpt: "L'hameçonnage figure chaque année en tête des menaces recensées par Cybermalveillance.gouv.fr, le dispositif public d'assistance aux victimes. Comment fonctionne un email frauduleux, à quels signaux le repérer et que faire en cas de clic — pour les particuliers comme pour les professionnels, sous Windows comme sous Linux."
 image: "/blog/arnaque-phishing.jpg"
@@ -69,4 +70,4 @@ Un gestionnaire de mots de passe — Bitwarden et KeePass sont gratuits et recon
 
 ---
 
-*En pratique :* un doute sur un message, une fenêtre suspecte ou un clic regretté ? Je réalise des diagnostics à domicile ou en atelier à Saint-Laurent-Médoc et dans le Médoc — [me contacter](/#contact).
+*En pratique :* un doute sur un message, une fenêtre suspecte ou un clic regretté ? Je reçois en atelier à Saint-Laurent-Médoc pour un diagnostic, particuliers comme professionnels du Médoc — [me contacter](/#contact).

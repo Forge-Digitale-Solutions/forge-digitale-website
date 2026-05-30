@@ -1,6 +1,7 @@
 ---
 title: "Fiche Google (Business Profile) : à quoi elle sert et comment la créer"
 date: "2026-05-19"
+lastModified: "2026-05-30"
 category: "Web"
 excerpt: "Avant même un site web, la fiche Google (Google Business Profile) est le premier outil de visibilité locale d'un artisan ou d'un commerçant — et il est gratuit. Comment elle fonctionne, pourquoi elle pèse autant dans les recherches locales, et comment la créer pas à pas."
 image: "/blog/fiche-google.jpg"
@@ -55,4 +56,4 @@ La fiche Google rend visible et permet d'être contacté, mais elle reste un for
 
 ---
 
-*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un site sur-mesure, j'interviens dans le Médoc et autour de Bordeaux — [me contacter](/#contact).
+*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un [site web sur-mesure](/creation-site-web), j'accompagne les artisans du Médoc et du Bassin d'Arcachon — [me contacter](/#contact).

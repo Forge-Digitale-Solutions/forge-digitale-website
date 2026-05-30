@@ -1,0 +1,30 @@
+# llms.txt — Forge Digitale Solutions
+# Artisanat numérique en Médoc — sites web, applications, PC, Linux Mint
+# Contact : contact@forgedigitalesolutions.com | SIREN : 100 857 838
+
+## À propos
+Forge Digitale Solutions : création de sites web et d'applications sur-mesure, montage PC, dépannage et installation Linux (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, Concepteur Développeur d'Applications (titre professionnel). Interventions en atelier à Saint-Laurent-Médoc ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux.
+
+## Pages principales
+- https://forgedigitalesolutions.com/ — Accueil : services et présentation (forfait Linux 69 €, montage PC 149 €)
+- https://forgedigitalesolutions.com/creation-site-web — Création de sites web et d'applications sur-mesure (à partir de 800 €)
+- https://forgedigitalesolutions.com/developpeur-medoc — Développeur web indépendant en Médoc et Bassin d'Arcachon
+- https://forgedigitalesolutions.com/blog — Articles : web, sécurité, montage PC, Linux
+
+## Sections de l'accueil (ancres)
+- https://forgedigitalesolutions.com/#services — Détail des services
+- https://forgedigitalesolutions.com/#about — Présentation d'Anthony Marcelin
+- https://forgedigitalesolutions.com/#realisations — Réalisations
+- https://forgedigitalesolutions.com/#faq — Questions fréquentes
+- https://forgedigitalesolutions.com/#contact — Contact et devis
+
+## Pages légales
+- https://forgedigitalesolutions.com/mentions-legales
+- https://forgedigitalesolutions.com/cgv
+- https://forgedigitalesolutions.com/confidentialite
+
+## Sitemap
+https://forgedigitalesolutions.com/sitemap.xml
+
+# Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended
+# Dernière mise à jour : 2026-05-30
