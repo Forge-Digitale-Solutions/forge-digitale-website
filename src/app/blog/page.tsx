@@ -1,7 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getSortedPostsData } from "@/lib/posts";
-import { ArrowRight, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
+import type { Metadata } from "next";
+
+const SITE_URL = "https://forgedigitalesolutions.com";
+
+export const metadata: Metadata = {
+  title: "Blog — Conseils web, montage PC & Linux en Médoc",
+  description:
+    "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant en Médoc et Bassin d'Arcachon.",
+  keywords: [
+    "blog informatique Médoc",
+    "conseils site web Gironde",
+    "tutoriel Linux Mint",
+    "montage PC Bordeaux",
+    "sécurité informatique artisan",
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: `${SITE_URL}/blog`,
+    title: "Blog — Conseils web, montage PC & Linux en Médoc",
+    description:
+      "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant en Médoc.",
+    siteName: "Forge Digitale Solutions",
+  },
+};
 
 export default function BlogIndex() {
   const posts = getSortedPostsData();

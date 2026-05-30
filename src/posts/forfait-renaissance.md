@@ -1,6 +1,7 @@
 ---
 title: "Fin de Windows 10 : passer son ancien PC sous Linux plutôt que le remplacer"
 date: "2026-03-15"
+lastModified: "2026-05-30"
 category: "Hardware"
 excerpt: "Le support de Windows 10 a pris fin le 14 octobre 2025. Pour un PC jugé trop ancien pour Windows 11, Linux Mint offre une alternative durable et gratuite, sans achat de matériel. Comment fonctionne cette transition, ce qu'elle change à l'usage, et ce que couvre le forfait Renaissance."
 image: "/blog/pc-mint.png"
@@ -38,7 +39,7 @@ Pour ceux qui ne souhaitent pas réaliser l'opération eux-mêmes, je propose un
 - la configuration des périphériques (Wi-Fi, imprimante, son) ;
 - une heure de prise en main.
 
-L'intervention dure environ deux heures, à domicile selon la localité ou en atelier.
+L'intervention se déroule en atelier à Saint-Laurent-Médoc et dure environ deux heures.
 
 ## Quand cette solution n'est pas adaptée
 
@@ -46,4 +47,4 @@ Linux Mint convient à la bureautique, au web, à la messagerie et au multimédi
 
 ---
 
-*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit à domicile ou en atelier dans le Médoc — [me contacter](/#contact).
+*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit en atelier à Saint-Laurent-Médoc (Médoc) — [me contacter](/#contact).

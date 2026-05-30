@@ -10,6 +10,7 @@ const services = [
     description:
       "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
     price: "À partir de 800€",
+    href: "/creation-site-web",
     icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
@@ -128,6 +129,28 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+
+              {service.href && (
+                <Link
+                  href={service.href}
+                  className="inline-flex items-center gap-1 text-sm text-[#C5A059] hover:text-[#D4B475] font-medium mb-4 transition-colors"
+                >
+                  En savoir plus
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </Link>
+              )}
 
               <div className="mt-auto text-right">
                 {service.badge && (

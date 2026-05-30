@@ -1,6 +1,7 @@
 ---
 title: "Un site web est-il utile à un artisan ? Ce que disent les études"
 date: "2026-02-18"
+lastModified: "2026-05-30"
 category: "Web"
 excerpt: "Pour une TPE locale, la présence en ligne n'est plus un supplément. Les enquêtes de France Num et de l'AFNIC montrent que la recherche en ligne précède le contact et qu'un site contribue à l'activité. Le point sur les chiffres, et sur ce qu'un site apporte concrètement à un artisan du Médoc."
 image: "/blog/croissance-web.jpg"
@@ -34,4 +35,4 @@ Pour une TPE, l'enjeu n'est pas de viser un site complexe, mais un site vitrine 
 
 ---
 
-*En pratique :* pour estimer le coût d'un site adapté à votre activité dans le Médoc ou le Bassin d'Arcachon, je propose un devis gratuit — [me contacter](/#contact).
+*En pratique :* pour estimer le coût d'un [site web adapté à votre activité](/creation-site-web) dans le Médoc ou le Bassin d'Arcachon, je propose un devis gratuit — [me contacter](/#contact).

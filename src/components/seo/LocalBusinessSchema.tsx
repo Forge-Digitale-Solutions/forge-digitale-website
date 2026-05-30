@@ -39,11 +39,31 @@ export function LocalBusinessSchema() {
       },
       {
         "@type": "City",
+        name: "Lesparre-Médoc",
+      },
+      {
+        "@type": "City",
+        name: "Pauillac",
+      },
+      {
+        "@type": "City",
+        name: "Castelnau-de-Médoc",
+      },
+      {
+        "@type": "City",
         name: "Bordeaux",
       },
       {
         "@type": "City",
         name: "Arcachon",
+      },
+      {
+        "@type": "Place",
+        name: "Bassin d'Arcachon",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Médoc",
       },
       {
         "@type": "AdministrativeArea",
