@@ -1,89 +1,73 @@
 ---
-title: "Vos fichiers en sécurité : la sauvegarde expliquée simplement pour les artisans du Médoc"
+title: "Sauvegarder ses données : comprendre la règle du 3-2-1"
 date: "2026-05-22"
 category: "Hardware"
-excerpt: "Un disque dur tombe en panne sans prévenir. Un ransomware chiffre vos devis et factures en quelques minutes. Sans sauvegarde, c'est la catastrophe. J'explique comment protéger vos données facilement — artisans et particuliers du Médoc et Gironde, même sous Linux."
+excerpt: "Panne de disque, rançongiciel, fausse manœuvre : les causes de perte de données sont nombreuses et ordinaires. Les principes d'une sauvegarde fiable tiennent pourtant en une règle simple, le 3-2-1. Explications pour les particuliers et les professionnels, sous Windows comme sous Linux."
 image: "/blog/sauvegarde-donnees.jpg"
 ---
 
-"Je n'ai jamais eu de problème avec mon PC, ça ira."
+La perte de données ne relève pas de la malchance exceptionnelle. Panne matérielle, attaque par rançongiciel ou simple erreur de manipulation : les causes sont nombreuses et fréquentes. Pour un professionnel, la disparition de devis, de factures ou de fichiers clients peut interrompre l'activité ; pour un particulier, elle se solde souvent par la perte définitive de photos et de documents.
 
-C'est ce que m'a dit un artisan menuisier de Lesparre l'année dernière. Deux semaines plus tard, son disque dur rendait l'âme. Ses devis, ses photos de chantier, ses modèles de factures… tout avait disparu. Zéro sauvegarde.
+La parade est connue de longue date et tient en une règle : le 3-2-1.
 
-La panne de disque dur ne prévient pas. Elle ne choisit pas son moment. Et elle touche tout le monde : un particulier qui perd ses photos de famille, un artisan qui perd 5 ans de documents clients, ça fait le même dégât.
+## La règle du 3-2-1
 
-Bonne nouvelle : se protéger n'est ni compliqué ni coûteux. Il suffit de comprendre la règle de base.
+Formalisée dans les années 2000 et toujours recommandée par les organismes de cybersécurité, elle se résume ainsi :
 
-## 1. La règle du 3-2-1 : la seule chose à retenir
+- **3 copies** des données : l'original et deux sauvegardes ;
+- **2 supports** de nature différente (par exemple un disque interne et un disque externe) ;
+- **1 copie hors site**, conservée ailleurs (cloud ou domicile d'un proche).
 
-Les informaticiens ont une règle simple, et elle tient depuis 20 ans :
+La copie hors site répond à un risque souvent négligé : un incendie, un dégât des eaux ou un cambriolage peut détruire en même temps l'ordinateur et le disque de sauvegarde posé à côté. Pour la plupart des usages, l'objectif minimal réaliste combine un disque externe et un service en ligne.
 
-- **3 copies** de vos données (l'original + 2 sauvegardes)
-- **2 supports différents** (ex : votre PC + un disque externe)
-- **1 copie hors site** (dans le cloud ou chez un proche)
+## Trois risques courants
 
-Pourquoi ? Parce qu'un incendie, un vol ou une inondation peut détruire votre PC *et* votre disque externe posé à côté en même temps. Si l'une de vos sauvegardes est ailleurs, vous êtes protégé.
+**La panne matérielle.** Les disques durs mécaniques (HDD) s'usent. Les relevés publiés chaque année par l'hébergeur Backblaze, à partir d'un parc de plusieurs centaines de milliers de disques, montrent que leur taux de panne augmente nettement avec l'âge, en particulier au-delà de trois à quatre ans. Une fois le disque hors service, la récupération des données en laboratoire spécialisé coûte de plusieurs centaines à plusieurs milliers d'euros, sans garantie de résultat.
 
-> Pour la plupart des artisans et particuliers, l'objectif minimal est : **disque externe + un service cloud**. C'est 80% du problème réglé.
+*Source : [Backblaze Drive Stats](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data)*
 
-## 2. Les 3 risques que vous ne prenez pas au sérieux (et qui arrivent)
+**Les rançongiciels.** Ces logiciels chiffrent les fichiers et en monnaient le déblocage. L'ANSSI les classe parmi les principales menaces visant les entreprises et les collectivités dans son *Panorama de la cybermenace*. Face à eux, une sauvegarde hors ligne et récente est le moyen le plus sûr de repartir sans payer la rançon.
 
-**La panne mécanique.** Les disques durs classiques (HDD) ont des pièces mobiles. Ils tombent en panne en moyenne après 3 à 5 ans d'utilisation. Un disque qui fait un bruit de "clic" ou qui ralentit le PC, c'est un disque qui vous prévient qu'il va mourir. À ce stade, il est souvent trop tard pour récupérer les données sans un prestataire spécialisé — et ça coûte entre 500€ et 2000€.
+*Source : [ANSSI – Panorama de la cybermenace](https://www.cyber.gouv.fr/)*
 
-**Le ransomware.** Ce type de virus chiffre tous vos fichiers et vous demande une rançon pour les récupérer. En 2024, une PME française sur cinq a été touchée par ce type d'attaque. *(Source : ANSSI, Rapport sur la menace informatique 2024.)* Un artisan sans sauvegarde n'a qu'un choix : payer ou tout perdre.
+**L'erreur humaine.** Supprimer un dossier, écraser un fichier, formater le mauvais disque : avec une sauvegarde récente, l'incident est mineur ; sans, il est définitif.
 
-**La fausse manœuvre.** Effacer par erreur un dossier, écraser un fichier important, formater le mauvais disque… ça arrive à tout le monde. Avec une sauvegarde récente, c'est un incident. Sans sauvegarde, c'est une catastrophe.
+## Mettre en place une sauvegarde
 
-## 3. Concrètement, que faire ?
+### Pour un professionnel (devis, factures, photos de chantier)
 
-### Pour un artisan (devis, factures, photos de chantier)
+Deux éléments couvrent l'essentiel du besoin :
 
-Vos documents professionnels méritent une attention particulière. Voici la solution la plus simple :
+1. **Un disque externe USB** (de l'ordre de 80 à 120 € pour 1 To), branché régulièrement pour une sauvegarde automatique.
+2. **Un service en ligne** — OneDrive, Google Drive, ou un Nextcloud auto-hébergé — pour synchroniser en continu le dossier de travail.
 
-1. **Un disque externe USB** (80 à 120€ pour 1 To) branché une fois par semaine pour une sauvegarde automatique.
-2. **OneDrive, Google Drive ou un Nextcloud auto-hébergé** pour une synchronisation continue de votre dossier Documents.
+Sous Windows, l'outil intégré « Historique des fichiers » assure la sauvegarde automatique vers un disque externe, sans logiciel tiers : il suffit de l'activer une fois. Sous Linux, **Timeshift** et **Déjà Dup** réalisent des sauvegardes incrémentales programmées qui, une fois configurées, n'exigent plus d'intervention.
 
-Sur Windows, l'outil intégré "Historique des fichiers" fait la sauvegarde automatique sur disque externe sans rien installer. Il suffit de l'activer une fois.
+### Pour un particulier (photos, vidéos, documents)
 
-Sur Linux (et c'est une des forces du système), des outils comme **Timeshift** ou **Déjà Dup** font des sauvegardes incrémentales automatiques. Une fois configuré, vous n'avez plus à y penser.
+La logique est identique :
 
-### Pour un particulier (photos, vidéos, documents personnels)
+- **Photos** : synchronisation automatique vers Google Photos, iCloud ou un Nextcloud personnel.
+- **Documents** : un dossier synchronisé avec le service en ligne de votre choix.
+- **Fichiers volumineux** (vidéos, musique) : une sauvegarde mensuelle sur disque externe.
 
-Vos photos de famille et souvenirs sont souvent irremplaçables. La règle :
+Sous Linux Mint, le système que j'installe avec le forfait Renaissance, **Déjà Dup** est présent par défaut et sauvegarde le dossier personnel en quelques clics.
 
-- **Photos** : synchronisation automatique sur Google Photos, iCloud ou un Nextcloud chez vous (gratuit et sans limite de stockage si auto-hébergé).
-- **Documents** : dossier synchronisé avec un service cloud de votre choix.
-- **Disque externe** : une sauvegarde mensuelle pour les fichiers volumineux (vidéos, musique).
+## Pourquoi le cloud seul ne suffit pas
 
-> Astuce : sous Linux Mint (le système que j'installe avec mon forfait Renaissance), l'application **Déjà Dup** est présente par défaut. Elle sauvegarde votre dossier personnel en deux clics.
+Une synchronisation (OneDrive, Google Drive, iCloud) n'est pas une sauvegarde. Un fichier supprimé ou chiffré sur l'ordinateur l'est aussi dans le cloud, souvent dans un délai de récupération court. S'y ajoutent la dépendance à la connexion et le risque de piratage du compte. Le cloud constitue l'une des trois copies de la règle du 3-2-1, pas la solution complète.
 
-## 4. Le cloud seul, ça suffit ?
+## Ce que cela coûte
 
-Non. Le cloud est pratique, mais il a des limites :
-
-- **Synchronisation ≠ sauvegarde.** Si vous effacez un fichier par erreur, il est aussi effacé du cloud (avec un délai de récupération limité).
-- **Dépendance à Internet.** Une connexion coupée, un abonnement expiré, et vous n'avez plus accès à rien.
-- **Risque de piratage de compte.** Si votre mot de passe est compromis, vos fichiers aussi.
-
-Le cloud est une pièce du puzzle, pas toute la solution. Il se combine avec le disque externe, jamais il ne le remplace.
-
-## 5. Ce que ça coûte (moins que vous ne le pensez)
-
-| Solution | Coût | Ce que ça couvre |
+| Solution | Coût | Couverture |
 |---|---|---|
-| Disque externe 1 To | ~80-100€ (une fois) | Sauvegarde locale complète |
-| Google Drive (15 Go gratuit) | 0€ | Documents courants |
-| Google One 100 Go | 2,49€/mois | Photos + documents + Drive |
-| Nextcloud auto-hébergé | 0€ (si déjà serveur) | Tout, sans limite |
+| Disque externe 1 To | ~80-100 € (une fois) | Sauvegarde locale complète |
+| Google Drive (15 Go) | 0 € | Documents courants |
+| Google One 100 Go | 2,49 €/mois | Photos + documents |
+| Nextcloud auto-hébergé | 0 € (si serveur existant) | Tout, sans limite imposée |
 
-Pour la grande majorité des artisans et particuliers que je croise dans le Médoc, **un disque externe à 90€ + Google Drive gratuit** couvre 95% des besoins. C'est moins cher qu'une heure de récupération de données chez un spécialiste.
+Pour la majorité des particuliers et des professionnels, un disque externe à une centaine d'euros associé à un espace cloud gratuit couvre l'essentiel des besoins — un coût sans commune mesure avec une récupération de données en laboratoire.
 
 ---
 
-## En résumé
-
-Vous n'avez pas besoin d'être informaticien pour protéger vos fichiers. Vous avez besoin de deux choses : un disque externe et un service cloud, configurés une bonne fois pour toutes.
-
-Si vous ne savez pas par où commencer, ou si vous voulez qu'on mette tout ça en place ensemble proprement, [contactez-moi](/#contact). Je m'occupe de la configuration complète lors d'une intervention à domicile — que vous soyez à Saint-Laurent-Médoc, Lesparre, Pauillac ou dans les environs.
-
-Parce qu'une panne, ça arrive toujours au pire moment.
+*En pratique :* la configuration d'une sauvegarde fiable se fait une fois pour toutes. Je peux la mettre en place lors d'une intervention à domicile à Saint-Laurent-Médoc, Lesparre, Pauillac et alentours — [me contacter](/#contact).
