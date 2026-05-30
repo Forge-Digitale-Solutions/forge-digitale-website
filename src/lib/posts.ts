@@ -11,6 +11,7 @@ export interface PostData {
   id: string;
   title: string;
   date: string;
+  lastModified?: string;
   excerpt: string;
   image?: string;
   category: string;
@@ -36,6 +37,7 @@ export function getSortedPostsData(): PostData[] {
         ...(matterResult.data as {
           title: string;
           date: string;
+          lastModified?: string;
           excerpt: string;
           image: string;
           category: string;
@@ -70,6 +72,7 @@ export async function getPostData(id: string): Promise<PostData> {
     ...(matterResult.data as {
       title: string;
       date: string;
+      lastModified?: string;
       excerpt: string;
       image: string;
       category: string;

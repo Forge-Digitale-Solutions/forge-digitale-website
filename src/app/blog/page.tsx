@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getSortedPostsData } from "@/lib/posts";
-import { Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import type { Metadata } from "next";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
