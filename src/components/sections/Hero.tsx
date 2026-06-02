@@ -41,9 +41,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-lg text-slate-300 mb-10 leading-relaxed"
         >
-          Forge Digitale crée des sites web performants pour les pros et redonne
-          vie à votre matériel informatique. Une expertise locale, à vos côtés
-          en <strong className="text-white font-semibold">Gironde</strong>.
+          <strong className="text-white font-semibold">
+            Création de sites web et d&rsquo;applications sur-mesure
+          </strong>
+          , montage PC et installation Linux. Développeur indépendant en{" "}
+          <strong className="text-white font-semibold">Médoc</strong>, au service
+          des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
         </motion.p>
 
         <motion.div

@@ -1,14 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const serviceLinks = [
+  { name: "Création de site web", href: "/creation-site-web" },
+  { name: "Maintenance de site web", href: "/maintenance-site-web" },
+  { name: "Développeur dans le Médoc", href: "/developpeur-medoc" },
+  { name: "Montage PC", href: "/montage-pc" },
+  { name: "Installation Linux", href: "/installation-linux" },
+];
+
+const navLinks = [
+  { name: "Réalisations", href: "/#realisations" },
+  { name: "Blog", href: "/blog" },
+  { name: "À Propos", href: "/#about" },
+  { name: "FAQ", href: "/#faq" },
+];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +36,31 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Services", href: "/#services" },
-    { name: "Réalisations", href: "/#realisations" },
-    { name: "Blog", href: "/blog" },
-    { name: "À Propos", href: "/#about" },
-    { name: "FAQ", href: "/#faq" },
-  ];
+  // Close the desktop dropdown on outside click or Escape
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        servicesRef.current &&
+        !servicesRef.current.contains(e.target as Node)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setServicesOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  const closeMobile = () => {
+    setIsOpen(false);
+    setMobileServicesOpen(false);
+  };
 
   return (
     <header
@@ -76,6 +112,48 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
+            {/* Services dropdown */}
+            <div ref={servicesRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setServicesOpen((v) => !v)}
+                className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-white focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-4 rounded transition-colors group"
+                aria-haspopup="true"
+                aria-expanded={servicesOpen}
+              >
+                Services
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    className="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-dark-base/95 backdrop-blur-md border border-white/10 shadow-2xl p-2"
+                  >
+                    {serviceLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="block px-4 py-2.5 rounded-xl text-sm text-slate-300 hover:text-white hover:bg-white/5 focus-visible:text-white focus-visible:bg-white/5 focus-visible:outline-2 focus-visible:outline-[#C5A059] transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -116,21 +194,61 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-dark-base border-b border-white/10 md:hidden flex flex-col p-6 gap-4 shadow-2xl"
+            className="absolute top-full left-0 w-full bg-dark-base border-b border-white/10 md:hidden flex flex-col p-6 gap-2 shadow-2xl"
           >
+            {/* Services accordion */}
+            <button
+              type="button"
+              onClick={() => setMobileServicesOpen((v) => !v)}
+              className="flex items-center justify-between py-2 text-lg font-medium text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+              aria-expanded={mobileServicesOpen}
+              aria-controls="mobile-services"
+            >
+              Services
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-200 ${
+                  mobileServicesOpen ? "rotate-180" : ""
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {mobileServicesOpen && (
+                <motion.div
+                  id="mobile-services"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="overflow-hidden flex flex-col"
+                >
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMobile}
+                      className="py-2 pl-4 text-base text-slate-400 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] py-2 text-lg font-medium border-b border-white/5 rounded"
-                onClick={() => setIsOpen(false)}
+                className="py-2 text-lg font-medium text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+                onClick={closeMobile}
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/#contact"
-              onClick={() => setIsOpen(false)}
+              onClick={closeMobile}
               className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
             >
               Me contacter

@@ -2,6 +2,7 @@ interface ArticleSchemaProps {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   image?: string;
   slug: string;
   category?: string;
@@ -11,6 +12,7 @@ export function ArticleSchema({
   title,
   description,
   datePublished,
+  dateModified,
   image,
   slug,
   category,
@@ -24,7 +26,7 @@ export function ArticleSchema({
     description: description,
     image: image || "https://forgedigitalesolutions.com/images/og-image.jpg",
     datePublished: datePublished,
-    dateModified: datePublished,
+    dateModified: dateModified || datePublished,
     author: {
       "@type": "Person",
       name: "Anthony Marcelin",

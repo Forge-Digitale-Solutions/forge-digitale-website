@@ -10,6 +10,7 @@ const services = [
     description:
       "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
     price: "À partir de 800€",
+    href: "/creation-site-web",
     icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
     colSpan: "md:col-span-2",
@@ -24,6 +25,7 @@ const services = [
     description:
       "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
     price: "Sur devis",
+    href: "/maintenance-site-web",
     icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",
@@ -34,6 +36,7 @@ const services = [
     description:
       "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
     price: "Forfait 149€",
+    href: "/montage-pc",
     badge: "Offre de Lancement 🚀",
     icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
@@ -50,6 +53,7 @@ const services = [
     description:
       "Votre ordinateur est lent ? Ne le jetez pas. Je le nettoie et j'installe un système léger pour lui redonner sa rapidité.",
     price: "Forfait 69€",
+    href: "/installation-linux",
     badge: "Tarif 2026 ✨",
     icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]",
@@ -102,7 +106,7 @@ export function Services() {
                 flex flex-col
               `}
             >
-              <div className="absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div
                 className={`w-12 h-12 rounded-2xl ${service.bgIcon} flex items-center justify-center mb-6`}
@@ -128,6 +132,28 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+
+              {service.href && (
+                <Link
+                  href={service.href}
+                  className="relative z-10 inline-flex items-center gap-1 text-sm text-[#C5A059] hover:text-[#D4B475] font-medium mb-4 transition-colors"
+                >
+                  En savoir plus
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </Link>
+              )}
 
               <div className="mt-auto text-right">
                 {service.badge && (

@@ -1,6 +1,7 @@
 ---
 title: "Monter un PC de jeu équilibré en 2026 : les priorités"
 date: "2026-02-07"
+lastModified: "2026-05-30"
 category: "Hardware"
 excerpt: "Un bon PC de jeu n'exige pas le matériel le plus cher, mais une configuration équilibrée. Où mettre le budget, où l'économiser, comment anticiper une évolution future : les principes d'un montage durable, et l'intérêt de passer par un assembleur."
 image: "/blog/pc-build.jpg"
@@ -38,4 +39,4 @@ Mon forfait montage (150 €) couvre l'assemblage complet et ces réglages, pour
 
 ---
 
-*En pratique :* pour une configuration sur-mesure adaptée à votre budget et à votre écran, en Gironde, je propose un montage et des conseils personnalisés — [me contacter](/#contact).
+*En pratique :* pour une configuration sur-mesure adaptée à votre budget et à votre écran, en Gironde, je propose un [montage PC](/montage-pc) et des conseils personnalisés. [Me contacter](/#contact).

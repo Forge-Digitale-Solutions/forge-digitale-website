@@ -30,34 +30,49 @@ export function Footer() {
             <h4 className="text-white font-bold mb-6">Services</h4>
             <ul className="space-y-3 text-sm text-slate-300">
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
-                  href="/#services"
-                  aria-label="Voir les services de création de site web"
+                <Link
+                  href="/creation-site-web"
+                  aria-label="Création de site web et d'applications"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Création Site Web
-                </a>
+                </Link>
               </li>
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
-                  href="/#services"
-                  aria-label="Voir les services de montage PC gamer"
+                <Link
+                  href="/maintenance-site-web"
+                  aria-label="Maintenance et hébergement de site web"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                >
+                  Maintenance Site Web
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/montage-pc"
+                  aria-label="Montage PC sur-mesure et gamer"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
                   Montage PC Gamer
-                </a>
+                </Link>
               </li>
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
-                  href="/#services"
-                  aria-label="Voir les services de dépannage et Linux"
+                <Link
+                  href="/installation-linux"
+                  aria-label="Installation Linux et forfait Renaissance"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
                 >
-                  Dépannage & Linux
-                </a>
+                  Installation Linux
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/developpeur-medoc"
+                  aria-label="Développeur web indépendant dans le Médoc"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                >
+                  Développeur dans le Médoc
+                </Link>
               </li>
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}

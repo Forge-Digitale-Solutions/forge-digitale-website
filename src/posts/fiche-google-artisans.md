@@ -1,8 +1,9 @@
 ---
 title: "Fiche Google (Business Profile) : à quoi elle sert et comment la créer"
 date: "2026-05-19"
+lastModified: "2026-05-30"
 category: "Web"
-excerpt: "Avant même un site web, la fiche Google (Google Business Profile) est le premier outil de visibilité locale d'un artisan ou d'un commerçant — et il est gratuit. Comment elle fonctionne, pourquoi elle pèse autant dans les recherches locales, et comment la créer pas à pas."
+excerpt: "Avant même un site web, la fiche Google (Google Business Profile) est le premier outil de visibilité locale d'un artisan ou d'un commerçant, et il est gratuit. Comment elle fonctionne, pourquoi elle pèse autant dans les recherches locales, et comment la créer pas à pas."
 image: "/blog/fiche-google.jpg"
 ---
 
@@ -45,7 +46,7 @@ Le contenu pèse sur le classement comme sur le taux de contact. Quelques points
 - **Les photos.** Selon Google, les fiches qui en comportent reçoivent davantage de demandes d'itinéraire et de clics vers le site web (l'entreprise avance respectivement +42 % et +35 %).
 - **Les horaires**, y compris les jours fériés : une mention « horaires non renseignés » fait perdre des contacts.
 - **L'exhaustivité** : description, services, zone desservie. Google met en avant les fiches complètes.
-- **Les avis** : y répondre, même brièvement, renforce la crédibilité — particulièrement pour un avis négatif, où une réponse posée rassure les futurs clients.
+- **Les avis** : y répondre, même brièvement, renforce la crédibilité, en particulier pour un avis négatif, où une réponse posée rassure les futurs clients.
 
 *Source : Google (Google Business Profile).*
 
@@ -55,4 +56,4 @@ La fiche Google rend visible et permet d'être contacté, mais elle reste un for
 
 ---
 
-*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un site sur-mesure, j'interviens dans le Médoc et autour de Bordeaux — [me contacter](/#contact).
+*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un [site web sur-mesure](/creation-site-web), j'accompagne les artisans du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -41,6 +42,9 @@ export async function generateMetadata({
       "Médoc",
     ],
     authors: [{ name: "Anthony Marcelin" }],
+    alternates: {
+      canonical: articleUrl,
+    },
     robots: {
       index: true,
       follow: true,
@@ -90,11 +94,19 @@ export default async function Post({
         title={postData.title}
         description={postData.excerpt || postData.title}
         datePublished={postData.date}
+        dateModified={postData.lastModified}
         image={
           postData.image ? `https://forgedigitalesolutions.com${postData.image}` : undefined
         }
         slug={slug}
         category={postData.category}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Accueil", url: `${SITE_URL}/` },
+          { name: "Blog", url: `${SITE_URL}/blog/` },
+          { name: postData.title, url: `${SITE_URL}/blog/${slug}/` },
+        ]}
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
