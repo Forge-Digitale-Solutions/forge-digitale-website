@@ -106,7 +106,7 @@ export function Services() {
                 flex flex-col
               `}
             >
-              <div className="absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div
                 className={`w-12 h-12 rounded-2xl ${service.bgIcon} flex items-center justify-center mb-6`}
@@ -136,7 +136,7 @@ export function Services() {
               {service.href && (
                 <Link
                   href={service.href}
-                  className="inline-flex items-center gap-1 text-sm text-[#C5A059] hover:text-[#D4B475] font-medium mb-4 transition-colors"
+                  className="relative z-10 inline-flex items-center gap-1 text-sm text-[#C5A059] hover:text-[#D4B475] font-medium mb-4 transition-colors"
                 >
                   En savoir plus
                   <svg
