@@ -121,12 +121,11 @@ export default function CreationSiteWebPage() {
           <p>
             Un point auquel je tiens : la rapidité. Un beau site qui met trois
             secondes à s&rsquo;afficher fait fuir les visiteurs, et Google le
-            relègue derrière les autres. Je travaille avec des outils récents
-            (Next.js, React) qui privilégient la vitesse et tiennent la route sur
-            téléphone, là où se font la plupart des recherches du coin. Le contenu
-            et les mots-clés sont pensés à partir de votre activité réelle, pour
-            que vous remontiez quand quelqu&rsquo;un cherche votre métier dans le
-            secteur.
+            relègue derrière les autres. Je développe des sites qui chargent vite
+            et tiennent la route sur téléphone, là où se font la plupart des
+            recherches du coin. Le contenu et les mots-clés sont pensés à partir
+            de votre activité réelle, pour que vous remontiez quand
+            quelqu&rsquo;un cherche votre métier dans le secteur.
           </p>
 
           <p>

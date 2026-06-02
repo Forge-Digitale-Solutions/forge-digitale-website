@@ -40,6 +40,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/maintenance-site-web"
+                  aria-label="Maintenance et hébergement de site web"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                >
+                  Maintenance Site Web
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/montage-pc"
                   aria-label="Montage PC sur-mesure et gamer"
                   className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"

@@ -180,9 +180,10 @@ export function LocalBusinessSchema() {
       "https://www.linkedin.com/company/forge-digitale-solutions/",
     ],
     knowsAbout: [
+      "Création de site web",
+      "Développement d'application",
       "Linux Mint",
-      "Next.js",
-      "Montage PC Gamer",
+      "Montage PC",
       "Green IT",
       "Développement web Gironde"
     ],

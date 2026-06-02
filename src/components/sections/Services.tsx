@@ -25,6 +25,7 @@ const services = [
     description:
       "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
     price: "Sur devis",
+    href: "/maintenance-site-web",
     icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
     bgIcon: "bg-[#C5A059]/10",
     colSpan: "md:col-span-1",

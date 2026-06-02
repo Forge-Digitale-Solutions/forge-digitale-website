@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages = [
     "/creation-site-web",
     "/developpeur-medoc",
+    "/maintenance-site-web",
     "/installation-linux",
     "/montage-pc",
   ].map(

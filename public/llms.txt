@@ -1,24 +1,25 @@
-# llms.txt — Forge Digitale Solutions
-# Artisanat numérique en Médoc — sites web, applications, PC, Linux Mint
+# llms.txt, Forge Digitale Solutions
+# Artisanat numérique dans le Médoc : sites web, applications, PC, Linux Mint
 # Contact : contact@forgedigitalesolutions.com | SIREN : 100 857 838
 
 ## À propos
-Forge Digitale Solutions : création de sites web et d'applications sur-mesure, montage PC, dépannage et installation Linux (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, Concepteur Développeur d'Applications (titre professionnel). Interventions en atelier à Saint-Laurent-Médoc ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux.
+Forge Digitale Solutions : création de sites web et d'applications sur-mesure, maintenance de sites, montage PC, dépannage et installation Linux (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, développeur full-stack, titulaire du titre de Concepteur Développeur d'Applications. Interventions en atelier à Saint-Laurent-Médoc ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux.
 
 ## Pages principales
-- https://forgedigitalesolutions.com/ — Accueil : services et présentation (forfait Linux 69 €, montage PC 149 €)
-- https://forgedigitalesolutions.com/creation-site-web — Création de sites web et d'applications sur-mesure (à partir de 800 €)
-- https://forgedigitalesolutions.com/developpeur-medoc — Développeur web indépendant en Médoc et Bassin d'Arcachon
-- https://forgedigitalesolutions.com/installation-linux — Installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
-- https://forgedigitalesolutions.com/montage-pc — Montage PC sur-mesure, gaming et bureautique (forfait 149 €)
-- https://forgedigitalesolutions.com/blog — Articles : web, sécurité, montage PC, Linux
+- https://forgedigitalesolutions.com/ : accueil, services et présentation (forfait Linux 69 €, montage PC 149 €)
+- https://forgedigitalesolutions.com/creation-site-web : création de sites web et d'applications sur-mesure (à partir de 800 €)
+- https://forgedigitalesolutions.com/maintenance-site-web : maintenance, hébergement et suivi de site web
+- https://forgedigitalesolutions.com/developpeur-medoc : développeur web indépendant dans le Médoc et le Bassin d'Arcachon
+- https://forgedigitalesolutions.com/installation-linux : installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
+- https://forgedigitalesolutions.com/montage-pc : montage PC sur-mesure, jeu et bureautique (forfait 149 €)
+- https://forgedigitalesolutions.com/blog : articles sur le web, la sécurité, le montage PC et Linux
 
 ## Sections de l'accueil (ancres)
-- https://forgedigitalesolutions.com/#services — Détail des services
-- https://forgedigitalesolutions.com/#about — Présentation d'Anthony Marcelin
-- https://forgedigitalesolutions.com/#realisations — Réalisations
-- https://forgedigitalesolutions.com/#faq — Questions fréquentes
-- https://forgedigitalesolutions.com/#contact — Contact et devis
+- https://forgedigitalesolutions.com/#services : détail des services
+- https://forgedigitalesolutions.com/#about : présentation d'Anthony Marcelin
+- https://forgedigitalesolutions.com/#realisations : réalisations
+- https://forgedigitalesolutions.com/#faq : questions fréquentes
+- https://forgedigitalesolutions.com/#contact : contact et devis
 
 ## Pages légales
 - https://forgedigitalesolutions.com/mentions-legales
@@ -29,4 +30,4 @@ Forge Digitale Solutions : création de sites web et d'applications sur-mesure, 
 https://forgedigitalesolutions.com/sitemap.xml
 
 # Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended
-# Dernière mise à jour : 2026-05-30
+# Dernière mise à jour : 2026-06-02
