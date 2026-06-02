@@ -7,9 +7,9 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/installation-linux`;
 
 export const metadata: Metadata = {
-  title: "Installation Linux & passage de Windows à Linux Mint en Médoc",
+  title: "Installation Linux : redonner vie à un vieux PC en Médoc",
   description:
-    "Votre PC est trop ancien pour Windows 11 ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour prolonger sa durée de vie, en atelier à Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
+    "Votre PC est trop ancien pour Windows 11 ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour le relancer, en atelier à Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
   keywords: [
     "installation Linux Médoc",
     "passage Windows à Linux",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Installation Linux & passage de Windows à Linux Mint en Médoc",
+    title: "Installation Linux : redonner vie à un vieux PC en Médoc",
     description:
-      "Installation de Linux Mint pour prolonger la vie de votre PC, en atelier à Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
+      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, en atelier à Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-mint.png`,
@@ -67,11 +67,11 @@ const serviceSchema = {
 };
 
 const inclus = [
-  "Sauvegarde préalable de vos fichiers personnels",
+  "Sauvegarde de vos fichiers personnels avant l'opération",
   "Nettoyage complet de la machine",
-  "Installation de Linux Mint (interface proche de Windows)",
-  "Configuration des périphériques (Wi-Fi, imprimante, son)",
-  "Une heure de prise en main personnalisée",
+  "Installation de Linux Mint, configuré pour ressembler à Windows",
+  "Réglage des périphériques : Wi-Fi, imprimante, son",
+  "Une heure de prise en main avec vous, pour partir tranquille",
 ];
 
 export default function InstallationLinuxPage() {
@@ -102,36 +102,54 @@ export default function InstallationLinuxPage() {
             Forfait Renaissance
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Installation Linux : redonnez une seconde vie à votre PC en Médoc
+            Installation Linux : redonner vie à un vieux PC en Médoc
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Le support de Windows 10 a pris fin et votre ordinateur est jugé trop
-            ancien pour Windows 11 ? Plutôt que de le remplacer, j&rsquo;installe{" "}
-            <strong className="text-white">Linux Mint</strong> pour lui rendre
-            rapidité et sécurité, pour plusieurs années. Une solution{" "}
-            <strong className="text-white">économique et écologique</strong>, en
-            atelier à Saint-Laurent-Médoc, pour tout le{" "}
-            <strong className="text-white">Médoc</strong> et le Bassin
+            Votre ordinateur rame, ou Windows ne le suit plus ? Avant de le
+            remplacer, il y a souvent une autre option : j&rsquo;installe{" "}
+            <strong className="text-white">Linux Mint</strong> à la place de
+            Windows, et la machine repart pour plusieurs années. C&rsquo;est mon{" "}
+            <strong className="text-white">forfait Renaissance</strong>, en
+            atelier à Saint-Laurent-Médoc, pour tout le Médoc et le Bassin
             d&rsquo;Arcachon.
           </p>
         </header>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Pourquoi passer à Linux Mint
+            Pourquoi ne pas le jeter
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            Linux Mint est un système gratuit, léger et maintenu dans la durée. Il
-            redonne de la fluidité à un PC d&rsquo;une dizaine d&rsquo;années (4 Go
-            de mémoire vive suffisent pour la bureautique et le web) et reste à
-            jour sans abonnement ni date de péremption imposée au matériel.
+            Beaucoup de PC partent à la benne alors qu&rsquo;ils fonctionnent
+            encore très bien pour la bureautique, internet et les mails. Ce qui
+            les ralentit, c&rsquo;est souvent Windows, devenu trop lourd pour eux —
+            et quand Microsoft arrête les mises à jour, on a l&rsquo;impression
+            qu&rsquo;il faut racheter.
           </p>
           <p className="text-slate-300 leading-relaxed">
-            Son interface a été pensée pour limiter le dépaysement : menu de
-            démarrage en bas à gauche, barre des tâches, fenêtres classiques. Les
-            usages courants trouvent leur équivalent direct — LibreOffice pour les
-            documents, Firefox ou Chrome pour le web — et vos fichiers (`.docx`,
-            `.pdf`, photos) s&rsquo;ouvrent sans conversion.
+            Linux Mint est gratuit, léger et reste à jour dans le temps. Sur une
+            machine d&rsquo;une dizaine d&rsquo;années, il redonne de la fluidité
+            là où Windows s&rsquo;essoufflait. Et c&rsquo;est aussi un geste pour
+            le portefeuille comme pour la planète : on garde ce qui marche.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            « Mais je vais être perdu, non ? »
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-4">
+            C&rsquo;est la crainte numéro un, et elle est légitime. La bonne
+            nouvelle : Linux Mint a été pensé pour ressembler à Windows. Menu en
+            bas à gauche, barre des tâches, fenêtres classiques — vos repères sont
+            là. Pour les logiciels, on retrouve l&rsquo;équivalent de ce que vous
+            utilisez : LibreOffice pour les documents, Firefox ou Chrome pour
+            internet, une messagerie intégrée.
+          </p>
+          <p className="text-slate-300 leading-relaxed">
+            Vos fichiers habituels (documents Word, PDF, photos) s&rsquo;ouvrent
+            normalement. Et l&rsquo;heure de prise en main comprise dans le forfait
+            sert exactement à ça : vous montrer où tout se trouve, à votre rythme.
           </p>
         </section>
 
@@ -151,22 +169,22 @@ export default function InstallationLinuxPage() {
             ))}
           </ul>
           <p className="text-slate-400 text-sm mt-6">
-            Tarif : <strong className="text-white">forfait Renaissance à 69 €</strong>.
-            L&rsquo;intervention se déroule en atelier à Saint-Laurent-Médoc et
-            dure environ deux heures.
+            Le tout pour <strong className="text-white">69 €</strong>, en atelier à
+            Saint-Laurent-Médoc, en deux heures environ.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Quand Linux n&rsquo;est pas la bonne solution
+            Quand Linux n&rsquo;est pas la bonne idée
           </h2>
           <p className="text-slate-300 leading-relaxed">
-            Linux Mint couvre la bureautique, le web, la messagerie et le
-            multimédia. En revanche, certains logiciels professionnels spécifiques
-            ou des jeux récents avec anti-triche ne fonctionnent pas sous Linux. Un
-            diagnostic préalable des usages permet de vérifier la compatibilité
-            avant toute migration — sans engagement.
+            Je préfère être honnête : Linux ne convient pas à tout le monde. Si
+            vous dépendez d&rsquo;un logiciel métier précis (compta, outil de
+            profession) ou de jeux récents avec anti-triche, ça peut coincer. On
+            en parle avant : je regarde vos usages, et si Linux n&rsquo;est pas
+            adapté, je vous le dis franchement plutôt que de vous vendre une
+            migration qui vous bloquera.
           </p>
         </section>
 
@@ -194,11 +212,11 @@ export default function InstallationLinuxPage() {
 
         <section className="mt-16 pt-8 border-t border-white/10">
           <h2 className="text-xl font-bold text-white mb-4">
-            Votre PC est lent ou bloqué sur Windows ?
+            Votre PC mérite peut-être une seconde vie
           </h2>
           <p className="text-slate-300 mb-6">
-            Diagnostic gratuit en atelier à Saint-Laurent-Médoc, pour les
-            particuliers et professionnels du Médoc et du Bassin d&rsquo;Arcachon.
+            Apportez-le-moi, je vous dis franchement ce qu&rsquo;il vaut encore. Le
+            diagnostic est gratuit, en atelier à Saint-Laurent-Médoc.
           </p>
           <Link
             href="/#contact"

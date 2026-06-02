@@ -7,9 +7,9 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/montage-pc`;
 
 export const metadata: Metadata = {
-  title: "Montage PC sur-mesure (gamer, bureautique) en Gironde",
+  title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
   description:
-    "Assemblage de PC sur-mesure — gaming, bureautique ou familial — en Gironde. Configuration équilibrée, réglages BIOS/XMP et montage soigné, en atelier à Saint-Laurent-Médoc. Forfait montage à 149 €.",
+    "Montage de PC adapté à votre usage et à votre budget — jeu, travail ou famille. Vous achetez les pièces, je les assemble et règle tout, en atelier à Saint-Laurent-Médoc. Forfait à 149 €, Gironde.",
   keywords: [
     "montage PC Gironde",
     "montage PC gamer Bordeaux",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Montage PC sur-mesure (gamer, bureautique) en Gironde",
+    title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
     description:
-      "Assemblage de PC sur-mesure en Gironde : configuration équilibrée, réglages BIOS/XMP, montage soigné. Forfait à 149 €, en atelier à Saint-Laurent-Médoc.",
+      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 €, en atelier à Saint-Laurent-Médoc.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-build.jpg`,
@@ -46,7 +46,7 @@ const serviceSchema = {
   name: "Montage PC sur-mesure",
   serviceType: "Assemblage d'ordinateur",
   description:
-    "Assemblage de PC sur-mesure (gaming, bureautique, familial) avec configuration équilibrée, optimisation BIOS/XMP et montage soigné. En atelier à Saint-Laurent-Médoc, pour toute la Gironde.",
+    "Assemblage de PC sur-mesure (jeu, bureautique, familial) avec choix des composants, montage soigné et réglages. Le client achète les pièces, l'assemblage se fait en atelier à Saint-Laurent-Médoc.",
   url: PAGE_URL,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Médoc" },
@@ -62,17 +62,17 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "149",
-    description: "Forfait montage complet (pièces fournies par le client)",
+    description: "Forfait montage complet (pièces achetées par le client)",
   },
 };
 
 const inclus = [
-  "Conseil et choix des composants adaptés à votre budget",
-  "Assemblage soigné et gestion des câbles",
-  "Mise à jour du BIOS si nécessaire",
-  "Activation du profil mémoire (XMP/EXPO)",
-  "Courbe de ventilation optimisée",
-  "Installation du système et prise en main",
+  "On choisit ensemble les composants selon votre budget",
+  "Vous commandez les pièces : factures et garanties à votre nom",
+  "Montage soigné et câbles rangés proprement",
+  "Mise à jour du BIOS et profil mémoire (XMP/EXPO) activé",
+  "Ventilation réglée pour rester silencieux",
+  "Système installé, machine prête à l'emploi",
 ];
 
 export default function MontagePcPage() {
@@ -103,41 +103,41 @@ export default function MontagePcPage() {
             Montage PC sur-mesure
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Montage PC sur-mesure : gaming, bureautique ou familial en Gironde
+            Montage PC sur-mesure en Gironde
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            J&rsquo;assemble des PC <strong className="text-white">sur-mesure</strong>{" "}
-            adaptés à votre usage réel et à votre budget — du PC{" "}
-            <strong className="text-white">gamer</strong> à la machine bureautique
-            ou familiale. Une configuration équilibrée, des réglages soignés et un
-            montage propre, en atelier à Saint-Laurent-Médoc, pour toute la{" "}
+            Que ce soit pour jouer, travailler ou un usage familial, je monte des
+            PC <strong className="text-white">adaptés à votre besoin réel</strong>{" "}
+            et à votre budget. Le principe est simple et transparent : vous achetez
+            les pièces, je m&rsquo;occupe de l&rsquo;assemblage et des réglages, en
+            atelier à Saint-Laurent-Médoc, pour toute la{" "}
             <strong className="text-white">Gironde</strong>.
           </p>
         </header>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Une configuration équilibrée, pas la plus chère
+            La bonne config, pas la plus chère
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            La performance ressentie dépend moins du prix total que de
-            l&rsquo;équilibre entre composants : une configuration mal répartie
-            plafonne quels que soient les montants engagés. Je définis avec vous
-            une machine cohérente, où le budget est placé là où il compte vraiment
-            — la carte graphique et sa mémoire vidéo pour le jeu, par exemple — sans
-            payer pour de la puissance inutile.
+            Un bon PC, ce n&rsquo;est pas celui qui coûte le plus cher, c&rsquo;est
+            celui qui est équilibré. Mettre tout le budget dans une pièce et
+            négliger le reste, c&rsquo;est se retrouver avec une machine bridée. Je
+            place donc l&rsquo;argent là où il compte vraiment pour votre usage —
+            la carte graphique pour le jeu, par exemple — sans vous faire payer de
+            la puissance qui ne vous servira jamais.
           </p>
           <p className="text-slate-300 leading-relaxed">
-            J&rsquo;accorde aussi une attention particulière aux composants que
-            l&rsquo;on néglige souvent à tort, comme l&rsquo;alimentation, qui
-            protège l&rsquo;ensemble et laisse la marge pour faire évoluer la
-            machine plus tard.
+            Je fais aussi attention aux pièces qu&rsquo;on néglige souvent à tort,
+            comme l&rsquo;alimentation : c&rsquo;est elle qui protège tout le reste
+            et qui vous laissera de la marge pour faire évoluer la machine plus
+            tard.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Ce que comprend le forfait montage
+            Comment ça se passe
           </h2>
           <ul className="space-y-3">
             {inclus.map((item) => (
@@ -151,25 +151,23 @@ export default function MontagePcPage() {
             ))}
           </ul>
           <p className="text-slate-400 text-sm mt-6">
-            Tarif : <strong className="text-white">forfait montage à 149 €</strong>.
-            Vous commandez les pièces directement (factures et garanties à votre
-            nom), je m&rsquo;occupe de l&rsquo;assemblage et des réglages, en
-            atelier à Saint-Laurent-Médoc.
+            Le forfait montage est à <strong className="text-white">149 €</strong>.
+            Comme vous achetez vous-même les pièces, vous gardez la main sur le
+            budget et les garanties restent à votre nom.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Pourquoi passer par un assembleur
+            Pourquoi pas le monter soi-même
           </h2>
           <p className="text-slate-300 leading-relaxed">
-            Monter soi-même sa machine est formateur, mais comporte des risques
-            concrets : une broche tordue sur le socket de la carte mère, et le
-            composant est généralement perdu, sans prise en charge au titre de la
-            garantie. Plusieurs réglages, par ailleurs, conditionnent les
-            performances réelles et passent souvent inaperçus — mise à jour du
-            BIOS, profil mémoire, courbe de ventilation. Je livre une machine prête
-            à l&rsquo;emploi et correctement paramétrée.
+            Monter son PC, c&rsquo;est gratifiant — mais une erreur coûte cher : une
+            broche tordue sur la carte mère, et la pièce est souvent perdue, sans
+            garantie. Et au-delà du montage, plusieurs réglages déterminent les
+            vraies performances et passent souvent à la trappe : la mise à jour du
+            BIOS, le profil mémoire, la courbe de ventilation. Je vous livre une
+            machine montée proprement et réglée correctement, prête à servir.
           </p>
         </section>
 
@@ -189,11 +187,11 @@ export default function MontagePcPage() {
 
         <section className="mt-16 pt-8 border-t border-white/10">
           <h2 className="text-xl font-bold text-white mb-4">
-            Un projet de PC sur-mesure ?
+            Une config en tête ?
           </h2>
           <p className="text-slate-300 mb-6">
-            Parlons de votre usage et de votre budget. Conseil et devis gratuits,
-            en atelier à Saint-Laurent-Médoc, pour toute la Gironde.
+            Dites-moi votre usage et votre budget, je vous conseille la
+            configuration qui tient la route. Le conseil et le devis sont gratuits.
           </p>
           <Link
             href="/#contact"

@@ -7,15 +7,14 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/developpeur-medoc`;
 
 export const metadata: Metadata = {
-  title: "Développeur web indépendant en Médoc & Bassin d'Arcachon",
+  title: "Développeur web indépendant en Médoc et Bassin d'Arcachon",
   description:
-    "Développeur web indépendant basé en Médoc : sites internet, applications sur-mesure et outils métier pour les professionnels de la Gironde et du Bassin d'Arcachon. Titre de Concepteur Développeur d'Applications.",
+    "Anthony Marcelin, développeur web indépendant basé en Médoc. Sites internet et applications sur-mesure pour les pros de la Gironde. Un seul interlocuteur, du devis à la mise en ligne.",
   keywords: [
     "développeur Médoc",
     "développeur web Bassin d'Arcachon",
     "développeur freelance Gironde",
     "développeur application sur-mesure",
-    "concepteur développeur d'applications",
     "développeur indépendant Bordeaux",
   ],
   alternates: {
@@ -26,9 +25,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Développeur web indépendant en Médoc & Bassin d'Arcachon",
+    title: "Développeur web indépendant en Médoc et Bassin d'Arcachon",
     description:
-      "Développeur web indépendant en Médoc : sites internet, applications sur-mesure et outils métier pour les professionnels de la Gironde.",
+      "Anthony Marcelin, développeur web indépendant en Médoc. Sites et applications sur-mesure pour les pros de la Gironde. Un seul interlocuteur, du devis à la mise en ligne.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -64,12 +63,11 @@ const profileSchema = {
   },
 };
 
-const competences = [
-  "Développement front-end (React, Next.js)",
-  "Développement back-end et bases de données",
-  "Applications web métier sur-mesure",
-  "Sites performants et optimisés pour le référencement",
-  "Intégration responsive (mobile, tablette, ordinateur)",
+const pourquoi = [
+  "Un seul interlocuteur : la personne à qui vous parlez est celle qui code",
+  "Des décisions rapides, sans chaîne d'intermédiaires",
+  "Un suivi de proximité, par quelqu'un de la région",
+  "Du concret : on parle de votre métier avant de parler technique",
 ];
 
 export default function DeveloppeurMedocPage() {
@@ -100,41 +98,45 @@ export default function DeveloppeurMedocPage() {
             Développeur indépendant
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Développeur web indépendant en Médoc &amp; Bassin d&rsquo;Arcachon
+            Développeur web indépendant en Médoc et Bassin d&rsquo;Arcachon
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Je suis Anthony Marcelin, développeur web indépendant basé à
-            Saint-Laurent-Médoc. J&rsquo;accompagne les professionnels de la{" "}
-            <strong className="text-white">Gironde</strong>, du{" "}
-            <strong className="text-white">Médoc</strong> au{" "}
-            <strong className="text-white">Bassin d&rsquo;Arcachon</strong>, dans
-            la création de sites internet et d&rsquo;applications sur-mesure.
+            Moi, c&rsquo;est Anthony Marcelin. Je développe des sites internet et
+            des applications depuis le <strong className="text-white">Médoc</strong>,
+            pour les professionnels de la <strong className="text-white">Gironde</strong>{" "}
+            et du Bassin d&rsquo;Arcachon. Pas une agence : un développeur, qui
+            prend votre projet du début à la fin.
           </p>
         </header>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Mon parcours</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            D&rsquo;où je viens
+          </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            Titulaire du titre professionnel de{" "}
+            Je suis tombé dans l&rsquo;informatique très jeune et je n&rsquo;en
+            suis jamais ressorti. Au fil du temps, j&rsquo;ai appris à toucher aux
+            deux bouts de la chaîne : le logiciel et le matériel. Aujourd&rsquo;hui
+            je suis titulaire du titre professionnel de{" "}
             <strong className="text-white">
               Concepteur Développeur d&rsquo;Applications
-            </strong>{" "}
-            et passionné d&rsquo;informatique depuis plus de vingt ans, je
-            combine développement logiciel et maîtrise du matériel. Cette double
-            compétence me permet de comprendre un projet de bout en bout, du code
-            jusqu&rsquo;à l&rsquo;infrastructure qui l&rsquo;héberge.
+            </strong>
+            , et cette double casquette m&rsquo;aide à comprendre un projet en
+            entier, du code jusqu&rsquo;au serveur qui l&rsquo;héberge.
           </p>
           <p className="text-slate-300 leading-relaxed">
-            Travailler en indépendant, c&rsquo;est un interlocuteur unique du
-            premier échange à la mise en ligne : pas d&rsquo;intermédiaire, des
-            décisions rapides et un suivi de proximité.
+            Travailler en indépendant, ce n&rsquo;est pas qu&rsquo;une question de
+            statut : c&rsquo;est ce qui me permet de rester joignable, de répondre
+            moi-même et de ne pas vous balader d&rsquo;un service à l&rsquo;autre.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Compétences</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Travailler avec moi
+          </h2>
           <ul className="space-y-3">
-            {competences.map((item) => (
+            {pourquoi.map((item) => (
               <li key={item} className="flex items-start gap-3 text-slate-300">
                 <Check
                   className="h-5 w-5 text-[#C5A059] shrink-0 mt-0.5"
@@ -148,26 +150,25 @@ export default function DeveloppeurMedocPage() {
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Travailler ensemble
+            Ce que je peux faire pour vous
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            Chaque projet commence par un échange pour cerner votre besoin réel,
-            votre activité et vos contraintes. Je propose ensuite une solution
-            claire et un devis détaillé, sans jargon inutile. Pour la création de
-            sites en particulier, le détail de la prestation est présenté sur la
-            page{" "}
+            Le plus souvent, ça commence par un site internet. Mais selon le
+            besoin, ça peut aussi être une application développée pour votre façon
+            de travailler, quand un logiciel du marché ne fait pas l&rsquo;affaire.
+            Je n&rsquo;arrive pas avec une solution toute prête : je pars de ce que
+            vous me décrivez, puis je propose ce qui tient la route.
+          </p>
+          <p className="text-slate-300 leading-relaxed">
+            Le détail de la prestation web est sur la page{" "}
             <Link
               href="/creation-site-web"
               className="text-[#C5A059] hover:underline"
             >
               création de site web
             </Link>
-            .
-          </p>
-          <p className="text-slate-300 leading-relaxed">
-            Que vous soyez à Lesparre, Pauillac, Castelnau-de-Médoc, sur le
-            Bassin d&rsquo;Arcachon ou aux environs de Bordeaux, je reste un
-            interlocuteur local, joignable et réactif.
+            . Que vous soyez à Lesparre, Pauillac, Castelnau-de-Médoc, sur le
+            Bassin ou autour de Bordeaux, on reste à distance d&rsquo;un appel.
           </p>
         </section>
 
@@ -176,7 +177,8 @@ export default function DeveloppeurMedocPage() {
             Un projet en tête ?
           </h2>
           <p className="text-slate-300 mb-6">
-            Parlons-en. L&rsquo;étude de votre projet et le devis sont gratuits.
+            Décrivez-moi ce que vous avez en tête. L&rsquo;échange et le devis ne
+            coûtent rien.
           </p>
           <Link
             href="/#contact"

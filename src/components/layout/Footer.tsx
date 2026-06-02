@@ -57,6 +57,15 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/developpeur-medoc"
+                  aria-label="Développeur web indépendant en Médoc"
+                  className="hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-1 focus-visible:outline-[#C5A059] rounded transition-colors"
+                >
+                  Développeur en Médoc
+                </Link>
+              </li>
+              <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
                   href="/#realisations"

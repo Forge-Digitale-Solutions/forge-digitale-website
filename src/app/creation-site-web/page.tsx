@@ -7,16 +7,15 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/creation-site-web`;
 
 export const metadata: Metadata = {
-  title: "Création de site web & d'applications sur-mesure en Médoc",
+  title: "Création de site web et d'application en Médoc",
   description:
-    "Création de sites internet et d'applications sur-mesure pour artisans, commerçants et TPE du Médoc et du Bassin d'Arcachon. Sites rapides, optimisés pour le référencement local, à partir de 800 €.",
+    "Développeur indépendant en Médoc, je crée des sites internet et des applications adaptés à votre métier. Pas de formule toute faite : on part de votre besoin. Devis gratuit, Médoc et Bassin d'Arcachon.",
   keywords: [
     "création site web Médoc",
     "créateur site internet Gironde",
     "création application web",
     "site internet artisan Médoc",
-    "site vitrine Bassin d'Arcachon",
-    "agence web Bordeaux",
+    "développeur site web Bassin d'Arcachon",
   ],
   alternates: {
     canonical: PAGE_URL,
@@ -26,9 +25,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Création de site web & d'applications sur-mesure en Médoc",
+    title: "Création de site web et d'application en Médoc",
     description:
-      "Sites internet et applications sur-mesure pour les professionnels du Médoc et du Bassin d'Arcachon. Performance, référencement local, accompagnement de proximité.",
+      "Développeur indépendant en Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -43,10 +42,10 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Création de site web et d'applications sur-mesure",
+  name: "Création de site web et d'application",
   serviceType: "Création de site internet",
   description:
-    "Conception de sites vitrines, sites catalogues et applications métier sur-mesure pour les professionnels du Médoc et du Bassin d'Arcachon. Sites performants et optimisés pour le référencement local.",
+    "Conception de sites internet et d'applications sur-mesure pour les professionnels du Médoc et du Bassin d'Arcachon. Développement adapté au besoin de chaque client, par un développeur indépendant.",
   url: PAGE_URL,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Médoc" },
@@ -62,31 +61,15 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "800",
-    description: "Site vitrine sur-mesure, à partir de 800 €",
+    description: "Création de site internet, à partir de 800 €",
   },
 };
 
-const prestations = [
-  {
-    title: "Sites vitrines",
-    text: "Présenter votre activité, vos réalisations et vos coordonnées avec un site clair, rapide et adapté au mobile. Le format idéal pour un artisan ou un commerçant qui veut être trouvé localement.",
-  },
-  {
-    title: "Sites catalogues",
-    text: "Mettre en avant une gamme de produits ou de services, avec des fiches détaillées et un formulaire de devis. Sans la lourdeur d'une boutique en ligne complète quand elle n'est pas nécessaire.",
-  },
-  {
-    title: "Applications web métier",
-    text: "Développer un outil sur-mesure quand un logiciel standard ne suffit pas : suivi de chantiers, réservation, gestion interne. Une application pensée pour votre façon de travailler.",
-  },
-];
-
-const inclus = [
-  "Conception sur-mesure, sans gabarit imposé",
-  "Site rapide et accessible sur mobile",
-  "Référencement local (Médoc, Bassin d'Arcachon, Gironde)",
-  "Hébergement et nom de domaine sur demande",
-  "Maintenance et mises à jour en option",
+const engagements = [
+  "Un seul interlocuteur, du premier échange à la mise en ligne",
+  "Un site qui charge vite et reste lisible sur téléphone",
+  "Un travail pensé pour être trouvé sur Google dans votre secteur",
+  "Hébergement, nom de domaine et maintenance possibles ensuite",
 ];
 
 export default function CreationSiteWebPage() {
@@ -117,60 +100,64 @@ export default function CreationSiteWebPage() {
             Création web &amp; applications
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Création de sites web &amp; d&rsquo;applications sur-mesure en Médoc
+            Création de site web et d&rsquo;application en Médoc
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Je conçois des sites internet et des applications sur-mesure pour les
-            artisans, commerçants et TPE du{" "}
-            <strong className="text-white">Médoc</strong> et du{" "}
-            <strong className="text-white">Bassin d&rsquo;Arcachon</strong>. Des
-            sites rapides, durables et pensés pour être trouvés par vos clients
-            locaux — pas des modèles génériques.
+            Je suis Anthony Marcelin, développeur indépendant installé en{" "}
+            <strong className="text-white">Médoc</strong>. Je conçois des sites
+            internet et des applications pour les professionnels et particuliers
+            de la région, du{" "}
+            <strong className="text-white">Bassin d&rsquo;Arcachon</strong> à
+            Bordeaux. Pas une agence avec plusieurs intermédiaires : un seul
+            interlocuteur, qui code lui-même votre projet.
           </p>
         </header>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Ce que je réalise
+            On part de votre besoin, pas d&rsquo;une formule
           </h2>
-          <div className="space-y-6">
-            {prestations.map((p) => (
-              <div
-                key={p.title}
-                className="p-6 rounded-2xl bg-white/5 border border-white/5"
-              >
-                <h3 className="text-lg font-bold text-[#C5A059] mb-2">
-                  {p.title}
-                </h3>
-                <p className="text-slate-300 leading-relaxed">{p.text}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-slate-300 leading-relaxed mb-4">
+            Je ne propose pas de catalogue de packs entre lesquels il faudrait
+            vous glisser. Chaque activité a ses contraintes, et un site utile,
+            c&rsquo;est un site qui colle à la vôtre. La première étape, c&rsquo;est
+            donc d&rsquo;en parler : ce que vous faites, qui sont vos clients, et
+            ce que le site doit vous apporter concrètement.
+          </p>
+          <p className="text-slate-300 leading-relaxed">
+            À partir de là, je construis la solution adaptée — d&rsquo;un site
+            vitrine simple qui présente votre métier et vos coordonnées, jusqu&rsquo;à
+            une application développée pour un besoin précis que les logiciels
+            tout faits ne couvrent pas. La technologie s&rsquo;adapte au projet, pas
+            l&rsquo;inverse.
+          </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">
-            Une approche technique soignée
+            Un site rapide, parce qu&rsquo;un site lent ne sert à rien
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            Les sites que je développe reposent sur des technologies modernes
-            (Next.js, React) qui privilégient la vitesse de chargement et la
-            stabilité. Un site rapide est mieux référencé par Google et plus
-            agréable pour vos visiteurs, en particulier sur mobile, où se fait la
-            majorité des recherches locales.
+            Un site joli mais qui rame finit par faire fuir les visiteurs — et
+            Google le sait aussi : il met en avant les sites rapides. Je
+            développe avec des technologies récentes (Next.js, React) qui
+            privilégient la vitesse et la stabilité, sur ordinateur comme sur
+            téléphone, où se font la plupart des recherches locales.
           </p>
           <p className="text-slate-300 leading-relaxed">
-            Chaque projet est construit à partir de votre activité réelle :
-            structure des pages, contenu, mots-clés locaux. L&rsquo;objectif
-            n&rsquo;est pas seulement d&rsquo;avoir un site, mais d&rsquo;apparaître
-            quand un client cherche votre métier dans votre secteur.
+            Le contenu, la structure et les mots-clés sont travaillés à partir de
+            votre activité réelle. L&rsquo;objectif n&rsquo;est pas seulement
+            d&rsquo;avoir un site, mais d&rsquo;apparaître quand quelqu&rsquo;un
+            cherche votre métier dans le coin.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Ce qui est inclus</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Ce sur quoi je m&rsquo;engage
+          </h2>
           <ul className="space-y-3">
-            {inclus.map((item) => (
+            {engagements.map((item) => (
               <li key={item} className="flex items-start gap-3 text-slate-300">
                 <Check
                   className="h-5 w-5 text-[#C5A059] shrink-0 mt-0.5"
@@ -181,17 +168,17 @@ export default function CreationSiteWebPage() {
             ))}
           </ul>
           <p className="text-slate-400 text-sm mt-6">
-            Tarif indicatif : site vitrine sur-mesure à partir de{" "}
-            <strong className="text-white">800 €</strong>. Chaque projet fait
-            l&rsquo;objet d&rsquo;un devis gratuit adapté à vos besoins.
+            Les tarifs démarrent autour de{" "}
+            <strong className="text-white">800 €</strong> pour un site vitrine,
+            mais tout dépend de votre projet. L&rsquo;échange et le devis sont
+            gratuits, sans engagement.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Pour aller plus loin</h2>
-          <p className="text-slate-300 leading-relaxed mb-4">
-            Avant ou en complément d&rsquo;un site, quelques lectures utiles :
-          </p>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            À lire avant de vous lancer
+          </h2>
           <ul className="space-y-2">
             <li>
               <Link
@@ -217,8 +204,8 @@ export default function CreationSiteWebPage() {
             Parlons de votre projet
           </h2>
           <p className="text-slate-300 mb-6">
-            Basé à Saint-Laurent-Médoc, j&rsquo;accompagne les professionnels du
-            Médoc, du Bassin d&rsquo;Arcachon et de la région bordelaise.
+            Une idée, un site à refaire, ou juste une question ? Écrivez-moi,
+            j&rsquo;y réponds moi-même. L&rsquo;étude du projet est gratuite.
           </p>
           <Link
             href="/#contact"
