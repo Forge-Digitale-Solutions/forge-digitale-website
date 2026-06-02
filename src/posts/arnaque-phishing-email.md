@@ -3,11 +3,11 @@ title: "Hameçonnage : reconnaître un email frauduleux et réagir au bon moment
 date: "2026-05-29"
 lastModified: "2026-05-30"
 category: "Sécurité"
-excerpt: "L'hameçonnage figure chaque année en tête des menaces recensées par Cybermalveillance.gouv.fr, le dispositif public d'assistance aux victimes. Comment fonctionne un email frauduleux, à quels signaux le repérer et que faire en cas de clic — pour les particuliers comme pour les professionnels, sous Windows comme sous Linux."
+excerpt: "L'hameçonnage figure chaque année en tête des menaces recensées par Cybermalveillance.gouv.fr, le dispositif public d'assistance aux victimes. Comment fonctionne un email frauduleux, à quels signaux le repérer et que faire en cas de clic, pour les particuliers comme pour les professionnels, sous Windows comme sous Linux."
 image: "/blog/arnaque-phishing.jpg"
 ---
 
-L'hameçonnage — *phishing* en anglais — consiste à usurper l'identité d'un organisme de confiance pour obtenir des informations sensibles ou faire installer un logiciel malveillant. La technique est ancienne, mais elle reste la menace n° 1 en France : selon le rapport d'activité 2024 de la plateforme publique Cybermalveillance.gouv.fr, elle représente à elle seule **33,7 % des demandes d'assistance des particuliers**, et demeure la première menace tous publics confondus.
+L'hameçonnage (*phishing* en anglais) consiste à usurper l'identité d'un organisme de confiance pour obtenir des informations sensibles ou faire installer un logiciel malveillant. La technique est ancienne, mais elle reste la menace n° 1 en France : selon le rapport d'activité 2024 de la plateforme publique Cybermalveillance.gouv.fr, elle représente à elle seule **33,7 % des demandes d'assistance des particuliers**, et demeure la première menace tous publics confondus.
 
 Sa force ne tient pas à la sophistication, souvent rudimentaire, mais à la mise en scène : un logo officiel, un ton administratif et un motif crédible suffisent à faire baisser la garde.
 
@@ -15,7 +15,7 @@ Sa force ne tient pas à la sophistication, souvent rudimentaire, mais à la mis
 
 ## Comment fonctionne une attaque
 
-Le scénario varie peu. La victime reçoit un message — email, SMS (on parle alors de *smishing*), parfois appel — imitant une organisation connue : banque, administration fiscale, Assurance maladie, La Poste, opérateur télécom, plateforme de commerce. Ce message l'invite à agir vite :
+Le scénario varie peu. La victime reçoit un message (email, SMS, parfois un appel) imitant une organisation connue : banque, administration fiscale, Assurance maladie, La Poste, opérateur télécom, plateforme de commerce. Ce message l'invite à agir vite :
 
 - cliquer sur un lien menant à un faux site, copie fidèle du site officiel ;
 - y saisir des identifiants, des coordonnées bancaires ou des données personnelles ;
@@ -48,7 +48,7 @@ Les mêmes familles d'arnaques reviennent régulièrement dans les alertes de Cy
 
 ## Le cas de Linux
 
-Sous Linux — notamment Linux Mint, que je déploie dans le cadre du forfait Renaissance — les fichiers exécutables conçus pour Windows (`.exe`, `.msi`) ne s'exécutent pas. Une pièce jointe malveillante prévue pour Windows y est donc inopérante.
+Sous Linux, et notamment sous Linux Mint que je déploie dans le cadre du forfait Renaissance, les fichiers exécutables conçus pour Windows (`.exe`, `.msi`) ne s'exécutent pas. Une pièce jointe malveillante prévue pour Windows y est donc inopérante.
 
 Cela ne protège pas de l'hameçonnage lui-même : si l'utilisateur saisit ses identifiants bancaires sur un faux site, le système d'exploitation n'a aucun rôle. La vigilance reste la principale protection, quel que soit l'appareil.
 
@@ -66,8 +66,8 @@ En cas de doute ou d'erreur, l'ordre des priorités compte.
 
 Beaucoup d'attaques réussissent parce qu'un même mot de passe est réutilisé partout : une fuite sur un site permet alors d'ouvrir les autres comptes. Cette technique, le *credential stuffing*, est largement automatisée.
 
-Un gestionnaire de mots de passe — Bitwarden et KeePass sont gratuits et reconnus — génère et mémorise un mot de passe distinct par service. Activer la double authentification, lorsqu'elle est proposée, ajoute une protection même si le mot de passe est compromis.
+Un gestionnaire de mots de passe (Bitwarden et KeePass sont gratuits et reconnus) génère et mémorise un mot de passe distinct par service. Activer la double authentification, lorsqu'elle est proposée, ajoute une protection même si le mot de passe est compromis.
 
 ---
 
-*En pratique :* un doute sur un message, une fenêtre suspecte ou un clic regretté ? Je reçois en atelier à Saint-Laurent-Médoc pour un diagnostic, particuliers comme professionnels du Médoc — [me contacter](/#contact).
+*En pratique :* un doute sur un message, une fenêtre suspecte ou un clic regretté ? Je reçois en atelier à Saint-Laurent-Médoc pour un diagnostic, particuliers comme professionnels du Médoc. [Me contacter](/#contact).

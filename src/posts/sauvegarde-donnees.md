@@ -40,7 +40,7 @@ La copie hors site répond à un risque souvent négligé : un incendie, un dég
 Deux éléments couvrent l'essentiel du besoin :
 
 1. **Un disque externe USB** (de l'ordre de 80 à 120 € pour 1 To), branché régulièrement pour une sauvegarde automatique.
-2. **Un service en ligne** — OneDrive, Google Drive, ou un Nextcloud auto-hébergé — pour synchroniser en continu le dossier de travail.
+2. **Un service en ligne** (OneDrive, Google Drive, ou un Nextcloud auto-hébergé) pour synchroniser en continu le dossier de travail.
 
 Sous Windows, l'outil intégré « Historique des fichiers » assure la sauvegarde automatique vers un disque externe, sans logiciel tiers : il suffit de l'activer une fois. Sous Linux, **Timeshift** et **Déjà Dup** réalisent des sauvegardes incrémentales programmées qui, une fois configurées, n'exigent plus d'intervention.
 
@@ -67,8 +67,8 @@ Une synchronisation (OneDrive, Google Drive, iCloud) n'est pas une sauvegarde. U
 | Google One 100 Go | 2,49 €/mois | Photos + documents |
 | Nextcloud auto-hébergé | 0 € (si serveur existant) | Tout, sans limite imposée |
 
-Pour la majorité des particuliers et des professionnels, un disque externe à une centaine d'euros associé à un espace cloud gratuit couvre l'essentiel des besoins — un coût sans commune mesure avec une récupération de données en laboratoire.
+Pour la majorité des particuliers et des professionnels, un disque externe à une centaine d'euros associé à un espace cloud gratuit couvre l'essentiel des besoins, un coût sans commune mesure avec une récupération de données en laboratoire.
 
 ---
 
-*En pratique :* la configuration d'une sauvegarde fiable se fait une fois pour toutes. Je la mets en place en atelier à Saint-Laurent-Médoc, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon — [me contacter](/#contact).
+*En pratique :* la configuration d'une sauvegarde fiable se fait une fois pour toutes. Je la mets en place en atelier à Saint-Laurent-Médoc, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).

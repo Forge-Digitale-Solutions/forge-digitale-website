@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/creation-site-web`;
 
 export const metadata: Metadata = {
-  title: "Création de site web et d'application en Médoc",
+  title: "Création de site web et d'application dans le Médoc",
   description:
-    "Développeur indépendant en Médoc, je crée des sites internet et des applications adaptés à votre métier. Pas de formule toute faite : on part de votre besoin. Devis gratuit, Médoc et Bassin d'Arcachon.",
+    "Développeur indépendant dans le Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite. Devis gratuit en Gironde.",
   keywords: [
     "création site web Médoc",
     "créateur site internet Gironde",
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Création de site web et d'application en Médoc",
+    title: "Création de site web et d'application dans le Médoc",
     description:
-      "Développeur indépendant en Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite.",
+      "Développeur indépendant dans le Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Création de sites web en Médoc — Forge Digitale Solutions",
+        alt: "Création de sites web dans le Médoc, Forge Digitale Solutions",
       },
     ],
   },
@@ -65,13 +65,6 @@ const serviceSchema = {
   },
 };
 
-const engagements = [
-  "Un seul interlocuteur, du premier échange à la mise en ligne",
-  "Un site qui charge vite et reste lisible sur téléphone",
-  "Un travail pensé pour être trouvé sur Google dans votre secteur",
-  "Hébergement, nom de domaine et maintenance possibles ensuite",
-];
-
 export default function CreationSiteWebPage() {
   return (
     <div className="min-h-screen bg-dark-base pt-32 pb-24">
@@ -95,90 +88,58 @@ export default function CreationSiteWebPage() {
           <span className="text-slate-300">Création de site web</span>
         </nav>
 
-        <header className="mb-12">
+        <header className="mb-10">
           <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
             Création web &amp; applications
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Création de site web et d&rsquo;application en Médoc
+            Création de site web et d&rsquo;application dans le Médoc
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            Je suis Anthony Marcelin, développeur indépendant installé en{" "}
-            <strong className="text-white">Médoc</strong>. Je conçois des sites
-            internet et des applications pour les professionnels et particuliers
-            de la région, du{" "}
-            <strong className="text-white">Bassin d&rsquo;Arcachon</strong> à
-            Bordeaux. Pas une agence avec plusieurs intermédiaires : un seul
-            interlocuteur, qui code lui-même votre projet.
-          </p>
         </header>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            On part de votre besoin, pas d&rsquo;une formule
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-4">
-            Je ne propose pas de catalogue de packs entre lesquels il faudrait
-            vous glisser. Chaque activité a ses contraintes, et un site utile,
-            c&rsquo;est un site qui colle à la vôtre. La première étape, c&rsquo;est
-            donc d&rsquo;en parler : ce que vous faites, qui sont vos clients, et
-            ce que le site doit vous apporter concrètement.
+        <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+          <p>
+            Moi c&rsquo;est Anthony Marcelin, développeur indépendant installé dans
+            le Médoc. Je crée des sites internet et des applications pour les
+            professionnels et les particuliers de la région, jusqu&rsquo;au Bassin
+            d&rsquo;Arcachon et à Bordeaux. Vous n&rsquo;avez pas affaire à une
+            agence avec une chaîne d&rsquo;intermédiaires : la personne qui vous
+            répond est celle qui développe votre projet.
           </p>
-          <p className="text-slate-300 leading-relaxed">
-            À partir de là, je construis la solution adaptée — d&rsquo;un site
-            vitrine simple qui présente votre métier et vos coordonnées, jusqu&rsquo;à
-            une application développée pour un besoin précis que les logiciels
-            tout faits ne couvrent pas. La technologie s&rsquo;adapte au projet, pas
-            l&rsquo;inverse.
-          </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Un site rapide, parce qu&rsquo;un site lent ne sert à rien
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-4">
-            Un site joli mais qui rame finit par faire fuir les visiteurs — et
-            Google le sait aussi : il met en avant les sites rapides. Je
-            développe avec des technologies récentes (Next.js, React) qui
-            privilégient la vitesse et la stabilité, sur ordinateur comme sur
-            téléphone, où se font la plupart des recherches locales.
+          <p>
+            Je n&rsquo;ai pas de catalogue de packs dans lesquels vous faire
+            entrer. Une activité a ses contraintes, et un site qui sert à quelque
+            chose, c&rsquo;est un site qui colle à la vôtre. On commence donc
+            toujours par en parler : ce que vous faites, à qui vous vous adressez,
+            et ce que vous attendez vraiment d&rsquo;un site. À partir de là, je
+            construis ce qui correspond, qu&rsquo;il s&rsquo;agisse d&rsquo;une
+            simple vitrine pour présenter votre métier ou d&rsquo;une application
+            taillée pour un besoin que les logiciels du marché ne couvrent pas.
           </p>
-          <p className="text-slate-300 leading-relaxed">
-            Le contenu, la structure et les mots-clés sont travaillés à partir de
-            votre activité réelle. L&rsquo;objectif n&rsquo;est pas seulement
-            d&rsquo;avoir un site, mais d&rsquo;apparaître quand quelqu&rsquo;un
-            cherche votre métier dans le coin.
-          </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Ce sur quoi je m&rsquo;engage
-          </h2>
-          <ul className="space-y-3">
-            {engagements.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-slate-300">
-                <Check
-                  className="h-5 w-5 text-[#C5A059] shrink-0 mt-0.5"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="text-slate-400 text-sm mt-6">
-            Les tarifs démarrent autour de{" "}
-            <strong className="text-white">800 €</strong> pour un site vitrine,
-            mais tout dépend de votre projet. L&rsquo;échange et le devis sont
-            gratuits, sans engagement.
+          <p>
+            Un point auquel je tiens : la rapidité. Un beau site qui met trois
+            secondes à s&rsquo;afficher fait fuir les visiteurs, et Google le
+            relègue derrière les autres. Je travaille avec des outils récents
+            (Next.js, React) qui privilégient la vitesse et tiennent la route sur
+            téléphone, là où se font la plupart des recherches du coin. Le contenu
+            et les mots-clés sont pensés à partir de votre activité réelle, pour
+            que vous remontiez quand quelqu&rsquo;un cherche votre métier dans le
+            secteur.
           </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            À lire avant de vous lancer
-          </h2>
+          <p>
+            Si vous voulez aller plus loin une fois le site en ligne, je peux
+            aussi m&rsquo;occuper de l&rsquo;hébergement, du nom de domaine et de
+            la maintenance. Mais rien n&rsquo;est imposé. Les tarifs commencent
+            autour de 800 € pour une vitrine, le reste dépend de ce qu&rsquo;on
+            définit ensemble. L&rsquo;échange et le devis sont gratuits.
+          </p>
+        </div>
+
+        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5">
+          <p className="text-slate-400 text-sm mb-3">À lire avant de vous lancer</p>
           <ul className="space-y-2">
             <li>
               <Link
@@ -197,15 +158,12 @@ export default function CreationSiteWebPage() {
               </Link>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section className="mt-16 pt-8 border-t border-white/10">
-          <h2 className="text-xl font-bold text-white mb-4">
-            Parlons de votre projet
-          </h2>
+        <section className="mt-12 pt-8 border-t border-white/10">
           <p className="text-slate-300 mb-6">
             Une idée, un site à refaire, ou juste une question ? Écrivez-moi,
-            j&rsquo;y réponds moi-même. L&rsquo;étude du projet est gratuite.
+            c&rsquo;est moi qui réponds.
           </p>
           <Link
             href="/#contact"

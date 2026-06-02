@@ -7,9 +7,9 @@ import type { Metadata } from "next";
 const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils web, montage PC & Linux en Médoc",
+  title: "Blog : conseils web, montage PC et Linux dans le Médoc",
   description:
-    "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant en Médoc et Bassin d'Arcachon.",
+    "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc et le Bassin d'Arcachon.",
   keywords: [
     "blog informatique Médoc",
     "conseils site web Gironde",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: `${SITE_URL}/blog`,
-    title: "Blog — Conseils web, montage PC & Linux en Médoc",
+    title: "Blog : conseils web, montage PC et Linux dans le Médoc",
     description:
-      "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant en Médoc.",
+      "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc.",
     siteName: "Forge Digitale Solutions",
   },
 };

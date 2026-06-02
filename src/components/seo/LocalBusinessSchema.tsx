@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     "@id": "https://forgedigitalesolutions.com/#business",
     name: "Forge Digitale Solutions",
     alternateName: "La Forge Digitale",
-    description: "Création de sites web sur mesure, montage PC gamer, dépannage informatique et installation Linux en Médoc. Expertise locale à Saint-Laurent-Médoc.",
+    description: "Création de sites web sur mesure, montage PC gamer, dépannage informatique et installation Linux dans le Médoc. Expertise locale à Saint-Laurent-Médoc.",
     url: "https://forgedigitalesolutions.com",
     telephone: "+33645659696",
     email: "contact@forgedigitalesolutions.com",

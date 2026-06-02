@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/montage-pc`;
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
   description:
-    "Montage de PC adapté à votre usage et à votre budget — jeu, travail ou famille. Vous achetez les pièces, je les assemble et règle tout, en atelier à Saint-Laurent-Médoc. Forfait à 149 €, Gironde.",
+    "Montage de PC adapté à votre usage et à votre budget, pour le jeu, le travail ou la famille. Vous achetez les pièces, je les assemble et règle tout, en atelier à Saint-Laurent-Médoc. Forfait à 149 €, Gironde.",
   keywords: [
     "montage PC Gironde",
     "montage PC gamer Bordeaux",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/blog/pc-build.jpg`,
         width: 1200,
         height: 630,
-        alt: "Montage PC sur-mesure en Gironde — Forge Digitale Solutions",
+        alt: "Montage PC sur-mesure en Gironde, Forge Digitale Solutions",
       },
     ],
   },
@@ -66,15 +66,6 @@ const serviceSchema = {
   },
 };
 
-const inclus = [
-  "On choisit ensemble les composants selon votre budget",
-  "Vous commandez les pièces : factures et garanties à votre nom",
-  "Montage soigné et câbles rangés proprement",
-  "Mise à jour du BIOS et profil mémoire (XMP/EXPO) activé",
-  "Ventilation réglée pour rester silencieux",
-  "Système installé, machine prête à l'emploi",
-];
-
 export default function MontagePcPage() {
   return (
     <div className="min-h-screen bg-dark-base pt-32 pb-24">
@@ -98,81 +89,61 @@ export default function MontagePcPage() {
           <span className="text-slate-300">Montage PC</span>
         </nav>
 
-        <header className="mb-12">
+        <header className="mb-10">
           <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
             Montage PC sur-mesure
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Montage PC sur-mesure en Gironde
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            Que ce soit pour jouer, travailler ou un usage familial, je monte des
-            PC <strong className="text-white">adaptés à votre besoin réel</strong>{" "}
-            et à votre budget. Le principe est simple et transparent : vous achetez
-            les pièces, je m&rsquo;occupe de l&rsquo;assemblage et des réglages, en
-            atelier à Saint-Laurent-Médoc, pour toute la{" "}
-            <strong className="text-white">Gironde</strong>.
-          </p>
         </header>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            La bonne config, pas la plus chère
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-4">
-            Un bon PC, ce n&rsquo;est pas celui qui coûte le plus cher, c&rsquo;est
-            celui qui est équilibré. Mettre tout le budget dans une pièce et
-            négliger le reste, c&rsquo;est se retrouver avec une machine bridée. Je
-            place donc l&rsquo;argent là où il compte vraiment pour votre usage —
-            la carte graphique pour le jeu, par exemple — sans vous faire payer de
-            la puissance qui ne vous servira jamais.
+        <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+          <p>
+            Que ce soit pour jouer, travailler ou un usage familial, je monte des
+            PC adaptés à votre besoin réel et à votre budget. Le principe est
+            simple et transparent : vous achetez les pièces, je m&rsquo;occupe de
+            l&rsquo;assemblage et des réglages, en atelier à Saint-Laurent-Médoc,
+            pour toute la Gironde.
           </p>
-          <p className="text-slate-300 leading-relaxed">
-            Je fais aussi attention aux pièces qu&rsquo;on néglige souvent à tort,
-            comme l&rsquo;alimentation : c&rsquo;est elle qui protège tout le reste
-            et qui vous laissera de la marge pour faire évoluer la machine plus
-            tard.
-          </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Comment ça se passe
-          </h2>
-          <ul className="space-y-3">
-            {inclus.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-slate-300">
-                <Check
-                  className="h-5 w-5 text-[#C5A059] shrink-0 mt-0.5"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="text-slate-400 text-sm mt-6">
-            Le forfait montage est à <strong className="text-white">149 €</strong>.
-            Comme vous achetez vous-même les pièces, vous gardez la main sur le
-            budget et les garanties restent à votre nom.
+          <p>
+            Un bon PC, ce n&rsquo;est pas celui qui coûte le plus cher,
+            c&rsquo;est celui qui est équilibré. Mettre tout le budget dans une
+            pièce et négliger le reste, c&rsquo;est se retrouver avec une machine
+            bridée. Je place donc l&rsquo;argent là où il compte vraiment pour
+            votre usage, par exemple la carte graphique pour le jeu, sans vous
+            faire payer de la puissance qui ne vous servira jamais. Je fais aussi
+            attention aux pièces qu&rsquo;on néglige souvent à tort, comme
+            l&rsquo;alimentation, parce que c&rsquo;est elle qui protège tout le
+            reste et qui vous laissera de la marge pour faire évoluer la machine
+            plus tard.
           </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Pourquoi pas le monter soi-même
-          </h2>
-          <p className="text-slate-300 leading-relaxed">
-            Monter son PC, c&rsquo;est gratifiant — mais une erreur coûte cher : une
-            broche tordue sur la carte mère, et la pièce est souvent perdue, sans
-            garantie. Et au-delà du montage, plusieurs réglages déterminent les
-            vraies performances et passent souvent à la trappe : la mise à jour du
-            BIOS, le profil mémoire, la courbe de ventilation. Je vous livre une
-            machine montée proprement et réglée correctement, prête à servir.
+          <p>
+            Concrètement, on choisit ensemble les composants selon votre budget,
+            puis vous les commandez vous-même. Comme ça, les factures et les
+            garanties restent à votre nom, et vous gardez la main sur le prix. De
+            mon côté, je monte la machine proprement, câbles rangés, je mets à
+            jour le BIOS, j&rsquo;active le profil mémoire (XMP ou EXPO), je règle
+            la ventilation pour que ça reste silencieux, et j&rsquo;installe le
+            système pour vous la rendre prête à l&rsquo;emploi. Le forfait montage
+            est à 149 €.
           </p>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Pour aller plus loin</h2>
+          <p>
+            Monter son PC soi-même, c&rsquo;est gratifiant, mais une erreur coûte
+            cher : une broche tordue sur la carte mère, et la pièce est souvent
+            perdue, sans garantie. Et au-delà du montage, plusieurs réglages
+            déterminent les vraies performances et passent souvent à la trappe, le
+            BIOS, le profil mémoire, la courbe de ventilation. C&rsquo;est ce que
+            je prends en charge pour vous livrer une machine qui tourne vraiment
+            comme elle le devrait.
+          </p>
+        </div>
+
+        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5">
+          <p className="text-slate-400 text-sm mb-3">Pour aller plus loin</p>
           <ul className="space-y-2">
             <li>
               <Link
@@ -183,15 +154,13 @@ export default function MontagePcPage() {
               </Link>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section className="mt-16 pt-8 border-t border-white/10">
-          <h2 className="text-xl font-bold text-white mb-4">
-            Une config en tête ?
-          </h2>
+        <section className="mt-12 pt-8 border-t border-white/10">
           <p className="text-slate-300 mb-6">
-            Dites-moi votre usage et votre budget, je vous conseille la
-            configuration qui tient la route. Le conseil et le devis sont gratuits.
+            Une config en tête ? Dites-moi votre usage et votre budget, je vous
+            conseille la configuration qui tient la route. Le conseil et le devis
+            sont gratuits.
           </p>
           <Link
             href="/#contact"
