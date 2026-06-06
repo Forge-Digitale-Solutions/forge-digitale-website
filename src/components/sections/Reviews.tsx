@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { PlaceInfo } from "@/lib/google-reviews";
 
 const SWIPE_THRESHOLD = 50;
@@ -33,20 +33,31 @@ const slideVariants = {
 export function Reviews({ data }: { data: PlaceInfo | null }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  if (!data || data.reviews.length === 0) return null;
-
-  const { reviews, rating, totalRatings, placeId } = data;
+  const { reviews, rating, totalRatings, placeId } = data ?? { reviews: [], rating: 0, totalRatings: 0, placeId: "" };
   const count = reviews.length;
+
+  const go = useCallback((next: number, manual = false) => {
+    if (manual) {
+      setPaused(true);
+      setTimeout(() => setPaused(false), 8000);
+    }
+    setDirection(next > current ? 1 : -1);
+    setCurrent((next + count) % count);
+  }, [current, count]);
+
+  useEffect(() => {
+    if (count <= 1 || paused) return;
+    const id = setInterval(() => go(current + 1), 5000);
+    return () => clearInterval(id);
+  }, [current, count, paused, go]);
+
+  if (!data || count === 0) return null;
 
   const googleUrl = placeId
     ? `https://www.google.com/maps/search/?api=1&query=Forge+Digitale+Solutions&query_place_id=${placeId}`
     : "https://www.google.com/maps/place/Forge+Digitale+Solutions/@44.8901966,-0.4729263,17z/data=!3m1!1e3!4m6!3m5!1s0xa3f788f259db0a87:0xeb74be8318b2b4e4!8m2!3d44.8901966!4d-0.4729263!16s%2Fg%2F11zbjsx1hc";
-
-  const go = (next: number) => {
-    setDirection(next > current ? 1 : -1);
-    setCurrent((next + count) % count);
-  };
 
   const review = reviews[current];
 
@@ -74,7 +85,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
             className="text-3xl md:text-4xl font-bold text-white mt-2"
           >
             Ce que disent{" "}
-            <span className="text-gold-gradient">nos clients</span>
+            <span className="text-gold-gradient">mes clients</span>
           </h2>
           <div className="flex items-center justify-center gap-3 mt-6">
             <StarRating rating={Math.round(rating)} />
@@ -85,19 +96,19 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           </div>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <div className="relative">
             {count > 1 && (
               <>
                 <button
-                  onClick={() => go(current - 1)}
+                  onClick={() => go(current - 1, true)}
                   className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 w-10 h-10 rounded-full border border-[#C5A059]/30 bg-slate-900/80 items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
                   aria-label="Avis précédent"
                 >
                   <ChevronLeft className="w-5 h-5" aria-hidden="true" />
                 </button>
                 <button
-                  onClick={() => go(current + 1)}
+                  onClick={() => go(current + 1, true)}
                   className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 w-10 h-10 rounded-full border border-[#C5A059]/30 bg-slate-900/80 items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
                   aria-label="Avis suivant"
                 >
@@ -120,8 +131,8 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.1}
                   onDragEnd={(_, info) => {
-                    if (info.offset.x < -SWIPE_THRESHOLD) go(current + 1);
-                    else if (info.offset.x > SWIPE_THRESHOLD) go(current - 1);
+                    if (info.offset.x < -SWIPE_THRESHOLD) go(current + 1, true);
+                    else if (info.offset.x > SWIPE_THRESHOLD) go(current - 1, true);
                   }}
                   className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 relative select-none cursor-grab active:cursor-grabbing"
                 >
@@ -165,7 +176,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           {count > 1 && (
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
-                onClick={() => go(current - 1)}
+                onClick={() => go(current - 1, true)}
                 className="md:hidden w-8 h-8 rounded-full border border-[#C5A059]/30 bg-slate-900/80 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
                 aria-label="Avis précédent"
               >
@@ -176,7 +187,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                 {reviews.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => go(i)}
+                    onClick={() => go(i, true)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       i === current
                         ? "bg-[#C5A059] w-6"
@@ -189,7 +200,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
               </div>
 
               <button
-                onClick={() => go(current + 1)}
+                onClick={() => go(current + 1, true)}
                 className="md:hidden w-8 h-8 rounded-full border border-[#C5A059]/30 bg-slate-900/80 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
                 aria-label="Avis suivant"
               >
