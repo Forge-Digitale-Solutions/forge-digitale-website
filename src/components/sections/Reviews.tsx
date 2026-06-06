@@ -8,6 +8,19 @@ import type { PlaceInfo } from "@/lib/google-reviews";
 
 const SWIPE_THRESHOLD = 50;
 
+function computeRelativeTime(isoDate: string): string {
+  const days = Math.floor((Date.now() - new Date(isoDate).getTime()) / 86_400_000);
+  if (days === 0) return "aujourd'hui";
+  if (days === 1) return "il y a 1 jour";
+  if (days < 7) return `il y a ${days} jours`;
+  const weeks = Math.floor(days / 7);
+  if (weeks === 1) return "il y a 1 semaine";
+  if (weeks < 5) return `il y a ${weeks} semaines`;
+  const months = Math.floor(days / 30);
+  if (months === 1) return "il y a 1 mois";
+  return `il y a ${months} mois`;
+}
+
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-1" aria-label={`Note : ${rating} sur 5`}>
@@ -34,6 +47,15 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [relativeTimes, setRelativeTimes] = useState<string[]>([]);
+
+  useEffect(() => {
+    setRelativeTimes(
+      (data?.reviews ?? []).map((r) =>
+        r.date ? computeRelativeTime(r.date) : r.relativeTime
+      )
+    );
+  }, [data]);
 
   const { reviews, rating, totalRatings, placeId } = data ?? { reviews: [], rating: 0, totalRatings: 0, placeId: "" };
   const count = reviews.length;
@@ -164,7 +186,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                         {review.authorName}
                       </p>
                       <p className="text-slate-500 text-sm">
-                        {review.relativeTime}
+                        {relativeTimes[current] ?? review.relativeTime}
                       </p>
                     </div>
                   </div>
