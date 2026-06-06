@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Star, ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 import type { PlaceInfo } from "@/lib/google-reviews";
+
+const SWIPE_THRESHOLD = 50;
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -21,16 +24,31 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-type ReviewsProps = {
-  data: PlaceInfo | null;
+const slideVariants = {
+  enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0 }),
 };
 
-export function Reviews({ data }: ReviewsProps) {
+export function Reviews({ data }: { data: PlaceInfo | null }) {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
+
   if (!data || data.reviews.length === 0) return null;
 
-  const googleUrl = data.placeId
-    ? `https://www.google.com/maps/search/?api=1&query=Forge+Digitale+Solutions&query_place_id=${data.placeId}`
+  const { reviews, rating, totalRatings, placeId } = data;
+  const count = reviews.length;
+
+  const googleUrl = placeId
+    ? `https://www.google.com/maps/search/?api=1&query=Forge+Digitale+Solutions&query_place_id=${placeId}`
     : "https://www.google.com/maps/place/Forge+Digitale+Solutions/@44.8901966,-0.4729263,17z/data=!3m1!1e3!4m6!3m5!1s0xa3f788f259db0a87:0xeb74be8318b2b4e4!8m2!3d44.8901966!4d-0.4729263!16s%2Fg%2F11zbjsx1hc";
+
+  const go = (next: number) => {
+    setDirection(next > current ? 1 : -1);
+    setCurrent((next + count) % count);
+  };
+
+  const review = reviews[current];
 
   return (
     <section
@@ -58,62 +76,127 @@ export function Reviews({ data }: ReviewsProps) {
             Ce que disent{" "}
             <span className="text-gold-gradient">nos clients</span>
           </h2>
-
           <div className="flex items-center justify-center gap-3 mt-6">
-            <StarRating rating={Math.round(data.rating)} />
+            <StarRating rating={Math.round(rating)} />
             <span className="text-slate-300 text-lg">
-              <span className="text-white font-bold">
-                {data.rating.toFixed(1)}
-              </span>{" "}
-              / 5 · {data.totalRatings} avis Google
+              <span className="text-white font-bold">{rating.toFixed(1)}</span>{" "}
+              / 5 · {totalRatings} avis Google
             </span>
           </div>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto grid gap-6">
-          {data.reviews.map((review, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 relative"
-            >
-              <span
-                className="absolute top-6 right-8 text-[#C5A059]/20 text-7xl font-serif leading-none select-none"
-                aria-hidden="true"
+        <div className="max-w-2xl mx-auto">
+          <div className="relative">
+            {count > 1 && (
+              <>
+                <button
+                  onClick={() => go(current - 1)}
+                  className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 w-10 h-10 rounded-full border border-[#C5A059]/30 bg-slate-900/80 items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
+                  aria-label="Avis précédent"
+                >
+                  <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+                </button>
+                <button
+                  onClick={() => go(current + 1)}
+                  className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 w-10 h-10 rounded-full border border-[#C5A059]/30 bg-slate-900/80 items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
+                  aria-label="Avis suivant"
+                >
+                  <ChevronRight className="w-5 h-5" aria-hidden="true" />
+                </button>
+              </>
+            )}
+
+            <div className="overflow-hidden rounded-2xl">
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={current}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  drag={count > 1 ? "x" : false}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.1}
+                  onDragEnd={(_, info) => {
+                    if (info.offset.x < -SWIPE_THRESHOLD) go(current + 1);
+                    else if (info.offset.x > SWIPE_THRESHOLD) go(current - 1);
+                  }}
+                  className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 relative select-none cursor-grab active:cursor-grabbing"
+                >
+                  <span
+                    className="absolute top-6 right-8 text-[#C5A059]/20 text-7xl font-serif leading-none select-none"
+                    aria-hidden="true"
+                  >
+                    &ldquo;
+                  </span>
+
+                  <StarRating rating={review.rating} />
+
+                  <p className="text-slate-200 text-lg leading-relaxed mt-4 mb-6 min-h-24">
+                    {review.text}
+                  </p>
+
+                  <div className="flex items-center gap-3">
+                    {review.authorPhotoUrl && (
+                      <Image
+                        src={review.authorPhotoUrl}
+                        alt={review.authorName}
+                        width={40}
+                        height={40}
+                        className="rounded-full"
+                      />
+                    )}
+                    <div>
+                      <p className="text-white font-semibold">
+                        {review.authorName}
+                      </p>
+                      <p className="text-slate-500 text-sm">
+                        {review.relativeTime}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {count > 1 && (
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <button
+                onClick={() => go(current - 1)}
+                className="md:hidden w-8 h-8 rounded-full border border-[#C5A059]/30 bg-slate-900/80 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
+                aria-label="Avis précédent"
               >
-                &ldquo;
-              </span>
+                <ChevronLeft className="w-4 h-4" aria-hidden="true" />
+              </button>
 
-              <StarRating rating={review.rating} />
-
-              <p className="text-slate-200 text-lg leading-relaxed mt-4 mb-6">
-                {review.text}
-              </p>
-
-              <div className="flex items-center gap-3">
-                {review.authorPhotoUrl && (
-                  <Image
-                    src={review.authorPhotoUrl}
-                    alt={review.authorName}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
+              <div className="flex gap-2">
+                {reviews.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => go(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === current
+                        ? "bg-[#C5A059] w-6"
+                        : "bg-slate-600 hover:bg-slate-400 w-2"
+                    }`}
+                    aria-label={`Aller à l'avis ${i + 1}`}
+                    aria-current={i === current ? "true" : undefined}
                   />
-                )}
-                <div>
-                  <p className="text-white font-semibold">
-                    {review.authorName}
-                  </p>
-                  <p className="text-slate-500 text-sm">
-                    {review.relativeTime}
-                  </p>
-                </div>
+                ))}
               </div>
-            </motion.div>
-          ))}
+
+              <button
+                onClick={() => go(current + 1)}
+                className="md:hidden w-8 h-8 rounded-full border border-[#C5A059]/30 bg-slate-900/80 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/10 transition-colors"
+                aria-label="Avis suivant"
+              >
+                <ChevronRight className="w-4 h-4" aria-hidden="true" />
+              </button>
+            </div>
+          )}
         </div>
 
         <motion.div
