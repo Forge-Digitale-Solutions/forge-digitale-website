@@ -4,6 +4,7 @@ export type GoogleReview = {
   rating: number;
   text: string;
   relativeTime: string;
+  date?: string; // ISO date — si présent, le relatif est recalculé dynamiquement
 };
 
 export type PlaceInfo = {
@@ -16,28 +17,47 @@ export type PlaceInfo = {
 const STATIC_FALLBACK: PlaceInfo = {
   placeId: "",
   rating: 5,
-  totalRatings: 3,
+  totalRatings: 5,
   reviews: [
     {
-      authorName: "Zilya",
+      authorName: "Lorenzo",
       authorPhotoUrl: "",
       rating: 5,
-      text: "J'ai fait appel à ses services pour une remise à neuf de mon ordinateur pour mes études. J'avais un vieil ordinateur sous Windows 7 qui était lent. Je suis maintenant sur Linux Mint, l'ordinateur a repris une seconde jeunesse, fluide et simple à utiliser. Ce monsieur a été très pédagogue pour la prise en main prévue dans la prestation. Je recommande chaudement.",
-      relativeTime: "il y a 4 heures",
+      text: "Développeur sérieux et efficace. Travail de qualité et très bonne communication. Merci beaucoup Anthony.",
+      relativeTime: "",
+      date: "2026-06-06",
     },
     {
-      authorName: "Stéphanie Cornut",
+      authorName: "Martin Ferret",
       authorPhotoUrl: "",
       rating: 5,
-      text: "À l'écoute, réactif, sérieux.",
-      relativeTime: "il y a 3 heures",
+      text: "Anthony communique énormément lorsqu'il s'engage sur un projet, livre dans les temps et un produit de qualité.",
+      relativeTime: "",
+      date: "2026-06-02",
     },
     {
       authorName: "David Moussiron",
       authorPhotoUrl: "",
       rating: 5,
       text: "Très pro et très réactif. Merci pour votre travail.",
-      relativeTime: "il y a 38 minutes",
+      relativeTime: "",
+      date: "2026-05-30",
+    },
+    {
+      authorName: "Stéphanie Cornut",
+      authorPhotoUrl: "",
+      rating: 5,
+      text: "À l'écoute, réactif, sérieux.",
+      relativeTime: "",
+      date: "2026-05-23",
+    },
+    {
+      authorName: "Zilya",
+      authorPhotoUrl: "",
+      rating: 5,
+      text: "J'ai fait appel à ses services pour une remise à neuf de mon ordinateur pour mes études. J'avais un vieil ordinateur sous Windows 7 qui était lent. Je suis maintenant sur Linux Mint, l'ordinateur a repris une seconde jeunesse, fluide et simple à utiliser. Ce monsieur a été très pédagogue pour la prise en main prévue dans la prestation. Je recommande chaudement.",
+      relativeTime: "",
+      date: "2026-05-16",
     },
   ],
 };
