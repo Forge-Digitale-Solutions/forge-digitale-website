@@ -4,7 +4,7 @@ date: "2026-03-15"
 lastModified: "2026-05-30"
 category: "Hardware"
 excerpt: "Le support de Windows 10 a pris fin le 14 octobre 2025. Pour un PC jugé trop ancien pour Windows 11, Linux Mint offre une alternative durable et gratuite, sans achat de matériel. Comment fonctionne cette transition, ce qu'elle change à l'usage, et ce que couvre le forfait Renaissance."
-image: "/blog/pc-mint.png"
+image: "/blog/pc-mint.jpg"
 ---
 
 Le **support de Windows 10 a pris fin le 14 octobre 2025** : Microsoft ne fournit plus de mises à jour de sécurité gratuites pour le grand public. Un PC qui reste sous Windows 10 sans protection s'expose progressivement aux failles non corrigées.
