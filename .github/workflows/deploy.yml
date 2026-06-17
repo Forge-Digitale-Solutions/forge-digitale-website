@@ -37,3 +37,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./www/
+          # ponytail: clean-slate ponctuel pour resync l'état FTP (550 sur dossier _next absent). À retirer après 1 déploiement vert.
+          dangerous-clean-slate: true
