@@ -190,11 +190,25 @@ export function LocalBusinessSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "5",
+      reviewCount: "7",
       bestRating: "5",
       worstRating: "1",
     },
     review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "ANTHONY LGD" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "1er rdv dans un café pour faire une \"interview client\", le lendemain la maquette de mon site était prête et correspondait parfaitement a mes attentes",
+        datePublished: "2026-06-16",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Anthony Di Sant'Agostino" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "il a supprimer tous les problème de mon pc en moins de 5min, je recommande",
+        datePublished: "2026-06-16",
+      },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Lorenzo" },
