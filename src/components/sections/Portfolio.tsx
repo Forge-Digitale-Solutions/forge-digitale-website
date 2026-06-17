@@ -12,7 +12,7 @@ const projects = [
     description:
       "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
     tags: ["Chargement Instantané", "Design Unique", "Optimisé Google"],
-    image: "/projects/forge.jpg",
+    image: "/projects/forge.webp",
     imageAlt:
       "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
     gradient: "from-[#C5A059]/20 to-slate-900",
@@ -24,7 +24,7 @@ const projects = [
     description:
       "Application de mise en relation pour sportifs pour iOs et Android. Design moderne, interface intuitive et fonctionnalités sur-mesure pour les passionnés de sport.",
     tags: ["Application Mobile", "Compte Utilisateur", "Carte Interactive"],
-    image: "/projects/gosportnow-og.png",
+    image: "/projects/gosportnow-og.webp",
     imageAlt:
       "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
     gradient: "from-blue-900/40 to-slate-900",
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Assemblage manuel de précision. Cable Management et ventilation optimisée pour un silence total.",
     tags: ["Silencieux", "Performance", "Esthétique Soignée"],
-    image: "/projects/pc.jpg",
+    image: "/projects/pc.webp",
     imageAlt:
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
     gradient: "from-purple-900/40 to-slate-900",
@@ -48,7 +48,7 @@ const projects = [
     description:
       "Site web professionnel pour un commerçant artisanal. Présentation élégante des produits, informations pratiques et optimisation pour le référencement local.",
     tags: ["Artisanat", "Référencement Local", "Design Responsive", "Présentation Produits"],
-    image: "/projects/charcuterie.jpg",
+    image: "/projects/charcuterie.webp",
     imageAlt:
       "Capture d'écran du site web Charcuterie Campagnarde avec présentation des produits artisanaux",
     gradient: "from-red-900/40 to-slate-900",
@@ -60,7 +60,7 @@ const projects = [
     description:
       "Site vitrine pour un studio d'impression murale professionnelle. Présentation de l'activité, galerie de réalisations et mise en avant des possibilités pour entreprises, commerces et particuliers.",
     tags: ["Impression Murale", "B2B & B2C", "Galerie", "Design Premium"],
-    image: "/projects/hvs-og.png",
+    image: "/projects/hvs-og.webp",
     imageAlt:
       "Logo Horizon Vertical Studio, studio d'impression murale professionnelle",
     gradient: "from-yellow-900/30 to-slate-900",
@@ -72,7 +72,7 @@ const projects = [
     description:
       "Site web pour le club de rugby fauteuil de La Teste-de-Buch. Interface d'administration Statamic pour une gestion autonome du contenu par les bénévoles.",
     tags: ["Association Sportive", "Rugby Fauteuil", "Back-office", "Bassin d'Arcachon"],
-    image: "/projects/rhsb-og.png",
+    image: "/projects/rhsb-og.webp",
     imageAlt:
       "Capture d'écran du site web Rugby Handi Sud Bassin, club de rugby fauteuil du Bassin d'Arcachon",
     gradient: "from-blue-900/50 to-slate-900",

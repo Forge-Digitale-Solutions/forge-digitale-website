@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, en atelier à Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
     images: [
       {
-        url: `${SITE_URL}/blog/pc-mint.png`,
+        url: `${SITE_URL}/blog/pc-mint.jpg`,
         width: 1200,
         height: 630,
         alt: "Installation Linux Mint dans le Médoc, Forge Digitale Solutions",
