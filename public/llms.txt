@@ -1,33 +1,34 @@
-# llms.txt, Forge Digitale Solutions
-# Artisanat numérique dans le Médoc : sites web, applications, PC, Linux Mint
-# Contact : contact@forgedigitalesolutions.com | SIREN : 100 857 838
+# Forge Digitale Solutions
 
-## À propos
-Forge Digitale Solutions : création de sites web et d'applications sur-mesure, maintenance de sites, montage PC, dépannage et installation Linux (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, développeur full-stack, titulaire du titre de Concepteur Développeur d'Applications. Interventions en atelier à Saint-Laurent-Médoc ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux.
+> Artisanat numérique dans le Médoc : création de sites web et d'applications sur-mesure, maintenance, montage PC, dépannage et installation Linux Mint (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, développeur full-stack, titulaire du titre de Concepteur Développeur d'Applications. Interventions en atelier ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux. Contact : contact@forgedigitalesolutions.com — SIREN : 100 857 838.
 
 ## Pages principales
-- https://forgedigitalesolutions.com/ : accueil, services et présentation (forfait Linux 69 €, montage PC 149 €)
-- https://forgedigitalesolutions.com/creation-site-web : création de sites web et d'applications sur-mesure (à partir de 800 €)
-- https://forgedigitalesolutions.com/maintenance-site-web : maintenance, hébergement et suivi de site web
-- https://forgedigitalesolutions.com/developpeur-medoc : développeur web indépendant dans le Médoc et le Bassin d'Arcachon
-- https://forgedigitalesolutions.com/installation-linux : installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
-- https://forgedigitalesolutions.com/montage-pc : montage PC sur-mesure, jeu et bureautique (forfait 149 €)
-- https://forgedigitalesolutions.com/blog : articles sur le web, la sécurité, le montage PC et Linux
 
-## Sections de l'accueil (ancres)
-- https://forgedigitalesolutions.com/#services : détail des services
-- https://forgedigitalesolutions.com/#about : présentation d'Anthony Marcelin
-- https://forgedigitalesolutions.com/#realisations : réalisations
-- https://forgedigitalesolutions.com/#faq : questions fréquentes
-- https://forgedigitalesolutions.com/#contact : contact et devis
+- [Accueil](https://forgedigitalesolutions.com/) : services et présentation (forfait Linux 69 €, montage PC 149 €)
+- [Création de site web](https://forgedigitalesolutions.com/creation-site-web) : sites web et applications sur-mesure (à partir de 800 €)
+- [Maintenance de site web](https://forgedigitalesolutions.com/maintenance-site-web) : maintenance, hébergement et suivi
+- [Développeur Médoc](https://forgedigitalesolutions.com/developpeur-medoc) : développeur web indépendant dans le Médoc et le Bassin d'Arcachon
+- [Installation Linux](https://forgedigitalesolutions.com/installation-linux) : installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
+- [Montage PC](https://forgedigitalesolutions.com/montage-pc) : montage PC sur-mesure, jeu et bureautique (forfait 149 €)
+- [Blog](https://forgedigitalesolutions.com/blog) : articles sur le web, la sécurité, le montage PC et Linux
+
+## Sections de l'accueil
+
+- [Services](https://forgedigitalesolutions.com/#services) : détail des services
+- [À propos](https://forgedigitalesolutions.com/#about) : présentation d'Anthony Marcelin
+- [Réalisations](https://forgedigitalesolutions.com/#realisations) : projets réalisés
+- [FAQ](https://forgedigitalesolutions.com/#faq) : questions fréquentes
+- [Contact](https://forgedigitalesolutions.com/#contact) : contact et devis
 
 ## Pages légales
-- https://forgedigitalesolutions.com/mentions-legales
-- https://forgedigitalesolutions.com/cgv
-- https://forgedigitalesolutions.com/confidentialite
 
-## Sitemap
-https://forgedigitalesolutions.com/sitemap.xml
+- [Mentions légales](https://forgedigitalesolutions.com/mentions-legales)
+- [CGV](https://forgedigitalesolutions.com/cgv)
+- [Confidentialité](https://forgedigitalesolutions.com/confidentialite)
 
-# Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended
-# Dernière mise à jour : 2026-06-02
+## Optional
+
+- [Sitemap XML](https://forgedigitalesolutions.com/sitemap.xml)
+
+<!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended -->
+<!-- Dernière mise à jour : 2026-06-17 -->
