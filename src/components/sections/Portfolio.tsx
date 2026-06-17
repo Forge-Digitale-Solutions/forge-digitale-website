@@ -58,8 +58,8 @@ const projects = [
     title: "Horizon Vertical Studio",
     category: "Site Vitrine",
     description:
-      "Site web pour un studio spécialisé en impression murale tous supports. Présentation de l'imprimante M1 Symp's, galerie de réalisations et prise de contact.",
-    tags: ["Impression Murale", "Artisanat", "Statamic", "Design Premium"],
+      "Site vitrine pour un studio d'impression murale professionnelle. Présentation de l'activité, galerie de réalisations et mise en avant des possibilités pour entreprises, commerces et particuliers.",
+    tags: ["Impression Murale", "B2B & B2C", "Galerie", "Design Premium"],
     image: "/projects/hvs-og.png",
     imageAlt:
       "Logo Horizon Vertical Studio, studio d'impression murale professionnelle",
