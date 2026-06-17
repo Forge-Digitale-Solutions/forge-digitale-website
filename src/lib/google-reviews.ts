@@ -17,8 +17,24 @@ export type PlaceInfo = {
 const STATIC_FALLBACK: PlaceInfo = {
   placeId: "",
   rating: 5,
-  totalRatings: 5,
+  totalRatings: 7,
   reviews: [
+    {
+      authorName: "ANTHONY LGD",
+      authorPhotoUrl: "",
+      rating: 5,
+      text: "1er rdv dans un café pour faire une \"interview client\", le lendemain la maquette de mon site était prête et correspondait parfaitement a mes attentes",
+      relativeTime: "",
+      date: "2026-06-16",
+    },
+    {
+      authorName: "Anthony Di Sant'Agostino",
+      authorPhotoUrl: "",
+      rating: 5,
+      text: "il a supprimer tous les problème de mon pc en moins de 5min, je recommande",
+      relativeTime: "",
+      date: "2026-06-16",
+    },
     {
       authorName: "Lorenzo",
       authorPhotoUrl: "",
