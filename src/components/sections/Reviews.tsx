@@ -23,7 +23,7 @@ function computeRelativeTime(isoDate: string): string {
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-1" aria-label={`Note : ${rating} sur 5`}>
+    <div className="flex gap-1" role="img" aria-label={`Note : ${rating} sur 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
