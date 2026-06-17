@@ -55,6 +55,18 @@ const projects = [
     link: "https://charcuterie-campagnarde.pages.dev",
   },
   {
+    title: "Horizon Vertical Studio",
+    category: "Site Vitrine",
+    description:
+      "Site web pour un studio spécialisé en impression murale tous supports. Présentation de l'imprimante M1 Symp's, galerie de réalisations et prise de contact.",
+    tags: ["Impression Murale", "Artisanat", "Statamic", "Design Premium"],
+    image: "/projects/hvs-og.png",
+    imageAlt:
+      "Logo Horizon Vertical Studio, studio d'impression murale professionnelle",
+    gradient: "from-yellow-900/30 to-slate-900",
+    link: "https://horizonverticalstudio.fr",
+  },
+  {
     title: "Rugby Handi Sud Bassin",
     category: "Site Associatif",
     description:
@@ -110,7 +122,7 @@ export function Portfolio() {
                 />
 
                 {/* GoSportNow et Charcuterie Campagnarde: liens actifs vers les sites */}
-                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde" || project.title === "Rugby Handi Sud Bassin") && (
+                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde" || project.title === "Rugby Handi Sud Bassin" || project.title === "Horizon Vertical Studio") && (
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Link
                       href={project.link}
