@@ -14,6 +14,9 @@ Redirect 301 /contact /
 Redirect 301 /realisations /
 Redirect 301 /faq /
 
+# Anciennes URLs .html -> version avec slash (ex: /blog/x.html -> /blog/x/)
+RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule . %{REQUEST_FILENAME}%1.html [NC,L]
