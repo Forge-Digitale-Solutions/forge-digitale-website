@@ -29,6 +29,14 @@ Elle renforce la mémorisation. `contact@jardins-dupont.fr` rappelle le nom de l
 
 Enfin, elle vous sépare du privé. Beaucoup d'artisans mélangent emails personnels et professionnels dans la même boîte. Séparer les deux, c'est retrouver ses messages clients sans fouiller, et pouvoir déconnecter le soir.
 
+## Ce qui se passe techniquement
+
+Derrière une adresse au nom de domaine, le mécanisme est plus simple qu'il n'y paraît. Quand quelqu'un écrit à `contact@jardins-dupont.fr`, son serveur cherche dans le domaine `jardins-dupont.fr` un enregistrement appelé **MX** (*Mail eXchange*). Cet enregistrement, configuré une fois, indique quel serveur reçoit les emails du domaine. C'est lui qui dirige le courrier vers la bonne boîte, exactement comme une adresse postale aiguille le facteur.
+
+Mais le point vraiment intéressant pour votre crédibilité, ce sont trois réglages qui prouvent qu'un email vient bien de vous : **SPF**, **DKIM** et **DMARC**. En clair, SPF déclare quels serveurs ont le droit d'envoyer du courrier en votre nom, DKIM ajoute une signature numérique à chaque message, et DMARC dit aux boîtes des destinataires quoi faire si ces vérifications échouent. Concrètement, ces réglages font deux choses : ils empêchent qu'un escroc usurpe votre adresse pour arnaquer vos clients, et ils évitent que vos vrais emails (devis, factures) finissent dans les spams. Une adresse Gmail générique ne vous laisse aucun contrôle là-dessus ; sur votre domaine, ces protections s'activent à la configuration.
+
+Dernier détail technique utile : pour relever votre boîte sur plusieurs appareils (téléphone et ordinateur), on utilise le protocole **IMAP**, qui synchronise les messages partout plutôt que de les télécharger sur une seule machine. Lu sur le téléphone, un email apparaît lu sur l'ordinateur : rien ne se perd.
+
 ## L'objection du coût : à relativiser
 
 La réticence la plus fréquente concerne le prix. Elle mérite d'être nuancée. Pour exister, une adresse professionnelle suppose deux choses : un **nom de domaine** (le `jardins-dupont.fr`) et un **service de messagerie** qui gère les boîtes.
