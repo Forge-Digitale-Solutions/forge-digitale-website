@@ -33,16 +33,16 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <main className="bg-dark-base min-h-screen flex flex-col">
+    <main className="bg-bg min-h-screen flex flex-col">
       <Header />
 
       <section className="pt-32 pb-24 px-4 md:px-6 grow">
-        <div className="container mx-auto max-w-3xl prose prose-invert prose-headings:text-white prose-p:text-slate-400 prose-li:text-slate-400 prose-strong:text-white prose-a:text-[#C5A059] prose-a:no-underline hover:prose-a:underline">
+        <div className="container mx-auto max-w-3xl prose prose-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">
-            Mentions <span className="text-[#C5A059]">Légales.</span>
+            Mentions <span className="text-accent">Légales.</span>
           </h1>
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 mb-10">
+          <div className="bg-surface-card p-8 rounded-lg border border-default mb-10">
             <h2 className="mt-0">1. Éditeur du site</h2>
             <p>
               Conformément aux dispositions de l&apos;article 6-I 1° de la loi

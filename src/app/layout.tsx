@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Archivo, Spline_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
@@ -9,7 +9,21 @@ import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 
-const inter = Inter({ subsets: ["latin"] });
+// Archivo variable font with the width (wdth) axis. Body uses the default
+// width; display headings widen to ~125 (the "Expanded" instance) via
+// `font-stretch` in globals.css. Self-hosted by next/font (no Google request).
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-text",
+  display: "swap",
+});
+const splineMono = Spline_Sans_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -72,8 +86,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className="dark"
-      style={{ colorScheme: "dark" }}
+      className={`${archivo.variable} ${splineMono.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -84,16 +97,14 @@ export default function RootLayout({
           strategy="afterInteractive"
         ></Script>
       </head>
-      <body
-        className={`${inter.className} bg-dark-base text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
-      >
+      <body className="bg-bg text-text font-sans antialiased">
         <LocalBusinessSchema />
         <FAQSchema />
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
+          attribute="data-theme"
+          defaultTheme="atelier"
           enableSystem={false}
-          forcedTheme="dark"
+          themes={["atelier", "graphite"]}
           disableTransitionOnChange
         >
           <div className="flex min-h-screen flex-col">

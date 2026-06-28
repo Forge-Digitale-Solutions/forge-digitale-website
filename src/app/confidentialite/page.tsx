@@ -32,12 +32,12 @@ export const metadata: Metadata = {
 
 export default function Confidentialite() {
   return (
-    <div className="min-h-screen bg-dark-base pt-32 pb-24 px-4">
-      <div className="container mx-auto max-w-3xl prose prose-invert prose-headings:text-white prose-p:text-slate-400 prose-li:text-slate-400 prose-strong:text-white prose-a:text-[#C5A059]">
+    <div className="min-h-screen bg-bg pt-32 pb-24 px-4">
+      <div className="container mx-auto max-w-3xl prose prose-lg">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">
           Politique de Confidentialité
         </h1>
-        <p className="lead text-lg text-slate-300">
+        <p className="lead text-lg text-soft">
           Dernière mise à jour :{" "}
           {new Date().toLocaleDateString("fr-FR", {
             month: "long",

@@ -59,7 +59,7 @@ export function CalendlyPopupButton() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
-          className="w-full bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-3 md:py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-1 md:gap-2 text-center flex-wrap"
+          className="btn-primary w-full py-3 md:py-4 gap-1 md:gap-2 text-center flex-wrap focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           aria-label="Réserver un appel de 30 minutes"
         >
           <CalendarDays size={16} className="md:w-4.5 md:h-4.5 shrink-0" aria-hidden="true" />
@@ -71,7 +71,7 @@ export function CalendlyPopupButton() {
           <ExternalLink size={14} className="md:w-4 md:h-4 shrink-0 hidden md:inline" aria-hidden="true" />
         </a>
 
-        <p className="text-sm leading-relaxed text-slate-400 text-center">
+        <p className="text-sm leading-relaxed text-muted text-center">
           Appel de 30 minutes, sans engagement. Si le widget ne se charge pas
           encore, le lien ouvre directement Calendly.
         </p>

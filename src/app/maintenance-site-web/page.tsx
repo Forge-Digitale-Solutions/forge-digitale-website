@@ -61,7 +61,7 @@ const serviceSchema = {
 
 export default function MaintenanceSiteWebPage() {
   return (
-    <div className="min-h-screen bg-dark-base pt-32 pb-24">
+    <div className="min-h-screen bg-bg pt-32 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -74,24 +74,24 @@ export default function MaintenanceSiteWebPage() {
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-slate-500 mb-8" aria-label="Fil d'Ariane">
-          <Link href="/" className="hover:text-[#C5A059] transition-colors">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
+          <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-slate-300">Maintenance de site web</span>
+          <span className="text-soft">Maintenance de site web</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Gestion &amp; suivi
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Maintenance de site web et hébergement dans le Médoc
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Un site internet, ce n&rsquo;est pas un projet qu&rsquo;on livre et
             qu&rsquo;on oublie. Il faut un hébergement qui tient, un nom de domaine
@@ -126,13 +126,13 @@ export default function MaintenanceSiteWebPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5">
-          <p className="text-slate-400 text-sm mb-3">À voir aussi</p>
+        <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
+          <p className="text-muted text-sm mb-3">À voir aussi</p>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/creation-site-web"
-                className="text-[#C5A059] hover:underline"
+                className="text-accent hover:underline"
               >
                 Création de site web et d&rsquo;application dans le Médoc
               </Link>
@@ -140,14 +140,14 @@ export default function MaintenanceSiteWebPage() {
           </ul>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-slate-300 mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Un site à confier, ou une question sur la maintenance du vôtre ?
             Écrivez-moi, c&rsquo;est moi qui réponds.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C5A059] px-6 py-3 font-bold text-dark-base transition-colors hover:bg-[#D4B475]"
+            className="btn-primary gap-2 px-6 py-3"
           >
             En parler avec moi
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const serviceLinks = [
   { name: "Création de site web", href: "/creation-site-web" },
@@ -65,9 +66,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-dark-base/80 backdrop-blur-md border-b border-white/10 py-3"
-          : "bg-transparent py-5"
+        scrolled ? "glass py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -78,7 +77,7 @@ export function Header() {
             className="flex items-center gap-3 group"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-[#C5A059]/20 border border-white/5 transition-transform group-hover:scale-105">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm border border-default transition-transform group-hover:scale-105">
               <Image
                 src="/logos/Logo1rond.png"
                 alt="Forge Digitale Logo"
@@ -91,18 +90,18 @@ export function Header() {
             <div className="flex flex-col justify-center">
               <div className="flex items-baseline gap-1.5 leading-none">
                 <span
-                  className="text-slate-500 text-xs font-medium -translate-y-px"
+                  className="text-muted text-xs font-medium -translate-y-px"
                   aria-hidden="true"
                 >
                   La
                 </span>
-                <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#C5A059] transition-colors">
+                <span className="font-display font-bold text-lg tracking-tight text-text-strong group-hover:text-accent transition-colors">
                   FORGE DIGITALE
                 </span>
               </div>
 
               <span
-                className="text-[10px] uppercase tracking-[0.35em] text-[#C5A059] font-medium ml-4.5 mt-0.5"
+                className="font-mono text-[10px] uppercase tracking-[0.35em] text-accent font-medium ml-4.5 mt-0.5"
                 aria-hidden="true"
               >
                 SOLUTIONS
@@ -117,7 +116,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setServicesOpen((v) => !v)}
-                className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-white focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-4 rounded transition-colors group"
+                className="flex items-center gap-1 text-sm font-medium text-soft hover:text-text-strong focus-visible:text-text-strong focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 rounded transition-colors group"
                 aria-haspopup="true"
                 aria-expanded={servicesOpen}
               >
@@ -137,14 +136,14 @@ export function Header() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 8, scale: 0.98 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
-                    className="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-dark-base/95 backdrop-blur-md border border-white/10 shadow-2xl p-2"
+                    className="absolute left-0 top-full mt-3 w-64 rounded-lg bg-surface-raised border border-default shadow-lg p-2"
                   >
                     {serviceLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
                         onClick={() => setServicesOpen(false)}
-                        className="block px-4 py-2.5 rounded-xl text-sm text-slate-300 hover:text-white hover:bg-white/5 focus-visible:text-white focus-visible:bg-white/5 focus-visible:outline-2 focus-visible:outline-[#C5A059] transition-colors"
+                        className="block px-4 py-2.5 rounded-md text-sm text-soft hover:text-text-strong hover:bg-surface-sunken focus-visible:text-text-strong focus-visible:bg-surface-sunken focus-visible:outline-2 focus-visible:outline-accent transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -158,31 +157,36 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-white focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-4 rounded transition-colors relative group"
+                className="text-sm font-medium text-soft hover:text-text-strong focus-visible:text-text-strong focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 rounded transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C5A059] transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
               </Link>
             ))}
 
+            <ThemeToggle />
+
             <Link
               href="/#contact"
-              className="bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-2.5 px-6 rounded-full text-sm transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+              className="btn-primary py-2.5 px-6 text-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               Demander un devis
             </Link>
           </nav>
 
-          {/* Mobile Toggle */}
-          <button
-            className="md:hidden text-white p-2 focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-2 rounded-lg"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-          >
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          {/* Mobile actions */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              className="text-text-strong p-2 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 rounded-md"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+            >
+              {isOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -194,13 +198,13 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-dark-base border-b border-white/10 md:hidden flex flex-col p-6 gap-2 shadow-2xl"
+            className="absolute top-full left-0 w-full bg-surface-raised border-b border-default md:hidden flex flex-col p-6 gap-2 shadow-lg"
           >
             {/* Services accordion */}
             <button
               type="button"
               onClick={() => setMobileServicesOpen((v) => !v)}
-              className="flex items-center justify-between py-2 text-lg font-medium text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+              className="flex items-center justify-between py-2 text-lg font-medium text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-2 focus-visible:outline-accent border-b border-default rounded"
               aria-expanded={mobileServicesOpen}
               aria-controls="mobile-services"
             >
@@ -227,7 +231,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={closeMobile}
-                      className="py-2 pl-4 text-base text-slate-400 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+                      className="py-2 pl-4 text-base text-muted hover:text-accent focus-visible:text-accent focus-visible:outline-2 focus-visible:outline-accent border-b border-default rounded"
                     >
                       {link.name}
                     </Link>
@@ -240,7 +244,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="py-2 text-lg font-medium text-slate-300 hover:text-[#C5A059] focus-visible:text-[#C5A059] focus-visible:outline-2 focus-visible:outline-[#C5A059] border-b border-white/5 rounded"
+                className="py-2 text-lg font-medium text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-2 focus-visible:outline-accent border-b border-default rounded"
                 onClick={closeMobile}
               >
                 {link.name}
@@ -249,7 +253,7 @@ export function Header() {
             <Link
               href="/#contact"
               onClick={closeMobile}
-              className="bg-[#C5A059] text-dark-base font-bold py-3 text-center rounded-lg mt-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+              className="btn-primary w-full py-3 text-center mt-4 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               Me contacter
             </Link>

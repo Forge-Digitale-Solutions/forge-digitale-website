@@ -68,7 +68,7 @@ const serviceSchema = {
 
 export default function InstallationLinuxPage() {
   return (
-    <div className="min-h-screen bg-dark-base pt-32 pb-24">
+    <div className="min-h-screen bg-bg pt-32 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -81,24 +81,24 @@ export default function InstallationLinuxPage() {
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-slate-500 mb-8" aria-label="Fil d'Ariane">
-          <Link href="/" className="hover:text-[#C5A059] transition-colors">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
+          <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-slate-300">Installation Linux</span>
+          <span className="text-soft">Installation Linux</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Forfait Renaissance
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Installation Linux : redonner vie à un vieux PC dans le Médoc
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Votre ordinateur rame, ou Windows ne le suit plus ? Avant de le
             remplacer, il y a souvent une autre option. J&rsquo;installe Linux
@@ -151,13 +151,13 @@ export default function InstallationLinuxPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5">
-          <p className="text-slate-400 text-sm mb-3">Pour aller plus loin</p>
+        <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
+          <p className="text-muted text-sm mb-3">Pour aller plus loin</p>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/blog/forfait-renaissance"
-                className="text-[#C5A059] hover:underline"
+                className="text-accent hover:underline"
               >
                 Fin de Windows 10 : passer son ancien PC sous Linux plutôt que le
                 remplacer
@@ -166,7 +166,7 @@ export default function InstallationLinuxPage() {
             <li>
               <Link
                 href="/blog/sauvegarde-donnees"
-                className="text-[#C5A059] hover:underline"
+                className="text-accent hover:underline"
               >
                 Sauvegarder ses données : comprendre la règle du 3-2-1
               </Link>
@@ -174,15 +174,15 @@ export default function InstallationLinuxPage() {
           </ul>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-slate-300 mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Votre PC mérite peut-être une seconde vie. Apportez-le-moi, je vous dis
             franchement ce qu&rsquo;il vaut encore. Le diagnostic est gratuit, en
             atelier à Saint-Laurent-Médoc.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C5A059] px-6 py-3 font-bold text-dark-base transition-colors hover:bg-[#D4B475]"
+            className="btn-primary gap-2 px-6 py-3"
           >
             Demander un diagnostic gratuit
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

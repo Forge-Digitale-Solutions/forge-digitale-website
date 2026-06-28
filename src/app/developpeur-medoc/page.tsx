@@ -65,7 +65,7 @@ const profileSchema = {
 
 export default function DeveloppeurMedocPage() {
   return (
-    <div className="min-h-screen bg-dark-base pt-32 pb-24">
+    <div className="min-h-screen bg-bg pt-32 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
@@ -78,25 +78,25 @@ export default function DeveloppeurMedocPage() {
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-slate-500 mb-8" aria-label="Fil d'Ariane">
-          <Link href="/" className="hover:text-[#C5A059] transition-colors">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
+          <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-slate-300">Développeur dans le Médoc</span>
+          <span className="text-soft">Développeur dans le Médoc</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Développeur indépendant
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Développeur web indépendant dans le Médoc et le Bassin
             d&rsquo;Arcachon
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Moi c&rsquo;est Anthony Marcelin. Je développe des sites internet et
             des applications depuis le Médoc, pour les professionnels de la
@@ -130,7 +130,7 @@ export default function DeveloppeurMedocPage() {
             la prestation web est sur la page{" "}
             <Link
               href="/creation-site-web"
-              className="text-[#C5A059] hover:underline"
+              className="text-accent hover:underline"
             >
               création de site web
             </Link>
@@ -139,14 +139,14 @@ export default function DeveloppeurMedocPage() {
           </p>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-slate-300 mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Un projet en tête ? Décrivez-moi ce que vous imaginez. L&rsquo;échange
             et le devis ne coûtent rien.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C5A059] px-6 py-3 font-bold text-dark-base transition-colors hover:bg-[#D4B475]"
+            className="btn-primary gap-2 px-6 py-3"
           >
             Me contacter
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
