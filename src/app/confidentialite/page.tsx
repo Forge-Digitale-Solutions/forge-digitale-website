@@ -11,13 +11,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: `${SITE_URL}/confidentialite/`,
-  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/confidentialite/`,
+    url: `${SITE_URL}/confidentialite`,
     title: "Politique de Confidentialité - Forge Digitale Solutions",
     description:
       "RGPD et protection des données. Umami auto-hébergé sans cookies. Votre vie privée est sacrée.",
@@ -36,11 +33,11 @@ export const metadata: Metadata = {
 export default function Confidentialite() {
   return (
     <div className="min-h-screen bg-bg pt-32 pb-24 px-4">
-      <div className="container mx-auto max-w-3xl prose prose-headings:text-fg prose-p:text-muted prose-li:text-muted prose-strong:text-fg prose-a:text-accent">
+      <div className="container mx-auto max-w-3xl prose prose-lg">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">
           Politique de Confidentialité
         </h1>
-        <p className="lead text-lg text-muted">
+        <p className="lead text-lg text-soft">
           Dernière mise à jour :{" "}
           {new Date().toLocaleDateString("fr-FR", {
             month: "long",

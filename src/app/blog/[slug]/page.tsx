@@ -30,7 +30,7 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: { absolute: postData.title },
+    title: postData.title,
     description:
       postData.excerpt ||
       `Article sur ${postData.category} - ${postData.title}`,
@@ -87,11 +87,6 @@ export default async function Post({
   const { slug } = await params;
 
   const postData = await getPostData(slug);
-  const otherPosts = getSortedPostsData().filter((post) => post.id !== slug);
-  const relatedPosts = [
-    ...otherPosts.filter((post) => post.category === postData.category),
-    ...otherPosts.filter((post) => post.category !== postData.category),
-  ].slice(0, 3);
 
   return (
     <article className="min-h-screen bg-bg pt-32 pb-24">
@@ -131,16 +126,16 @@ export default async function Post({
           <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
             {postData.category}
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-fg mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             {postData.title}
           </h1>
-          <div className="flex items-center gap-4 text-subtle text-sm border-l-2 border-accent pl-4 mb-8">
+          <div className="flex items-center gap-4 text-faint text-sm border-l-2 border-accent pl-4 mb-8">
             <p>Publié le {postData.date}</p>
             <span>•</span>
             <p>Par Anthony Marcelin</p>
           </div>
           {postData.image && (
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden">
               <Image
                 src={postData.image}
                 alt={postData.title}
@@ -153,42 +148,18 @@ export default async function Post({
         </header>
 
         <div
-          className="prose prose-lg max-w-none 
-          prose-headings:text-fg prose-headings:font-bold
-          prose-p:text-muted prose-p:leading-relaxed
-          prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-          prose-strong:text-fg prose-strong:font-bold
-          prose-li:text-muted
-          prose-blockquote:border-l-accent prose-blockquote:text-muted prose-blockquote:italic"
+          className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
         />
 
-        <aside className="mt-12" aria-labelledby="related-articles-title">
-          <h2 id="related-articles-title" className="text-xl font-bold text-fg">
-            À lire aussi
-          </h2>
-          <ul className="mt-4 space-y-3">
-            {relatedPosts.map((post) => (
-              <li key={post.id}>
-                <Link
-                  href={`/blog/${post.id}/`}
-                  className="text-accent hover:underline"
-                >
-                  {post.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        <div className="mt-16 pt-8 border-t border-line">
-          <h3 className="text-fg font-bold mb-4">
+        <div className="mt-16 pt-8 border-t border-default">
+          <h3 className="text-text-strong font-bold mb-4">
             Une question sur cet article ?
           </h3>
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/#contact"
-            className="inline-block bg-accent text-on-accent font-bold px-6 py-3 rounded-full hover:bg-accent-hover transition-colors"
+            className="btn-primary px-6 py-3"
           >
             Contactez La Forge
           </a>

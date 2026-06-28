@@ -12,13 +12,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: `${SITE_URL}/mentions-legales/`,
-  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/mentions-legales/`,
+    url: `${SITE_URL}/mentions-legales`,
     title: "Mentions Légales - Forge Digitale Solutions",
     description:
       "EI Anthony Marcelin - SIREN 100 857 838 - Saint-Laurent-Médoc (Gironde) - Hébergeur OVH",
@@ -40,12 +37,12 @@ export default function MentionsLegales() {
       <Header />
 
       <section className="pt-32 pb-24 px-4 md:px-6 grow">
-        <div className="container mx-auto max-w-3xl prose prose-headings:text-fg prose-p:text-muted prose-li:text-muted prose-strong:text-fg prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
+        <div className="container mx-auto max-w-3xl prose prose-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">
             Mentions <span className="text-accent">Légales.</span>
           </h1>
 
-          <div className="bg-card p-8 rounded-2xl border border-line mb-10">
+          <div className="bg-surface-card p-8 rounded-lg border border-default mb-10">
             <h2 className="mt-0">1. Éditeur du site</h2>
             <p>
               Conformément aux dispositions de l&apos;article 6-I 1° de la loi

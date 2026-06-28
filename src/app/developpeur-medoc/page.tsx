@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/developpeur-medoc/`;
+const PAGE_URL = `${SITE_URL}/developpeur-medoc`;
 
 export const metadata: Metadata = {
   title: "Développeur web indépendant dans le Médoc et le Bassin d'Arcachon",
@@ -73,30 +73,30 @@ export default function DeveloppeurMedocPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Développeur dans le Médoc", url: PAGE_URL },
+          { name: "Développeur dans le Médoc", url: `${PAGE_URL}/` },
         ]}
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-subtle mb-8" aria-label="Fil d'Ariane">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
           <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-muted">Développeur dans le Médoc</span>
+          <span className="text-soft">Développeur dans le Médoc</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Développeur indépendant
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-fg mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Développeur web indépendant dans le Médoc et le Bassin
             d&rsquo;Arcachon
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-muted leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Moi c&rsquo;est Anthony Marcelin. Je développe des sites internet et
             des applications depuis le Médoc, pour les professionnels de la
@@ -139,14 +139,14 @@ export default function DeveloppeurMedocPage() {
           </p>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-line">
-          <p className="text-muted mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Un projet en tête ? Décrivez-moi ce que vous imaginez. L&rsquo;échange
             et le devis ne coûtent rien.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-on-accent transition-colors hover:bg-accent-hover"
+            className="btn-primary gap-2 px-6 py-3"
           >
             Me contacter
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

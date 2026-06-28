@@ -11,13 +11,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: `${SITE_URL}/cgv/`,
-  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/cgv/`,
+    url: `${SITE_URL}/cgv`,
     title: "Conditions Générales de Vente - Forge Digitale Solutions",
     description:
       "CGV Forge Digitale. Création web, montage PC, forfait Renaissance. En vigueur depuis le 07 février 2026.",
@@ -36,11 +33,11 @@ export const metadata: Metadata = {
 export default function CGV() {
   return (
     <div className="min-h-screen bg-bg pt-32 pb-24 px-4">
-      <div className="container mx-auto max-w-3xl prose prose-headings:text-fg prose-p:text-muted prose-li:text-muted prose-strong:text-fg prose-a:text-accent">
+      <div className="container mx-auto max-w-3xl prose prose-lg">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">
           Conditions Générales de Vente (CGV)
         </h1>
-        <p className="lead text-lg text-muted">
+        <p className="lead text-lg text-soft">
           En vigueur au 07 février 2026
         </p>
 

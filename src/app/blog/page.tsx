@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
-  title: { absolute: "Blog : conseils web, PC et Linux dans le Médoc" },
+  title: "Blog : conseils web, montage PC et Linux dans le Médoc",
   description:
     "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc et le Bassin d'Arcachon.",
   keywords: [
@@ -38,8 +38,8 @@ export default function BlogIndex() {
     <div className="min-h-screen bg-bg pt-32 pb-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-fg mb-6 tracking-tight">
-            Le Blog de <span className="text-gold-gradient">La Forge.</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-text-strong mb-6 tracking-tight">
+            Le Blog de <span className="text-accent">La Forge.</span>
           </h1>
           <p className="text-muted text-lg">
             Décryptage tech, conseils hardware et coulisses du développement
@@ -53,9 +53,9 @@ export default function BlogIndex() {
             <Link
               key={post.id}
               href={`/blog/${post.id}/`}
-              className="group flex flex-col h-full bg-card border border-line rounded-3xl overflow-hidden hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col h-full bg-surface-card border border-default rounded-xl overflow-hidden hover:border-strong transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="h-48 bg-linear-to-br from-sunken to-bg relative overflow-hidden">
+              <div className="h-48 bg-surface-sunken relative overflow-hidden">
                 {post.image && (
                   <Image
                     src={post.image}
@@ -72,12 +72,12 @@ export default function BlogIndex() {
               </div>
 
               <div className="p-8 flex flex-col grow">
-                <div className="flex items-center gap-2 text-subtle text-xs mb-4">
+                <div className="flex items-center gap-2 text-faint text-xs mb-4">
                   <Calendar size={14} aria-hidden="true" />
                   {post.date}
                 </div>
 
-                <h2 className="text-xl font-bold text-fg mb-3 group-hover:text-accent transition-colors">
+                <h2 className="text-xl font-bold text-text-strong mb-3 group-hover:text-accent transition-colors">
                   {post.title}
                 </h2>
 

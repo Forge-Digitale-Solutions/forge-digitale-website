@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/montage-pc/`;
+const PAGE_URL = `${SITE_URL}/montage-pc`;
 
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
@@ -76,29 +76,29 @@ export default function MontagePcPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Montage PC", url: PAGE_URL },
+          { name: "Montage PC", url: `${PAGE_URL}/` },
         ]}
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-subtle mb-8" aria-label="Fil d'Ariane">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
           <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-muted">Montage PC</span>
+          <span className="text-soft">Montage PC</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Montage PC sur-mesure
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-fg mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Montage PC sur-mesure en Gironde
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-muted leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Que ce soit pour jouer, travailler ou un usage familial, je monte des
             PC adaptés à votre besoin réel et à votre budget. Le principe est
@@ -142,7 +142,7 @@ export default function MontagePcPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl bg-card border border-line">
+        <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
           <p className="text-muted text-sm mb-3">Pour aller plus loin</p>
           <ul className="space-y-2">
             <li>
@@ -156,15 +156,15 @@ export default function MontagePcPage() {
           </ul>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-line">
-          <p className="text-muted mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Une config en tête ? Dites-moi votre usage et votre budget, je vous
             conseille la configuration qui tient la route. Le conseil et le devis
             sont gratuits.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-on-accent transition-colors hover:bg-accent-hover"
+            className="btn-primary gap-2 px-6 py-3"
           >
             Demander un devis gratuit
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -7,28 +7,28 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-bg border-t border-line pt-16 pb-8">
+    <footer className="bg-bg border-t border-default pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-fg">
+            <h3 className="text-2xl font-bold text-text-strong">
               Forge <span className="text-accent">Digitale.</span>
             </h3>
-            <p className="text-muted text-sm leading-relaxed">
+            <p className="text-soft text-sm leading-relaxed">
               L&apos;artisanat numérique au service du Médoc.
               <br />
               Solutions web sur-mesure et expertise hardware haute performance.
             </p>
 
-            <div className="pt-4 mt-4 border-t border-line text-xs text-subtle">
+            <div className="pt-4 mt-4 border-t border-default text-xs text-faint">
               <p>EI Anthony Marcelin</p>
               <p>SIREN : 100 857 838</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-fg font-bold mb-6">Services</h4>
-            <ul className="space-y-3 text-sm text-muted">
+            <h4 className="text-text-strong font-bold mb-6">Services</h4>
+            <ul className="space-y-3 text-sm text-soft">
               <li>
                 <Link
                   href="/creation-site-web"
@@ -88,11 +88,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-fg font-bold mb-6">Liens Utiles</h4>
-            <ul className="space-y-3 text-sm text-muted">
+            <h4 className="text-text-strong font-bold mb-6">Liens Utiles</h4>
+            <ul className="space-y-3 text-sm text-soft">
               <li>
                 <Link
-                  href="/blog"
+                  href="/blog/"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
                   Le Blog Tech
@@ -128,8 +128,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-fg font-bold mb-6">Contact</h4>
-            <ul className="space-y-4 text-sm text-muted">
+            <h4 className="text-text-strong font-bold mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm text-soft">
               <li className="flex items-start gap-3">
                 <MapPin
                   size={18}
@@ -150,7 +150,7 @@ export function Footer() {
                 />
                 <a
                   href="tel:+33645659696"
-                  className="hover:text-fg transition-colors"
+                  className="hover:text-text-strong transition-colors"
                 >
                   06 45 65 96 96
                 </a>
@@ -163,7 +163,7 @@ export function Footer() {
                 />
                 <a
                   href="mailto:contact@forgedigitalesolutions.com"
-                  className="hover:text-fg transition-colors break-all"
+                  className="hover:text-text-strong transition-colors break-all"
                 >
                   contact@forgedigitalesolutions.com
                 </a>
@@ -172,14 +172,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-fg font-bold mb-6">Réseaux Sociaux</h4>
+            <h4 className="text-text-strong font-bold mb-6">Réseaux Sociaux</h4>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61577431918424"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Page Facebook de Forge Digitale Solutions"
-                className="text-muted hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
               >
                 <Facebook size={24} aria-hidden="true" />
               </a>
@@ -188,7 +188,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Profil LinkedIn d'Anthony Marcelin"
-                className="text-muted hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
               >
                 <Linkedin size={24} aria-hidden="true" />
               </a>
@@ -197,7 +197,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Page LinkedIn de Forge Digitale Solutions"
-                className="text-muted hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 title="LinkedIn Entreprise"
               >
                 <Linkedin size={24} aria-hidden="true" />
@@ -206,24 +206,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-line pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-subtle">
+        <div className="border-t border-default pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-faint">
           <p>© {currentYear} Forge Digitale Solutions. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link
               href="/cgv"
-              className="hover:text-muted focus-visible:text-muted focus-visible:outline-1 focus-visible:outline-muted rounded transition-colors"
+              className="hover:text-soft focus-visible:text-soft focus-visible:outline-1 focus-visible:outline-strong rounded transition-colors"
             >
               CGV
             </Link>
             <Link
               href="/mentions-legales"
-              className="hover:text-muted focus-visible:text-muted focus-visible:outline-1 focus-visible:outline-muted rounded transition-colors"
+              className="hover:text-soft focus-visible:text-soft focus-visible:outline-1 focus-visible:outline-strong rounded transition-colors"
             >
               Mentions Légales
             </Link>
             <Link
               href="/confidentialite"
-              className="hover:text-muted focus-visible:text-muted focus-visible:outline-1 focus-visible:outline-muted rounded transition-colors"
+              className="hover:text-soft focus-visible:text-soft focus-visible:outline-1 focus-visible:outline-strong rounded transition-colors"
             >
               Politique de Confidentialité
             </Link>

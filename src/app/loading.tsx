@@ -16,7 +16,7 @@ export default function Loading() {
           }}
         />
         <motion.div
-          className="absolute inset-2 rounded-full bg-accent/20"
+          className="absolute inset-2 rounded-full bg-accent/10"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{
             duration: 1.5,
@@ -25,7 +25,7 @@ export default function Loading() {
           }}
         />
       </div>
-      <p className="text-accent font-medium tracking-widest text-sm uppercase">
+      <p className="text-accent font-mono font-medium tracking-widest text-sm uppercase">
         Chargement...
       </p>
     </div>

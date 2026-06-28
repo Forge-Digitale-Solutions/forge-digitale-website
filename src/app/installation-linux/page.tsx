@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/installation-linux/`;
+const PAGE_URL = `${SITE_URL}/installation-linux`;
 
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
@@ -76,29 +76,29 @@ export default function InstallationLinuxPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Installation Linux", url: PAGE_URL },
+          { name: "Installation Linux", url: `${PAGE_URL}/` },
         ]}
       />
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <nav className="text-sm text-subtle mb-8" aria-label="Fil d'Ariane">
+        <nav className="text-sm text-faint mb-8" aria-label="Fil d'Ariane">
           <Link href="/" className="hover:text-accent transition-colors">
             Accueil
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-muted">Installation Linux</span>
+          <span className="text-soft">Installation Linux</span>
         </nav>
 
         <header className="mb-10">
-          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-mono font-bold tracking-widest uppercase text-xs mb-4 block">
             Forfait Renaissance
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-fg mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
             Installation Linux : redonner vie à un vieux PC dans le Médoc
           </h1>
         </header>
 
-        <div className="space-y-6 text-lg text-muted leading-relaxed">
+        <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Votre ordinateur rame, ou Windows ne le suit plus ? Avant de le
             remplacer, il y a souvent une autre option. J&rsquo;installe Linux
@@ -151,7 +151,7 @@ export default function InstallationLinuxPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl bg-card border border-line">
+        <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
           <p className="text-muted text-sm mb-3">Pour aller plus loin</p>
           <ul className="space-y-2">
             <li>
@@ -174,15 +174,15 @@ export default function InstallationLinuxPage() {
           </ul>
         </div>
 
-        <section className="mt-12 pt-8 border-t border-line">
-          <p className="text-muted mb-6">
+        <section className="mt-12 pt-8 border-t border-default">
+          <p className="text-soft mb-6">
             Votre PC mérite peut-être une seconde vie. Apportez-le-moi, je vous dis
             franchement ce qu&rsquo;il vaut encore. Le diagnostic est gratuit, en
             atelier à Saint-Laurent-Médoc.
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-on-accent transition-colors hover:bg-accent-hover"
+            className="btn-primary gap-2 px-6 py-3"
           >
             Demander un diagnostic gratuit
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

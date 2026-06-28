@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { SectionHeading } from "@/components/ui/section";
 import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
@@ -28,7 +29,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={i}
           className={`w-5 h-5 ${
-            i < rating ? "fill-accent text-accent" : "text-subtle"
+            i < rating ? "fill-accent text-accent" : "text-faint"
           }`}
           aria-hidden="true"
         />
@@ -47,6 +48,15 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [relativeTimes, setRelativeTimes] = useState<string[]>([]);
+
+  useEffect(() => {
+    setRelativeTimes(
+      (data?.reviews ?? []).map((r) =>
+        r.date ? computeRelativeTime(r.date) : r.relativeTime
+      )
+    );
+  }, [data]);
 
   const { reviews, rating, totalRatings, placeId } = data ?? { reviews: [], rating: 0, totalRatings: 0, placeId: "" };
   const count = reviews.length;
@@ -80,8 +90,6 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
       className="py-24 relative overflow-hidden bg-bg"
       aria-labelledby="reviews-heading"
     >
-      <div className="absolute inset-0 bg-accent/5 blur-[200px] -z-10" />
-
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,20 +98,20 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-accent font-bold tracking-widest uppercase text-sm">
-            Avis clients
-          </span>
-          <h2
-            id="reviews-heading"
-            className="text-3xl md:text-4xl font-bold text-fg mt-2"
-          >
-            Ce que disent{" "}
-            <span className="text-gold-gradient">mes clients</span>
-          </h2>
+          <SectionHeading
+            index="06"
+            eyebrow="Avis clients"
+            titleId="reviews-heading"
+            title={
+              <>
+                Ce que disent <span className="text-accent">mes clients</span>
+              </>
+            }
+          />
           <div className="flex items-center justify-center gap-3 mt-6">
             <StarRating rating={Math.round(rating)} />
-            <span className="text-muted text-lg">
-              <span className="text-fg font-bold">{rating.toFixed(1)}</span>{" "}
+            <span className="text-soft text-lg">
+              <span className="text-text-strong font-bold">{rating.toFixed(1)}</span>{" "}
               / 5 · {totalRatings} avis Google
             </span>
           </div>
@@ -115,14 +123,14 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
               <>
                 <button
                   onClick={() => go(current - 1, true)}
-                  className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 w-10 h-10 rounded-full border border-accent/30 bg-card items-center justify-center text-accent hover:bg-accent/10 transition-colors"
+                  className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 w-10 h-10 rounded-full border border-strong bg-surface items-center justify-center text-accent hover:bg-accent/10 transition-colors"
                   aria-label="Avis précédent"
                 >
                   <ChevronLeft className="w-5 h-5" aria-hidden="true" />
                 </button>
                 <button
                   onClick={() => go(current + 1, true)}
-                  className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 w-10 h-10 rounded-full border border-accent/30 bg-card items-center justify-center text-accent hover:bg-accent/10 transition-colors"
+                  className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 w-10 h-10 rounded-full border border-strong bg-surface items-center justify-center text-accent hover:bg-accent/10 transition-colors"
                   aria-label="Avis suivant"
                 >
                   <ChevronRight className="w-5 h-5" aria-hidden="true" />
@@ -130,7 +138,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
               </>
             )}
 
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-lg">
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={current}
@@ -147,7 +155,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                     if (info.offset.x < -SWIPE_THRESHOLD) go(current + 1, true);
                     else if (info.offset.x > SWIPE_THRESHOLD) go(current - 1, true);
                   }}
-                  className="bg-card border border-line rounded-2xl p-8 relative select-none cursor-grab active:cursor-grabbing"
+                  className="bg-surface-card border border-default rounded-lg p-8 relative select-none cursor-grab active:cursor-grabbing"
                 >
                   <span
                     className="absolute top-6 right-8 text-accent/20 text-7xl font-serif leading-none select-none"
@@ -158,7 +166,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
 
                   <StarRating rating={review.rating} />
 
-                  <p className="text-fg text-lg leading-relaxed mt-4 mb-6 min-h-24">
+                  <p className="text-soft text-lg leading-relaxed mt-4 mb-6 min-h-24">
                     {review.text}
                   </p>
 
@@ -173,16 +181,11 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                       />
                     )}
                     <div>
-                      <p className="text-fg font-semibold">
+                      <p className="text-text-strong font-semibold">
                         {review.authorName}
                       </p>
-                      <p
-                        className="text-subtle text-sm"
-                        suppressHydrationWarning
-                      >
-                        {review.date
-                          ? computeRelativeTime(review.date)
-                          : review.relativeTime}
+                      <p className="text-faint text-sm">
+                        {relativeTimes[current] ?? review.relativeTime}
                       </p>
                     </div>
                   </div>
@@ -195,7 +198,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
                 onClick={() => go(current - 1, true)}
-                className="md:hidden w-8 h-8 rounded-full border border-accent/30 bg-card flex items-center justify-center text-accent hover:bg-accent/10 transition-colors"
+                className="md:hidden w-8 h-8 rounded-full border border-strong bg-surface flex items-center justify-center text-accent hover:bg-accent/10 transition-colors"
                 aria-label="Avis précédent"
               >
                 <ChevronLeft className="w-4 h-4" aria-hidden="true" />
@@ -209,7 +212,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                     className={`h-2 rounded-full transition-all duration-300 ${
                       i === current
                         ? "bg-accent w-6"
-                        : "bg-subtle hover:bg-muted w-2"
+                        : "bg-surface-raised hover:bg-surface w-2"
                     }`}
                     aria-label={`Aller à l'avis ${i + 1}`}
                     aria-current={i === current ? "true" : undefined}
@@ -219,7 +222,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
 
               <button
                 onClick={() => go(current + 1, true)}
-                className="md:hidden w-8 h-8 rounded-full border border-accent/30 bg-card flex items-center justify-center text-accent hover:bg-accent/10 transition-colors"
+                className="md:hidden w-8 h-8 rounded-full border border-strong bg-surface flex items-center justify-center text-accent hover:bg-accent/10 transition-colors"
                 aria-label="Avis suivant"
               >
                 <ChevronRight className="w-4 h-4" aria-hidden="true" />
@@ -239,7 +242,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
             href={googleUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-accent hover:text-fg transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 text-accent hover:text-text-strong transition-colors text-sm font-medium"
           >
             Voir tous les avis sur Google
             <ExternalLink className="w-4 h-4" aria-hidden="true" />

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SectionHeading } from "@/components/ui/section";
 import {
   Mail,
   Phone,
@@ -87,7 +88,7 @@ export function Contact() {
       className="py-24 bg-bg relative"
       aria-labelledby="contact-heading"
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-line to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-border-default to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
@@ -98,74 +99,77 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div>
-              <h2
-                id="contact-heading"
-                className="text-3xl md:text-4xl font-bold text-fg mb-4 text-balance"
-              >
-                Parlons de votre <span className="text-accent">projet.</span>
-              </h2>
-              <p className="text-fg text-lg leading-relaxed">
-                Un projet web ? Un PC à monter ou une seconde vie à donner à
-                votre matériel ?
-                <br />
-                Je suis disponible et réactif.
-              </p>
-            </div>
+            <SectionHeading
+              index="05"
+              eyebrow="Contact"
+              align="left"
+              titleId="contact-heading"
+              title={
+                <>
+                  Parlons de votre <span className="text-accent">projet.</span>
+                </>
+              }
+              description={
+                <>
+                  Un projet web ? Un PC à monter ou une seconde vie à donner à
+                  votre matériel ? Je suis disponible et réactif.
+                </>
+              }
+            />
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface-card border border-default">
                 <div
-                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
+                  className="bg-accent/10 p-3 rounded-md text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <Phone size={24} />
                 </div>
                 <div className="break-words-custom">
-                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
+                  <p className="text-sm text-faint font-medium uppercase tracking-wide">
                     Téléphone
                   </p>
                   <a
                     href="tel:+33645659696"
-                    className="text-fg hover:text-accent transition-colors text-lg font-medium"
+                    className="text-text-strong hover:text-accent transition-colors text-lg font-medium"
                   >
                     06 45 65 96 96
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface-card border border-default">
                 <div
-                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
+                  className="bg-accent/10 p-3 rounded-md text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <Mail size={24} />
                 </div>
                 <div className="break-words-custom w-full">
-                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
+                  <p className="text-sm text-faint font-medium uppercase tracking-wide">
                     Email
                   </p>
                   <a
                     href="mailto:contact@forgedigitalesolutions.com"
-                    className="text-fg hover:text-accent transition-colors text-lg font-medium break-all block"
+                    className="text-text-strong hover:text-accent transition-colors text-lg font-medium break-all block"
                   >
                     contact@forgedigitalesolutions.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface-card border border-default">
                 <div
-                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
+                  className="bg-accent/10 p-3 rounded-md text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
+                  <p className="text-sm text-faint font-medium uppercase tracking-wide">
                     Atelier
                   </p>
-                  <p className="text-fg text-lg font-medium">
+                  <p className="text-text-strong text-lg font-medium">
                     Saint-Laurent-Médoc (33112)
                   </p>
                 </div>
@@ -177,18 +181,18 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="rounded-2xl border border-line bg-card p-5 space-y-4"
+              className="rounded-lg border border-default bg-surface-card p-5 space-y-4"
               aria-labelledby="contact-rdv-heading"
             >
               <div className="flex items-center gap-4">
-                <div className="flex-1 h-px bg-line" />
+                <div className="flex-1 h-px bg-border-default" />
                 <span
                   id="contact-rdv-heading"
                   className="text-muted text-sm font-medium"
                 >
                   Prendre rendez-vous directement
                 </span>
-                <div className="flex-1 h-px bg-line" />
+                <div className="flex-1 h-px bg-border-default" />
               </div>
 
               <p className="text-sm leading-relaxed text-muted text-center">
@@ -206,7 +210,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card p-8 rounded-3xl border border-line backdrop-blur-sm"
+            className="bg-surface-card p-8 rounded-xl border border-default backdrop-blur-sm"
           >
             {status === "success" ? (
               <div
@@ -221,7 +225,7 @@ export function Contact() {
                   <CheckCircle size={40} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-fg mb-2">
+                  <h3 className="text-2xl font-bold text-text-strong mb-2">
                     Message envoyé !
                   </h3>
                   <p className="text-muted max-w-xs mx-auto">
@@ -230,7 +234,7 @@ export function Contact() {
                 </div>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="mt-4 text-accent hover:text-fg text-sm font-medium underline underline-offset-4 transition-colors"
+                  className="mt-4 text-accent hover:text-text-strong text-sm font-medium underline underline-offset-4 transition-colors"
                 >
                   Envoyer un autre message
                 </button>
@@ -262,7 +266,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
-                      className="text-sm font-medium text-muted"
+                      className="text-sm font-medium text-soft"
                     >
                       Nom *
                     </label>
@@ -272,16 +276,16 @@ export function Contact() {
                       type="text"
                       required
                       placeholder="Votre nom"
-                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent transition-colors placeholder:text-subtle"
+                      className="w-full bg-surface-raised border border-default rounded-md px-4 py-3 text-text-strong focus:outline-none focus:border-accent transition-colors placeholder:text-faint"
                     />
                   </div>
                   <div className="space-y-2">
                     <label
                       htmlFor="company"
-                      className="text-sm font-medium text-muted"
+                      className="text-sm font-medium text-soft"
                     >
                       Société{" "}
-                      <span className="text-subtle text-xs">
+                      <span className="text-faint text-xs">
                         (Optionnel)
                       </span>
                     </label>
@@ -290,7 +294,7 @@ export function Contact() {
                       id="company"
                       type="text"
                       placeholder="Nom de l'entreprise"
-                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent transition-colors placeholder:text-subtle"
+                      className="w-full bg-surface-raised border border-default rounded-md px-4 py-3 text-text-strong focus:outline-none focus:border-accent transition-colors placeholder:text-faint"
                     />
                   </div>
                 </div>
@@ -299,7 +303,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="email"
-                      className="text-sm font-medium text-muted"
+                      className="text-sm font-medium text-soft"
                     >
                       Email *
                     </label>
@@ -309,7 +313,7 @@ export function Contact() {
                       type="email"
                       required
                       placeholder="vous@exemple.com"
-                      className={`w-full bg-bg border rounded-xl px-4 py-3 text-fg focus:outline-none transition-colors placeholder:text-subtle ${errors.email ? "border-danger/50 focus:border-danger" : "border-line focus:border-accent"}`}
+                      className={`w-full bg-surface-raised border rounded-md px-4 py-3 text-text-strong focus:outline-none transition-colors placeholder:text-faint ${errors.email ? "border-danger focus:border-danger" : "border-default focus:border-accent"}`}
                     />
                     {errors.email && (
                       <p
@@ -324,7 +328,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="phone"
-                      className="text-sm font-medium text-muted"
+                      className="text-sm font-medium text-soft"
                     >
                       Téléphone *
                     </label>
@@ -334,7 +338,7 @@ export function Contact() {
                       type="tel"
                       required
                       placeholder="06..."
-                      className={`w-full bg-bg border rounded-xl px-4 py-3 text-fg focus:outline-none transition-colors placeholder:text-subtle ${errors.phone ? "border-danger/50 focus:border-danger" : "border-line focus:border-accent"}`}
+                      className={`w-full bg-surface-raised border rounded-md px-4 py-3 text-text-strong focus:outline-none transition-colors placeholder:text-faint ${errors.phone ? "border-danger focus:border-danger" : "border-default focus:border-accent"}`}
                     />
                     {errors.phone && (
                       <p
@@ -351,7 +355,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label
                     htmlFor="service-select"
-                    className="text-sm font-medium text-muted"
+                    className="text-sm font-medium text-soft"
                   >
                     Sujet
                   </label>
@@ -360,7 +364,7 @@ export function Contact() {
                       name="service"
                       id="service-select"
                       defaultValue=""
-                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent appearance-none cursor-pointer"
+                      className="w-full bg-surface-raised border border-default rounded-md px-4 py-3 text-text-strong focus:outline-none focus:border-accent appearance-none cursor-pointer"
                     >
                       <option value="" disabled>
                         Sélectionnez un sujet
@@ -370,7 +374,7 @@ export function Contact() {
                       <option value="Dépannage / Maintenance">Dépannage / Maintenance</option>
                       <option value="Autre demande">Autre demande</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-subtle">
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-faint">
                       <svg
                         width="12"
                         height="12"
@@ -390,7 +394,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label
                     htmlFor="message"
-                    className="text-sm font-medium text-muted"
+                    className="text-sm font-medium text-soft"
                   >
                     Message *
                   </label>
@@ -400,13 +404,13 @@ export function Contact() {
                     required
                     rows={4}
                     placeholder="Décrivez votre besoin..."
-                    className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent resize-none placeholder:text-subtle"
+                    className="w-full bg-surface-raised border border-default rounded-md px-4 py-3 text-text-strong focus:outline-none focus:border-accent resize-none placeholder:text-faint"
                   />
                 </div>
 
                 {status === "error" && (
                   <div
-                    className="flex items-center gap-2 text-danger text-sm bg-danger/10 p-3 rounded-lg border border-danger/20"
+                    className="flex items-center gap-2 text-danger text-sm bg-danger/10 p-3 rounded-md border border-danger/20"
                     role="alert"
                     aria-live="assertive"
                   >
@@ -419,7 +423,7 @@ export function Contact() {
                   type="submit"
                   disabled={status === "submitting"}
                   aria-busy={status === "submitting"}
-                  className="w-full bg-accent hover:bg-accent-hover focus-visible:bg-accent-hover focus-visible:outline-2 focus-visible:outline-fg focus-visible:outline-offset-2 text-on-accent font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-primary w-full py-4 gap-2 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? (
                     <>
