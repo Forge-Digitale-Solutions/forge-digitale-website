@@ -8,6 +8,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // ponytail: fichiers RSC internes Next.js exportés (payloads de prefetch),
+        // pas des pages — Google ne doit pas tenter de les indexer
+        disallow: "/*__next",
       },
       {
         userAgent: [
