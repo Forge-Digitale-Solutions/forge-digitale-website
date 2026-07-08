@@ -52,11 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // trailingSlash: true -> le sitemap doit matcher les canonical (slash final)
   return [
     mainRoute,
     ...servicePages,
     blogRoute,
     ...legalRoutes,
     ...blogRoutes,
-  ];
+  ].map((r) => ({ ...r, url: r.url.endsWith("/") ? r.url : `${r.url}/` }));
 }
