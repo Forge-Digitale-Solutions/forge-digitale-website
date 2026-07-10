@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="bg-bg border-t border-default pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-16">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-text-strong">
               Forge <span className="text-accent">Digitale.</span>

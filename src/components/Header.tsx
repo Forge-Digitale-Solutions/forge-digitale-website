@@ -110,7 +110,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {/* Services dropdown */}
             <div ref={servicesRef} className="relative">
               <button
@@ -175,7 +175,7 @@ export function Header() {
           </nav>
 
           {/* Mobile actions */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <button
               className="text-text-strong p-2 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 rounded-md"
@@ -198,7 +198,7 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-surface-raised border-b border-default md:hidden flex flex-col p-6 gap-2 shadow-lg"
+            className="absolute top-full left-0 w-full bg-surface-raised border-b border-default lg:hidden flex flex-col p-6 gap-2 shadow-lg"
           >
             {/* Services accordion */}
             <button
