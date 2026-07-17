@@ -23,13 +23,13 @@ Un professionnel qui sauvegarde des fichiers clients manipule des données perso
 
 Pour la copie hors site, celle qui part vers un cloud ou un disque distant, le chiffrement n'est pas optionnel. **BorgBackup** et **restic** répondent à ce besoin : sauvegarde chiffrée, dédupliquée pour ne pas exploser le volume, pilotable vers un stockage distant. Plus techniques que Déjà Dup, ils conviennent au poste d'un indépendant qui veut une copie externalisée sérieuse sans dépendre d'un service propriétaire. La CNIL rappelle dans sa fiche sécurité que le chiffrement des sauvegardes et leur stockage à l'écart du système font partie des mesures de base.
 
-*Source : [CNIL – Sécurité : Sauvegarder](https://www.cnil.fr/fr/securite-sauvegarder)*
+*Source : [CNIL, « Sécurité : Sauvegarder »](https://www.cnil.fr/fr/securite-sauvegarder)*
 
 ## La copie hors ligne contre le rançongiciel
 
 Un rançongiciel chiffre tout ce qu'il atteint, y compris les sauvegardes connectées en permanence. Un disque externe branché en continu ou un cloud synchronisé en temps réel se fait chiffrer avec le reste. La parade tient en un geste : une copie déconnectée. Un disque externe qu'on rebranche pour la sauvegarde hebdomadaire puis qu'on range protège mieux qu'un NAS toujours en ligne. L'ANSSI insiste sur ce point, prévoir au moins une sauvegarde hors ligne, isolée du système.
 
-*Source : [ANSSI – Sauvegarde des systèmes d'information, les fondamentaux](https://messervices.cyber.gouv.fr/documents-guides/anssi_fondamentaux_sauvegarde_systemes_dinformation_v1.1.pdf)*
+*Source : [ANSSI, « Sauvegarde des systèmes d'information : les fondamentaux »](https://messervices.cyber.gouv.fr/documents-guides/anssi_fondamentaux_sauvegarde_systemes_dinformation_v1.1.pdf)*
 
 ## La seule vérification qui compte : restaurer
 
