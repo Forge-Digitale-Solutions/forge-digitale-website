@@ -11,10 +11,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: `${SITE_URL}/cgv/`,
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/cgv`,
+    url: `${SITE_URL}/cgv/`,
     title: "Conditions Générales de Vente - Forge Digitale Solutions",
     description:
       "CGV Forge Digitale. Création web, montage PC, forfait Renaissance. En vigueur depuis le 07 février 2026.",

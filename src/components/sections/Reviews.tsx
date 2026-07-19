@@ -47,15 +47,6 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [relativeTimes, setRelativeTimes] = useState<string[]>([]);
-
-  useEffect(() => {
-    setRelativeTimes(
-      (data?.reviews ?? []).map((r) =>
-        r.date ? computeRelativeTime(r.date) : r.relativeTime
-      )
-    );
-  }, [data]);
 
   const { reviews, rating, totalRatings, placeId } = data ?? { reviews: [], rating: 0, totalRatings: 0, placeId: "" };
   const count = reviews.length;
@@ -185,8 +176,13 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                       <p className="text-white font-semibold">
                         {review.authorName}
                       </p>
-                      <p className="text-slate-500 text-sm">
-                        {relativeTimes[current] ?? review.relativeTime}
+                      <p
+                        className="text-slate-500 text-sm"
+                        suppressHydrationWarning
+                      >
+                        {review.date
+                          ? computeRelativeTime(review.date)
+                          : review.relativeTime}
                       </p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 ---
 title: "Hameçonnage : reconnaître un email frauduleux et réagir au bon moment"
 date: "2026-05-29"
-lastModified: "2026-05-30"
+lastModified: "2026-07-19"
 category: "Sécurité"
 excerpt: "L'hameçonnage figure chaque année en tête des menaces recensées par Cybermalveillance.gouv.fr, le dispositif public d'assistance aux victimes. Comment fonctionne un email frauduleux, à quels signaux le repérer et que faire en cas de clic, pour les particuliers comme pour les professionnels, sous Windows comme sous Linux."
 image: "/blog/arnaque-phishing.jpg"
@@ -27,7 +27,7 @@ Les informations récoltées sont ensuite utilisées pour vider un compte, sousc
 
 Aucun de ces indices ne constitue une preuve à lui seul, mais leur présence appelle la prudence.
 
-**L'adresse réelle de l'expéditeur.** Le nom affiché peut être falsifié ; l'adresse, plus difficilement. Une adresse du type `support@amaz0n-service.com` ou `impots@no-reply-france.net` est frauduleuse. L'administration fiscale, par exemple, n'écrit que depuis des adresses en `@dgfip.finances.gouv.fr` ou `@impots.gouv.fr`.
+**L'adresse complète de l'expéditeur.** Le nom affiché ne suffit pas : il faut ouvrir le détail de l'adresse et lire le domaine après le `@`. Une variante comme `amaz0n-service.com` ou `no-reply-impots.net` doit alerter. Même une adresse affichée correctement peut être usurpée, donc ce contrôle ne remplace pas les autres indices.
 
 **L'urgence.** « Compte suspendu sous 24 h », « colis bloqué », « remboursement à valider avant ce soir » : la pression temporelle sert à court-circuiter la réflexion.
 
@@ -41,14 +41,14 @@ Aucun de ces indices ne constitue une preuve à lui seul, mais leur présence ap
 
 Les mêmes familles d'arnaques reviennent régulièrement dans les alertes de Cybermalveillance.gouv.fr et de la DGCCRF :
 
-- **Le faux remboursement** (impôts, Assurance maladie, fournisseur d'énergie). Un remboursement réel est versé automatiquement sur un compte déjà connu de l'organisme ; il n'est jamais « à confirmer » par email.
+- **Le faux remboursement** (impôts, Assurance maladie, fournisseur d'énergie). Plutôt que de suivre le lien reçu, ouvrez vous-même le site ou l'application officielle pour vérifier si une démarche est réellement attendue.
 - **La fausse facture**, qui vise particulièrement les professionnels : un message imite un fournisseur ou un client et joint un document piégé.
 - **Le colis en attente** (La Poste, Chronopost, transporteurs), qui réclame quelques euros de « frais » pour capter une carte bancaire.
 - **Le faux support technique** (Microsoft, Apple) : ni l'un ni l'autre ne contacte spontanément un particulier par téléphone ou par fenêtre surgissante.
 
 ## Le cas de Linux
 
-Sous Linux, et notamment sous Linux Mint que je déploie dans le cadre du forfait Renaissance, les fichiers exécutables conçus pour Windows (`.exe`, `.msi`) ne s'exécutent pas. Une pièce jointe malveillante prévue pour Windows y est donc inopérante.
+Sous Linux, et notamment sous Linux Mint que je déploie dans le cadre du forfait Renaissance, les fichiers exécutables conçus pour Windows (`.exe`, `.msi`) ne se lancent normalement pas directement. Ce n'est pas une immunité : Wine peut exécuter certains programmes Windows, et une archive peut contenir un script visant Linux ou le navigateur.
 
 Cela ne protège pas de l'hameçonnage lui-même : si l'utilisateur saisit ses identifiants bancaires sur un faux site, le système d'exploitation n'a aucun rôle. La vigilance reste la principale protection, quel que soit l'appareil.
 
@@ -66,7 +66,7 @@ En cas de doute ou d'erreur, l'ordre des priorités compte.
 
 Beaucoup d'attaques réussissent parce qu'un même mot de passe est réutilisé partout : une fuite sur un site permet alors d'ouvrir les autres comptes. Cette technique, le *credential stuffing*, est largement automatisée.
 
-Un gestionnaire de mots de passe (Bitwarden et KeePass sont gratuits et reconnus) génère et mémorise un mot de passe distinct par service. Activer la double authentification, lorsqu'elle est proposée, ajoute une protection même si le mot de passe est compromis.
+Un [gestionnaire de mots de passe](/blog/gestionnaire-mots-de-passe/) génère et mémorise un mot de passe distinct par service. Activer la double authentification, lorsqu'elle est proposée, ajoute une protection même si le mot de passe est compromis.
 
 ---
 

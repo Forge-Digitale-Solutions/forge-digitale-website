@@ -11,10 +11,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: `${SITE_URL}/confidentialite/`,
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/confidentialite`,
+    url: `${SITE_URL}/confidentialite/`,
     title: "Politique de Confidentialité - Forge Digitale Solutions",
     description:
       "RGPD et protection des données. Umami auto-hébergé sans cookies. Votre vie privée est sacrée.",

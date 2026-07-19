@@ -19,7 +19,7 @@ Quand un site se fait dérober sa base de comptes, les couples email + mot de pa
 
 Conséquence : un mot de passe, même long et complexe, ne protège plus rien s'il est utilisé sur plusieurs sites. La fuite peut venir d'un petit site marchand oublié depuis des années et ouvrir l'accès à la boîte mail, qui permet à son tour de réinitialiser tous les autres comptes.
 
-Pour un professionnel, l'enjeu dépasse le compte personnel : un compte Google piraté, c'est une [fiche Google](/blog/fiche-google-artisans) modifiée ou détournée ; une page Facebook volée, c'est un canal de contact perdu et des clients exposés à des arnaques au nom de l'entreprise.
+Pour un professionnel, l'enjeu dépasse le compte personnel : un compte Google piraté, c'est une [fiche Google](/blog/fiche-google-artisans/) modifiée ou détournée ; une page Facebook volée, c'est un canal de contact perdu et des clients exposés à des arnaques au nom de l'entreprise.
 
 ## Ce que recommande la CNIL
 
@@ -44,7 +44,7 @@ Deux solutions gratuites et reconnues couvrent l'essentiel des besoins :
 | **Bitwarden** | Coffre synchronisé en ligne, applications Windows, Linux, Android, iOS | Usage sur plusieurs appareils, simplicité |
 | **KeePass / KeePassXC** | Coffre stocké localement dans un fichier, certifié par l'ANSSI (KeePass) | Maîtrise complète, pas de cloud, très à l'aise sous Linux |
 
-Les deux sont des logiciels libres, fonctionnent aussi bien sous Windows que sous Linux, et n'imposent aucun abonnement pour l'usage courant. Le fichier KeePassXC se sauvegarde comme n'importe quel document, la [règle du 3-2-1](/blog/sauvegarde-donnees) s'y applique.
+Les deux sont des logiciels libres, fonctionnent aussi bien sous Windows que sous Linux, et n'imposent aucun abonnement pour l'usage courant. Le fichier KeePassXC se sauvegarde comme n'importe quel document, la [règle du 3-2-1](/blog/sauvegarde-donnees/) s'y applique.
 
 Reste le mot de passe maître : c'est le bon candidat pour une phrase de passe de 7 mots ou plus, facile à retenir, très difficile à casser.
 
