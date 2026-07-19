@@ -17,7 +17,7 @@ export function ArticleSchema({
   slug,
   category,
 }: ArticleSchemaProps) {
-  const articleUrl = `https://forgedigitalesolutions.com/blog/${slug}`;
+  const articleUrl = `https://forgedigitalesolutions.com/blog/${slug}/`;
 
   const schema = {
     "@context": "https://schema.org",
@@ -30,21 +30,20 @@ export function ArticleSchema({
     author: {
       "@type": "Person",
       name: "Anthony Marcelin",
-      url: "https://forgedigitalesolutions.com",
+      url: "https://forgedigitalesolutions.com/#about",
     },
     publisher: {
       "@type": "Organization",
       name: "Forge Digitale Solutions",
       logo: {
         "@type": "ImageObject",
-        url: "https://forgedigitalesolutions.com/images/og-image.jpg",
+        url: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": articleUrl,
     },
-    articleBody: description,
     keywords: [category, "Forge Digitale", "blog"].filter(Boolean).join(", "),
   };
 

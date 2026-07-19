@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/maintenance-site-web`;
+const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
@@ -69,7 +69,7 @@ export default function MaintenanceSiteWebPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Maintenance de site web", url: `${PAGE_URL}/` },
+          { name: "Maintenance de site web", url: PAGE_URL },
         ]}
       />
 

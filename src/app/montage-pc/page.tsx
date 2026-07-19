@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/montage-pc`;
+const PAGE_URL = `${SITE_URL}/montage-pc/`;
 
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
@@ -76,7 +76,7 @@ export default function MontagePcPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Montage PC", url: `${PAGE_URL}/` },
+          { name: "Montage PC", url: PAGE_URL },
         ]}
       />
 

@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
-  title: "Blog : conseils web, montage PC et Linux dans le Médoc",
+  title: { absolute: "Blog : conseils web, PC et Linux dans le Médoc" },
   description:
     "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc et le Bassin d'Arcachon.",
   keywords: [
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     "sécurité informatique artisan",
   ],
   alternates: {
-    canonical: `${SITE_URL}/blog`,
+    canonical: `${SITE_URL}/blog/`,
   },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/blog`,
+    url: `${SITE_URL}/blog/`,
     title: "Blog : conseils web, montage PC et Linux dans le Médoc",
     description:
       "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc.",
@@ -52,7 +52,7 @@ export default function BlogIndex() {
           {posts.map((post) => (
             <Link
               key={post.id}
-              href={`/blog/${post.id}`}
+              href={`/blog/${post.id}/`}
               className="group flex flex-col h-full bg-white/5 border border-white/5 rounded-3xl overflow-hidden hover:border-[#C5A059]/30 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="h-48 bg-linear-to-br from-slate-800 to-black relative overflow-hidden">

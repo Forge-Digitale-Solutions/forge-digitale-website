@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/developpeur-medoc`;
+const PAGE_URL = `${SITE_URL}/developpeur-medoc/`;
 
 export const metadata: Metadata = {
   title: "Développeur web indépendant dans le Médoc et le Bassin d'Arcachon",
@@ -73,7 +73,7 @@ export default function DeveloppeurMedocPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Développeur dans le Médoc", url: `${PAGE_URL}/` },
+          { name: "Développeur dans le Médoc", url: PAGE_URL },
         ]}
       />
 

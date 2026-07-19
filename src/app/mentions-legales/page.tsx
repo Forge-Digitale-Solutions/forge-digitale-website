@@ -12,10 +12,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: `${SITE_URL}/mentions-legales/`,
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/mentions-legales`,
+    url: `${SITE_URL}/mentions-legales/`,
     title: "Mentions Légales - Forge Digitale Solutions",
     description:
       "EI Anthony Marcelin - SIREN 100 857 838 - Saint-Laurent-Médoc (Gironde) - Hébergeur OVH",

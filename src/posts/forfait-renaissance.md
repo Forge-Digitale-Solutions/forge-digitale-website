@@ -1,7 +1,7 @@
 ---
 title: "Fin de Windows 10 : passer son ancien PC sous Linux plutôt que le remplacer"
 date: "2026-03-15"
-lastModified: "2026-05-30"
+lastModified: "2026-07-19"
 category: "Hardware"
 excerpt: "Le support de Windows 10 a pris fin le 14 octobre 2025. Pour un PC jugé trop ancien pour Windows 11, Linux Mint offre une alternative durable et gratuite, sans achat de matériel. Comment fonctionne cette transition, ce qu'elle change à l'usage, et ce que couvre le forfait Renaissance."
 image: "/blog/pc-mint.jpg"
@@ -9,19 +9,19 @@ image: "/blog/pc-mint.jpg"
 
 Le **support de Windows 10 a pris fin le 14 octobre 2025** : Microsoft ne fournit plus de mises à jour de sécurité gratuites pour le grand public. Un PC qui reste sous Windows 10 sans protection s'expose progressivement aux failles non corrigées.
 
-Microsoft propose bien une année supplémentaire de mises à jour de sécurité étendues (ESU), rendue gratuite pour les particuliers de l'Espace économique européen sous la pression des associations de consommateurs, à condition de se connecter avec un compte Microsoft au moins tous les 60 jours. Mais cette rallonge est temporaire : elle s'achève le 13 octobre 2026. Reste alors l'alternative habituelle : passer à Windows 11. Or beaucoup de machines encore fonctionnelles ne remplissent pas ses prérequis matériels (puce TPM 2.0, processeur récent). D'où l'équation que rencontrent beaucoup de particuliers : racheter un ordinateur, ou prolonger l'existant.
+Microsoft propose une année supplémentaire de mises à jour de sécurité étendues (ESU) jusqu'au 13 octobre 2026. L'une des options pour les particuliers consiste à rester connecté avec le compte Microsoft utilisé lors de l'inscription ; après une période pouvant aller jusqu'à 60 jours sans cette connexion, les mises à jour sont interrompues jusqu'à une nouvelle inscription. Cette rallonge reste temporaire. Beaucoup de machines encore fonctionnelles ne remplissent par ailleurs pas les prérequis de Windows 11 (TPM 2.0 et processeur pris en charge). D'où la question : remplacer l'ordinateur, ou prolonger l'existant autrement ?
 
-*Source : [Microsoft – Fin du support de Windows 10](https://www.microsoft.com/fr-fr/windows/end-of-support)*
+*Sources : [Microsoft – Fin du support de Windows 10](https://www.microsoft.com/fr-fr/windows/end-of-support), [Microsoft – Mises à jour de sécurité étendues](https://www.microsoft.com/fr-fr/windows/extended-security-updates)*
 
 ## Une troisième voie : Linux Mint
 
 Remplacer un PC qui fonctionne encore pour de la bureautique et de la navigation n'a souvent rien d'indispensable. Installer une distribution Linux à la place de Windows redonne plusieurs années d'usage à la machine, pour trois raisons :
 
-- **Des mises à jour gratuites et continues.** Linux Mint est maintenu sans abonnement ni date de péremption imposée au matériel.
+- **Des mises à jour gratuites pendant le cycle de support.** Chaque version de Linux Mint annonce une date de fin de maintenance et peut ensuite être mise à niveau sans abonnement.
 - **Une exposition réduite aux logiciels malveillants** conçus pour Windows : les exécutables `.exe` et `.msi` ne s'y lancent pas, et le système ne fonctionne pas en administrateur par défaut.
-- **Une faible consommation de ressources.** Mint reste fluide sur des configurations anciennes ; 4 Go de mémoire vive suffisent pour la bureautique et le web.
+- **Une consommation de ressources mesurée.** Mint reste à l'aise sur de nombreuses configurations anciennes ; 4 Go de mémoire peuvent convenir à un usage léger, tandis que 8 Go apportent davantage de confort avec plusieurs onglets et applications.
 
-Côté licence, le coût est nul, là où une mise à niveau Windows représente un achat, pour un matériel souvent jugé incompatible de toute façon.
+Côté licence, le coût de Linux Mint est nul. La mise à niveau de Windows 10 vers Windows 11 est généralement gratuite lorsque le PC est éligible ; le problème se pose surtout pour le matériel officiellement incompatible.
 
 ## Une interface proche de Windows
 
@@ -47,4 +47,4 @@ Linux Mint convient à la bureautique, au web, à la messagerie et au multimédi
 
 ---
 
-*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit en atelier à Saint-Laurent-Médoc (Médoc). Voir le détail de la prestation [installation Linux](/installation-linux) ou [me contacter](/#contact).
+*En pratique :* pour savoir si votre PC est un bon candidat à une seconde vie sous Linux, je réalise un diagnostic gratuit en atelier à Saint-Laurent-Médoc (Médoc). Voir le détail de la prestation [installation Linux](/installation-linux/) ou [me contacter](/#contact).

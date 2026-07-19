@@ -23,14 +23,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const postData = await getPostData(slug);
 
-  const articleUrl = `${SITE_URL}/blog/${slug}`;
+  const articleUrl = `${SITE_URL}/blog/${slug}/`;
   const articleImage = postData.image
     ? `${SITE_URL}${postData.image}`
     : `${SITE_URL}/images/og-image.jpg`;
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: postData.title,
+    title: { absolute: postData.title },
     description:
       postData.excerpt ||
       `Article sur ${postData.category} - ${postData.title}`,
@@ -87,6 +87,11 @@ export default async function Post({
   const { slug } = await params;
 
   const postData = await getPostData(slug);
+  const otherPosts = getSortedPostsData().filter((post) => post.id !== slug);
+  const relatedPosts = [
+    ...otherPosts.filter((post) => post.category === postData.category),
+    ...otherPosts.filter((post) => post.category !== postData.category),
+  ].slice(0, 3);
 
   return (
     <article className="min-h-screen bg-dark-base pt-32 pb-24">
@@ -111,7 +116,7 @@ export default async function Post({
 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <Link
-          href="/blog"
+          href="/blog/"
           className="inline-flex items-center text-slate-400 hover:text-[#C5A059] transition-colors mb-8 text-sm group"
         >
           <ArrowLeft
@@ -157,6 +162,39 @@ export default async function Post({
           prose-blockquote:border-l-[#C5A059] prose-blockquote:text-slate-400 prose-blockquote:italic"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
         />
+
+        <aside className="mt-14 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 className="text-lg font-bold text-white">À propos de l’auteur</h2>
+          <p className="mt-3 text-sm leading-relaxed text-slate-300">
+            Anthony Marcelin est développeur web et technicien informatique à
+            Saint-Laurent-Médoc. Il accompagne particuliers, artisans et petites
+            entreprises sur leurs sites, leur matériel et leurs usages de Linux.
+          </p>
+          <Link
+            href="/#about"
+            className="mt-3 inline-block text-sm font-medium text-[#C5A059] hover:underline"
+          >
+            Découvrir Forge Digitale Solutions
+          </Link>
+        </aside>
+
+        <aside className="mt-12" aria-labelledby="related-articles-title">
+          <h2 id="related-articles-title" className="text-xl font-bold text-white">
+            À lire aussi
+          </h2>
+          <ul className="mt-4 space-y-3">
+            {relatedPosts.map((post) => (
+              <li key={post.id}>
+                <Link
+                  href={`/blog/${post.id}/`}
+                  className="text-[#C5A059] hover:underline"
+                >
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
 
         <div className="mt-16 pt-8 border-t border-white/10">
           <h3 className="text-white font-bold mb-4">

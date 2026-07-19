@@ -1,7 +1,7 @@
 ---
 title: "Sauvegarder ses données : comprendre la règle du 3-2-1"
 date: "2026-05-22"
-lastModified: "2026-05-30"
+lastModified: "2026-07-19"
 category: "Hardware"
 excerpt: "Panne de disque, rançongiciel, fausse manœuvre : les causes de perte de données sont nombreuses et ordinaires. Les principes d'une sauvegarde fiable tiennent pourtant en une règle simple, le 3-2-1. Explications pour les particuliers et les professionnels, sous Windows comme sous Linux."
 image: "/blog/sauvegarde-donnees.jpg"
@@ -39,10 +39,10 @@ La copie hors site répond à un risque souvent négligé : un incendie, un dég
 
 Deux éléments couvrent l'essentiel du besoin :
 
-1. **Un disque externe USB** (de l'ordre de 80 à 120 € pour 1 To), branché régulièrement pour une sauvegarde automatique.
+1. **Un disque externe USB** dimensionné au volume de données, branché régulièrement pour une sauvegarde automatique.
 2. **Un service en ligne** (OneDrive, Google Drive, ou un Nextcloud auto-hébergé) pour synchroniser en continu le dossier de travail.
 
-Sous Windows, l'outil intégré « Historique des fichiers » assure la sauvegarde automatique vers un disque externe, sans logiciel tiers : il suffit de l'activer une fois. Sous Linux, **Timeshift** et **Déjà Dup** réalisent des sauvegardes incrémentales programmées qui, une fois configurées, n'exigent plus d'intervention.
+Sous Windows, l'outil intégré « Historique des fichiers » peut sauvegarder les dossiers personnels vers un disque externe. Sous Linux, **Déjà Dup** remplit ce rôle pour les fichiers, tandis que **Timeshift** crée des instantanés du système. Dans les deux cas, il faut vérifier régulièrement que la tâche s'exécute et qu'un fichier peut être restauré.
 
 ### Pour un particulier (photos, vidéos, documents)
 
@@ -56,18 +56,13 @@ Sous Linux Mint, le système que j'installe avec le forfait Renaissance, **Déj�
 
 ## Pourquoi le cloud seul ne suffit pas
 
-Une synchronisation (OneDrive, Google Drive, iCloud) n'est pas une sauvegarde. Un fichier supprimé ou chiffré sur l'ordinateur l'est aussi dans le cloud, souvent dans un délai de récupération court. S'y ajoutent la dépendance à la connexion et le risque de piratage du compte. Le cloud constitue l'une des trois copies de la règle du 3-2-1, pas la solution complète.
+Une synchronisation (OneDrive, Google Drive, iCloud) ne remplace pas à elle seule une sauvegarde. Une suppression ou un chiffrement peut être répercuté dans le cloud. Les corbeilles et historiques de versions offrent parfois un recours, mais leur durée et leurs limites dépendent du service. Le cloud peut constituer l'une des copies de la règle du 3-2-1, pas la solution complète.
 
 ## Ce que cela coûte
 
-| Solution | Coût | Couverture |
-|---|---|---|
-| Disque externe 1 To | ~80-100 € (une fois) | Sauvegarde locale complète |
-| Google Drive (15 Go) | 0 € | Documents courants |
-| Google One 100 Go | 2,49 €/mois | Photos + documents |
-| Nextcloud auto-hébergé | 0 € (si serveur existant) | Tout, sans limite imposée |
+Le budget dépend surtout du volume et du niveau d'automatisation. Un disque externe de 1 à 2 To coûte généralement quelques dizaines à un peu plus d'une centaine d'euros selon qu'il s'agit d'un HDD ou d'un SSD. Un espace en ligne ajoute un abonnement lorsque le quota gratuit ne suffit plus. Un Nextcloud auto-hébergé évite l'abonnement à un fournisseur, mais le serveur, les disques et la maintenance ont eux aussi un coût.
 
-Pour la majorité des particuliers et des professionnels, un disque externe à une centaine d'euros associé à un espace cloud gratuit couvre l'essentiel des besoins, un coût sans commune mesure avec une récupération de données en laboratoire.
+Pour beaucoup de particuliers et de petites entreprises, un disque externe associé à un espace distant raisonnable couvre déjà l'essentiel. L'important est de budgéter aussi le test de restauration, pas seulement le support de stockage.
 
 ---
 

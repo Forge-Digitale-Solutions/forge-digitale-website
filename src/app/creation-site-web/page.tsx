@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/creation-site-web`;
+const PAGE_URL = `${SITE_URL}/creation-site-web/`;
 
 export const metadata: Metadata = {
   title: "Création de site web et d'application dans le Médoc",
@@ -75,7 +75,7 @@ export default function CreationSiteWebPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Création de site web", url: `${PAGE_URL}/` },
+          { name: "Création de site web", url: PAGE_URL },
         ]}
       />
 

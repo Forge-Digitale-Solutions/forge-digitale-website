@@ -1,9 +1,9 @@
 ---
 title: "Fiche Google (Business Profile) : à quoi elle sert et comment la créer"
 date: "2026-05-19"
-lastModified: "2026-05-30"
+lastModified: "2026-07-19"
 category: "Web"
-excerpt: "Avant même un site web, la fiche Google (Google Business Profile) est le premier outil de visibilité locale d'un artisan ou d'un commerçant, et il est gratuit. Comment elle fonctionne, pourquoi elle pèse autant dans les recherches locales, et comment la créer pas à pas."
+excerpt: "Avant même un site web, la fiche Google (Google Business Profile) est le premier outil de visibilité locale d'un artisan ou d'un commerçant, et elle est gratuite. Comment elle fonctionne, pourquoi elle pèse autant dans les recherches locales, et comment la créer pas à pas."
 image: "/blog/fiche-google.jpg"
 ---
 
@@ -27,7 +27,7 @@ C'est, de fait, la première carte de visite numérique d'un professionnel, inde
 
 Lorsqu'un internaute cherche un service de proximité (« plombier Saint-Laurent-Médoc », « électricien Lesparre »), Google met en avant un bloc local : une carte accompagnée de quelques fiches, classées notamment selon la pertinence, la proximité et la notoriété. Ce bloc occupe l'essentiel de l'écran, en particulier sur mobile.
 
-Sans fiche, une entreprise n'apparaît pas à cette étape, quelle que soit sa réputation locale. À l'inverse, une fiche complète et à jour capte une part des recherches qui se transforment directement en appels ou en demandes d'itinéraire.
+Sans fiche revendiquée et tenue à jour, l'entreprise maîtrise mal les informations montrées aux internautes. À l'inverse, une fiche complète facilite les appels, les demandes d'itinéraire et la visite du site depuis les résultats locaux.
 
 ## Créer sa fiche, étape par étape
 
@@ -36,19 +36,19 @@ Sans fiche, une entreprise n'apparaît pas à cette étape, quelle que soit sa r
 3. Saisir le nom de l'entreprise.
 4. Indiquer l'adresse, ou la zone d'intervention pour une activité itinérante.
 5. Renseigner le téléphone, la catégorie d'activité et les horaires.
-6. **Valider la fiche.** Google demande de prouver la réalité de l'activité ; la méthode la plus courante aujourd'hui est une courte vidéo (une à deux minutes) montrant l'atelier, le véhicule professionnel, l'enseigne ou une réalisation. Un téléphone suffit.
-7. Après vérification (quelques jours), la fiche devient visible.
+6. **Valider la fiche.** Google propose une ou plusieurs méthodes selon l'activité et les informations disponibles : vidéo, téléphone, email, courrier ou appel vidéo. La méthode ne se choisit pas toujours.
+7. Une fois la vérification terminée, contrôler les informations affichées et compléter les éléments manquants.
 
 ## Soigner la fiche après sa création
 
 Le contenu pèse sur le classement comme sur le taux de contact. Quelques points font la différence :
 
-- **Les photos.** Selon Google, les fiches qui en comportent reçoivent davantage de demandes d'itinéraire et de clics vers le site web (l'entreprise avance respectivement +42 % et +35 %).
+- **Les photos.** Des images récentes de l'atelier, des réalisations ou de l'équipe aident le client à comprendre l'activité avant de prendre contact.
 - **Les horaires**, y compris les jours fériés : une mention « horaires non renseignés » fait perdre des contacts.
 - **L'exhaustivité** : description, services, zone desservie. Google met en avant les fiches complètes.
 - **Les avis** : y répondre, même brièvement, renforce la crédibilité, en particulier pour un avis négatif, où une réponse posée rassure les futurs clients.
 
-*Source : Google (Google Business Profile).*
+*Source : [Google – Conseils pour améliorer votre classement local](https://support.google.com/business/answer/7091?hl=fr)*
 
 ## La limite de l'exercice
 
@@ -56,4 +56,4 @@ La fiche Google rend visible et permet d'être contacté, mais elle reste un for
 
 ---
 
-*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un [site web sur-mesure](/creation-site-web), j'accompagne les artisans du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).
+*En pratique :* pour créer ou optimiser une fiche Google, ou la compléter d'un [site web sur-mesure](/creation-site-web/), j'accompagne les artisans du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).
