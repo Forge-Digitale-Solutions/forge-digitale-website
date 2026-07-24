@@ -163,21 +163,6 @@ export default async function Post({
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
         />
 
-        <aside className="mt-14 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-lg font-bold text-white">À propos de l’auteur</h2>
-          <p className="mt-3 text-sm leading-relaxed text-slate-300">
-            Anthony Marcelin est développeur web et technicien informatique à
-            Saint-Laurent-Médoc. Il accompagne particuliers, artisans et petites
-            entreprises sur leurs sites, leur matériel et leurs usages de Linux.
-          </p>
-          <Link
-            href="/#about"
-            className="mt-3 inline-block text-sm font-medium text-[#C5A059] hover:underline"
-          >
-            Découvrir Forge Digitale Solutions
-          </Link>
-        </aside>
-
         <aside className="mt-12" aria-labelledby="related-articles-title">
           <h2 id="related-articles-title" className="text-xl font-bold text-white">
             À lire aussi
