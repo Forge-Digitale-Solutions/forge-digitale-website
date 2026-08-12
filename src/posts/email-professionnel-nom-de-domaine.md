@@ -1,13 +1,13 @@
 ---
 title: "Adresse email professionnelle : pourquoi quitter le Gmail générique"
 date: "2026-06-19"
-lastModified: "2026-07-19"
+lastModified: "2026-08-12"
 category: "Web"
 excerpt: "Devis envoyé depuis une adresse en @gmail.com, contact d'entreprise en @orange.fr : pour un artisan ou un commerçant, l'email générique entame la confiance avant même le premier échange. Ce qu'apporte une adresse au nom de son entreprise, ce qu'elle coûte vraiment, et comment la mettre en place dans le Médoc."
 image: "/blog/email-professionnel.jpg"
 ---
 
-Un client reçoit un devis. En haut du message, l'expéditeur : `jardin.dupont33@gmail.com`. Le travail est peut-être irréprochable, mais le signal envoyé, lui, est flou. La même proposition arrivant de `contact@jardins-dupont.fr` ne se lit pas de la même manière : elle dit qu'il y a une entreprise derrière, un site, une adresse stable. Pour un artisan ou un commerçant, l'adresse email n'est pas un détail technique, c'est une carte de visite envoyée plusieurs fois par jour.
+Un client reçoit un devis. En haut du message, l'expéditeur : `jardin.dupont33@gmail.com`. Le travail est peut-être irréprochable, mais le signal envoyé, lui, est flou. La même proposition arrivant de `contact@jardins-dupont.fr` ne se lit pas de la même manière : elle dit qu'il y a une entreprise derrière, un site, une adresse stable. Pour un artisan ou un commerçant, l'adresse email n'est pas un détail technique, c'est une carte de visite envoyée plusieurs fois par jour. Et si le client répond sur ce même fil, sa réponse peut [valoir acceptation du devis](/blog/devis-sms-mail-valeur-juridique/), à condition d'être claire.
 
 ## Ce que perçoit le client
 

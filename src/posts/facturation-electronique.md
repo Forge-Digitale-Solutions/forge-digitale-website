@@ -1,7 +1,7 @@
 ---
 title: "Facturation électronique : le calendrier 2026-2027 pour les artisans"
 date: "2026-06-12"
-lastModified: "2026-07-19"
+lastModified: "2026-08-12"
 category: "Gestion"
 excerpt: "Dès le 1er septembre 2026, toutes les entreprises devront pouvoir recevoir des factures électroniques. Les TPE et micro-entreprises auront jusqu'en septembre 2027 pour en émettre. Le calendrier et les démarches utiles pour les artisans et commerçants du Médoc."
 image: "/blog/facturation-electronique.jpg"
@@ -66,7 +66,7 @@ L'échéance de 2026 paraît lointaine, mais la mise en conformité tient en que
 3. **Mettre à jour ses informations légales.** SIREN, adresse, coordonnées : l'annuaire central s'appuie sur des données exactes pour acheminer les factures au bon destinataire.
 4. **Tester la réception avant septembre 2026.** C'est la première obligation effective. Émettre pourra venir ensuite, d'ici 2027 pour les plus petites structures.
 
-La réforme demande surtout de choisir un outil et de tester la réception avant l'échéance. Une fois ce point réglé, la transition vers l'émission électronique pourra se préparer progressivement jusqu'en 2027 pour les petites structures.
+La réforme demande surtout de choisir un outil et de tester la réception avant l'échéance. Une fois ce point réglé, la transition vers l'émission électronique pourra se préparer progressivement jusqu'en 2027 pour les petites structures. Sur le même terrain de la dématérialisation, mieux vaut aussi sécuriser dès maintenant [l'acceptation des devis par mail ou SMS](/blog/devis-sms-mail-valeur-juridique/), avant même la facture.
 
 *Source : [impots.gouv.fr – La facturation électronique, qu'est-ce que ça change pour moi ?](https://www.impots.gouv.fr/facturation-electronique-qu-est-ce-que-ca-change-pour-moi)*
 
