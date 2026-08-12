@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp Business pour artisans : gérer les demandes clients"
 date: "2026-07-24"
-lastModified: "2026-07-24"
+lastModified: "2026-08-12"
 category: "Gestion"
 excerpt: "WhatsApp Business aide artisans et commerçants à qualifier les demandes clients grâce au profil professionnel, aux réponses rapides et aux étiquettes."
 image: "/blog/whatsapp-business-artisans-commercants.jpg"
@@ -135,6 +135,6 @@ Après quelques semaines, trois indicateurs simples permettent d'évaluer l'orga
 
 ---
 
-*En pratique :* pour un artisan ou un commerçant du Médoc, WhatsApp Business peut servir de point d'entrée vers un devis ou une [prise de rendez-vous en ligne](/blog/prise-de-rendez-vous-en-ligne/). Je peux intégrer ce canal à un [site web professionnel](/creation-site-web/) et définir un parcours adapté aux demandes reçues. [Me contacter](/#contact).
+*En pratique :* pour un artisan ou un commerçant du Médoc, WhatsApp Business peut servir de point d'entrée vers un devis, y compris pour en [conserver la preuve d'acceptation](/blog/devis-sms-mail-valeur-juridique/), ou une [prise de rendez-vous en ligne](/blog/prise-de-rendez-vous-en-ligne/). Je peux intégrer ce canal à un [site web professionnel](/creation-site-web/) et définir un parcours adapté aux demandes reçues. [Me contacter](/#contact).
 
 *Sources : [WhatsApp Business – Présentation de l'application](https://whatsappbusiness.com/products/business-app/), [WhatsApp Business – Utiliser le catalogue](https://whatsappbusiness.com/fr/resources/resource-library/whatsapp-business-app-resources-whatsapp-business-catalog/?lang=fr_FR), [CNIL – Communications électroniques aux prospects et clients](https://www.cnil.fr/fr/communication-electronique-quelles-regles)*
