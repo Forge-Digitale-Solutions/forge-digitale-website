@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     title: "Forge Digitale Solutions | Création Web & Dépannage (Médoc - Gironde)",
     description:
       "Web & Hardware. Solutions sur-mesure pour les professionnels et particuliers du Médoc au Bassin d'Arcachon.",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: `${SITE_URL}/`,
     types: {
       "application/rss+xml": `${SITE_URL}/feed`,
     },

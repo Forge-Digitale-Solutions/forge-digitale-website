@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/installation-linux`;
+const PAGE_URL = `${SITE_URL}/installation-linux/`;
 
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
@@ -76,7 +76,7 @@ export default function InstallationLinuxPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Installation Linux", url: `${PAGE_URL}/` },
+          { name: "Installation Linux", url: PAGE_URL },
         ]}
       />
 

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/creation-site-web`;
+const PAGE_URL = `${SITE_URL}/creation-site-web/`;
 
 export const metadata: Metadata = {
   title: "Création de site web et d'application dans le Médoc",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Développeur indépendant dans le Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite.",
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`,
+        url: `${SITE_URL}/blog/croissance-web.jpg`,
         width: 1200,
         height: 630,
         alt: "Création de sites web dans le Médoc, Forge Digitale Solutions",
@@ -75,7 +75,7 @@ export default function CreationSiteWebPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Création de site web", url: `${PAGE_URL}/` },
+          { name: "Création de site web", url: PAGE_URL },
         ]}
       />
 

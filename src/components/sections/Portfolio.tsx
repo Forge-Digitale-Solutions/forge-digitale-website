@@ -111,6 +111,8 @@ export function Portfolio() {
                   src={project.image}
                   alt={project.imageAlt}
                   fill
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:-translate-y-px transition-all duration-500"
                 />
 

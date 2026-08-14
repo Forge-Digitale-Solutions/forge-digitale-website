@@ -10,7 +10,7 @@ export function LocalBusinessSchema() {
     name: "Forge Digitale Solutions",
     alternateName: "La Forge Digitale",
     description: "Création de sites web sur mesure, montage PC gamer, dépannage informatique et installation Linux dans le Médoc. Expertise locale à Saint-Laurent-Médoc.",
-    url: "https://forgedigitalesolutions.com",
+    url: "https://forgedigitalesolutions.com/",
     telephone: "+33645659696",
     email: "contact@forgedigitalesolutions.com",
     priceRange: "€€",
@@ -83,7 +83,7 @@ export function LocalBusinessSchema() {
       "@type": "Person",
       name: "Anthony Marcelin",
       jobTitle: "Concepteur Développeur d'Applications (Titre Pro)",
-      url: "https://forgedigitalesolutions.com/about",
+      url: "https://forgedigitalesolutions.com/#about",
       sameAs: [
         "https://www.linkedin.com/in/anthonymarcelin",
       ],
@@ -126,7 +126,22 @@ export function LocalBusinessSchema() {
               "@id": "https://forgedigitalesolutions.com/#business"
             }
           },
-          url: "https://forgedigitalesolutions.com/services",
+          url: "https://forgedigitalesolutions.com/creation-site-web/",
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Maintenance de site web et hébergement",
+            description: "Hébergement, nom de domaine, mises à jour, sauvegardes et sécurité pour les sites des artisans et commerçants du Médoc.",
+            serviceType: "Website Maintenance",
+            areaServed: "Gironde",
+            provider: {
+              "@type": "LocalBusiness",
+              "@id": "https://forgedigitalesolutions.com/#business"
+            }
+          },
+          url: "https://forgedigitalesolutions.com/maintenance-site-web/",
         },
         {
           "@type": "Offer",
@@ -148,7 +163,7 @@ export function LocalBusinessSchema() {
             description: "Forfait montage complet (client fournit pièces)",
             eligibleRegion: "FR",
           },
-          url: "https://forgedigitalesolutions.com/services",
+          url: "https://forgedigitalesolutions.com/montage-pc/",
         },
         {
           "@type": "Offer",
@@ -170,7 +185,7 @@ export function LocalBusinessSchema() {
             description: "Forfait complet (client fournit matériel)",
             eligibleRegion: "FR",
           },
-          url: "https://forgedigitalesolutions.com/services",
+          url: "https://forgedigitalesolutions.com/installation-linux/",
         },
       ],
     },

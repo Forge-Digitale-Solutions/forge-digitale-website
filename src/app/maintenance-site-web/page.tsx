@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/maintenance-site-web`;
+const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Hébergement, nom de domaine, mises à jour, sauvegardes et sécurité : je gère la technique de votre site pendant que vous gérez votre activité.",
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`,
+        url: `${SITE_URL}/blog/sauvegarde-donnees.jpg`,
         width: 1200,
         height: 630,
         alt: "Maintenance de site web dans le Médoc, Forge Digitale Solutions",
@@ -69,7 +69,7 @@ export default function MaintenanceSiteWebPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Maintenance de site web", url: `${PAGE_URL}/` },
+          { name: "Maintenance de site web", url: PAGE_URL },
         ]}
       />
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -12,10 +11,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: `${SITE_URL}/mentions-legales/`,
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: `${SITE_URL}/mentions-legales`,
+    url: `${SITE_URL}/mentions-legales/`,
     title: "Mentions Légales - Forge Digitale Solutions",
     description:
       "EI Anthony Marcelin - SIREN 100 857 838 - Saint-Laurent-Médoc (Gironde) - Hébergeur OVH",
@@ -33,11 +35,8 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <main className="bg-bg min-h-screen flex flex-col">
-      <Header />
-
-      <section className="pt-32 pb-24 px-4 md:px-6 grow">
-        <div className="container mx-auto max-w-3xl prose prose-lg">
+    <div className="min-h-screen bg-bg pt-32 pb-24 px-4">
+      <div className="container mx-auto max-w-3xl prose prose-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">
             Mentions <span className="text-accent">Légales.</span>
           </h1>
@@ -175,7 +174,6 @@ export default function MentionsLegales() {
             </ul>
           </section>
         </div>
-      </section>
-    </main>
+    </div>
   );
 }

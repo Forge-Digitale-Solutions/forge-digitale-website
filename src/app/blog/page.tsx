@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     description:
       "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc.",
     siteName: "Forge Digitale Solutions",
+    images: [
+      {
+        url: `${SITE_URL}/blog/croissance-web.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Blog Forge Digitale Solutions : web, PC et Linux dans le Médoc",
+      },
+    ],
   },
 };
 

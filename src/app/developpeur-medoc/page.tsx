@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
-const PAGE_URL = `${SITE_URL}/developpeur-medoc`;
+const PAGE_URL = `${SITE_URL}/developpeur-medoc/`;
 
 export const metadata: Metadata = {
   title: "Développeur web indépendant dans le Médoc et le Bassin d'Arcachon",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Anthony Marcelin, développeur web indépendant dans le Médoc. Sites et applications sur-mesure pour les pros de la Gironde. Un seul interlocuteur, du devis à la mise en ligne.",
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`,
+        url: `${SITE_URL}/images/about_picture.jpg`,
         width: 1200,
         height: 630,
         alt: "Développeur web dans le Médoc, Anthony Marcelin, Forge Digitale Solutions",
@@ -73,7 +73,7 @@ export default function DeveloppeurMedocPage() {
       <BreadcrumbSchema
         items={[
           { name: "Accueil", url: `${SITE_URL}/` },
-          { name: "Développeur dans le Médoc", url: `${PAGE_URL}/` },
+          { name: "Développeur dans le Médoc", url: PAGE_URL },
         ]}
       />
 

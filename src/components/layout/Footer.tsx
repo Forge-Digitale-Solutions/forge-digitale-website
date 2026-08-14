@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Linkedin, Rss } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -124,6 +124,14 @@ export function Footer() {
                   Confidentialité
                 </Link>
               </li>
+              <li>
+                <a
+                  href="/feed"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Flux RSS
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -201,6 +209,14 @@ export function Footer() {
                 title="LinkedIn Entreprise"
               >
                 <Linkedin size={24} aria-hidden="true" />
+              </a>
+              <a
+                href="/feed"
+                aria-label="Flux RSS du blog"
+                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                title="Flux RSS"
+              >
+                <Rss size={24} aria-hidden="true" />
               </a>
             </div>
           </div>
