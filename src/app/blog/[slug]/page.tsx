@@ -94,7 +94,7 @@ export default async function Post({
   ].slice(0, 3);
 
   return (
-    <article className="min-h-screen bg-dark-base pt-32 pb-24">
+    <article className="min-h-screen bg-bg pt-32 pb-24">
       <ArticleSchema
         title={postData.title}
         description={postData.excerpt || postData.title}
@@ -117,7 +117,7 @@ export default async function Post({
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <Link
           href="/blog/"
-          className="inline-flex items-center text-slate-400 hover:text-[#C5A059] transition-colors mb-8 text-sm group"
+          className="inline-flex items-center text-muted hover:text-accent transition-colors mb-8 text-sm group"
         >
           <ArrowLeft
             size={16}
@@ -128,13 +128,13 @@ export default async function Post({
         </Link>
 
         <header className="mb-12">
-          <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">
+          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
             {postData.category}
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-fg mb-6 leading-tight">
             {postData.title}
           </h1>
-          <div className="flex items-center gap-4 text-slate-500 text-sm border-l-2 border-[#C5A059] pl-4 mb-8">
+          <div className="flex items-center gap-4 text-subtle text-sm border-l-2 border-accent pl-4 mb-8">
             <p>Publié le {postData.date}</p>
             <span>•</span>
             <p>Par Anthony Marcelin</p>
@@ -153,18 +153,18 @@ export default async function Post({
         </header>
 
         <div
-          className="prose prose-invert prose-lg max-w-none 
-          prose-headings:text-white prose-headings:font-bold
-          prose-p:text-slate-300 prose-p:leading-relaxed
-          prose-a:text-[#C5A059] prose-a:no-underline hover:prose-a:underline
-          prose-strong:text-white prose-strong:font-bold
-          prose-li:text-slate-300
-          prose-blockquote:border-l-[#C5A059] prose-blockquote:text-slate-400 prose-blockquote:italic"
+          className="prose prose-lg max-w-none 
+          prose-headings:text-fg prose-headings:font-bold
+          prose-p:text-muted prose-p:leading-relaxed
+          prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-fg prose-strong:font-bold
+          prose-li:text-muted
+          prose-blockquote:border-l-accent prose-blockquote:text-muted prose-blockquote:italic"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
         />
 
         <aside className="mt-12" aria-labelledby="related-articles-title">
-          <h2 id="related-articles-title" className="text-xl font-bold text-white">
+          <h2 id="related-articles-title" className="text-xl font-bold text-fg">
             À lire aussi
           </h2>
           <ul className="mt-4 space-y-3">
@@ -172,7 +172,7 @@ export default async function Post({
               <li key={post.id}>
                 <Link
                   href={`/blog/${post.id}/`}
-                  className="text-[#C5A059] hover:underline"
+                  className="text-accent hover:underline"
                 >
                   {post.title}
                 </Link>
@@ -181,14 +181,14 @@ export default async function Post({
           </ul>
         </aside>
 
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <h3 className="text-white font-bold mb-4">
+        <div className="mt-16 pt-8 border-t border-line">
+          <h3 className="text-fg font-bold mb-4">
             Une question sur cet article ?
           </h3>
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/#contact"
-            className="inline-block bg-[#C5A059] text-dark-base font-bold px-6 py-3 rounded-full hover:bg-[#D4B475] transition-colors"
+            className="inline-block bg-accent text-on-accent font-bold px-6 py-3 rounded-full hover:bg-accent-hover transition-colors"
           >
             Contactez La Forge
           </a>

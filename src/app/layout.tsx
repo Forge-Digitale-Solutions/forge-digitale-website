@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
@@ -9,7 +9,11 @@ import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 
-const inter = Inter({ subsets: ["latin"] });
+const archivo = Archivo({
+  subsets: ["latin"],
+  variable: "--font-archivo",
+  display: "swap",
+});
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -70,12 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className="dark"
-      style={{ colorScheme: "dark" }}
-      suppressHydrationWarning
-    >
+    <html lang="fr" className={archivo.variable} suppressHydrationWarning>
       <head>
         <Script
           defer
@@ -84,16 +83,14 @@ export default function RootLayout({
           strategy="afterInteractive"
         ></Script>
       </head>
-      <body
-        className={`${inter.className} bg-dark-base text-slate-200 antialiased selection:bg-[#C5A059] selection:text-black`}
-      >
+      <body className={`${archivo.className} bg-bg text-muted antialiased`}>
         <LocalBusinessSchema />
         <FAQSchema />
         <ThemeProvider
-          attribute="class"
+          attribute="data-theme"
           defaultTheme="dark"
           enableSystem={false}
-          forcedTheme="dark"
+          themes={["dark", "light"]}
           disableTransitionOnChange
         >
           <div className="flex min-h-screen flex-col">

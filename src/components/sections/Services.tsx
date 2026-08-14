@@ -11,8 +11,8 @@ const services = [
       "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
     price: "À partir de 800€",
     href: "/creation-site-web",
-    icon: <Code2 className="w-6 h-6 text-dark-base" aria-hidden="true" />,
-    bgIcon: "bg-[#C5A059]",
+    icon: <Code2 className="w-6 h-6 text-on-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent",
     colSpan: "md:col-span-2",
     features: [
       "Performance & Vitesse",
@@ -26,8 +26,8 @@ const services = [
       "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
     price: "Sur devis",
     href: "/maintenance-site-web",
-    icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
-    bgIcon: "bg-[#C5A059]/10",
+    icon: <ShieldCheck className="w-6 h-6 text-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent/10",
     colSpan: "md:col-span-1",
     features: ["Hébergement & Domaine", "Support & Mises à jour"],
   },
@@ -38,8 +38,8 @@ const services = [
     price: "Forfait 149€",
     href: "/montage-pc",
     badge: "Offre de Lancement 🚀",
-    icon: <Cpu className="w-6 h-6 text-[#C5A059]" aria-hidden="true" />,
-    bgIcon: "bg-[#C5A059]/10",
+    icon: <Cpu className="w-6 h-6 text-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent/10",
     colSpan: "md:col-span-1",
     features: [
       "Conseil & Choix des pièces",
@@ -55,8 +55,8 @@ const services = [
     price: "Forfait 69€",
     href: "/installation-linux",
     badge: "Tarif 2026 ✨",
-    icon: <Wrench className="w-6 h-6 text-dark-base" aria-hidden="true" />,
-    bgIcon: "bg-[#C5A059]",
+    icon: <Wrench className="w-6 h-6 text-on-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent",
     colSpan: "md:col-span-2",
     features: [
       "Nettoyage complet",
@@ -75,18 +75,18 @@ export function Services() {
       className="py-24 relative overflow-hidden"
       aria-labelledby="services-heading"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#C5A059]/5 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-accent/5 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2
             id="services-heading"
-            className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
+            className="text-3xl md:text-4xl font-bold text-fg mb-4 tracking-tight"
           >
             Des solutions forgées pour{" "}
             <span className="text-gold-gradient">durer.</span>
           </h2>
-          <p className="text-slate-300">
+          <p className="text-muted">
             Une expertise technique pointue au service de votre activité et de
             votre matériel. Des solutions claires et durables.
           </p>
@@ -101,12 +101,12 @@ export function Services() {
               className={`
                 ${service.colSpan} 
                 group relative p-8 rounded-3xl 
-                bg-dark-base border border-white/5 hover:border-[#C5A059]/30 
+                bg-bg border border-line hover:border-accent/30 
                 transition-all duration-300 overflow-hidden
                 flex flex-col
               `}
             >
-              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#C5A059]/0 via-[#C5A059]/0 to-[#C5A059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div
                 className={`w-12 h-12 rounded-2xl ${service.bgIcon} flex items-center justify-center mb-6`}
@@ -114,10 +114,10 @@ export function Services() {
                 {service.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-fg mb-2">
                 {service.title}
               </h3>
-              <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+              <p className="text-muted text-sm mb-6 leading-relaxed">
                 {service.description}
               </p>
 
@@ -125,9 +125,9 @@ export function Services() {
                 {service.features.map((feature, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-xs text-slate-500 font-medium uppercase tracking-wide"
+                    className="flex items-center gap-2 text-xs text-subtle font-medium uppercase tracking-wide"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#C5A059]" />
+                    <span className="w-1 h-1 rounded-full bg-accent" />
                     {feature}
                   </li>
                 ))}
@@ -136,7 +136,7 @@ export function Services() {
               {service.href && (
                 <Link
                   href={service.href}
-                  className="relative z-10 inline-flex items-center gap-1 text-sm text-[#C5A059] hover:text-[#D4B475] font-medium mb-4 transition-colors"
+                  className="relative z-10 inline-flex items-center gap-1 text-sm text-accent hover:text-accent-hover font-medium mb-4 transition-colors"
                 >
                   En savoir plus
                   <svg
@@ -157,11 +157,11 @@ export function Services() {
 
               <div className="mt-auto text-right">
                 {service.badge && (
-                  <span className="inline-block bg-[#C5A059]/10 text-[#C5A059] text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 border border-[#C5A059]/20">
+                  <span className="inline-block bg-accent/10 text-accent text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 border border-accent/20">
                     {service.badge}
                   </span>
                 )}
-                <div className="text-lg font-bold text-[#C5A059]">
+                <div className="text-lg font-bold text-accent">
                   {service.price}
                 </div>
               </div>
@@ -170,16 +170,16 @@ export function Services() {
         </div>
 
         <div className="text-center mt-16">
-          <p className="text-slate-300 mb-6">
+          <p className="text-muted mb-6">
             Des questions sur mes services ?{" "}
-            <span className="text-white font-medium">
+            <span className="text-fg font-medium">
               Consultez ma FAQ pour tout savoir sur mes méthodes de travail.
             </span>
           </p>
           <Link
             href="/#faq"
             aria-label="Consulter la foire aux questions"
-            className="inline-flex items-center gap-2 text-[#C5A059] hover:text-[#D4B475] font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-medium transition-colors"
           >
             Voir la FAQ
             <svg

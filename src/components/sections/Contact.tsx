@@ -84,10 +84,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-dark-base relative"
+      className="py-24 bg-bg relative"
       aria-labelledby="contact-heading"
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-line to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
@@ -101,11 +101,11 @@ export function Contact() {
             <div>
               <h2
                 id="contact-heading"
-                className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance"
+                className="text-3xl md:text-4xl font-bold text-fg mb-4 text-balance"
               >
-                Parlons de votre <span className="text-[#C5A059]">projet.</span>
+                Parlons de votre <span className="text-accent">projet.</span>
               </h2>
-              <p className="text-slate-200 text-lg leading-relaxed">
+              <p className="text-fg text-lg leading-relaxed">
                 Un projet web ? Un PC à monter ou une seconde vie à donner à
                 votre matériel ?
                 <br />
@@ -114,58 +114,58 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
                 <div
-                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <Phone size={24} />
                 </div>
                 <div className="break-words-custom">
-                  <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
+                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
                     Téléphone
                   </p>
                   <a
                     href="tel:+33645659696"
-                    className="text-white hover:text-[#C5A059] transition-colors text-lg font-medium"
+                    className="text-fg hover:text-accent transition-colors text-lg font-medium"
                   >
                     06 45 65 96 96
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
                 <div
-                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <Mail size={24} />
                 </div>
                 <div className="break-words-custom w-full">
-                  <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
+                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
                     Email
                   </p>
                   <a
                     href="mailto:contact@forgedigitalesolutions.com"
-                    className="text-white hover:text-[#C5A059] transition-colors text-lg font-medium break-all block"
+                    className="text-fg hover:text-accent transition-colors text-lg font-medium break-all block"
                   >
                     contact@forgedigitalesolutions.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
                 <div
-                  className="bg-[#C5A059]/10 p-3 rounded-xl text-[#C5A059] shrink-0"
+                  className="bg-accent/10 p-3 rounded-xl text-accent shrink-0"
                   aria-hidden="true"
                 >
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">
+                  <p className="text-sm text-subtle font-medium uppercase tracking-wide">
                     Atelier
                   </p>
-                  <p className="text-white text-lg font-medium">
+                  <p className="text-fg text-lg font-medium">
                     Saint-Laurent-Médoc (33112)
                   </p>
                 </div>
@@ -177,21 +177,21 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="rounded-2xl border border-white/10 bg-dark-base/60 p-5 space-y-4"
+              className="rounded-2xl border border-line bg-card p-5 space-y-4"
               aria-labelledby="contact-rdv-heading"
             >
               <div className="flex items-center gap-4">
-                <div className="flex-1 h-px bg-white/10" />
+                <div className="flex-1 h-px bg-line" />
                 <span
                   id="contact-rdv-heading"
-                  className="text-slate-400 text-sm font-medium"
+                  className="text-muted text-sm font-medium"
                 >
                   Prendre rendez-vous directement
                 </span>
-                <div className="flex-1 h-px bg-white/10" />
+                <div className="flex-1 h-px bg-line" />
               </div>
 
-              <p className="text-sm leading-relaxed text-slate-400 text-center">
+              <p className="text-sm leading-relaxed text-muted text-center">
                 Pour un échange rapide sur votre demande de site, votre
                 maintenance ou votre configuration PC, choisissez un créneau qui
                 vous convient.
@@ -206,7 +206,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm"
+            className="bg-card p-8 rounded-3xl border border-line backdrop-blur-sm"
           >
             {status === "success" ? (
               <div
@@ -215,22 +215,22 @@ export function Contact() {
                 aria-live="polite"
               >
                 <div
-                  className="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-2"
+                  className="w-20 h-20 bg-success/10 text-success rounded-full flex items-center justify-center mb-2"
                   aria-hidden="true"
                 >
                   <CheckCircle size={40} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-fg mb-2">
                     Message envoyé !
                   </h3>
-                  <p className="text-slate-400 max-w-xs mx-auto">
+                  <p className="text-muted max-w-xs mx-auto">
                     Merci. Je vous recontacte très rapidement.
                   </p>
                 </div>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="mt-4 text-[#C5A059] hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
+                  className="mt-4 text-accent hover:text-fg text-sm font-medium underline underline-offset-4 transition-colors"
                 >
                   Envoyer un autre message
                 </button>
@@ -262,7 +262,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-muted"
                     >
                       Nom *
                     </label>
@@ -272,16 +272,16 @@ export function Contact() {
                       type="text"
                       required
                       placeholder="Votre nom"
-                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-slate-600"
+                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent transition-colors placeholder:text-subtle"
                     />
                   </div>
                   <div className="space-y-2">
                     <label
                       htmlFor="company"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-muted"
                     >
                       Société{" "}
-                      <span className="text-slate-600 text-xs">
+                      <span className="text-subtle text-xs">
                         (Optionnel)
                       </span>
                     </label>
@@ -290,7 +290,7 @@ export function Contact() {
                       id="company"
                       type="text"
                       placeholder="Nom de l'entreprise"
-                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-slate-600"
+                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent transition-colors placeholder:text-subtle"
                     />
                   </div>
                 </div>
@@ -299,7 +299,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="email"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-muted"
                     >
                       Email *
                     </label>
@@ -309,11 +309,11 @@ export function Contact() {
                       type="email"
                       required
                       placeholder="vous@exemple.com"
-                      className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.email ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
+                      className={`w-full bg-bg border rounded-xl px-4 py-3 text-fg focus:outline-none transition-colors placeholder:text-subtle ${errors.email ? "border-danger/50 focus:border-danger" : "border-line focus:border-accent"}`}
                     />
                     {errors.email && (
                       <p
-                        className="text-red-400 text-xs mt-1"
+                        className="text-danger text-xs mt-1"
                         role="alert"
                         aria-live="polite"
                       >
@@ -324,7 +324,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="phone"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-muted"
                     >
                       Téléphone *
                     </label>
@@ -334,11 +334,11 @@ export function Contact() {
                       type="tel"
                       required
                       placeholder="06..."
-                      className={`w-full bg-dark-base border rounded-xl px-4 py-3 text-white focus:outline-none transition-colors placeholder:text-slate-600 ${errors.phone ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-[#C5A059]"}`}
+                      className={`w-full bg-bg border rounded-xl px-4 py-3 text-fg focus:outline-none transition-colors placeholder:text-subtle ${errors.phone ? "border-danger/50 focus:border-danger" : "border-line focus:border-accent"}`}
                     />
                     {errors.phone && (
                       <p
-                        className="text-red-400 text-xs mt-1"
+                        className="text-danger text-xs mt-1"
                         role="alert"
                         aria-live="polite"
                       >
@@ -351,7 +351,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label
                     htmlFor="service-select"
-                    className="text-sm font-medium text-slate-300"
+                    className="text-sm font-medium text-muted"
                   >
                     Sujet
                   </label>
@@ -360,7 +360,7 @@ export function Contact() {
                       name="service"
                       id="service-select"
                       defaultValue=""
-                      className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] appearance-none cursor-pointer"
+                      className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent appearance-none cursor-pointer"
                     >
                       <option value="" disabled>
                         Sélectionnez un sujet
@@ -370,7 +370,7 @@ export function Contact() {
                       <option value="Dépannage / Maintenance">Dépannage / Maintenance</option>
                       <option value="Autre demande">Autre demande</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-subtle">
                       <svg
                         width="12"
                         height="12"
@@ -390,7 +390,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label
                     htmlFor="message"
-                    className="text-sm font-medium text-slate-300"
+                    className="text-sm font-medium text-muted"
                   >
                     Message *
                   </label>
@@ -400,13 +400,13 @@ export function Contact() {
                     required
                     rows={4}
                     placeholder="Décrivez votre besoin..."
-                    className="w-full bg-dark-base border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C5A059] resize-none placeholder:text-slate-600"
+                    className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-fg focus:outline-none focus:border-accent resize-none placeholder:text-subtle"
                   />
                 </div>
 
                 {status === "error" && (
                   <div
-                    className="flex items-center gap-2 text-red-400 text-sm bg-red-500/10 p-3 rounded-lg border border-red-500/20"
+                    className="flex items-center gap-2 text-danger text-sm bg-danger/10 p-3 rounded-lg border border-danger/20"
                     role="alert"
                     aria-live="assertive"
                   >
@@ -419,7 +419,7 @@ export function Contact() {
                   type="submit"
                   disabled={status === "submitting"}
                   aria-busy={status === "submitting"}
-                  className="w-full bg-[#C5A059] hover:bg-[#D4B475] focus-visible:bg-[#D4B475] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 text-dark-base font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-accent hover:bg-accent-hover focus-visible:bg-accent-hover focus-visible:outline-2 focus-visible:outline-fg focus-visible:outline-offset-2 text-on-accent font-bold py-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? (
                     <>

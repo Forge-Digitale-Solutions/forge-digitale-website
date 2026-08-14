@@ -1,56 +1,145 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
-  --color-gold: #c5a059;
-  --color-gold-light: #e5c585;
-  --color-gold-dark: #8a6d32;
-  --color-dark-base: #020617; /* Slate 950 */
-  --font-inter: var(--font-inter);
+/* Visual tokens only. Namespaced sizes so we never override Tailwind text-*. */
 
-  --radius: 0.5rem;
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #141310;
+  --fg: #f4f2ec;
+  --muted: #c8c3b6;
+  --subtle: #9a9588;
+  --card: #1b1a16;
+  --sunken: #0f0e0c;
+  --line: rgba(228, 220, 200, 0.14);
+  --accent: #c5a059;
+  --accent-hover: #d4b475;
+  --on-accent: #1a1712;
+  --danger: #c45c48;
+  --success: #7a9a68;
+  --selection-bg: rgba(197, 160, 89, 0.28);
+  --overlay: rgba(20, 19, 16, 0.88);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f4f2ec;
+  --fg: #26241f;
+  --muted: #5f5b50;
+  --subtle: #716d62;
+  --card: #fbfaf6;
+  --sunken: #e7e3d8;
+  --line: #dcd7ca;
+  --accent: #6f6038;
+  --accent-hover: #5c4f2e;
+  --on-accent: #fbfaf6;
+  --danger: #a8442e;
+  --success: #5f7a4e;
+  --selection-bg: rgba(111, 96, 56, 0.22);
+  --overlay: rgba(244, 242, 236, 0.92);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-card: var(--card);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --font-sans: var(--font-archivo);
 }
 
 @layer base {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --primary: 40 48% 56%; /* Gold */
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --border: 217.2 32.6% 17.5%;
-  }
-
-  * {
-    @apply border-white/10;
+  html {
+    overflow-x: clip;
   }
 
   body {
-    @apply bg-dark-base text-slate-300 font-sans;
+    background: var(--bg);
+    color: var(--muted);
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--fg);
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply text-white font-bold tracking-tight;
+    color: var(--fg);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .prose {
+    --tw-prose-body: var(--muted);
+    --tw-prose-headings: var(--fg);
+    --tw-prose-lead: var(--muted);
+    --tw-prose-links: var(--accent);
+    --tw-prose-bold: var(--fg);
+    --tw-prose-counters: var(--subtle);
+    --tw-prose-bullets: var(--accent);
+    --tw-prose-hr: var(--line);
+    --tw-prose-quotes: var(--muted);
+    --tw-prose-quote-borders: var(--accent);
+    --tw-prose-captions: var(--subtle);
+    --tw-prose-code: var(--fg);
+    --tw-prose-pre-code: var(--fg);
+    --tw-prose-pre-bg: var(--sunken);
+    --tw-prose-th-borders: var(--line);
+    --tw-prose-td-borders: var(--line);
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-dark-base/80 backdrop-blur-md border-b border-white/10;
+    background: var(--overlay);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .text-gold-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-br from-gold-light via-gold to-gold-dark;
+    color: var(--accent);
   }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-white text-black font-medium transition-all hover:bg-gray-200 hover:scale-[1.02] active:scale-[0.98];
-  }
-
+  .btn-primary,
   .btn-gold {
-    @apply inline-flex items-center justify-center rounded-full bg-gold text-dark-base font-bold transition-all hover:bg-gold-light hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] hover:scale-[1.02] active:scale-[0.98];
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease;
+  }
+  .btn-primary:hover,
+  .btn-gold:hover {
+    background: var(--accent-hover);
+  }
+  .btn-primary:active,
+  .btn-gold:active {
+    transform: translateY(1px);
   }
 
   .text-balance {

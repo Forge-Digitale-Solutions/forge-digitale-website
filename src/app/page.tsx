@@ -11,7 +11,7 @@ export default async function Home() {
   const reviewsData = await getGoogleReviews();
 
   return (
-    <div className="min-h-screen bg-dark-base">
+    <div className="min-h-screen bg-bg">
       <Hero />
       <Services />
       <Portfolio />

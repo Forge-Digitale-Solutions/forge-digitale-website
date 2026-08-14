@@ -55,7 +55,7 @@ const faqData: FaqCategory[] = [
               Je propose une formule de maintenance <strong>clé en main</strong>{" "}
               pour votre sérénité :
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
+            <ul className="list-disc pl-5 space-y-2 text-muted">
               <li>
                 <strong>Technique :</strong> Je gère l&apos;hébergement, le
                 renouvellement du nom de domaine, les sauvegardes et la
@@ -90,7 +90,7 @@ const faqData: FaqCategory[] = [
               Voici ma méthode pour vous garantir le meilleur rapport
               performance/prix :
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
+            <ul className="list-disc pl-5 space-y-2 text-muted">
               <li>
                 <strong>1. Audit & Conseil :</strong> On discute d&apos;abord de
                 vos besoins (Gaming, Workstation, bureautique, etc.) et de votre
@@ -128,7 +128,7 @@ const faqData: FaqCategory[] = [
                 jetable et un investissement durable.
               </strong>
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
+            <ul className="list-disc pl-5 space-y-2 text-muted">
               <li>
                 <strong>Composants entrée de gamme :</strong> Les PC de grande
                 surface (et même certains gros intégrateurs) rognent sur les
@@ -181,7 +181,7 @@ const faqData: FaqCategory[] = [
               C&apos;est le gros avantage de ma formule :{" "}
               <strong>vous êtes protégé deux fois.</strong>
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
+            <ul className="list-disc pl-5 space-y-2 text-muted">
               <li>
                 <strong>Garantie Pièces (2 à 10 ans) :</strong> Comme vous
                 achetez les composants, les factures sont à votre nom. Vous
@@ -224,7 +224,7 @@ const faqData: FaqCategory[] = [
               <strong>Renaissance (Linux Mint par exemple)</strong> est
               immédiate :
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
+            <ul className="list-disc pl-5 space-y-2 text-muted">
               <li>
                 <strong>Performance :</strong> Votre PC est libéré des lourdeurs
                 de Windows. Il redevient rapide et fluide.
@@ -281,18 +281,18 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="py-24 bg-dark-base border-t border-white/5 scroll-mt-20"
+      className="py-24 bg-bg border-t border-line scroll-mt-20"
       aria-labelledby="faq-heading"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <div className="text-center mb-16">
           <h2
             id="faq-heading"
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-fg mb-4"
           >
-            Questions <span className="text-[#C5A059]">Fréquentes.</span>
+            Questions <span className="text-accent">Fréquentes.</span>
           </h2>
-          <p className="text-slate-300">
+          <p className="text-muted">
             Transparence totale sur mes méthodes de travail.
           </p>
         </div>
@@ -300,7 +300,7 @@ export function Faq() {
         <div className="space-y-12">
           {faqData.map((category, catIndex) => (
             <div key={catIndex}>
-              <h3 className="text-xl font-bold text-[#C5A059] mb-6 border-b border-[#C5A059]/20 pb-2 inline-block">
+              <h3 className="text-xl font-bold text-accent mb-6 border-b border-accent/20 pb-2 inline-block">
                 {category.title}
               </h3>
               <div className="space-y-4">
@@ -310,19 +310,19 @@ export function Faq() {
                   return (
                     <div
                       key={itemIndex}
-                      className="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-colors hover:border-[#C5A059]/30"
+                      className="border border-line rounded-2xl bg-card overflow-hidden transition-colors hover:border-accent/30"
                     >
                       <button
                         onClick={() => toggleItem(catIndex, itemIndex)}
-                        className="w-full flex items-center justify-between p-6 text-left focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-2 rounded-t-2xl transition-colors"
+                        className="w-full flex items-center justify-between p-6 text-left focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 rounded-t-2xl transition-colors"
                         aria-expanded={isOpen}
                         aria-controls={contentId}
                       >
-                        <span className="text-white font-medium text-lg pr-4">
+                        <span className="text-fg font-medium text-lg pr-4">
                           {item.question}
                         </span>
                         <span
-                          className="text-[#C5A059] shrink-0"
+                          className="text-accent shrink-0"
                           aria-hidden="true"
                         >
                           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
@@ -339,7 +339,7 @@ export function Faq() {
                             transition={{ duration: 0.3 }}
                             role="region"
                           >
-                            <div className="px-6 pb-6 text-slate-300 leading-relaxed border-t border-white/5 pt-4 text-sm md:text-base">
+                            <div className="px-6 pb-6 text-muted leading-relaxed border-t border-line pt-4 text-sm md:text-base">
                               {item.answer}
                             </div>
                           </motion.div>

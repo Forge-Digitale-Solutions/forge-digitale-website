@@ -10,9 +10,9 @@ export function Hero() {
       className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden"
       aria-label="Section d'accueil"
     >
-      <div className="absolute inset-0 -z-10 h-full w-full bg-dark-base">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-bg">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[50px_50px]" />
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-77.5 w-77.5 rounded-full bg-[#C5A059] opacity-20 blur-[100px]" />
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-77.5 w-77.5 rounded-full bg-accent opacity-20 blur-[100px]" />
       </div>
 
       <div className="container mx-auto px-4 text-center">
@@ -20,7 +20,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="mx-auto max-w-4xl text-4xl sm:text-5xl font-bold tracking-tight text-white md:text-7xl mb-4"
+          className="mx-auto max-w-4xl text-4xl sm:text-5xl font-bold tracking-tight text-fg md:text-7xl mb-4"
         >
           L&rsquo;Artisanat Numérique <br />
           <span className="text-gold-gradient">au service du Médoc</span>
@@ -30,7 +30,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-xl font-medium text-[#C5A059]/90 mb-6 tracking-wide"
+          className="text-lg md:text-xl font-medium text-accent mb-6 tracking-wide"
         >
           Partenaire digital du Bassin d&rsquo;Arcachon à Bordeaux.
         </motion.div>
@@ -39,13 +39,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="mx-auto max-w-2xl text-lg text-slate-300 mb-10 leading-relaxed"
+          className="mx-auto max-w-2xl text-lg text-muted mb-10 leading-relaxed"
         >
-          <strong className="text-white font-semibold">
+          <strong className="text-fg font-semibold">
             Création de sites web et d&rsquo;applications sur-mesure
           </strong>
           , montage PC et installation Linux. Développeur indépendant en{" "}
-          <strong className="text-white font-semibold">Médoc</strong>, au service
+          <strong className="text-fg font-semibold">Médoc</strong>, au service
           des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
         </motion.p>
 
@@ -57,7 +57,7 @@ export function Hero() {
         >
           <Link
             href="/#contact"
-            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#C5A059] px-8 font-medium text-black transition-all duration-300 hover:bg-[#d4be85] hover:scale-105 hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] focus-visible:bg-[#d4be85] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-accent px-8 font-medium text-on-accent transition-all duration-300 hover:bg-accent-hover hover:scale-105 focus-visible:bg-accent-hover focus-visible:outline-2 focus-visible:outline-fg focus-visible:outline-offset-2"
           >
             <span className="mr-2">Lancer mon projet</span>
             <ArrowRight
@@ -68,11 +68,11 @@ export function Hero() {
 
           <Link
             href="/#services"
-            className="group inline-flex h-12 items-center justify-center rounded-full border border-slate-700 bg-transparent px-8 font-medium text-slate-200 transition-all hover:bg-slate-800 hover:text-white focus-visible:bg-slate-800 focus-visible:text-white focus-visible:outline-2 focus-visible:outline-[#C5A059] focus-visible:outline-offset-2"
+            className="group inline-flex h-12 items-center justify-center rounded-full border border-line bg-transparent px-8 font-medium text-fg transition-all hover:bg-sunken hover:text-fg focus-visible:bg-sunken focus-visible:text-fg focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             Voir les services
             <ChevronRight
-              className="ml-2 h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-1"
+              className="ml-2 h-4 w-4 text-muted transition-transform group-hover:translate-x-1"
               aria-hidden="true"
             />
           </Link>
@@ -82,25 +82,25 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-slate-300"
+          className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted"
         >
           <div className="flex items-center gap-2">
             <CheckCircle2
-              className="h-4 w-4 text-[#C5A059]"
+              className="h-4 w-4 text-accent"
               aria-hidden="true"
             />{" "}
             Site Web & App
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2
-              className="h-4 w-4 text-[#C5A059]"
+              className="h-4 w-4 text-accent"
               aria-hidden="true"
             />{" "}
             Montage PC
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2
-              className="h-4 w-4 text-[#C5A059]"
+              className="h-4 w-4 text-accent"
               aria-hidden="true"
             />{" "}
             Maintenance Locale

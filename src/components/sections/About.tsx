@@ -8,10 +8,10 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 relative overflow-hidden bg-dark-base"
+      className="py-24 relative overflow-hidden bg-bg"
       aria-labelledby="about-heading"
     >
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#C5A059]/5 blur-[120px] -z-10" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 blur-[120px] -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -23,12 +23,12 @@ export function About() {
             className="space-y-8"
           >
             <div>
-              <span className="text-[#C5A059] font-bold tracking-widest uppercase text-sm">
+              <span className="text-accent font-bold tracking-widest uppercase text-sm">
                 À Propos
               </span>
               <h2
                 id="about-heading"
-                className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6"
+                className="text-3xl md:text-4xl font-bold text-fg mt-2 mb-6"
               >
                 L&apos;expertise technique,
                 <br />
@@ -37,7 +37,7 @@ export function About() {
                 </span>
               </h2>
 
-              <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
+              <div className="space-y-4 text-muted text-lg leading-relaxed">
                 <p>
                   Basé au cœur du <strong>Médoc</strong>, je combine deux
                   passions qui sont pour moi indissociables : le{" "}
@@ -62,26 +62,26 @@ export function About() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                <Award className="text-[#C5A059] shrink-0" aria-hidden="true" />
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
+                <Award className="text-accent shrink-0" aria-hidden="true" />
                 <div>
-                  <h3 className="text-white font-bold text-sm">Certifié</h3>
-                  <p className="text-slate-400 text-xs mt-1">
+                  <h3 className="text-fg font-bold text-sm">Certifié</h3>
+                  <p className="text-muted text-xs mt-1">
                     Titre Professionnel &quot; Concepteur Développeur
                     d&apos;Applications &quot;
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-line">
                 <MapPin
-                  className="text-[#C5A059] shrink-0"
+                  className="text-accent shrink-0"
                   aria-hidden="true"
                 />
                 <div>
-                  <h3 className="text-white font-bold text-sm">
+                  <h3 className="text-fg font-bold text-sm">
                     Ancrage Local
                   </h3>
-                  <p className="text-slate-400 text-xs mt-1">
+                  <p className="text-muted text-xs mt-1">
                     Atelier basé à St Laurent Medoc
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative w-full lg:max-w-md mx-auto"
           >
-            <div className="relative aspect-square md:aspect-4/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-base">
+            <div className="relative aspect-square md:aspect-4/5 rounded-3xl overflow-hidden border border-line shadow-2xl bg-bg">
               <Image
                 src="/images/about_picture.jpg"
                 alt="Anthony Marcelin dans son atelier de développement web et montage PC à Saint-Laurent-Médoc"
@@ -105,19 +105,19 @@ export function About() {
                 priority
               />
 
-              <div className="absolute inset-0 bg-[#C5A059]/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-accent/10 mix-blend-overlay" />
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-dark-base p-5 rounded-2xl border border-[#C5A059]/30 shadow-xl hidden md:block z-40">
+            <div className="absolute -bottom-6 -left-6 bg-bg p-5 rounded-2xl border border-accent/30 shadow-xl hidden md:block z-40">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-[#C5A059] rounded-full text-dark-base">
+                <div className="p-3 bg-accent rounded-full text-on-accent">
                   <Heart size={20} fill="currentColor" />
                 </div>
                 <div>
-                  <p className="text-slate-400 text-xs font-bold uppercase tracking-wider">
+                  <p className="text-muted text-xs font-bold uppercase tracking-wider">
                     Passionné depuis
                   </p>
-                  <p className="text-white text-xl font-bold">+ 20 ans</p>
+                  <p className="text-fg text-xl font-bold">+ 20 ans</p>
                 </div>
               </div>
             </div>

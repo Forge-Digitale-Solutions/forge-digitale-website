@@ -15,7 +15,7 @@ const projects = [
     image: "/projects/forge.webp",
     imageAlt:
       "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
-    gradient: "from-[#C5A059]/20 to-slate-900",
+    gradient: "from-accent/20 to-sunken",
     link: "#",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     image: "/projects/gosportnow-og.webp",
     imageAlt:
       "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
-    gradient: "from-blue-900/40 to-slate-900",
+    gradient: "from-blue-900/40 to-sunken",
     link: "https://gosportnow.fr",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     image: "/projects/pc.webp",
     imageAlt:
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
-    gradient: "from-purple-900/40 to-slate-900",
+    gradient: "from-purple-900/40 to-sunken",
     link: "/#contact",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     image: "/projects/charcuterie.webp",
     imageAlt:
       "Capture d'écran du site web Charcuterie Campagnarde avec présentation des produits artisanaux",
-    gradient: "from-red-900/40 to-slate-900",
+    gradient: "from-red-900/40 to-sunken",
     link: "https://charcuterie-campagnarde.pages.dev",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     image: "/projects/hvs-og.webp",
     imageAlt:
       "Logo Horizon Vertical Studio, studio d'impression murale professionnelle",
-    gradient: "from-yellow-900/30 to-slate-900",
+    gradient: "from-yellow-900/30 to-sunken",
     link: "https://horizonverticalstudio.fr",
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     image: "/projects/rhsb-og.webp",
     imageAlt:
       "Capture d'écran du site web Rugby Handi Sud Bassin, club de rugby fauteuil du Bassin d'Arcachon",
-    gradient: "from-blue-900/50 to-slate-900",
+    gradient: "from-blue-900/50 to-sunken",
     link: "https://rhsb.fr",
   },
 ];
@@ -84,7 +84,7 @@ export function Portfolio() {
   return (
     <section
       id="realisations"
-      className="py-24 bg-dark-base relative"
+      className="py-24 bg-bg relative"
       aria-labelledby="portfolio-heading"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -92,11 +92,11 @@ export function Portfolio() {
           <div className="max-w-2xl">
             <h2
               id="portfolio-heading"
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="text-3xl md:text-4xl font-bold text-fg mb-4"
             >
               Réalisations <span className="text-gold-gradient">récentes.</span>
             </h2>
-            <p className="text-slate-300">
+            <p className="text-muted">
               Du développement web au montage hardware : voici des exemples
               concrets de mon savoir-faire.
             </p>
@@ -109,7 +109,7 @@ export function Portfolio() {
               key={index}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="group rounded-3xl bg-white/5 border border-white/5 overflow-hidden hover:border-[#C5A059]/30 transition-colors duration-300 flex flex-col h-full"
+              className="group rounded-3xl bg-card border border-line overflow-hidden hover:border-accent/30 transition-colors duration-300 flex flex-col h-full"
             >
               <div
                 className={`h-48 w-full bg-linear-to-br ${project.gradient} relative overflow-hidden`}
@@ -129,7 +129,7 @@ export function Portfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Voir le projet ${project.title}`}
-                      className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold text-sm hover:bg-[#C5A059] hover:text-white focus-visible:bg-[#C5A059] focus-visible:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition-colors shadow-xl"
+                      className="flex items-center gap-2 px-6 py-3 bg-fg text-bg rounded-full font-bold text-sm hover:bg-accent hover:text-fg focus-visible:bg-accent focus-visible:text-fg focus-visible:outline-2 focus-visible:outline-fg focus-visible:outline-offset-2 transition-colors shadow-xl"
                     >
                       Voir le projet{" "}
                       <ExternalLink size={16} aria-hidden="true" />
@@ -142,7 +142,7 @@ export function Portfolio() {
                   <Link
                     href={project.link}
                     aria-label={`Voir le projet ${project.title}`}
-                    className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold text-sm hover:bg-[#C5A059] hover:text-white focus-visible:bg-[#C5A059] focus-visible:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition-colors shadow-xl"
+                    className="flex items-center gap-2 px-6 py-3 bg-fg text-bg rounded-full font-bold text-sm hover:bg-accent hover:text-fg focus-visible:bg-accent focus-visible:text-fg focus-visible:outline-2 focus-visible:outline-fg focus-visible:outline-offset-2 transition-colors shadow-xl"
                   >
                     Voir le projet <ExternalLink size={16} aria-hidden="true" />
                   </Link>
@@ -152,16 +152,16 @@ export function Portfolio() {
               <div className="p-6 flex flex-col grow">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <span className="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-2 block">
+                    <span className="text-accent text-xs font-bold uppercase tracking-wider mb-2 block">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-bold text-white group-hover:text-[#C5A059] transition-colors">
+                    <h3 className="text-xl font-bold text-fg group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-sm mb-6 grow">
+                <p className="text-muted text-sm mb-6 grow">
                   {project.description}
                 </p>
 
@@ -169,7 +169,7 @@ export function Portfolio() {
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs font-medium text-slate-300 bg-white/5 px-3 py-1 rounded-full border border-white/5"
+                      className="text-xs font-medium text-muted bg-card px-3 py-1 rounded-full border border-line"
                     >
                       {tag}
                     </span>
