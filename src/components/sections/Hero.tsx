@@ -9,7 +9,7 @@ const trust = ["Site Web & App", "Montage PC", "Maintenance Locale"];
 export function Hero() {
   return (
     <section
-      className="relative overflow-hidden pt-32 pb-16 md:pt-44 md:pb-24"
+      className="relative overflow-hidden pt-32 pb-24 md:pt-44"
       aria-label="Section d'accueil"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -31,8 +31,8 @@ export function Hero() {
             <span className="fds-reg left-full top-full" />
           </div>
 
-          {/* Content: left-aligned, dense, graduated */}
-          <div className="relative max-w-4xl px-5 py-12 md:px-12 md:py-16">
+          {/* Same left rail as other sections (container px-4/md:px-6 only). */}
+          <div className="relative max-w-4xl pt-12 md:pt-16">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export function Hero() {
               <strong className="font-semibold text-text-strong">
                 Création de sites web et d&rsquo;applications sur-mesure
               </strong>
-              , montage PC et installation Linux. Développeur indépendant en{" "}
+              , montage PC et installation Linux. Développeur indépendant dans le{" "}
               <strong className="font-semibold text-text-strong">Médoc</strong>, au
               service des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
             </motion.p>

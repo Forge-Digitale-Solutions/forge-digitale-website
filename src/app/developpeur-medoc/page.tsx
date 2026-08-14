@@ -98,44 +98,38 @@ export default function DeveloppeurMedocPage() {
 
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
-            Moi c&rsquo;est Anthony Marcelin. Je développe des sites internet et
+            Je suis Anthony Marcelin. Je développe des sites internet et
             des applications depuis le Médoc, pour les professionnels de la
             Gironde et du Bassin d&rsquo;Arcachon. Pas une agence, mais un
             développeur qui prend votre projet du début à la fin.
           </p>
 
           <p>
-            Je suis tombé dans l&rsquo;informatique très jeune et je n&rsquo;en
-            suis jamais ressorti. Avec le temps, j&rsquo;ai appris à toucher aux
-            deux bouts de la chaîne, le logiciel et le matériel. Je suis
-            aujourd&rsquo;hui titulaire du titre professionnel de Concepteur
-            Développeur d&rsquo;Applications, ce qui m&rsquo;aide à comprendre un
-            projet en entier, du code jusqu&rsquo;au serveur qui l&rsquo;héberge.
+            Je suis titulaire du titre professionnel de Concepteur Développeur
+            d&rsquo;Applications. J&rsquo;interviens sur le logiciel et le
+            matériel : du développement jusqu&rsquo;à l&rsquo;hébergement.
           </p>
 
           <p>
             Travailler en indépendant, ce n&rsquo;est pas qu&rsquo;une question de
-            statut. C&rsquo;est ce qui me permet de rester joignable, de répondre
-            moi-même et de ne pas vous faire passer d&rsquo;un service à
-            l&rsquo;autre. La personne à qui vous parlez est celle qui code, et
-            les décisions se prennent vite.
+            statut. Je reste joignable, je réponds moi-même, et les décisions se
+            prennent vite, sans vous faire passer d&rsquo;un service à
+            l&rsquo;autre.
           </p>
 
           <p>
-            Le plus souvent, tout commence par un site internet. Mais selon le
-            besoin, ça peut aussi être une application développée pour votre façon
-            de travailler, quand un logiciel du marché ne fait pas l&rsquo;affaire.
-            Je n&rsquo;arrive pas avec une solution toute prête : je pars de ce que
-            vous me décrivez, puis je propose ce qui tient la route. Le détail de
-            la prestation web est sur la page{" "}
+            Le plus souvent, tout commence par un site internet. Selon le besoin,
+            ça peut aussi être une application adaptée à votre façon de
+            travailler, quand un logiciel du marché ne fait pas l&rsquo;affaire.
+            Je pars de ce que vous me décrivez, puis je propose ce qui
+            correspond. Le détail de la prestation web est sur la page{" "}
             <Link
               href="/creation-site-web"
               className="text-accent hover:underline"
             >
               création de site web
             </Link>
-            . Que vous soyez à Lesparre, Pauillac, Castelnau-de-Médoc, sur le
-            Bassin ou autour de Bordeaux, on reste à distance d&rsquo;un appel.
+            .
           </p>
         </div>
 

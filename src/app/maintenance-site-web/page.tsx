@@ -94,7 +94,7 @@ export default function MaintenanceSiteWebPage() {
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
             Un site internet, ce n&rsquo;est pas un projet qu&rsquo;on livre et
-            qu&rsquo;on oublie. Il faut un hébergement qui tient, un nom de domaine
+            qu&rsquo;on oublie. Il faut un hébergement qui tienne, un nom de domaine
             renouvelé à temps, des mises à jour régulières et des sauvegardes au
             cas où. C&rsquo;est rarement le métier d&rsquo;un artisan ou
             d&rsquo;un commerçant, et c&rsquo;est bien normal. Je propose donc de
@@ -143,7 +143,7 @@ export default function MaintenanceSiteWebPage() {
         <section className="mt-12 pt-8 border-t border-default">
           <p className="text-soft mb-6">
             Un site à confier, ou une question sur la maintenance du vôtre ?
-            Écrivez-moi, c&rsquo;est moi qui réponds.
+            Écrivez-moi.
           </p>
           <Link
             href="/#contact"

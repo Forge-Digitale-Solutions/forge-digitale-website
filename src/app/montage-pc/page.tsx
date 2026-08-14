@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/montage-pc`;
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
   description:
-    "Montage de PC adapté à votre usage et à votre budget, pour le jeu, le travail ou la famille. Vous achetez les pièces, je les assemble et règle tout, en atelier à Saint-Laurent-Médoc. Forfait à 149 €, Gironde.",
+    "Montage de PC adapté à votre usage et à votre budget, pour le jeu, le travail ou la famille. Vous achetez les pièces, je les assemble et règle tout dans mon atelier de Saint-Laurent-Médoc. Forfait à 149 €, Gironde.",
   keywords: [
     "montage PC Gironde",
     "montage PC gamer Bordeaux",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
     description:
-      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 €, en atelier à Saint-Laurent-Médoc.",
+      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 €, dans mon atelier de Saint-Laurent-Médoc.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-build.jpg`,
@@ -46,7 +46,7 @@ const serviceSchema = {
   name: "Montage PC sur-mesure",
   serviceType: "Assemblage d'ordinateur",
   description:
-    "Assemblage de PC sur-mesure (jeu, bureautique, familial) avec choix des composants, montage soigné et réglages. Le client achète les pièces, l'assemblage se fait en atelier à Saint-Laurent-Médoc.",
+    "Assemblage de PC sur-mesure (jeu, bureautique, familial) avec choix des composants, montage soigné et réglages. Le client achète les pièces, l'assemblage se fait dans l'atelier de Saint-Laurent-Médoc.",
   url: PAGE_URL,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Médoc" },
@@ -103,8 +103,8 @@ export default function MontagePcPage() {
             Que ce soit pour jouer, travailler ou un usage familial, je monte des
             PC adaptés à votre besoin réel et à votre budget. Le principe est
             simple et transparent : vous achetez les pièces, je m&rsquo;occupe de
-            l&rsquo;assemblage et des réglages, en atelier à Saint-Laurent-Médoc,
-            pour toute la Gironde.
+            l&rsquo;assemblage et des réglages dans mon atelier de
+            Saint-Laurent-Médoc, pour toute la Gironde.
           </p>
 
           <p>
@@ -159,8 +159,8 @@ export default function MontagePcPage() {
         <section className="mt-12 pt-8 border-t border-default">
           <p className="text-soft mb-6">
             Une config en tête ? Dites-moi votre usage et votre budget, je vous
-            conseille la configuration qui tient la route. Le conseil et le devis
-            sont gratuits.
+            propose une configuration adaptée. Le conseil et le devis sont
+            gratuits.
           </p>
           <Link
             href="/#contact"

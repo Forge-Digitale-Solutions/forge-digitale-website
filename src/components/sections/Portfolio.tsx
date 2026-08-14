@@ -85,7 +85,7 @@ export function Portfolio() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <SectionHeading
-            index="02"
+            index="03"
             eyebrow="Réalisations"
             align="left"
             titleId="portfolio-heading"

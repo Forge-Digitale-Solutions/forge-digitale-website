@@ -323,7 +323,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 5.5rem;
   }
 
   ::selection {
@@ -357,12 +357,6 @@
 
   a {
     color: inherit;
-  }
-
-  *:focus-visible {
-    outline: none;
-    box-shadow: var(--ring);
-    border-radius: var(--radius-sm);
   }
 
   /* Prose (blog + legal pages) — themed in BOTH themes through

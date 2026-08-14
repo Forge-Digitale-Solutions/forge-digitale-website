@@ -285,10 +285,10 @@ export function Faq() {
       className="py-24 bg-bg border-t border-default scroll-mt-20"
       aria-labelledby="faq-heading"
     >
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16">
           <SectionHeading
-            index="04"
+            index="05"
             eyebrow="FAQ"
             titleId="faq-heading"
             title={
@@ -300,7 +300,7 @@ export function Faq() {
           />
         </div>
 
-        <div className="space-y-12">
+        <div className="max-w-3xl space-y-12">
           {faqData.map((category, catIndex) => (
             <div key={catIndex}>
               <h3 className="text-xl font-bold text-accent mb-6 border-b border-accent-line pb-2 inline-block">

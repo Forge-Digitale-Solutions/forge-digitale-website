@@ -96,10 +96,10 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
           <SectionHeading
-            index="06"
+            index="07"
             eyebrow="Avis clients"
             titleId="reviews-heading"
             title={
@@ -108,7 +108,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
               </>
             }
           />
-          <div className="flex items-center justify-center gap-3 mt-6">
+          <div className="flex items-center justify-start gap-3 mt-6">
             <StarRating rating={Math.round(rating)} />
             <span className="text-soft text-lg">
               <span className="text-text-strong font-bold">{rating.toFixed(1)}</span>{" "}
@@ -212,7 +212,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
                     className={`h-2 rounded-full transition-all duration-300 ${
                       i === current
                         ? "bg-accent w-6"
-                        : "bg-surface-raised hover:bg-surface w-2"
+                        : "bg-muted hover:bg-soft w-2"
                     }`}
                     aria-label={`Aller à l'avis ${i + 1}`}
                     aria-current={i === current ? "true" : undefined}
@@ -236,7 +236,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-10"
+          className="mt-10"
         >
           <a
             href={googleUrl}

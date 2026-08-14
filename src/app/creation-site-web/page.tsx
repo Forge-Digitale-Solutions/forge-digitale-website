@@ -99,7 +99,7 @@ export default function CreationSiteWebPage() {
 
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
-            Moi c&rsquo;est Anthony Marcelin, développeur indépendant installé dans
+            Je suis Anthony Marcelin, développeur indépendant installé dans
             le Médoc. Je crée des sites internet et des applications pour les
             professionnels et les particuliers de la région, jusqu&rsquo;au Bassin
             d&rsquo;Arcachon et à Bordeaux. Vous n&rsquo;avez pas affaire à une
@@ -121,18 +121,17 @@ export default function CreationSiteWebPage() {
           <p>
             Un point auquel je tiens : la rapidité. Un beau site qui met trois
             secondes à s&rsquo;afficher fait fuir les visiteurs, et Google le
-            relègue derrière les autres. Je développe des sites qui chargent vite
-            et tiennent la route sur téléphone, là où se font la plupart des
-            recherches du coin. Le contenu et les mots-clés sont pensés à partir
-            de votre activité réelle, pour que vous remontiez quand
-            quelqu&rsquo;un cherche votre métier dans le secteur.
+            relègue derrière les autres. Je développe des sites qui chargent vite,
+            y compris sur téléphone. Le contenu est pensé à partir de votre
+            activité réelle, pour que l&rsquo;on vous trouve quand on cherche
+            votre métier dans le secteur.
           </p>
 
           <p>
             Si vous voulez aller plus loin une fois le site en ligne, je peux
             aussi m&rsquo;occuper de l&rsquo;hébergement, du nom de domaine et de
             la maintenance. Mais rien n&rsquo;est imposé. Les tarifs commencent
-            autour de 800 € pour une vitrine, le reste dépend de ce qu&rsquo;on
+            autour de 800 € pour une vitrine, le reste dépend de ce que l&rsquo;on
             définit ensemble. L&rsquo;échange et le devis sont gratuits.
           </p>
         </div>
@@ -161,8 +160,7 @@ export default function CreationSiteWebPage() {
 
         <section className="mt-12 pt-8 border-t border-default">
           <p className="text-soft mb-6">
-            Une idée, un site à refaire, ou juste une question ? Écrivez-moi,
-            c&rsquo;est moi qui réponds.
+            Une idée, un site à refaire, ou juste une question ? Écrivez-moi.
           </p>
           <Link
             href="/#contact"

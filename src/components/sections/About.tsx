@@ -13,7 +13,7 @@ export function About() {
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -23,7 +23,7 @@ export function About() {
           >
             <div>
               <SectionHeading
-                index="03"
+                index="04"
                 eyebrow="À propos"
                 align="left"
                 titleId="about-heading"
@@ -92,9 +92,9 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative w-full lg:max-w-md mx-auto"
+            className="relative w-full lg:max-w-sm lg:ml-auto"
           >
-            <div className="relative aspect-square md:aspect-4/5 rounded-xl overflow-hidden border border-default shadow-lg bg-surface-card">
+            <div className="relative aspect-square rounded-xl overflow-hidden border border-default shadow-lg bg-surface-card">
               <Image
                 src="/images/about_picture.jpg"
                 alt="Anthony Marcelin dans son atelier de développement web et montage PC à Saint-Laurent-Médoc"

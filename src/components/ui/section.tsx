@@ -1,16 +1,15 @@
 import type { ReactNode } from "react";
 
 // Mono, numbered section eyebrow + display heading (FUNKTION identity).
-// Technical numbering like "01 / SERVICES" sits above the title; the title
-// uses the display font and system color tokens. Centered by default to match
-// the existing section layouts; pass align="left" for a left-aligned head.
+// Technical numbering like "01 / SERVICES" sits above the title.
+// Left-aligned: the catalog / atelier rail, not a marketing center stack.
 export function SectionHeading({
   index,
   eyebrow,
   title,
   titleId,
   description,
-  align = "center",
+  align = "left",
 }: {
   index?: string;
   eyebrow: string;

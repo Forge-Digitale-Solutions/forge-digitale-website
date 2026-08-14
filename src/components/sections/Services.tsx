@@ -79,7 +79,7 @@ export function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16">
           <SectionHeading
-            index="01"
+            index="02"
             eyebrow="Services"
             titleId="services-heading"
             title={
@@ -167,7 +167,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="mt-16">
           <p className="text-soft mb-6">
             Des questions sur mes services ?{" "}
             <span className="text-text-strong font-medium">

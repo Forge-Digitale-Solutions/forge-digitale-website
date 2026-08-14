@@ -37,7 +37,7 @@ export default function BlogIndex() {
   return (
     <div className="min-h-screen bg-bg pt-32 pb-24">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="max-w-2xl mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-text-strong mb-6 tracking-tight">
             Le Blog de <span className="text-accent">La Forge.</span>
           </h1>

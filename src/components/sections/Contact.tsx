@@ -88,7 +88,7 @@ export function Contact() {
       className="py-24 bg-bg relative"
       aria-labelledby="contact-heading"
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-border-default to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-default to-transparent" />
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
@@ -100,7 +100,7 @@ export function Contact() {
             className="space-y-8"
           >
             <SectionHeading
-              index="05"
+              index="06"
               eyebrow="Contact"
               align="left"
               titleId="contact-heading"
@@ -185,14 +185,14 @@ export function Contact() {
               aria-labelledby="contact-rdv-heading"
             >
               <div className="flex items-center gap-4">
-                <div className="flex-1 h-px bg-border-default" />
+                <div className="flex-1 h-px bg-default" />
                 <span
                   id="contact-rdv-heading"
                   className="text-muted text-sm font-medium"
                 >
                   Prendre rendez-vous directement
                 </span>
-                <div className="flex-1 h-px bg-border-default" />
+                <div className="flex-1 h-px bg-default" />
               </div>
 
               <p className="text-sm leading-relaxed text-muted text-center">
