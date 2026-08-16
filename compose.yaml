@@ -1,0 +1,14 @@
+# Local smoke-test only. En prod, Dokploy build le Dockerfile
+# et attache Traefik + dokploy-network (pas besoin de ports publics).
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY:-}
+        GOOGLE_PLACES_API_KEY: ${GOOGLE_PLACES_API_KEY:-}
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,39 +1,30 @@
-name: Mise en ligne OVH
+name: Deploy Dokploy
+
+# Remplace le déploiement FTP OVH mutualisé.
+# Prérequis secrets GitHub :
+#   DOKPLOY_WEBHOOK_URL — URL webhook de l'application (Dokploy → Deployments → Webhook)
+#
+# Dokploy build lui-même le Dockerfile (Git provider + auto-deploy).
+# Ce workflow ne fait que déclencher un redeploy après push sur main.
 
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "0 4 * * *"
+  workflow_dispatch:
 
 jobs:
-  web-deploy:
-    name: Build & Deploy
+  trigger:
+    name: Trigger Dokploy
     runs-on: ubuntu-latest
     steps:
-      - name: Récupération du code
-        uses: actions/checkout@v4
-
-      - name: Installation de Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "npm"
-
-      - name: Installation des dépendances
-        run: npm ci
-
-      - name: Construction du site (Build)
-        run: npm run build
+      - name: Notify Dokploy webhook
         env:
-          NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
-
-      - name: 📂 Envoi vers OVH
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: ./www/
+          DOKPLOY_WEBHOOK_URL: ${{ secrets.DOKPLOY_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DOKPLOY_WEBHOOK_URL" ]; then
+            echo "DOKPLOY_WEBHOOK_URL manquant — configure le secret ou active l'auto-deploy Git dans Dokploy."
+            exit 1
+          fi
+          curl -fsS -X POST "$DOKPLOY_WEBHOOK_URL"
+          echo "Dokploy webhook OK"

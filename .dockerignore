@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.git
+.github
+.DS_Store
+*.md
+!docker/**
+.env*
+npm-debug.log*
+repomix-output*
+docs
+coverage
+*.pem

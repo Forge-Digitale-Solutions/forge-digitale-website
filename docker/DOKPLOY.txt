@@ -1,0 +1,15 @@
+# Déploiement Dokploy (VPS OVH) — site vitrine statique
+#
+# Dans Dokploy → Application :
+#   Provider: GitHub (ce repo) · Branch: main (après merge)
+#   Build type: Dockerfile · Dockerfile path: Dockerfile
+#   Port: 80
+#   Build args:
+#     NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=<clé Web3Forms>
+#     GOOGLE_PLACES_API_KEY=<optionnel>
+#   Domains: forgedigitalesolutions.com + www (redirect www→apex côté Traefik)
+#   Auto-deploy: ON (Git) et/ou secret GitHub DOKPLOY_WEBHOOK_URL
+#
+# Test local:
+#   docker compose up --build
+#   → http://localhost:8080
