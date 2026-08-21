@@ -8,7 +8,7 @@ image: "/blog/changer-de-prestataire-web.jpg"
 
 Un carreleur veut refaire son site. L'ancien prestataire, joignable un mois sur deux, met trois semaines à corriger un numéro de téléphone. Le carreleur signe ailleurs, prévient par mail, et découvre la semaine suivante que son site a disparu, que ses adresses en `@son-entreprise.fr` ne reçoivent plus rien, et que le nom de domaine qu'il utilise depuis six ans est enregistré au nom de l'agence. Changer de prestataire web ne pose aucun problème technique. Ce qui coince, c'est presque toujours la question de savoir à qui appartiennent les clés.
 
-Ce cas revient régulièrement chez les artisans que je récupère en Médoc et autour de Bordeaux. Tout se vérifie en une heure, avant de signer quoi que ce soit ailleurs.
+Ce cas revient régulièrement chez les artisans que je récupère dans le Médoc et autour de Bordeaux. Tout se vérifie en une heure, avant de signer quoi que ce soit ailleurs.
 
 ## Qui est vraiment propriétaire de votre nom de domaine ?
 
