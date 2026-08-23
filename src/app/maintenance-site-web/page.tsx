@@ -8,6 +8,7 @@ const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
+  description:
     "Maintenance, hébergement, mises à jour et sauvegardes : au cas par cas, sans forfait mensuel unique. Sites déjà en ligne acceptés après diagnostic.",
   keywords: [
     "maintenance site web Médoc",
