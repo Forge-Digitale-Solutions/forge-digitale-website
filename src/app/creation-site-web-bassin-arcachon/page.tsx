@@ -7,7 +7,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/creation-site-web-bassin-arcachon/`;
 
 export const metadata: Metadata = {
-  title: "Création de site web sur le Bassin d’Arcachon | Forge Digitale Solutions",
+  title: "Création de site web sur le Bassin d’Arcachon",
   description:
     "Sites pour assos, commerces et studios du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine dès ~800 €. Travail depuis le Médoc.",
   alternates: { canonical: PAGE_URL },
