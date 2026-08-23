@@ -143,7 +143,8 @@ export default function MaintenanceSiteWebPage() {
             Sites déjà en ligne : oui, après accès admin / hébergeur / DNS et
             un diagnostic. Si le socle est trop vieux ou fermé, je le dis. Voir
             la{" "}
-            Un site à confier, créé ici ou ailleurs ? Écrivez-moi.
+            <Link href="/faq/" className="text-accent hover:underline">FAQ</Link>.
+          </p>
           <p>
             Sauvegardes : on note où, à quelle fréquence, qui restaure. Le cloud
             de l&rsquo;hébergeur ne suffit pas seul.{" "}
