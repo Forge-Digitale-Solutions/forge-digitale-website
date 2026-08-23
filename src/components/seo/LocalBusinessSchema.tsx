@@ -9,6 +9,7 @@ export function LocalBusinessSchema() {
     "@id": "https://forgedigitalesolutions.com/#business",
     name: "Forge Digitale Solutions",
     alternateName: "La Forge Digitale",
+    legalName: "EI Anthony Marcelin",
     description: "Création de sites web sur mesure, montage PC gamer, dépannage informatique et installation Linux dans le Médoc. Expertise locale à Saint-Laurent-Médoc.",
     url: "https://forgedigitalesolutions.com/",
     telephone: "+33645659696",
@@ -21,16 +22,11 @@ export function LocalBusinessSchema() {
     logo: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "36 chemin de la Mienne",
+      streetAddress: "6 rue Saint-Julien",
       addressLocality: "Saint-Laurent-Médoc",
       postalCode: "33112",
       addressRegion: "Nouvelle-Aquitaine",
       addressCountry: "FR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 45.15,
-      longitude: -0.8242,
     },
     areaServed: [
       {
@@ -69,15 +65,6 @@ export function LocalBusinessSchema() {
         "@type": "AdministrativeArea",
         name: "Gironde",
       },
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: {
-          "@type": "GeoCoordinates",
-          latitude: 45.15,
-          longitude: -0.8242,
-        },
-        geoRadius: "50000",
-      },
     ],
     founder: {
       "@type": "Person",
@@ -85,7 +72,7 @@ export function LocalBusinessSchema() {
       jobTitle: "Concepteur Développeur d'Applications (Titre Pro)",
       url: "https://forgedigitalesolutions.com/#about",
       sameAs: [
-        "https://www.linkedin.com/in/anthonymarcelin",
+        "https://www.linkedin.com/in/anthony-marcelin/",
       ],
     },
     employee: [
@@ -205,7 +192,7 @@ export function LocalBusinessSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "7",
+      reviewCount: "6",
       bestRating: "5",
       worstRating: "1",
     },

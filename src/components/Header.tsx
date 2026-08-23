@@ -80,7 +80,7 @@ export function Header() {
             <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm border border-default transition-transform group-hover:scale-105">
               <Image
                 src="/logos/Logo1rond.png"
-                alt="Forge Digitale Logo"
+                alt="Forge Digitale Solutions"
                 fill
                 className="object-cover"
                 priority
@@ -88,22 +88,10 @@ export function Header() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <div className="flex items-baseline gap-1.5 leading-none">
-                <span
-                  className="text-muted text-xs font-medium -translate-y-px"
-                  aria-hidden="true"
-                >
-                  La
-                </span>
-                <span className="font-display font-bold text-lg tracking-tight text-text-strong group-hover:text-accent transition-colors">
-                  FORGE DIGITALE
-                </span>
-              </div>
-
-              <span
-                className="font-mono text-[10px] uppercase tracking-[0.35em] text-accent font-medium ml-4.5 mt-0.5"
-                aria-hidden="true"
-              >
+              <span className="font-display font-bold text-lg tracking-tight text-text-strong group-hover:text-accent transition-colors leading-none">
+                FORGE DIGITALE
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-accent font-medium mt-0.5">
                 SOLUTIONS
               </span>
             </div>

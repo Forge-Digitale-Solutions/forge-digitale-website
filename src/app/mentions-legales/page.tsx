@@ -70,7 +70,7 @@ export default function MentionsLegales() {
                 <strong>Code APE :</strong> 62.01Z (Programmation informatique)
               </li>
               <li>
-                <strong>Adresse :</strong> 6 rue Saint Julien, 33112
+                <strong>Adresse :</strong> 6 rue Saint-Julien, 33112
                 Saint-Laurent-Médoc, France
               </li>
               <li>
