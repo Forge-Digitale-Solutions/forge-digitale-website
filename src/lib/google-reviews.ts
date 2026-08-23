@@ -15,9 +15,9 @@ export type PlaceInfo = {
 };
 
 const STATIC_FALLBACK: PlaceInfo = {
-  placeId: "",
+  placeId: "g/11zbjsx1hc",
   rating: 5,
-  totalRatings: 7,
+  totalRatings: 6,
   reviews: [
     {
       authorName: "ANTHONY LGD",
@@ -79,65 +79,5 @@ const STATIC_FALLBACK: PlaceInfo = {
 };
 
 export async function getGoogleReviews(): Promise<PlaceInfo | null> {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  if (!apiKey) return STATIC_FALLBACK;
-
-  try {
-    const searchRes = await fetch(
-      "https://places.googleapis.com/v1/places:searchText",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Goog-Api-Key": apiKey,
-          "X-Goog-FieldMask": "places.id",
-        },
-        body: JSON.stringify({ textQuery: "Forge Digitale Solutions Saint-Laurent-Médoc" }),
-        next: { revalidate: 86400 },
-      }
-    );
-
-    const searchData = await searchRes.json();
-    const placeId = searchData.places?.[0]?.id;
-    if (!placeId) return STATIC_FALLBACK;
-
-    const detailRes = await fetch(
-      `https://places.googleapis.com/v1/places/${placeId}`,
-      {
-        headers: {
-          "X-Goog-Api-Key": apiKey,
-          "X-Goog-FieldMask": "rating,userRatingCount,reviews",
-        },
-        next: { revalidate: 86400 },
-      }
-    );
-
-    const detail = await detailRes.json();
-
-    const reviews: GoogleReview[] = (detail.reviews ?? []).map(
-      (r: {
-        authorAttribution: { displayName: string; photoUri: string };
-        rating: number;
-        text: { text: string };
-        relativePublishTimeDescription: string;
-      }) => ({
-        authorName: r.authorAttribution.displayName,
-        authorPhotoUrl: r.authorAttribution.photoUri,
-        rating: r.rating,
-        text: r.text?.text ?? "",
-        relativeTime: r.relativePublishTimeDescription,
-      })
-    );
-
-    if (reviews.length === 0) return STATIC_FALLBACK;
-
-    return {
-      placeId,
-      rating: detail.rating ?? 0,
-      totalRatings: detail.userRatingCount ?? 0,
-      reviews,
-    };
-  } catch {
-    return STATIC_FALLBACK;
-  }
+  return STATIC_FALLBACK;
 }

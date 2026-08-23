@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Phone, Facebook, Linkedin, Rss } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-16">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-text-strong">
-              Forge <span className="text-accent">Digitale.</span>
+              Forge <span className="text-accent">Digitale Solutions</span>
             </h3>
             <p className="text-soft text-sm leading-relaxed">
               L&apos;artisanat numérique au service du Médoc.
@@ -99,6 +99,78 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/blog/arnaque-phishing-email/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Arnaque phishing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/croissance-web/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Croissance web
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/fiche-google-artisans/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Fiche Google artisans
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/gestionnaire-mots-de-passe/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Gestionnaire de mots de passe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/sauvegarde-automatique-linux/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Sauvegarde Linux
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/sauvegarde-donnees/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Sauvegarde des données
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/site-web-ou-reseaux-sociaux/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Site web ou réseaux
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/whatsapp-business-artisans-commercants/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  WhatsApp Business
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/facturation-electronique/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Facturation électronique
+                </Link>
+              </li>
+              <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
                   href="/#about"
@@ -124,14 +196,6 @@ export function Footer() {
                   Confidentialité
                 </Link>
               </li>
-              <li>
-                <a
-                  href="/feed"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Flux RSS
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -145,9 +209,9 @@ export function Footer() {
                   aria-hidden="true"
                 />
                 <span>
-                  Saint-Laurent-Médoc
+                  6 rue Saint-Julien
                   <br />
-                  (33112)
+                  33112 Saint-Laurent-Médoc
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -209,14 +273,6 @@ export function Footer() {
                 title="LinkedIn Entreprise"
               >
                 <Linkedin size={24} aria-hidden="true" />
-              </a>
-              <a
-                href="/feed"
-                aria-label="Flux RSS du blog"
-                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                title="Flux RSS"
-              >
-                <Rss size={24} aria-hidden="true" />
               </a>
             </div>
           </div>

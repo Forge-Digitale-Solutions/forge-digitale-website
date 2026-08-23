@@ -78,9 +78,9 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
 
   if (!data || count === 0) return null;
 
-  const googleUrl = placeId
+  const googleUrl = placeId.startsWith("ChIJ")
     ? `https://www.google.com/maps/search/?api=1&query=Forge+Digitale+Solutions&query_place_id=${placeId}`
-    : "https://www.google.com/maps/place/Forge+Digitale+Solutions/@44.8901966,-0.4729263,17z/data=!3m1!1e3!4m6!3m5!1s0xa3f788f259db0a87:0xeb74be8318b2b4e4!8m2!3d44.8901966!4d-0.4729263!16s%2Fg%2F11zbjsx1hc";
+    : "https://www.google.com/maps/place/Forge+Digitale+Solutions/data=!16s%2Fg%2F11zbjsx1hc";
 
   const review = reviews[current];
 
