@@ -73,6 +73,39 @@ export function Footer() {
                 >
                   Développeur dans le Médoc
                 </Link>
+              <li>
+                <Link
+                  href="/faq/"
+                  aria-label="FAQ"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/atelier-saint-laurent-medoc/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Atelier Saint-Laurent-Médoc
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/creation-site-web-bassin-arcachon/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Site web Bassin d&apos;Arcachon
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/site-internet-artisan-medoc/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Site internet artisan
+                </Link>
+              </li>
               </li>
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}

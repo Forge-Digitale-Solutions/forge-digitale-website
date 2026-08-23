@@ -8,8 +8,7 @@ const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
-  description:
-    "Une fois votre site en ligne, je m'occupe de tout : hébergement, nom de domaine, mises à jour, sauvegardes et sécurité. Vous gardez l'esprit tranquille, je gère la technique. Médoc et Bassin d'Arcachon.",
+    "Maintenance, hébergement, mises à jour et sauvegardes : au cas par cas, sans forfait mensuel unique. Sites déjà en ligne acceptés après diagnostic.",
   keywords: [
     "maintenance site web Médoc",
     "hébergement site internet Gironde",
@@ -125,6 +124,38 @@ export default function MaintenanceSiteWebPage() {
             proposition claire, sans engagement caché.
           </p>
         </div>
+
+          <h2 className="text-2xl font-bold text-text-strong pt-4">Ce qui est inclus, typiquement</h2>
+          <p>
+            Hébergement et suivi du nom de domaine, mises à jour techniques,
+            sauvegardes régulières, un œil sur la dispo et la sécu, un
+            interlocuteur unique. Les petits textes, photos ou horaires se
+            facturent à l&rsquo;heure, sur devis.
+          </p>
+          <h2 className="text-2xl font-bold text-text-strong pt-4">Hors forfait (sauf mention)</h2>
+          <p>
+            Refonte, nouvelles rubriques, fonctions métier, contenus longs
+            rédigés par moi, récupération après casse sans sauvegarde
+            antérieure, déplacements (devis). Pas de prix mensuel unique.
+          </p>
+          <p>
+            Sites déjà en ligne : oui, après accès admin / hébergeur / DNS et
+            un diagnostic. Si le socle est trop vieux ou fermé, je le dis. Voir
+            la{" "}
+            Un site à confier, créé ici ou ailleurs ? Écrivez-moi.
+          <p>
+            Sauvegardes : on note où, à quelle fréquence, qui restaure. Le cloud
+            de l&rsquo;hébergeur ne suffit pas seul.{" "}
+            <Link href="/blog/sauvegarde-donnees/" className="text-accent hover:underline">
+              Sauvegarde des données
+            </Link>
+            .
+          </p>
+          <p>
+            À l&rsquo;arrêt : accès, exports, DNS, dernière sauvegarde. Cadre :{" "}
+            <Link href="/cgv/" className="text-accent hover:underline">CGV</Link>.
+            Vous récupérez votre site.
+          </p>
 
         <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
           <p className="text-muted text-sm mb-3">À voir aussi</p>
