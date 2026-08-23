@@ -24,7 +24,7 @@ export default function ArtisanPage() {
       />
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-          Un site à vous, pour un métier artisanal dans le Médoc
+          Site internet pour artisan ou commerçant dans le Médoc
         </h1>
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>

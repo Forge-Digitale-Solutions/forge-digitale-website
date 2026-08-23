@@ -24,11 +24,11 @@ export default function BassinPage() {
       />
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-          Un site utile sur le Bassin — conçu depuis le Médoc, sans agence interposée
+          Un site pour une asso ou un commerce du Bassin, fait depuis Saint-Laurent-Médoc
         </h1>
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
-            Je ne suis pas une agence arcachonnaise. Je suis Anthony Marcelin,
+            Je suis Anthony Marcelin,
             développeur indépendant à Saint-Laurent-Médoc. J&rsquo;ai déjà livré
             un site associatif sur le Bassin.
           </p>
@@ -46,7 +46,7 @@ export default function BassinPage() {
               site ou réseaux
             </Link>
             ). Studios et indépendants : galerie, vitrine métier (ex. Horizon
-            Vertical Studio). Même exigence : pages rapides, mobile, contenu réel.
+            Vertical Studio). Pages lisibles sur téléphone, calées sur l’activité.
             Pas de promesse de première page Google.
           </p>
           <h2 className="text-2xl font-bold text-text-strong">Depuis le Médoc</h2>
