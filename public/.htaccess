@@ -12,7 +12,6 @@ Redirect 301 /services /
 Redirect 301 /about /
 Redirect 301 /contact /
 Redirect 301 /realisations /
-Redirect 301 /faq /
 
 # Anciennes URLs .html -> version avec slash (ex: /blog/x.html -> /blog/x/)
 

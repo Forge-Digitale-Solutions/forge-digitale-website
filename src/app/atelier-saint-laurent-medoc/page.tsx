@@ -7,7 +7,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/atelier-saint-laurent-medoc/`;
 
 export const metadata: Metadata = {
-  title: "Atelier numérique à Saint-Laurent-Médoc | Forge Digitale Solutions",
+  title: "Atelier numérique à Saint-Laurent-Médoc",
   description:
     "Atelier privé à Saint-Laurent-Médoc, sur rendez-vous. Sites, montage PC et Linux. Zone : Médoc, Bassin d'Arcachon, Bordeaux (~50 km).",
   alternates: { canonical: PAGE_URL },

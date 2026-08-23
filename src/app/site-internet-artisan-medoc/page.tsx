@@ -7,7 +7,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/site-internet-artisan-medoc/`;
 
 export const metadata: Metadata = {
-  title: "Site internet pour artisan et commerçant dans le Médoc | FDS",
+  title: "Site internet pour artisan et commerçant dans le Médoc",
   description:
     "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. Dès ~800 €, devis sans packs. Site et fiche Google, chacun son rôle.",
   alternates: { canonical: PAGE_URL },
