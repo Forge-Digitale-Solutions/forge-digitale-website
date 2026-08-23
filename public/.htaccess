@@ -15,6 +15,11 @@ Redirect 301 /realisations /
 Redirect 301 /faq /
 
 # Anciennes URLs .html -> version avec slash (ex: /blog/x.html -> /blog/x/)
+
+# /404.html ne doit PAS devenir /404/ : ErrorDocument 404 irait en 301 puis bouclerait.
+RewriteRule ^404/?$ - [R=404,L]
+RewriteRule ^404\.html$ - [L]
+RewriteRule ^feed/?$ - [R=404,L]
 RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
