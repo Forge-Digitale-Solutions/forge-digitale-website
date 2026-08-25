@@ -136,6 +136,17 @@ export default function CreationSiteWebPage() {
           </p>
         </div>
 
+        <p className="mt-10 text-lg text-soft leading-relaxed">
+            Pour une vitrine TPE dans le Médoc (ordre de prix, déroulement,
+            atelier) :{" "}
+            <Link
+              href="/creation-site-internet-medoc/"
+              className="text-accent hover:underline"
+            >
+              création de site internet dans le Médoc
+            </Link>
+            .
+          </p>
         <div className="mt-12 p-6 rounded-lg bg-surface-card border border-default">
           <p className="text-muted text-sm mb-3">À lire avant de vous lancer</p>
           <ul className="space-y-2">
