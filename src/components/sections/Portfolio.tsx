@@ -19,6 +19,17 @@ const projects = [
     link: "#",
   },
   {
+    title: "La Délicieuse",
+    category: "E-commerce",
+    description:
+      "Boutique en ligne pour une épicerie fine à Cissac-Médoc. Catalogue de producteurs français, vente aux particuliers et aux professionnels, livraison partout en France.",
+    tags: ["Épicerie Fine", "Boutique en ligne", "Cissac-Médoc", "B2B & B2C"],
+    image: "/projects/la-delicieuse.webp",
+    imageAlt:
+      "Capture d'écran de la boutique en ligne Épicerie Fine La Délicieuse, avec le hero Cave & Spiritueux et les rayons produits",
+    link: "https://epiceriefineladelicieuse.fr",
+  },
+  {
     title: "GoSportNow",
     category: "Application Mobile",
     description:
@@ -116,8 +127,7 @@ export function Portfolio() {
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:-translate-y-px transition-all duration-500"
                 />
 
-                {/* GoSportNow et Charcuterie Campagnarde: liens actifs vers les sites */}
-                {(project.title === "GoSportNow" || project.title === "Charcuterie Campagnarde" || project.title === "Rugby Handi Sud Bassin" || project.title === "Horizon Vertical Studio") && (
+                {project.link.startsWith("http") && (
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Link
                       href={project.link}
