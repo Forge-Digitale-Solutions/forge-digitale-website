@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/atelier-saint-laurent-medoc", lastModified: "2026-08-23" },
     { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-08-23" },
     { route: "/site-internet-artisan-medoc", lastModified: "2026-08-23" },
+    { route: "/creation-site-internet-medoc", lastModified: "2026-08-25" },
   ].map(
     ({ route, lastModified }) => ({
       url: `${baseUrl}${route}`,

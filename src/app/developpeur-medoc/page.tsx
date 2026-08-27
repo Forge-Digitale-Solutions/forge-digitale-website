@@ -129,6 +129,13 @@ export default function DeveloppeurMedocPage() {
             >
               création de site web
             </Link>
+            . Le cadre concret d&rsquo;une vitrine TPE dans le Médoc est sur{" "}
+            <Link
+              href="/creation-site-internet-medoc/"
+              className="text-accent hover:underline"
+            >
+              création de site internet dans le Médoc
+            </Link>
             .
           </p>
         </div>

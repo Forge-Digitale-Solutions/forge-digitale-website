@@ -106,6 +106,14 @@ export function Footer() {
                   Site internet artisan
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/creation-site-internet-medoc/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Création site internet Médoc
+                </Link>
+              </li>
               </li>
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
