@@ -5,7 +5,6 @@ date: "2026-08-28"
 lastModified: "2026-08-28"
 category: "Web"
 excerpt: "Le site est en ligne, on tape le nom de l’entreprise, Google n’affiche rien. Ce n’est pas une histoire de ranking : cinq blocages concrets à vérifier."
-image: "/blog/site-en-ligne-introuvable-google.jpg"
 ---
 
 J’ai mis le site en ligne. J’ai ouvert Google, j’ai tapé « Forge Digitale Solutions ». Ce qui est sorti, ce n’était pas ma page. Un homonyme, une vieille mention, pas l’atelier.
