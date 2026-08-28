@@ -127,7 +127,7 @@ export default async function Post({
             {postData.category}
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-            {postData.title}
+            {postData.h1 || postData.title}
           </h1>
           <div className="flex items-center gap-4 text-faint text-sm border-l-2 border-accent pl-4 mb-8">
             <p>Publié le {postData.date}</p>

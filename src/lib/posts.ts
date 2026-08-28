@@ -10,6 +10,7 @@ const postsDirectory = path.join(process.cwd(), "src/posts");
 export interface PostData {
   id: string;
   title: string;
+  h1?: string;
   date: string;
   lastModified?: string;
   excerpt: string;
@@ -36,6 +37,7 @@ export function getSortedPostsData(): PostData[] {
         id,
         ...(matterResult.data as {
           title: string;
+          h1?: string;
           date: string;
           lastModified?: string;
           excerpt: string;
@@ -71,6 +73,7 @@ export async function getPostData(id: string): Promise<PostData> {
     contentHtml,
     ...(matterResult.data as {
       title: string;
+      h1?: string;
       date: string;
       lastModified?: string;
       excerpt: string;
