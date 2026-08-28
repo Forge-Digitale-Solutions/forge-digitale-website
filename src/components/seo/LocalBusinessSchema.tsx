@@ -10,7 +10,7 @@ export function LocalBusinessSchema() {
     name: "Forge Digitale Solutions",
     alternateName: "La Forge Digitale",
     legalName: "EI Anthony Marcelin",
-    description: "Création de sites web sur mesure, montage PC gamer, dépannage informatique et installation Linux dans le Médoc. Expertise locale à Saint-Laurent-Médoc.",
+    description: "Sites web sur mesure et développement pour artisans et PME du Médoc. Développeur à Saint-Laurent-Médoc.",
     url: "https://forgedigitalesolutions.com/",
     telephone: "+33645659696",
     email: "contact@forgedigitalesolutions.com",
@@ -98,7 +98,7 @@ export function LocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Services Numériques & Hardware Médoc",
+      name: "Création de sites web et développement Médoc",
       itemListElement: [
         {
           "@type": "Offer",
