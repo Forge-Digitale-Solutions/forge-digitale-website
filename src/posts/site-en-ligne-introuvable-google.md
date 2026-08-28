@@ -5,6 +5,7 @@ date: "2026-08-28"
 lastModified: "2026-08-28"
 category: "Web"
 excerpt: "Le site est en ligne, on tape le nom de l’entreprise, Google n’affiche rien. Ce n’est pas une histoire de ranking : cinq blocages concrets à vérifier."
+image: "/blog/site-en-ligne-introuvable-google.jpg"
 ---
 
 J’ai mis le site en ligne. J’ai ouvert Google, j’ai tapé « Forge Digitale Solutions ». Ce qui est sorti, ce n’était pas ma page. Un homonyme, une vieille mention, pas l’atelier.
@@ -25,6 +26,10 @@ Sur le mien, des articles de blog et les CGV n’étaient pas encore crawlés : 
 
 Collez le nom de domaine dans Google, précédé de `site:`. Si presque rien ne sort, les pages n’ont pas été vues. Search Console dit si Google est déjà passé. Tant que la page n’est pas crawlée, il n’y a rien à optimiser.
 
+*Source : [Google Search Central – Fonctionnement de la recherche](https://developers.google.com/search/docs/fundamentals/how-search-works?hl=fr)*
+*Source : [Google Search Central – Sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=fr)*
+*Source : [Google Search Console](https://search.google.com/search-console)*
+
 ## Le title dit « Accueil » au lieu de dire qui vous êtes
 
 L’onglet du navigateur, c’est le title. C’est aussi le lien bleu dans les résultats. Si la page d’accueil s’appelle « Accueil » ou « Bienvenue », Google n’a presque rien à accrocher au nom.
@@ -32,6 +37,8 @@ L’onglet du navigateur, c’est le title. C’est aussi le lien bleu dans les 
 Le mien a longtemps été trop vague. « Forge Digitale » dit peu, et le nom n’est pas unique. Le nom complet, le métier, la commune, ça dit qui je suis. Deux homonymes dans le même métier, un title trop court n’aide pas à départager.
 
 Ouvrez le site et regardez l’onglet. Le nom de l’entreprise doit y figurer dès la page d’accueil. Pas « Accueil ». Pas le nom du thème.
+
+*Source : [Google Search Central – Liens de titre](https://developers.google.com/search/docs/appearance/title-link?hl=fr)*
 
 ## Une adresse dans le code, une autre sur la page
 
@@ -48,6 +55,8 @@ Le cadenas dans la barre d’adresse, c’est le HTTPS. Sans lui, le navigateur 
 Sur ce site, le vrai sujet c’était un HTTP sans 301 propre vers le HTTPS. Search Console voyait déjà la version canonique en HTTPS. Le navigateur, lui, pouvait encore ouvrir l’ancienne adresse.
 
 Si l’URL commence par http:// sans le s, ou si les deux versions s’ouvrent, le site n’est pas « en ligne » de la façon dont Google l’entend. Un certificat et une redirection unique suffisent souvent.
+
+*Source : [Google Search Central – HTTPS](https://developers.google.com/search/docs/advanced/security/https)*
 
 ## La page d’accueil ne dit rien
 
