@@ -7,7 +7,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
-import { FAQSchema } from "@/components/seo/FAQSchema";
 
 // Archivo variable font with the width (wdth) axis. Body uses the default
 // width; display headings widen to ~125 (the "Expanded" instance) via
@@ -96,7 +95,6 @@ export default function RootLayout({
       </head>
       <body className="bg-bg text-text font-sans antialiased">
         <LocalBusinessSchema />
-        <FAQSchema />
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="atelier"

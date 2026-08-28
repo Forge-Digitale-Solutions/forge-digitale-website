@@ -4,6 +4,7 @@ import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
 import { Faq } from "@/components/sections/Faq";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Reviews } from "@/components/sections/Reviews";
 import { GridDivider } from "@/components/ui/section";
 import { getGoogleReviews } from "@/lib/google-reviews";
@@ -21,6 +22,7 @@ export default async function Home() {
       <GridDivider />
       <About />
       <GridDivider />
+      <FAQSchema />
       <Faq />
       <GridDivider />
       <Contact />
