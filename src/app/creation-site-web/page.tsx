@@ -60,8 +60,8 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "EUR",
-    price: "800",
-    description: "Création de site internet, à partir de 800 €",
+    price: "500",
+    description: "Création de site internet, à partir de 500 €",
   },
 };
 
@@ -131,8 +131,9 @@ export default function CreationSiteWebPage() {
             Si vous voulez aller plus loin une fois le site en ligne, je peux
             aussi m&rsquo;occuper de l&rsquo;hébergement, du nom de domaine et de
             la maintenance. Mais rien n&rsquo;est imposé. Les tarifs commencent
-            autour de 800 € pour une vitrine, le reste dépend de ce que l&rsquo;on
-            définit ensemble. L&rsquo;échange et le devis sont gratuits.
+            à partir de 500 € pour une vitrine, avec un espace pour mettre à
+            jour le contenu. Le reste dépend de ce que l&rsquo;on définit
+            ensemble. L&rsquo;échange et le devis sont gratuits.
           </p>
         </div>
 

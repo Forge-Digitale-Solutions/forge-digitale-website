@@ -24,19 +24,17 @@ const faqData: FaqCategory[] = [
         answer: (
           <div className="space-y-4">
             <p>
-              Il est impossible de donner un tarif unique sans connaître votre
-              projet, car je ne vends pas de &quot;modèles&quot; tout faits.
+              Il n&apos;y a pas de packs. Une vitrine claire, utile, pensée pour
+              le téléphone, avec un espace pour mettre à jour le contenu, à
+              partir de 500&nbsp;€.
             </p>
             <p>
-              Le coût dépend entièrement de vos besoins spécifiques : un site
-              vitrine simple, un site catalogue ou une application métier
-              complexe ne demandent pas le même travail.
+              Au-delà, le prix dépend de ce que le site doit vraiment faire :
+              boutique, formulaires avancés, application métier.
             </p>
             <p>
-              Mon approche est de construire une solution{" "}
-              <strong>100% sur-mesure</strong>, adaptée à vos objectifs et à
-              votre budget. Le mieux est d&apos;en discuter de vive voix :
-              l&apos;étude de votre projet est gratuite.
+              Le mieux est d&apos;en discuter de vive voix : l&apos;étude de
+              votre projet est gratuite.
             </p>
           </div>
         ),

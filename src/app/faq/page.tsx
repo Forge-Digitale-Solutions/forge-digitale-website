@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const qa = [
   {
     q: "Combien coûte la création d’un site internet ?",
-    a: "Il n’y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, commence autour de 800 €. Au-delà, le prix dépend de ce que le site doit vraiment faire : formulaires, back-office, application métier. Le devis est gratuit.",
+    a: "Il n’y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, avec un espace pour mettre à jour le contenu, à partir de 500 €. Au-delà, le prix dépend de ce que le site doit vraiment faire : boutique, formulaires avancés, application métier. Le devis est gratuit.",
   },
   {
     q: "Combien de pages ? Est-ce que je mets à jour tout seul ?",
@@ -185,9 +185,10 @@ export default function FaqPage() {
             <Qa q="Combien coûte la création d’un site internet ?">
               <p>
                 Il n&rsquo;y a pas de packs. Une vitrine claire, utile, pensée
-                pour le téléphone, commence autour de 800 €. Au-delà, le prix
-                dépend de ce que le site doit vraiment faire : formulaires,
-                back-office, application métier. Devis gratuit. Voir{" "}
+                pour le téléphone, avec un espace pour mettre à jour le contenu,
+                à partir de 500 €. Au-delà, le prix dépend de ce que le site
+                doit vraiment faire : boutique, formulaires avancés, application
+                métier. Devis gratuit. Voir{" "}
                 <Link href="/creation-site-web/" className="text-accent hover:underline">
                   création de site web
                 </Link>{" "}
@@ -343,8 +344,9 @@ export default function FaqPage() {
           <section className="space-y-6">
             <h2 className="text-2xl font-bold text-text-strong">Devis et paiement</h2>
             <p>
-              Devis gratuit. Montants fermes : autour de 800 € pour une vitrine,
-              149 € montage, 69 € Renaissance. Le reste au cas par cas. Cadre :{" "}
+              Devis gratuit. Montants fermes : à partir de 500 € pour une
+              vitrine, 149 € montage, 69 € Renaissance. Le reste au cas par cas.
+              Cadre :{" "}
               <Link href="/cgv/" className="text-accent hover:underline">
                 CGV
               </Link>

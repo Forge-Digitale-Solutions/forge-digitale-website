@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/site-internet-artisan-medoc/`;
 export const metadata: Metadata = {
   title: "Site internet pour artisan et commerçant dans le Médoc",
   description:
-    "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. Dès ~800 €, devis sans packs. Site et fiche Google, chacun son rôle.",
+    "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. À partir de 500 €, devis sans packs. Site et fiche Google, chacun son rôle.",
   alternates: { canonical: PAGE_URL },
 };
 
@@ -57,7 +57,8 @@ export default function ArtisanPage() {
           </p>
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
           <p>
-            Dès environ 800 € pour une vitrine. Devis après échange. Maintenance
+            À partir de 500 € pour une vitrine, avec un espace pour mettre à
+            jour le contenu. Devis après échange. Maintenance
             seulement si vous la voulez :{" "}
             <Link href="/maintenance-site-web/" className="text-accent hover:underline">
               maintenance

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     absolute: "Création de site internet dans le Médoc | Anthony Marcelin",
   },
   description:
-    "Anthony Marcelin, développeur indépendant à Saint-Laurent-Médoc. Sites internet pour TPE, vitrine dès environ 800 euros, un interlocuteur. Devis gratuit.",
+    "Anthony Marcelin, développeur indépendant à Saint-Laurent-Médoc. Sites internet pour TPE, vitrine à partir de 500 euros, un interlocuteur. Devis gratuit.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Création de site internet dans le Médoc | Anthony Marcelin",
     description:
-      "Anthony Marcelin, développeur indépendant à Saint-Laurent-Médoc. Sites internet pour TPE, vitrine dès environ 800 euros, un interlocuteur. Devis gratuit.",
+      "Anthony Marcelin, développeur indépendant à Saint-Laurent-Médoc. Sites internet pour TPE, vitrine à partir de 500 euros, un interlocuteur. Devis gratuit.",
   },
 };
 
@@ -138,10 +138,10 @@ export default function CreationSiteInternetMedocPage() {
             L&rsquo;ordre de prix
           </h2>
           <p>
-            Une vitrine claire, utile, pensée pour le téléphone, commence autour
-            de 800 €. Pas de packs. Le devis suit ce que le site doit vraiment
-            faire : quelques pages, un formulaire, un espace pour que vous
-            mettiez à jour, ou plus.
+            Une vitrine claire, utile, pensée pour le téléphone, avec un espace
+            pour mettre à jour le contenu, à partir de 500 €. Pas de packs. Le
+            devis suit ce que le site doit vraiment faire : quelques pages, un
+            formulaire, ou plus.
           </p>
           <p>
             L&rsquo;échange et le devis sont gratuits. Les montants fermes, après

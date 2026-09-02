@@ -70,7 +70,7 @@ Lisez votre page d’accueil à voix haute, en ignorant le logo. Est-ce qu’on 
 
 Ça ne veut pas dire qu’il faut « du SEO ». Ça ne veut pas dire une campagne de liens, un audit de soixante pages, ni une place dans un classement. Le nom de l’entreprise n’est pas un podium.
 
-Ça ne veut pas dire non plus qu’un site est obligatoire. Une vitrine claire ([création de site web](/creation-site-web/)) commence autour de 800 € quand elle sert vraiment : le métier, l’adresse, un moyen de joindre. Un artisan qui n’a besoin que d’un numéro peut s’en passer. Je le dis avant de chiffrer.
+Ça ne veut pas dire non plus qu’un site est obligatoire. Une vitrine claire ([création de site web](/creation-site-web/)) commence à partir de 500 € quand elle sert vraiment : le métier, l’adresse, un moyen de joindre. Un artisan qui n’a besoin que d’un numéro peut s’en passer. Je le dis avant de chiffrer.
 
 Ça veut dire : le site existe, Google ne le relie pas encore à votre nom. Ça se regarde en une heure. La [FAQ](/faq/) : un seul interlocuteur, l’atelier à Saint-Laurent-Médoc.
 

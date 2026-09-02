@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/creation-site-web-bassin-arcachon/`;
 export const metadata: Metadata = {
   title: "Création de site web sur le Bassin d’Arcachon",
   description:
-    "Sites pour assos, commerces et studios du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine dès ~800 €. Travail depuis le Médoc.",
+    "Sites pour assos, commerces et studios du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 €. Travail depuis le Médoc.",
   alternates: { canonical: PAGE_URL },
 };
 
@@ -65,7 +65,8 @@ export default function BassinPage() {
           </p>
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
           <p>
-            Vitrine dès environ 800 €. Pas de packs. Hébergement, domaine,
+            Vitrine à partir de 500 €, avec un espace pour mettre à jour le
+            contenu. Pas de packs. Hébergement, domaine,
             maintenance :{" "}
             <Link href="/maintenance-site-web/" className="text-accent hover:underline">
               page maintenance
