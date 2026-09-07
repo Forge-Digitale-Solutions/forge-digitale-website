@@ -39,7 +39,7 @@ export function Hero() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="fds-eyebrow mb-6"
             >
-              01 / Atelier numérique · Médoc
+              01 / Créateur de sites · Médoc
             </motion.p>
 
             <motion.h1
@@ -48,8 +48,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
               className="font-display text-2xl font-bold uppercase leading-[1.04] tracking-tight text-text-strong text-balance sm:text-4xl md:text-5xl"
             >
-              L&rsquo;Artisanat Numérique{" "}
-              <span className="text-accent">au service du Médoc</span>
+              Des sites internet utiles,{" "}
+              <span className="text-accent">faits dans le Médoc</span>
             </motion.h1>
 
             <motion.p

@@ -31,16 +31,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const servicePages = [
-    { route: "/creation-site-web", lastModified: "2026-06-02" },
+    { route: "/creation-site-web", lastModified: "2026-09-07" },
     { route: "/developpeur-medoc", lastModified: "2026-06-02" },
     { route: "/maintenance-site-web", lastModified: "2026-08-23" },
-    { route: "/installation-linux", lastModified: "2026-06-17" },
-    { route: "/montage-pc", lastModified: "2026-06-02" },
-    { route: "/faq", lastModified: "2026-08-23" },
-    { route: "/atelier-saint-laurent-medoc", lastModified: "2026-08-23" },
-    { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-08-23" },
-    { route: "/site-internet-artisan-medoc", lastModified: "2026-08-23" },
-    { route: "/creation-site-internet-medoc", lastModified: "2026-08-25" },
+    { route: "/installation-linux", lastModified: "2026-09-07" },
+    { route: "/montage-pc", lastModified: "2026-09-07" },
+    { route: "/faq", lastModified: "2026-09-07" },
+    { route: "/rendez-vous-saint-laurent-medoc", lastModified: "2026-09-07" },
+    { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-09-07" },
+    { route: "/site-internet-artisan-medoc", lastModified: "2026-09-07" },
+    { route: "/creation-site-internet-medoc", lastModified: "2026-09-07" },
   ].map(
     ({ route, lastModified }) => ({
       url: `${baseUrl}${route}`,

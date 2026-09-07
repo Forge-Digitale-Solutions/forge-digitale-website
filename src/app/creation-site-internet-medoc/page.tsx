@@ -129,9 +129,9 @@ export default function CreationSiteInternetMedocPage() {
           </p>
           <p>
             Un site internet se fait très bien à distance. Le rendez-vous
-            physique est l&rsquo;exception. Si on se voit, c&rsquo;est à
-            l&rsquo;atelier, sur rendez-vous, ou dans un rayon d&rsquo;environ 50
-            km, sur devis.
+            physique est l&rsquo;exception. Si on se voit, c&rsquo;est RDV en
+            lieu public ou visio, ou dans un rayon d&rsquo;environ 50 km, sur
+            devis.
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">
@@ -158,21 +158,19 @@ export default function CreationSiteInternetMedocPage() {
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">
-            L&rsquo;atelier, à Saint-Laurent-Médoc
+            Où je suis basé
           </h2>
           <p>
-            Atelier privé, 6 rue Saint-Julien, 33112 Saint-Laurent-Médoc. Sur
-            rendez-vous. Ce n&rsquo;est pas une boutique : on ne passe pas
-            déposer un dossier sans avoir appelé.
+            RDV en lieu public ou visio ; pas d&rsquo;accueil chez moi.
           </p>
           <p>
             Ma fiche Google est une zone de service. Pas d&rsquo;adresse de rue
             dessus. Ne venez pas à une adresse trouvée sur Maps. Le lieu :{" "}
             <Link
-              href="/atelier-saint-laurent-medoc/"
+              href="/rendez-vous-saint-laurent-medoc/"
               className="text-accent hover:underline"
             >
-              page atelier
+              Rendez-vous
             </Link>
             .
           </p>
@@ -230,8 +228,8 @@ export default function CreationSiteInternetMedocPage() {
               Faut-il venir jusqu&rsquo;à Saint-Laurent-Médoc ?
             </strong>
             <br />
-            Non pour un site internet. Téléphone, visio, formulaire. Le
-            rendez-vous à l&rsquo;atelier, s&rsquo;il y a une raison de se voir.
+            Non pour un site internet. Téléphone, visio, formulaire. Un RDV en
+            lieu public, s&rsquo;il y a une raison de se voir.
           </p>
           <p>
             <strong>Vous vous occupez de tout après ?</strong>

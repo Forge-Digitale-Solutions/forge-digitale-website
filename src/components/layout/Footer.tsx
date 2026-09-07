@@ -15,7 +15,7 @@ export function Footer() {
               Forge <span className="text-accent">Digitale Solutions</span>
             </h3>
             <p className="text-soft text-sm leading-relaxed">
-              L&apos;artisanat numérique au service du Médoc.
+              Création de sites internet dans le Médoc.
               <br />
               Solutions web sur-mesure et expertise hardware haute performance.
             </p>
@@ -84,10 +84,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/atelier-saint-laurent-medoc/"
+                  href="/rendez-vous-saint-laurent-medoc/"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
-                  Atelier Saint-Laurent-Médoc
+                  Rendez-vous
                 </Link>
               </li>
               <li>

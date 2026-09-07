@@ -1,7 +1,7 @@
 ---
 title: "Automatiser ses sauvegardes sous Linux : la mettre en place et la tester"
 date: "2026-07-17"
-lastModified: "2026-07-19"
+lastModified: "2026-09-07"
 category: "Hardware"
 excerpt: "Une sauvegarde qui tourne toute seule ne vaut que si elle se restaure vraiment. Sous Linux, quelques outils installés une fois suffisent à protéger le système d'un côté, les fichiers clients de l'autre, avec chiffrement et copie hors site. Le guide pratique pour un poste professionnel, et la seule vérification qui compte : tester la restauration."
 image: "/blog/sauvegarde-automatique-linux.jpg"
@@ -41,4 +41,4 @@ Programmer une sauvegarde simple et restaurer un fichier test prennent peu de te
 
 Pour un poste professionnel sous Linux, la configuration fiable tient en trois briques : Timeshift pour le système, Déjà Dup chiffré pour les données quotidiennes, une copie hors ligne ou externalisée pour le hors-site. L'automatisation fait l'essentiel du travail ; les alertes et les tests confirment qu'elle continue de fonctionner.
 
-Je mets cette chaîne en place en atelier à **Saint-Laurent-Médoc**, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon, avec un premier test de restauration fait ensemble pour vérifier qu'elle répond présent le jour venu. [Me contacter](/#contact).
+Je mets cette chaîne en place sur rendez-vous depuis **Saint-Laurent-Médoc**, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon, avec un premier test de restauration fait ensemble pour vérifier qu'elle répond présent le jour venu. [Me contacter](/#contact).

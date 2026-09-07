@@ -167,7 +167,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-faint font-medium uppercase tracking-wide">
-                    Atelier
+                    Zone
                   </p>
                   <p className="text-text-strong text-lg font-medium">
                     Saint-Laurent-Médoc (33112)

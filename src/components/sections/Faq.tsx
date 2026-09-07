@@ -250,18 +250,15 @@ const faqData: FaqCategory[] = [
         question: "Intervenez-vous à domicile ?",
         answer: (
           <p>
-            Pour garantir une qualité de service optimale (bancs de test,
-            outillage de précision, connexions), je réalise toutes les
-            interventions <strong>dans mon atelier privé</strong> à
-            Saint-Laurent-Médoc.
+            Je ne reçois pas le public chez moi. Pour le web : visio, téléphone,
+            ou RDV en lieu public. Pour un PC : récupération sur rendez-vous.
             <br />
             <br />
-            Je ne reçois pas de public sans rendez-vous. Je conviens avec vous
-            d&apos;un créneau pour le{" "}
+            On calcule un créneau pour le{" "}
             <strong>dépôt et la récupération du matériel</strong>.
             <br />
-            Les déplacements sont exceptionnels et font l&apos;objet d&apos;une
-            facturation spécifique sur devis.
+            Les déplacements sont exceptionnels, devis, environ 50 km (Médoc,
+            Bassin, Bordeaux).
           </p>
         ),
       },

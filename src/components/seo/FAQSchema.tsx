@@ -48,7 +48,7 @@ export function FAQSchema() {
         name: "Intervenez-vous à domicile ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Pour garantir une qualité optimale, je réalise toutes les interventions dans mon atelier privé à Saint-Laurent-Médoc avec bancs de test et outillage de précision. Les déplacements sont exceptionnels et font l'objet d'une facturation sur devis.",
+          text: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Déplacements exceptionnels, devis, environ 50 km (Médoc, Bassin, Bordeaux).",
         },
       },
     ],

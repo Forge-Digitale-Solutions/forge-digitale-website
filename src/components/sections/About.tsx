@@ -80,7 +80,7 @@ export function About() {
                     Ancrage Local
                   </h3>
                   <p className="text-muted text-xs mt-1">
-                    Atelier basé à St Laurent Medoc
+                    Basé à Saint-Laurent-Médoc
                   </p>
                 </div>
               </div>

@@ -139,7 +139,7 @@ export default function CreationSiteWebPage() {
 
         <p className="mt-10 text-lg text-soft leading-relaxed">
             Pour une vitrine TPE dans le Médoc (ordre de prix, déroulement,
-            atelier) :{" "}
+            zone) :{" "}
             <Link
               href="/creation-site-internet-medoc/"
               className="text-accent hover:underline"

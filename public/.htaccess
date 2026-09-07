@@ -2,6 +2,9 @@ Options -Indexes
 DirectoryIndex index.html
 RewriteEngine On
 
+# Ancienne URL atelier -> rendez-vous. Un saut vers https apex (query conservée).
+RewriteRule ^atelier-saint-laurent-medoc(?:\.html|/index\.html)?/?$ https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/ [R=301,L]
+
 # Un saut : http et/ou www -> https apex. `^` matche aussi la homepage (`.` ne matchait pas `/`).
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.forgedigitalesolutions\.com [NC]

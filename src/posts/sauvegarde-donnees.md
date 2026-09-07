@@ -1,7 +1,7 @@
 ---
 title: "Sauvegarder ses données : comprendre la règle du 3-2-1"
 date: "2026-05-22"
-lastModified: "2026-07-19"
+lastModified: "2026-09-07"
 category: "Hardware"
 excerpt: "Panne de disque, rançongiciel, fausse manœuvre : les causes de perte de données sont nombreuses et ordinaires. Les principes d'une sauvegarde fiable tiennent pourtant en une règle simple, le 3-2-1. Explications pour les particuliers et les professionnels, sous Windows comme sous Linux."
 image: "/blog/sauvegarde-donnees.jpg"
@@ -66,4 +66,4 @@ Pour beaucoup de particuliers et de petites entreprises, un disque externe assoc
 
 ---
 
-*En pratique :* la configuration d'une sauvegarde fiable se fait une fois pour toutes. Je la mets en place en atelier à Saint-Laurent-Médoc, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).
+*En pratique :* la configuration d'une sauvegarde fiable se fait une fois pour toutes. Je la mets en place sur rendez-vous depuis Saint-Laurent-Médoc, pour les particuliers et professionnels du Médoc et du Bassin d'Arcachon. [Me contacter](/#contact).
