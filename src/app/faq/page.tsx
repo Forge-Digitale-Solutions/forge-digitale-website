@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/faq/`;
 export const metadata: Metadata = {
   title: "FAQ : sites web, montage PC et Linux à Saint-Laurent-Médoc",
   description:
-    "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Atelier à Saint-Laurent-Médoc, sur rendez-vous.",
+    "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Saint-Laurent-Médoc, sur rendez-vous.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "FAQ : sites web, montage PC et Linux à Saint-Laurent-Médoc",
     description:
-      "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Atelier à Saint-Laurent-Médoc, sur rendez-vous.",
+      "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Saint-Laurent-Médoc, sur rendez-vous.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -53,7 +53,7 @@ const qa = [
   },
   {
     q: "Comment se passe le montage ? Dois-je acheter les pièces ?",
-    a: "Oui : les pièces sont à votre nom (factures et garanties). Forfait 149 € à l’atelier.",
+    a: "Oui : les pièces sont à votre nom (factures et garanties). Forfait 149 €, après récupération de la machine sur rendez-vous.",
   },
   {
     q: "Le forfait 149 € inclut-il Windows ?",
@@ -61,7 +61,7 @@ const qa = [
   },
   {
     q: "Pourquoi pas un PC tout fait ?",
-    a: "Le budget va sur les bonnes pièces, le montage se fait à l’atelier.",
+    a: "Le budget va sur les bonnes pièces, le montage chez moi, sur créneau.",
   },
   {
     q: "Une pièce tombe en panne plus tard ?",
@@ -85,7 +85,7 @@ const qa = [
   },
   {
     q: "Intervenez-vous à domicile ?",
-    a: "Ce n’est pas l’offre phare. Atelier privé à Saint-Laurent-Médoc, sur rendez-vous. Déplacements exceptionnels, sur devis, environ 50 km (Médoc, Bassin, Bordeaux).",
+    a: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Déplacements exceptionnels, devis, environ 50 km (Médoc, Bassin, Bordeaux).",
   },
   {
     q: "Sans rendez-vous ?",
@@ -140,7 +140,7 @@ export default function FaqPage() {
             Questions fréquentes
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-            FAQ : sites, PC et Linux — les questions que l&rsquo;on me pose vraiment
+            FAQ : sites, PC et Linux, les questions que l&rsquo;on me pose vraiment
           </h1>
         </header>
 
@@ -150,9 +150,9 @@ export default function FaqPage() {
             (EI, SIREN 100 857 838), titulaire du titre professionnel de
             Concepteur Développeur d&rsquo;Applications, et je bricole le web et
             le matériel depuis plus de 20 ans. Un seul interlocuteur : moi. Cette
-            page rassemble les questions que l&rsquo;on me pose le plus souvent —
-            à l&rsquo;atelier de Saint-Laurent-Médoc, au téléphone ou avant un
-            devis. Elle complète les pages services, elle ne les remplace pas.
+            page rassemble les questions que l&rsquo;on me pose le plus souvent,
+            à Saint-Laurent-Médoc, au téléphone ou avant un devis. Elle complète
+            les pages services, elle ne les remplace pas.
           </p>
           <p>
             Si vous cherchez le détail d&rsquo;une prestation :{" "}
@@ -253,8 +253,8 @@ export default function FaqPage() {
             <h2 className="text-2xl font-bold text-text-strong">Montage PC</h2>
             <Qa q="Comment se passe le montage ? Dois-je acheter les pièces ?">
               <p>
-                Oui : pièces à votre nom (factures et garanties). Forfait 149 € à
-                l&rsquo;atelier.{" "}
+                Oui : pièces à votre nom (factures et garanties). Forfait 149 €,
+                après récupération de la machine sur rendez-vous.{" "}
                 <Link href="/montage-pc/" className="text-accent hover:underline">
                   Montage PC
                 </Link>
@@ -265,7 +265,7 @@ export default function FaqPage() {
               <p>Non. Licence à part, ou Linux.</p>
             </Qa>
             <Qa q="Pourquoi pas un PC tout fait ?">
-              <p>Budget sur les bonnes pièces, montage atelier.</p>
+              <p>Budget sur les bonnes pièces, montage chez moi, sur créneau.</p>
             </Qa>
             <Qa q="Pièce en panne plus tard ?">
               <p>
@@ -306,10 +306,11 @@ export default function FaqPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-text-strong">Atelier et déplacements</h2>
+            <h2 className="text-2xl font-bold text-text-strong">Rendez-vous et déplacements</h2>
             <Qa q="À domicile ?">
               <p>
-                Pas l&rsquo;offre phare. Atelier privé à Saint-Laurent-Médoc, sur
+                Je ne reçois pas le public chez moi. Pour le web : visio,
+                téléphone, ou RDV en lieu public. Pour un PC : récupération sur
                 rendez-vous. Déplacements exceptionnels, devis, environ 50 km
                 (Médoc, Bassin, Bordeaux).
               </p>

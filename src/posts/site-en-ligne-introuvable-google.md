@@ -2,13 +2,13 @@
 title: "Mon site n’apparaît pas sur Google : ce qui bloque vraiment"
 h1: "Mon site est en ligne. Personne ne le trouve."
 date: "2026-08-28"
-lastModified: "2026-08-28"
+lastModified: "2026-09-07"
 category: "Web"
 excerpt: "Le site est en ligne, on tape le nom de l’entreprise, Google n’affiche rien. Ce n’est pas une histoire de ranking : cinq blocages concrets à vérifier."
 image: "/blog/site-en-ligne-introuvable-google.jpg"
 ---
 
-J’ai mis le site en ligne. J’ai ouvert Google, j’ai tapé « Forge Digitale Solutions ». Ce qui est sorti, ce n’était pas ma page. Un homonyme, une vieille mention, pas l’atelier.
+J’ai mis le site en ligne. J’ai ouvert Google, j’ai tapé « Forge Digitale Solutions ». Ce qui est sorti, ce n’était pas ma page. Un homonyme, une vieille mention, pas le site.
 
 Le même geste, je le vois chez des artisans du Médoc. On tape le nom de l’entreprise, comme un client qui a le carton dans la poche. Google affiche autre chose, ou rien. Le réflexe, c’est de conclure qu’il « faut du référencement ». Souvent, le site n’est simplement pas rattaché au nom.
 
@@ -44,7 +44,7 @@ Ouvrez le site et regardez l’onglet. Le nom de l’entreprise doit y figurer d
 
 Google recoupe le nom, l’adresse et le téléphone. Quand ces trois éléments ne disent pas la même chose partout, le moteur n’a plus une entreprise : il en a deux versions. Il hésite.
 
-Une adresse dans le pied de page, une autre dans le code structuré, héritée d’un ancien local. J’ai déjà eu ce décalage ici : le chemin de la Mienne d’un côté, le 6 rue Saint-Julien, 33112 Saint-Laurent-Médoc de l’autre. Pour un visiteur, la page est claire. Pour un robot, l’atelier a déménagé et pas déménagé.
+Une adresse dans le pied de page, une autre dans le code structuré, héritée d’un ancien local. J’ai déjà eu ce décalage ici : le chemin de la Mienne d’un côté, le 6 rue Saint-Julien, 33112 Saint-Laurent-Médoc de l’autre. Pour un visiteur, la page est claire. Pour un robot, l’adresse a déménagé et pas déménagé.
 
 Regardez la page contact, le pied de page, et le code source (clic droit, chercher l’ancienne rue). Le téléphone aussi : un mobile sur le site et un fixe oublié plus bas, c’est la même contradiction.
 
@@ -72,7 +72,7 @@ Lisez votre page d’accueil à voix haute, en ignorant le logo. Est-ce qu’on 
 
 Ça ne veut pas dire non plus qu’un site est obligatoire. Une vitrine claire ([création de site web](/creation-site-web/)) commence à partir de 500 € quand elle sert vraiment : le métier, l’adresse, un moyen de joindre. Un artisan qui n’a besoin que d’un numéro peut s’en passer. Je le dis avant de chiffrer.
 
-Ça veut dire : le site existe, Google ne le relie pas encore à votre nom. Ça se regarde en une heure. La [FAQ](/faq/) : un seul interlocuteur, l’atelier à Saint-Laurent-Médoc.
+Ça veut dire : le site existe, Google ne le relie pas encore à votre nom. Ça se regarde en une heure. La [FAQ](/faq/) : un seul interlocuteur, depuis Saint-Laurent-Médoc.
 
 ## Par où commencer
 

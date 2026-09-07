@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/installation-linux/`;
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
   description:
-    "Votre PC est trop ancien pour Windows 11, ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour le relancer, dans mon atelier de Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
+    "Votre PC est trop ancien pour Windows 11, ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour le relancer, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
   keywords: [
     "installation Linux Médoc",
     "passage Windows à Linux",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
     description:
-      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, dans mon atelier de Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
+      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-mint.jpg`,
@@ -46,7 +46,7 @@ const serviceSchema = {
   name: "Installation Linux et passage de Windows à Linux Mint",
   serviceType: "Installation de système d'exploitation",
   description:
-    "Installation de Linux Mint en remplacement de Windows pour prolonger la durée de vie d'un PC ancien. Forfait Renaissance clé en main, dans l'atelier de Saint-Laurent-Médoc.",
+    "Installation de Linux Mint en remplacement de Windows pour prolonger la durée de vie d'un PC ancien. Forfait Renaissance clé en main, depuis Saint-Laurent-Médoc.",
   url: PAGE_URL,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Médoc" },
@@ -103,7 +103,7 @@ export default function InstallationLinuxPage() {
             Votre ordinateur rame, ou Windows ne le suit plus ? Avant de le
             remplacer, il y a souvent une autre option. J&rsquo;installe Linux
             Mint à la place de Windows, et la machine repart pour plusieurs
-            années. C&rsquo;est mon forfait Renaissance, dans mon atelier de
+            années. C&rsquo;est mon forfait Renaissance, depuis
             Saint-Laurent-Médoc, pour tout le Médoc et le Bassin d&rsquo;Arcachon.
           </p>
 
@@ -137,8 +137,8 @@ export default function InstallationLinuxPage() {
             fichiers avant l&rsquo;opération, le nettoyage de la machine,
             l&rsquo;installation de Linux Mint configuré pour ressembler à
             Windows, le réglage des périphériques (Wi-Fi, imprimante, son) et une
-            heure de prise en main avec vous. Le tout pour 69 €, dans mon atelier
-            de Saint-Laurent-Médoc, en deux heures environ.
+            heure de prise en main avec vous. Le tout pour 69 €, depuis
+            Saint-Laurent-Médoc, en deux heures environ.
           </p>
 
           <p>
@@ -176,9 +176,9 @@ export default function InstallationLinuxPage() {
 
         <section className="mt-12 pt-8 border-t border-default">
           <p className="text-soft mb-6">
-            Votre PC mérite peut-être une seconde vie. Apportez-le-moi, je vous dis
-            franchement ce qu&rsquo;il vaut encore. Le diagnostic est gratuit,
-            dans mon atelier de Saint-Laurent-Médoc.
+            Votre PC mérite peut-être une seconde vie. On calcule un créneau : je
+            récupère le PC. Pas d&rsquo;accueil boutique. Diagnostic gratuit, sur
+            rendez-vous.
           </p>
           <Link
             href="/#contact"

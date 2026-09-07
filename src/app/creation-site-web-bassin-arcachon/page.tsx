@@ -57,8 +57,8 @@ export default function BassinPage() {
             </Link>
             . Pas besoin de venir à Saint-Laurent-Médoc pour un site. RDV
             physique = exception, devis, environ 50 km.{" "}
-            <Link href="/atelier-saint-laurent-medoc/" className="text-accent hover:underline">
-              L&rsquo;atelier
+            <Link href="/rendez-vous-saint-laurent-medoc/" className="text-accent hover:underline">
+              Rendez-vous
             </Link>
             . Un interlocuteur, titre CDA, plus de 20 ans. Preuves : FDS,
             GoSportNow, Charcuterie Campagnarde, Atelier Hardware, HVS, RHSB.

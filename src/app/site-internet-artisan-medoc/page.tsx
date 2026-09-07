@@ -65,8 +65,8 @@ export default function ArtisanPage() {
             </Link>
             . Zone : Saint-Laurent-Médoc, Lesparre, Pauillac, Castelnau ; Bassin
             et Bordeaux si le projet s&rsquo;y prête.{" "}
-            <Link href="/atelier-saint-laurent-medoc/" className="text-accent hover:underline">
-              L&rsquo;atelier
+            <Link href="/rendez-vous-saint-laurent-medoc/" className="text-accent hover:underline">
+              Rendez-vous
             </Link>
             .
           </p>
