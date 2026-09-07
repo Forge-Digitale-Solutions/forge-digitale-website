@@ -97,7 +97,7 @@ export function About() {
             <div className="relative aspect-square rounded-xl overflow-hidden border border-default shadow-lg bg-surface-card">
               <Image
                 src="/images/about_picture.jpg"
-                alt="Anthony Marcelin dans son atelier de développement web et montage PC à Saint-Laurent-Médoc"
+                alt="Anthony Marcelin, créateur de sites à Saint-Laurent-Médoc"
                 fill
                 className="object-cover"
                 priority
