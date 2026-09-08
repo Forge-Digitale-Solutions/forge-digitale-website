@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   description:
     "Sites pour assos, commerces et studios du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 €. Travail depuis le Médoc.",
   alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: PAGE_URL,
+    siteName: "Forge Digitale Solutions",
+    title: "Création de site web sur le Bassin d’Arcachon",
+    description:
+      "Sites pour assos, commerces et studios du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 €. Travail depuis le Médoc.",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Création de site web sur le Bassin d’Arcachon, Forge Digitale Solutions",
+      },
+    ],
+  },
 };
 
 export default function BassinPage() {

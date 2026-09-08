@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   description:
     "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. À partir de 500 €, devis sans packs. Site et fiche Google, chacun son rôle.",
   alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: PAGE_URL,
+    siteName: "Forge Digitale Solutions",
+    title: "Site internet pour artisan et commerçant dans le Médoc",
+    description:
+      "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. À partir de 500 €, devis sans packs. Site et fiche Google, chacun son rôle.",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Site internet pour artisan et commerçant dans le Médoc, Forge Digitale Solutions",
+      },
+    ],
+  },
 };
 
 export default function ArtisanPage() {
