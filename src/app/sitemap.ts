@@ -38,8 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/montage-pc", lastModified: "2026-09-07" },
     { route: "/faq", lastModified: "2026-09-07" },
     { route: "/rendez-vous-saint-laurent-medoc", lastModified: "2026-09-07" },
-    { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-09-07" },
-    { route: "/site-internet-artisan-medoc", lastModified: "2026-09-07" },
+    { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-09-08" },
+    { route: "/site-internet-artisan-medoc", lastModified: "2026-09-08" },
     { route: "/creation-site-internet-medoc", lastModified: "2026-09-07" },
   ].map(
     ({ route, lastModified }) => ({
