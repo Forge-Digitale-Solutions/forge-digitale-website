@@ -67,14 +67,6 @@ const STATIC_FALLBACK: PlaceInfo = {
       relativeTime: "",
       date: "2026-05-23",
     },
-    {
-      authorName: "Zilya",
-      authorPhotoUrl: "",
-      rating: 5,
-      text: "J'ai fait appel à ses services pour une remise à neuf de mon ordinateur pour mes études. J'avais un vieil ordinateur sous Windows 7 qui était lent. Je suis maintenant sur Linux Mint, l'ordinateur a repris une seconde jeunesse, fluide et simple à utiliser. Ce monsieur a été très pédagogue pour la prise en main prévue dans la prestation. Je recommande chaudement.",
-      relativeTime: "",
-      date: "2026-05-16",
-    },
   ],
 };
 
