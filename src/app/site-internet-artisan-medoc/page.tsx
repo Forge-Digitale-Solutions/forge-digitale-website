@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: TITLE,
     description: DESCRIPTION,
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Site internet pour artisan et commerçant dans le Médoc, Forge Digitale Solutions",
+      },
+    ],
   },
 };
 
