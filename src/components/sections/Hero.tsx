@@ -48,8 +48,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
               className="font-display text-2xl font-bold uppercase leading-[1.04] tracking-tight text-text-strong text-balance sm:text-4xl md:text-5xl"
             >
-              Des sites internet utiles,{" "}
-              <span className="text-accent">faits dans le Médoc</span>
+              L&rsquo;Artisanat Numérique{" "}
+              <span className="text-accent">au service du Médoc</span>
             </motion.h1>
 
             <motion.p
@@ -61,7 +61,8 @@ export function Hero() {
               <strong className="font-semibold text-text-strong">
                 Création de sites web et d&rsquo;applications sur-mesure
               </strong>
-              , montage PC et installation Linux. Développeur indépendant dans le{" "}
+              , maintenance, montage PC et installation Linux. Développeur
+              indépendant dans le{" "}
               <strong className="font-semibold text-text-strong">Médoc</strong>, au
               service des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
             </motion.p>
