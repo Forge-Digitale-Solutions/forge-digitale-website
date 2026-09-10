@@ -51,11 +51,6 @@ const profileSchema = {
     { "@type": "Place", name: "Bassin d'Arcachon" },
     { "@type": "AdministrativeArea", name: "Gironde" },
   ],
-  founder: {
-    "@type": "Person",
-    name: "Anthony Marcelin",
-    jobTitle: "Concepteur Développeur d'Applications",
-  },
   provider: {
     "@id": `${SITE_URL}/#business`,
   },
