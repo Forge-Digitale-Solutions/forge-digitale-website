@@ -53,9 +53,7 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Gironde" },
   ],
   provider: {
-    "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
-    name: "Forge Digitale Solutions",
   },
   offers: {
     "@type": "Offer",

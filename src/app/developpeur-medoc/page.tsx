@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 const profileSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Service",
   name: "Forge Digitale Solutions, développeur web dans le Médoc",
   description:
     "Développeur web indépendant installé dans le Médoc, spécialisé dans la création de sites internet et d'applications sur-mesure pour les professionnels de la Gironde et du Bassin d'Arcachon.",
@@ -57,9 +57,7 @@ const profileSchema = {
     jobTitle: "Concepteur Développeur d'Applications",
   },
   provider: {
-    "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
-    name: "Forge Digitale Solutions",
   },
 };
 
