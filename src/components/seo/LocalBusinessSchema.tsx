@@ -22,7 +22,6 @@ export function LocalBusinessSchema() {
     logo: "https://forgedigitalesolutions.com/logos/Logo1rond.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "6 rue Saint-Julien",
       addressLocality: "Saint-Laurent-Médoc",
       postalCode: "33112",
       addressRegion: "Nouvelle-Aquitaine",
@@ -109,7 +108,6 @@ export function LocalBusinessSchema() {
             serviceType: "Web Development",
             areaServed: "Gironde",
             provider: {
-              "@type": "LocalBusiness",
               "@id": "https://forgedigitalesolutions.com/#business"
             }
           },
@@ -124,7 +122,6 @@ export function LocalBusinessSchema() {
             serviceType: "Website Maintenance",
             areaServed: "Gironde",
             provider: {
-              "@type": "LocalBusiness",
               "@id": "https://forgedigitalesolutions.com/#business"
             }
           },
@@ -139,7 +136,6 @@ export function LocalBusinessSchema() {
             serviceType: "Computer Assembly",
             areaServed: "Gironde",
             provider: {
-              "@type": "LocalBusiness",
               "@id": "https://forgedigitalesolutions.com/#business"
             }
           },
@@ -161,7 +157,6 @@ export function LocalBusinessSchema() {
             serviceType: "Computer Repair",
             areaServed: "Gironde",
             provider: {
-              "@type": "LocalBusiness",
               "@id": "https://forgedigitalesolutions.com/#business"
             }
           },
@@ -188,57 +183,6 @@ export function LocalBusinessSchema() {
       "Montage PC",
       "Green IT",
       "Développement web Gironde"
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "6",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "ANTHONY LGD" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "1er rdv dans un café pour faire une \"interview client\", le lendemain la maquette de mon site était prête et correspondait parfaitement a mes attentes",
-        datePublished: "2026-06-16",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Anthony Di Sant'Agostino" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "il a supprimer tous les problème de mon pc en moins de 5min, je recommande",
-        datePublished: "2026-06-16",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Lorenzo" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Développeur sérieux et efficace. Travail de qualité et très bonne communication. Merci beaucoup Anthony.",
-        datePublished: "2026-06-06",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Martin Ferret" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Anthony communique énormément lorsqu'il s'engage sur un projet, livre dans les temps et un produit de qualité.",
-        datePublished: "2026-06-02",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "David Moussiron" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Très pro et très réactif. Merci pour votre travail.",
-        datePublished: "2026-05-28",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Stéphanie Cornut" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "À l'écoute, réactif, sérieux.",
-        datePublished: "2026-05-19",
-      },
     ],
   };
 

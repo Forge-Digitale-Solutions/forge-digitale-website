@@ -14,8 +14,9 @@ Site vitrine + blog pour un artisan numérique à Saint-Laurent-Médoc (Gironde)
 Infrastructure en place :
 - `robots.ts` + `sitemap.ts` (Next.js)
 - `.htaccess` : 301 www / HTTP→HTTPS ; `/feed` en 404 (RSS retiré, pas de route `/feed`)
-- `LocalBusinessSchema` : NAP (`streetAddress` 6 rue Saint-Julien), **sans** `geo` / GeoCircle (fiche GBP = zone de service), `sameAs` Facebook + LinkedIn (pas X)
-- `aggregateRating.reviewCount` et `review[]` alignés sur **6** avis GBP
+- `LocalBusinessSchema` : un seul LocalBusiness sitewide (`#business`), locality / region / `areaServed`, **sans** `streetAddress`, **sans** `geo` / GeoCircle (fiche GBP = zone de service), `sameAs` Facebook + LinkedIn (pas X)
+- Pas d’`aggregateRating` ni de `review[]` dans le JSON-LD LocalBusiness (GSC : extraits d’avis invalides). Avis visibles en HTML (`Reviews` / GBP) uniquement
+- NAP rue (`6 rue Saint-Julien`) : Footer + mentions légales, hors schema public
 - `FAQSchema` sur la homepage ; breadcrumbs + `ArticleSchema` sur le blog
 - HTTPS, Umami auto-hébergé (sans cookie)
 - Open Graph : layout (accueil) + métadonnées dédiées sur pages services / légales / landing locales
@@ -95,7 +96,7 @@ Umami : https://stats.forgedigitalesolutions.com/ (anonyme, sans cookie).
 
 Saint-Laurent-Médoc (33112). Zone ~50 km (Médoc, Bassin d’Arcachon, Bordeaux). FR uniquement.
 
-Schema : `areaServed` (villes / zones), pas de coordonnées GPS dans le JSON-LD.
+Schema : `areaServed` (villes / zones), pas de `streetAddress` ni de coordonnées GPS dans le JSON-LD. Rue affichée en HTML (Footer, mentions légales) uniquement.
 
 ---
 
@@ -109,4 +110,4 @@ Schema : `areaServed` (villes / zones), pas de coordonnées GPS dans le JSON-LD.
 
 ---
 
-**Dernière mise à jour** : 8 septembre 2026
+**Dernière mise à jour** : 10 septembre 2026
