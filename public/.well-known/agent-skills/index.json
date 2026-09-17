@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "fds-site-facts",
+      "type": "skill-md",
+      "description": "Use this when you need Forge Digitale Solutions identity, contact, service area, or entry pricing — fetch the public read-only JSON.",
+      "url": "/.well-known/agent-skills/fds-site-facts/SKILL.md",
+      "digest": "sha256:e22a6ecc1c9b2be4243614c1f2bc26b0d666879deb0c9c3a3d71c3cc91f8a7cc"
+    },
+    {
+      "name": "fds-read-llms",
+      "type": "skill-md",
+      "description": "Use this when you need a markdown index of Forge Digitale Solutions public pages — fetch llms.txt.",
+      "url": "/.well-known/agent-skills/fds-read-llms/SKILL.md",
+      "digest": "sha256:ce06ee91f2f74aefa3a49cb3006f3cc01973afa89e43c97fc933dde72603ab20"
+    },
+    {
+      "name": "fds-public-pages",
+      "type": "skill-md",
+      "description": "Use this when answering about FDS website creation, FAQ, atelier rendez-vous, or blog — open the matching public URL.",
+      "url": "/.well-known/agent-skills/fds-public-pages/SKILL.md",
+      "digest": "sha256:1622333e15cf19183552a97ac2c6ca88a2e12705e393033ca7fca0f2dd13cf40"
+    }
+  ]
+}

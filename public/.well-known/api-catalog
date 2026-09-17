@@ -38,6 +38,18 @@
           "type": "text/markdown",
           "hreflang": "fr",
           "title": "Pas d'auth agent publique"
+        },
+        {
+          "href": "https://forgedigitalesolutions.com/.well-known/agent-skills/index.json",
+          "type": "application/json",
+          "hreflang": "fr",
+          "title": "Agent Skills index (lecture seule)"
+        },
+        {
+          "href": "https://forgedigitalesolutions.com/.well-known/ai-catalog.json",
+          "type": "application/json",
+          "hreflang": "fr",
+          "title": "ARD / AI Catalog"
         }
       ],
       "service-desc": [

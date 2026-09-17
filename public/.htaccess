@@ -4,7 +4,7 @@ RewriteEngine On
 
 # === agent-ready (isitagentready) ===
 <IfModule mod_headers.c>
-  Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"describedby\"; type=\"application/xml\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
+  Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"describedby\"; type=\"application/xml\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\", </.well-known/agent-skills/index.json>; rel=\"describedby\"; type=\"application/json\", </.well-known/ai-catalog.json>; rel=\"describedby\"; type=\"application/json\""api-catalog\"; type=\"application/linkset+json\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"describedby\"; type=\"application/xml\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
   Header always set Content-Signal "search=yes, ai-input=yes, ai-train=no"
   Header append Vary Accept
 </IfModule>
@@ -105,4 +105,14 @@ ErrorDocument 404 /404.html
     Header set Access-Control-Allow-Origin "*"
     Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
   </Files>
+</IfModule>
+
+# === agent-ready CORS skills/ard ===
+<IfModule mod_headers.c>
+  <FilesMatch "^(index\.json|ai-catalog\.json)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+    Header set Access-Control-Allow-Headers "Accept, Content-Type"
+    Header set Content-Type "application/json; charset=utf-8"
+  </FilesMatch>
 </IfModule>
