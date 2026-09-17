@@ -2,6 +2,46 @@ Options -Indexes
 DirectoryIndex index.html
 RewriteEngine On
 
+# === agent-ready (isitagentready) ===
+<IfModule mod_headers.c>
+  Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"describedby\"; type=\"application/xml\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
+  Header always set Content-Signal "search=yes, ai-input=yes, ai-train=no"
+  Header append Vary Accept
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  # Markdown negotiation (Accept: text/markdown) — before DirectoryIndex HTML
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{REQUEST_URI} ^/$ [OR]
+  RewriteCond %{REQUEST_URI} ^/index\.html$
+  RewriteCond %{DOCUMENT_ROOT}/index.md -f
+  RewriteRule ^.*$ /index.md [L]
+
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.md -f
+  RewriteRule ^(.*)$ $1/index.md [L]
+
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{REQUEST_FILENAME}.md -f
+  RewriteRule ^(.*)$ $1.md [L]
+</IfModule>
+
+<FilesMatch "\.md$">
+  ForceType text/markdown
+  <IfModule mod_headers.c>
+    Header set Content-Type "text/markdown; charset=utf-8"
+  </IfModule>
+</FilesMatch>
+
+<Files "api-catalog">
+  ForceType application/linkset+json
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/linkset+json; charset=utf-8"
+  </IfModule>
+</Files>
+
+
 # Ancienne URL atelier -> rendez-vous. Un saut vers https apex (query conservée).
 RewriteRule ^atelier-saint-laurent-medoc(?:\.html|/index\.html)?/?$ https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/ [R=301,L]
 
