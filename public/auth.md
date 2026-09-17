@@ -2,24 +2,42 @@
 
 ## Audience
 
-Agents et humains qui contactent une agence / artisan numérique local. Ce site est une vitrine : **pas de serveur OAuth**, **pas d'API protégée** pour des tiers.
+Agents et humains. Ce domaine est une **vitrine** (site statique) pour Forge Digitale Solutions (Saint-Laurent-Médoc). Raison sociale : EI Anthony Marcelin. Nom commercial : Forge Digitale Solutions.
 
 ## Registration
 
-Il n'y a **pas** d'enregistrement d'agent automatisé (ni flux « agent verified », ni « user claimed »).
+**Pas d'enregistrement d'agent.**
 
-Pour un devis ou une intervention :
+- Aucun flux « agent verified »
+- Aucun flux « user claimed »
+- Aucun `register_uri`, aucun one-shot environment, aucun claim token
+
+Les agents **ne doivent pas** tenter de provisionner un compte ou un credential sur ce domaine.
+
+Contact humain pour devis / rendez-vous :
 
 1. Formulaire : https://forgedigitalesolutions.com/#contact
 2. E-mail : contact@forgedigitalesolutions.com
 3. Téléphone : 06 45 65 96 96
 
-## OAuth / tokens
+## OAuth / OpenID
 
-Aucun endpoint d'autorisation, aucun Protected Resource Metadata, aucun jeton délivré aux agents.
+**Pas d'OAuth public, pas d'OpenID Connect.**
 
-## Capacités liées
+- Pas de `/.well-known/openid-configuration`
+- Pas de `/.well-known/oauth-authorization-server`
+- Pas de `/.well-known/oauth-protected-resource`
+- Aucun issuer, authorization_endpoint, token_endpoint ou jwks_uri publiés
+- Aucun jeton d'accès délivré aux agents
 
-- Contenu : HTML, `llms.txt`, négociation `Accept: text/markdown`
-- Découverte : `/.well-known/api-catalog` (catalogue honnête, sans API REST)
-- Pas de MCP Server Card, pas de carte A2A
+## MCP / A2A / WebMCP
+
+Pas de serveur MCP public, pas de carte A2A, pas d'outils WebMCP. Voir `/.well-known/api-catalog` et `/.well-known/ai-catalog.json` pour les ressources **lecture seule** (JSON, llms.txt, pages).
+
+## Capacités liées (lecture seule)
+
+- `GET /api/public/site.json` — faits site
+- `GET /llms.txt` — index markdown
+- `Accept: text/markdown` sur l'accueil (et pages avec `.md`)
+- Skills découverte : `/.well-known/agent-skills/index.json`
+- ARD : `/.well-known/ai-catalog.json`
