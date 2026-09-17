@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoute = {
     url: `${baseUrl}/blog`,
-    lastModified: new Date("2026-09-11"),
+    lastModified: new Date("2026-09-18"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   };
