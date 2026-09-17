@@ -23,6 +23,7 @@
 - [llms.txt](https://forgedigitalesolutions.com/llms.txt)
 - [Sitemap](https://forgedigitalesolutions.com/sitemap.xml)
 - [API catalog](https://forgedigitalesolutions.com/.well-known/api-catalog) : RFC 9727 — aucune API REST publique
+- [site.json](https://forgedigitalesolutions.com/api/public/site.json) : JSON public lecture seule (identité, contact, offre)
 - [auth.md](https://forgedigitalesolutions.com/auth.md) : pas d'enregistrement agent / pas d'OAuth public
 
 ## Capacités agents (honnête)
