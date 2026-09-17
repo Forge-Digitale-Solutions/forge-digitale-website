@@ -1,0 +1,45 @@
+{
+  "name": "Forge Digitale Solutions",
+  "legalName": "EI Anthony Marcelin",
+  "siren": "100857838",
+  "description": "Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME.",
+  "contact": {
+    "email": "contact@forgedigitalesolutions.com",
+    "phone": "+33645659696",
+    "phoneDisplay": "06 45 65 96 96",
+    "formUrl": "https://forgedigitalesolutions.com/#contact"
+  },
+  "address": {
+    "locality": "Saint-Laurent-Médoc",
+    "postalCode": "33112",
+    "region": "Gironde",
+    "country": "FR"
+  },
+  "serviceArea": [
+    "Médoc",
+    "Bassin d'Arcachon",
+    "Bordeaux"
+  ],
+  "offers": {
+    "websiteCreationFromEurHt": 500,
+    "note": "Ticket d'entrée création de site web à partir de 500 € HT. TVA non applicable art. 293 B."
+  },
+  "urls": {
+    "home": "https://forgedigitalesolutions.com/",
+    "creationSiteWeb": "https://forgedigitalesolutions.com/creation-site-web/",
+    "faq": "https://forgedigitalesolutions.com/faq/",
+    "rendezVous": "https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/",
+    "blog": "https://forgedigitalesolutions.com/blog/",
+    "llmsTxt": "https://forgedigitalesolutions.com/llms.txt",
+    "sitemap": "https://forgedigitalesolutions.com/sitemap.xml",
+    "apiCatalog": "https://forgedigitalesolutions.com/.well-known/api-catalog",
+    "thisDocument": "https://forgedigitalesolutions.com/api/public/site.json"
+  },
+  "access": {
+    "method": "GET",
+    "auth": "none",
+    "mutations": false,
+    "contentType": "application/json"
+  },
+  "updated": "2026-09-17"
+}

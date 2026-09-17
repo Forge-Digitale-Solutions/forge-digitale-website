@@ -96,3 +96,13 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "no-cache, max-age=0, must-revalidate"
   </IfModule>
 </FilesMatch>
+
+# Public read-only JSON lab
+<IfModule mod_headers.c>
+  <Files "site.json">
+    Header set Content-Type "application/json; charset=utf-8"
+    Header set Cache-Control "public, max-age=3600"
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+  </Files>
+</IfModule>
