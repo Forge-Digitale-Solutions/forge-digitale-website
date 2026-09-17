@@ -2,10 +2,10 @@
 title: "Clics et impressions Search Console : ce que ça veut dire"
 h1: "Clics et impressions Search Console : ce que ça veut dire"
 excerpt: "Impressions, clics, CTR, position moyenne : comment lire le rapport Performances de la Search Console sans se tromper."
-date: 2026-09-18
-lastModified: 2026-09-18
-category: Web
-image: /blog/clics-impressions-search-console.jpg
+date: "2026-09-18"
+lastModified: "2026-09-18"
+category: "Web"
+image: "/blog/clics-impressions-search-console.jpg"
 ---
 
 # Clics et impressions Search Console : ce que ça veut dire
