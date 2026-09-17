@@ -14,7 +14,7 @@ Agents et humains. Ce domaine est une **vitrine** (site statique) pour Forge Dig
 
 Les agents **ne doivent pas** tenter de provisionner un compte ou un credential sur ce domaine.
 
-Contact humain pour devis / atelier :
+Contact humain pour devis / rendez-vous :
 
 1. Formulaire : https://forgedigitalesolutions.com/#contact
 2. E-mail : contact@forgedigitalesolutions.com

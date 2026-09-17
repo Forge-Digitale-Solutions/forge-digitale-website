@@ -60,11 +60,11 @@
     },
     {
       "identifier": "urn:air:forgedigitalesolutions.com:page:rdv",
-      "displayName": "Rendez-vous atelier",
+      "displayName": "Rendez-vous",
       "type": "text/html",
       "url": "https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/",
       "representativeQueries": [
-        "Prendre rendez-vous atelier Saint-Laurent-Médoc",
+        "Prendre rendez-vous Saint-Laurent-Médoc",
         "Horaires rendez-vous Forge Digitale"
       ]
     },
