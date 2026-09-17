@@ -1,34 +1,41 @@
 # Forge Digitale Solutions
 
-> Artisanat numérique dans le Médoc : création de sites web et d'applications sur-mesure, maintenance, montage PC, dépannage et installation Linux Mint (Green IT) pour artisans, TPE et particuliers de la Gironde. Basé à Saint-Laurent-Médoc (33112). Anthony Marcelin, développeur full-stack, titulaire du titre de Concepteur Développeur d'Applications. Interventions en atelier ; zone servie : Médoc, Bassin d'Arcachon, Bordeaux. Contact : contact@forgedigitalesolutions.com — SIREN : 100 857 838.
+> Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME du Médoc, du Bassin d'Arcachon et de Bordeaux. Anthony Marcelin, développeur full-stack (titre CDA). Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96. Création de sites à partir de 500 € HT. SIREN 100 857 838.
 
 ## Pages principales
 
-- [Accueil](https://forgedigitalesolutions.com/) : services et présentation (forfait Linux 69 €, montage PC 149 €)
-- [Création de site web](https://forgedigitalesolutions.com/creation-site-web) : sites web et applications sur-mesure (à partir de 800 €)
-- [Maintenance de site web](https://forgedigitalesolutions.com/maintenance-site-web) : maintenance, hébergement et suivi
-- [Développeur Médoc](https://forgedigitalesolutions.com/developpeur-medoc) : développeur web indépendant dans le Médoc et le Bassin d'Arcachon
-- [Installation Linux](https://forgedigitalesolutions.com/installation-linux) : installation Linux Mint, forfait Renaissance (69 €) pour PC anciens
-- [Montage PC](https://forgedigitalesolutions.com/montage-pc) : montage PC sur-mesure, jeu et bureautique (forfait 149 €)
-- [Blog](https://forgedigitalesolutions.com/blog) : articles sur le web, la sécurité, le montage PC et Linux
+- [Accueil](https://forgedigitalesolutions.com/) : services et présentation
+- [Création de site web](https://forgedigitalesolutions.com/creation-site-web/) : sites et apps sur-mesure (à partir de 500 € HT)
+- [Création de site internet Médoc](https://forgedigitalesolutions.com/creation-site-internet-medoc/) : offre locale Médoc
+- [Site web Bassin d'Arcachon](https://forgedigitalesolutions.com/creation-site-web-bassin-arcachon/) : offre Bassin
+- [Site internet artisan Médoc](https://forgedigitalesolutions.com/site-internet-artisan-medoc/) : artisans et métiers de bouche
+- [Maintenance de site web](https://forgedigitalesolutions.com/maintenance-site-web/) : hébergement, mises à jour, suivi
+- [Développeur Médoc](https://forgedigitalesolutions.com/developpeur-medoc/) : interventions locales
+- [Installation Linux](https://forgedigitalesolutions.com/installation-linux/) : Linux Mint / forfait Renaissance (69 €)
+- [Montage PC](https://forgedigitalesolutions.com/montage-pc/) : montage PC sur-mesure (forfait 149 €)
+- [Rendez-vous atelier](https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/) : prise de rendez-vous
+- [FAQ](https://forgedigitalesolutions.com/faq/) : questions fréquentes
+- [Blog](https://forgedigitalesolutions.com/blog/) : articles web, sécurité, Linux
+- [Contact / devis](https://forgedigitalesolutions.com/#contact) : formulaire, téléphone, e-mail
 
-## Sections de l'accueil
+## Découverte machine
 
-- [Services](https://forgedigitalesolutions.com/#services) : détail des services
-- [À propos](https://forgedigitalesolutions.com/#about) : présentation d'Anthony Marcelin
-- [Réalisations](https://forgedigitalesolutions.com/#realisations) : projets réalisés
-- [FAQ](https://forgedigitalesolutions.com/#faq) : questions fréquentes
-- [Contact](https://forgedigitalesolutions.com/#contact) : contact et devis
+- [llms.txt](https://forgedigitalesolutions.com/llms.txt)
+- [Sitemap](https://forgedigitalesolutions.com/sitemap.xml)
+- [API catalog](https://forgedigitalesolutions.com/.well-known/api-catalog) : RFC 9727 — aucune API REST publique
+- [auth.md](https://forgedigitalesolutions.com/auth.md) : pas d'enregistrement agent / pas d'OAuth public
 
-## Pages légales
+## Capacités agents (honnête)
 
-- [Mentions légales](https://forgedigitalesolutions.com/mentions-legales)
-- [CGV](https://forgedigitalesolutions.com/cgv)
-- [Confidentialité](https://forgedigitalesolutions.com/confidentialite)
+- Pas de serveur MCP public, pas de carte A2A, pas d'OAuth agent.
+- Contenu lisible via HTML, llms.txt, et négociation `Accept: text/markdown`.
+- Contact humain uniquement pour devis et interventions.
 
-## Optional
+## Légal
 
-- [Sitemap XML](https://forgedigitalesolutions.com/sitemap.xml)
+- [Mentions légales](https://forgedigitalesolutions.com/mentions-legales/)
+- [CGV](https://forgedigitalesolutions.com/cgv/)
+- [Confidentialité](https://forgedigitalesolutions.com/confidentialite/)
 
-<!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended -->
-<!-- Dernière mise à jour : 2026-06-17 -->
+<!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended, etc. -->
+<!-- Dernière mise à jour : 2026-09-17 -->

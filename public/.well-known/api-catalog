@@ -1,0 +1,39 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://forgedigitalesolutions.com/",
+      "service-doc": [
+        {
+          "href": "https://forgedigitalesolutions.com/llms.txt",
+          "type": "text/plain",
+          "hreflang": "fr",
+          "title": "Vue LLM — Forge Digitale Solutions"
+        },
+        {
+          "href": "https://forgedigitalesolutions.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "Sitemap XML"
+        },
+        {
+          "href": "https://forgedigitalesolutions.com/#contact",
+          "type": "text/html",
+          "hreflang": "fr",
+          "title": "Contact et devis (humain)"
+        },
+        {
+          "href": "https://forgedigitalesolutions.com/auth.md",
+          "type": "text/markdown",
+          "hreflang": "fr",
+          "title": "Pas d'auth agent publique"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://forgedigitalesolutions.com/.well-known/api-catalog",
+          "type": "application/linkset+json",
+          "title": "Ce catalogue — aucune API REST publique"
+        }
+      ]
+    }
+  ]
+}
