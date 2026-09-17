@@ -25,6 +25,8 @@
 - [API catalog](https://forgedigitalesolutions.com/.well-known/api-catalog) : RFC 9727 — aucune API REST publique
 - [site.json](https://forgedigitalesolutions.com/api/public/site.json) : JSON public lecture seule (identité, contact, offre)
 - [auth.md](https://forgedigitalesolutions.com/auth.md) : pas d'enregistrement agent / pas d'OAuth public
+- [Agent skills](https://forgedigitalesolutions.com/.well-known/agent-skills/index.json) : index skills lecture seule
+- [ARD ai-catalog](https://forgedigitalesolutions.com/.well-known/ai-catalog.json) : catalogue ressources
 
 ## Capacités agents (honnête)
 

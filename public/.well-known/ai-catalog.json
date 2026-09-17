@@ -1,0 +1,82 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Forge Digitale Solutions",
+    "identifier": "https://forgedigitalesolutions.com/"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:data:site-json",
+      "displayName": "Fiche site publique (JSON lecture seule)",
+      "type": "application/json",
+      "url": "https://forgedigitalesolutions.com/api/public/site.json",
+      "representativeQueries": [
+        "Quel est le SIREN de Forge Digitale Solutions ?",
+        "Comment contacter Forge Digitale Solutions ?",
+        "Quel est le prix d entrée pour un site web FDS ?",
+        "Quelle est la zone d intervention Médoc ?"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:docs:llms-txt",
+      "displayName": "Index llms.txt",
+      "type": "text/plain",
+      "url": "https://forgedigitalesolutions.com/llms.txt",
+      "representativeQueries": [
+        "Quelles pages publiques a le site Forge Digitale ?",
+        "Où est le blog FDS ?",
+        "Liste des services Forge Digitale Solutions"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:discovery:api-catalog",
+      "displayName": "API catalog RFC 9727",
+      "type": "application/linkset+json",
+      "url": "https://forgedigitalesolutions.com/.well-known/api-catalog",
+      "representativeQueries": [
+        "Quelles ressources machine publie forgedigitalesolutions.com ?",
+        "Y a-t-il une API publique FDS ?"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:page:creation-site-web",
+      "displayName": "Création de site web",
+      "type": "text/html",
+      "url": "https://forgedigitalesolutions.com/creation-site-web/",
+      "representativeQueries": [
+        "Combien coûte un site web chez Forge Digitale ?",
+        "Création de site internet Médoc"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:page:faq",
+      "displayName": "FAQ",
+      "type": "text/html",
+      "url": "https://forgedigitalesolutions.com/faq/",
+      "representativeQueries": [
+        "FAQ Forge Digitale Solutions",
+        "Questions fréquentes création site Médoc"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:page:rdv",
+      "displayName": "Rendez-vous",
+      "type": "text/html",
+      "url": "https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/",
+      "representativeQueries": [
+        "Prendre rendez-vous Saint-Laurent-Médoc",
+        "Horaires rendez-vous Forge Digitale"
+      ]
+    },
+    {
+      "identifier": "urn:air:forgedigitalesolutions.com:page:blog",
+      "displayName": "Blog",
+      "type": "text/html",
+      "url": "https://forgedigitalesolutions.com/blog/",
+      "representativeQueries": [
+        "Articles blog Forge Digitale Solutions",
+        "Blog Search Console clics impressions"
+      ]
+    }
+  ]
+}
