@@ -18,9 +18,9 @@
     {
       "name": "fds-public-pages",
       "type": "skill-md",
-      "description": "Use this when answering about FDS website creation, FAQ, atelier rendez-vous, or blog — open the matching public URL.",
+      "description": "Use this when answering about FDS website creation, FAQ, rendez-vous, or blog — open the matching public URL.",
       "url": "/.well-known/agent-skills/fds-public-pages/SKILL.md",
-      "digest": "sha256:1622333e15cf19183552a97ac2c6ca88a2e12705e393033ca7fca0f2dd13cf40"
+      "digest": "sha256:51a77da32ffda25d1871fbc0e370c2798dc7f5d948fb8e07a3f18ffac924c4b0"
     }
   ]
 }
