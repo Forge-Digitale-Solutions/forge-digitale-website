@@ -1,32 +1,45 @@
-# Content Signals Policy (https://contentsignals.org / Cloudflare CC0)
-# As a condition of accessing this website, you agree to abide by the following content signals:
-#
-# (a)  If a content-signal = yes, you may collect content for the corresponding use.
-# (b)  If a content-signal = no, you may not collect content for the corresponding use.
-# (c)  If the website operator does not include a content signal for a corresponding use, the website operator neither grants nor restricts permission via content signal with respect to the corresponding use.
-#
-# The content signals and their meanings are:
-# search: building a search index and providing search results (e.g., returning hyperlinks and short excerpts). Search does not include providing AI-generated search summaries.
-# ai-input: inputting content into one or more AI models (e.g., RAG, grounding, or other real-time taking of content for generative AI answers).
-# ai-train: training or fine-tuning AI models.
-#
-# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
+# Content Signals Policy — https://contentsignals.org (CC0)
+# search | ai-input | ai-train — yes = allowed, no = not allowed for that use.
 
 User-Agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /*__next
-Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-Agent: GPTBot
-User-Agent: ChatGPT-User
-User-Agent: OAI-SearchBot
-User-Agent: PerplexityBot
-User-Agent: ClaudeBot
-User-Agent: Claude-Web
-User-Agent: Google-Extended
-User-Agent: Applebot-Extended
-User-Agent: CCBot
-Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: ChatGPT-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: PerplexityBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: ClaudeBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: Claude-Web
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: Google-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: Applebot-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-Agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
 
 Sitemap: https://forgedigitalesolutions.com/sitemap.xml
