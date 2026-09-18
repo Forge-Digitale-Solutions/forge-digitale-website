@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Phone, Facebook, Linkedin, Instagram } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -301,9 +302,16 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Compte Instagram de Forge Digitale Solutions"
-                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                className="inline-flex items-center justify-center text-soft hover:opacity-80 focus-visible:outline-1 focus-visible:outline-accent rounded transition-opacity"
               >
-                <Instagram size={24} aria-hidden="true" />
+                <Image
+                  src="/instagram.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="size-6"
+                  aria-hidden="true"
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/anthony-marcelin/"
