@@ -33,7 +33,8 @@
     "llmsTxt": "https://forgedigitalesolutions.com/llms.txt",
     "sitemap": "https://forgedigitalesolutions.com/sitemap.xml",
     "apiCatalog": "https://forgedigitalesolutions.com/.well-known/api-catalog",
-    "thisDocument": "https://forgedigitalesolutions.com/api/public/site.json"
+    "thisDocument": "https://forgedigitalesolutions.com/api/public/site.json",
+    "instagram": "https://www.instagram.com/forgedigitalesolutions/"
   },
   "access": {
     "method": "GET",
@@ -41,5 +42,11 @@
     "mutations": false,
     "contentType": "application/json"
   },
-  "updated": "2026-09-17"
+  "updated": "2026-09-17",
+  "social": {
+    "instagram": "https://www.instagram.com/forgedigitalesolutions/",
+    "facebook": "https://www.facebook.com/profile.php?id=61577431918424",
+    "linkedinCompany": "https://www.linkedin.com/company/forge-digitale-solutions/",
+    "linkedinPerson": "https://www.linkedin.com/in/anthony-marcelin/"
+  }
 }
