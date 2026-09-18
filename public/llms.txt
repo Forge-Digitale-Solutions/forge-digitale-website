@@ -18,6 +18,12 @@
 - [Blog](https://forgedigitalesolutions.com/blog/) : articles web, sécurité, Linux
 - [Contact / devis](https://forgedigitalesolutions.com/#contact) : formulaire, téléphone, e-mail
 
+## Réseaux
+
+- [Instagram](https://www.instagram.com/forgedigitalesolutions/) : @forgedigitalesolutions
+- [Facebook](https://www.facebook.com/profile.php?id=61577431918424)
+- [LinkedIn](https://www.linkedin.com/company/forge-digitale-solutions/)
+
 ## Découverte machine
 
 - [llms.txt](https://forgedigitalesolutions.com/llms.txt)
