@@ -173,6 +173,7 @@ export function LocalBusinessSchema() {
     },
     sameAs: [
       "https://www.facebook.com/profile.php?id=61577431918424",
+      "https://www.instagram.com/forgedigitalesolutions/",
       "https://www.linkedin.com/in/anthony-marcelin/",
       "https://www.linkedin.com/company/forge-digitale-solutions/",
     ],
