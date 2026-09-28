@@ -164,6 +164,10 @@ export default function FaqPage() {
               maintenance
             </Link>
             ,{" "}
+            <Link href="/pack-agent-ready/" className="text-accent hover:underline">
+              Pack Agent Ready
+            </Link>
+            ,{" "}
             <Link href="/montage-pc/" className="text-accent hover:underline">
               montage PC
             </Link>

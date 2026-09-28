@@ -133,6 +133,14 @@ export default function CreationSiteWebPage() {
             jour le contenu. Le reste dépend de ce que l&rsquo;on définit
             ensemble. L&rsquo;échange et le devis sont gratuits.
           </p>
+          <p>
+            Sur un site neuf, l&rsquo;option{" "}
+            <Link href="/pack-agent-ready/" className="text-accent hover:underline">
+              Pack Agent Ready
+            </Link>{" "}
+            s&rsquo;ajoute au devis : +90 € HT (Essentiel) ou +190 € HT
+            (Complet). Le ticket d&rsquo;entrée du site reste à partir de 500 € HT.
+          </p>
         </div>
 
         <p className="mt-10 text-lg text-soft leading-relaxed">

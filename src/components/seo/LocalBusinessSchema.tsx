@@ -131,6 +131,27 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Pack Agent Ready",
+            description: "Rendre un site déjà en ligne lisible par les assistants, avec des règles d'usage. Essentiel 190 € HT, Complet 350 € HT. Option sur site neuf : +90 € HT ou +190 € HT.",
+            serviceType: "Website agent readiness",
+            areaServed: "Gironde",
+            provider: {
+              "@id": "https://forgedigitalesolutions.com/#business"
+            }
+          },
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "190",
+            priceCurrency: "EUR",
+            description: "Formule Essentiel, prestation seule sur site existant, 190 € HT. TVA non applicable, article 293 B du CGI.",
+            eligibleRegion: "FR",
+          },
+          url: "https://forgedigitalesolutions.com/pack-agent-ready/",
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Montage PC sur mesure",
             description: "Assemblage de PC gaming, workstation ou familial avec optimisation BIOS/XMP et suivi 1 an.",
             serviceType: "Computer Assembly",
@@ -181,6 +202,7 @@ export function LocalBusinessSchema() {
       "Création de site web",
       "Développement d'application",
       "Linux Mint",
+      "Pack Agent Ready",
       "Montage PC",
       "Green IT",
       "Développement web Gironde"

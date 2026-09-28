@@ -22,11 +22,16 @@
   ],
   "offers": {
     "websiteCreationFromEurHt": 500,
-    "note": "Ticket d'entrée création de site web à partir de 500 € HT. TVA non applicable art. 293 B."
+    "agentReadyEssentielEurHt": 190,
+    "agentReadyCompletEurHt": 350,
+    "agentReadyOnNewSiteEssentielEurHt": 90,
+    "agentReadyOnNewSiteCompletEurHt": 190,
+    "note": "Ticket d'entrée création de site web à partir de 500 € HT. Pack Agent Ready sur site existant : 190 € HT (Essentiel) ou 350 € HT (Complet). Option sur site neuf : +90 € HT ou +190 € HT. TVA non applicable art. 293 B."
   },
   "urls": {
     "home": "https://forgedigitalesolutions.com/",
     "creationSiteWeb": "https://forgedigitalesolutions.com/creation-site-web/",
+    "packAgentReady": "https://forgedigitalesolutions.com/pack-agent-ready/",
     "faq": "https://forgedigitalesolutions.com/faq/",
     "rendezVous": "https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/",
     "blog": "https://forgedigitalesolutions.com/blog/",
@@ -42,7 +47,7 @@
     "mutations": false,
     "contentType": "application/json"
   },
-  "updated": "2026-09-17",
+  "updated": "2026-09-28",
   "social": {
     "instagram": "https://www.instagram.com/forgedigitalesolutions/",
     "facebook": "https://www.facebook.com/profile.php?id=61577431918424",

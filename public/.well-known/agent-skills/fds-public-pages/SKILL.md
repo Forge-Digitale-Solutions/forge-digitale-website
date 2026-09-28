@@ -12,6 +12,7 @@ Questions sur l'offre site web, FAQ, rendez-vous Médoc, ou articles du blog.
 ## How
 
 - Création site : https://forgedigitalesolutions.com/creation-site-web/
+- Pack Agent Ready : https://forgedigitalesolutions.com/pack-agent-ready/
 - FAQ : https://forgedigitalesolutions.com/faq/
 - RDV : https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/
 - Blog : https://forgedigitalesolutions.com/blog/

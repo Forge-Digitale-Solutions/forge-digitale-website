@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section";
-import { Wrench, Code2, ShieldCheck, Cpu } from "lucide-react";
+import { Wrench, Code2, ShieldCheck, Cpu, Bot } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -31,6 +31,17 @@ const services = [
     bgIcon: "bg-accent/10",
     colSpan: "md:col-span-1",
     features: ["Hébergement & Domaine", "Support & Mises à jour"],
+  },
+  {
+    title: "Pack Agent Ready",
+    description:
+      "Votre site est déjà en ligne. Je le rends lisible par les assistants, avec des règles d'usage claires.",
+    price: "À partir de 190 € HT",
+    href: "/pack-agent-ready",
+    icon: <Bot className="w-6 h-6 text-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent/10",
+    colSpan: "md:col-span-3",
+    features: ["robots.txt et sitemap", "llms.txt", "Compte-rendu"],
   },
   {
     title: "Montage PC Sur Mesure",

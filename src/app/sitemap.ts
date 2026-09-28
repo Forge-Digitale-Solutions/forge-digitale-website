@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/creation-site-web", lastModified: "2026-09-07" },
     { route: "/developpeur-medoc", lastModified: "2026-06-02" },
     { route: "/maintenance-site-web", lastModified: "2026-08-23" },
+    { route: "/pack-agent-ready", lastModified: "2026-09-28" },
     { route: "/installation-linux", lastModified: "2026-09-07" },
     { route: "/montage-pc", lastModified: "2026-09-07" },
     { route: "/faq", lastModified: "2026-09-07" },

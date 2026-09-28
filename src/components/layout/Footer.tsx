@@ -50,6 +50,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/pack-agent-ready"
+                  aria-label="Pack Agent Ready, site lisible par les assistants"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Pack Agent Ready
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/montage-pc"
                   aria-label="Montage PC sur-mesure et gamer"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
