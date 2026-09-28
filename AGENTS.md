@@ -5,7 +5,7 @@ Site vitrine + blog pour un artisan numérique à Saint-Laurent-Médoc (Gironde)
 - Montage et maintenance PC (gamer, bureautique, Renaissance Linux)
 - Services informatiques (dépannage, Linux)
 
-**Stack** : Next.js 16 (static export), React 19, Tailwind CSS 4, TypeScript, blog Markdown.
+**Stack** : Next.js 16 (serveur `next start`, Dokploy), React 19, Tailwind CSS 4, TypeScript, blog Markdown.
 
 ---
 
@@ -57,12 +57,12 @@ src/
 
 ```bash
 npm run dev
-npm run build    # export → out/
-npm run start
+npm run build    # build Next.js (pas d'export out/)
+npm run start    # serveur Node
 npm run lint
 ```
 
-Pas de `curl …/feed`. Vérifier le `<head>` compilé : `head -n 40 out/index.html`.
+Pas de `curl …/feed`. Vérifier le `<head>` : `npm run start`, puis `curl -s http://127.0.0.1:3000/ | head -n 40`.
 
 ---
 
@@ -103,11 +103,11 @@ Schema : `areaServed` (villes / zones), pas de `streetAddress` ni de coordonnée
 ## Checklist SEO
 
 1. `npm run build`
-2. Sitemap : `out/sitemap.xml`
+2. Sitemap : `/sitemap.xml` (servi par `next start`)
 3. Pages touchées + JSON-LD (validator.schema.org)
 4. OG title/url de la page, pas ceux de l’accueil
 5. Commit + push (deploy via CI)
 
 ---
 
-**Dernière mise à jour** : 10 septembre 2026
+**Dernière mise à jour** : 28 septembre 2026

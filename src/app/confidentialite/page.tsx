@@ -53,8 +53,8 @@ export default function Confidentialite() {
           <p>
             La protection de vos données personnelles est une priorité pour{" "}
             <strong>Forge Digitale Solutions</strong>. Contrairement à de
-            nombreux sites, nous avons fait le choix d&apos;un site web
-            statique, éthique et léger qui ne trace pas votre navigation à des
+            nombreux sites, nous avons fait le choix d&apos;une vitrine
+            éthique et légère qui ne trace pas votre navigation à des
             fins publicitaires.
           </p>
         </section>
