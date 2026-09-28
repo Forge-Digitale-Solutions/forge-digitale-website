@@ -11,74 +11,284 @@ import {
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
 
 const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const CONTACT_SERVICES = [
+  "Demande de Devis Web",
+  "Montage PC",
+  "Dépannage / Maintenance",
+  "Autre demande",
+] as const;
+
+type ContactService = (typeof CONTACT_SERVICES)[number];
+
+type ContactFields = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  company?: string;
+  service?: string;
+};
+
+type FieldErrors = { email?: string; phone?: string };
+
+type ModelContextLike = {
+  registerTool: (
+    tool: {
+      name: string;
+      title: string;
+      description: string;
+      inputSchema: Record<string, unknown>;
+      annotations: { consequentialHint: boolean; readOnlyHint: boolean };
+      execute: (
+        args: ContactFields,
+        ctx?: { signal?: AbortSignal },
+      ) => Promise<string>;
+    },
+    options?: { signal?: AbortSignal },
+  ) => Promise<unknown>;
+};
+
+function modelContext(): ModelContextLike | null {
+  const doc = document as Document & { modelContext?: ModelContextLike };
+  const nav = navigator as Navigator & { modelContext?: ModelContextLike };
+  // ponytail: navigator.modelContext is the pre-Chrome 150 path
+  const ctx = doc.modelContext ?? nav.modelContext;
+  if (!ctx || typeof ctx.registerTool !== "function") return null;
+  return ctx;
+}
+
+function fieldErrors(fields: ContactFields): FieldErrors {
+  const errors: FieldErrors = {};
+  if (!emailRegex.test(fields.email.trim())) {
+    errors.email = "Veuillez saisir une adresse e-mail valide.";
+  }
+  if (!phoneRegex.test(fields.phone.trim())) {
+    errors.phone =
+      "Veuillez saisir un numéro valide, par exemple 06 12 34 56 78.";
+  }
+  return errors;
+}
+
+function fillContactForm(fields: ContactFields) {
+  const form = document.getElementById("contact-form");
+  if (!(form instanceof HTMLFormElement)) return;
+  const values: Record<string, string> = {
+    name: fields.name,
+    email: fields.email,
+    phone: fields.phone,
+    message: fields.message,
+    company: fields.company ?? "",
+    service: fields.service ?? "",
+  };
+  for (const [name, value] of Object.entries(values)) {
+    const el = form.elements.namedItem(name);
+    if (
+      el instanceof HTMLInputElement ||
+      el instanceof HTMLTextAreaElement ||
+      el instanceof HTMLSelectElement
+    ) {
+      el.value = value;
+    }
+  }
+}
+
+async function postContact(
+  fields: ContactFields,
+  signal?: AbortSignal,
+): Promise<{ ok: boolean; message: string }> {
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+  if (!accessKey) {
+    return {
+      ok: false,
+      message: "Le formulaire n'est pas configuré. Écrivez à contact@forgedigitalesolutions.com.",
+    };
+  }
+
+  const formData = new FormData();
+  formData.set("access_key", accessKey);
+  formData.set("subject", "Nouveau contact - Site Web La Forge");
+  formData.set("from_name", "Site Web");
+  formData.set("name", fields.name.trim());
+  formData.set("email", fields.email.trim());
+  formData.set("phone", fields.phone.trim());
+  formData.set("message", fields.message.trim());
+  if (fields.company?.trim()) formData.set("company", fields.company.trim());
+  if (fields.service?.trim()) formData.set("service", fields.service.trim());
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData,
+    signal,
+  });
+  const data = (await response.json()) as { success?: boolean; message?: string };
+
+  if (data.success) {
+    return {
+      ok: true,
+      message: "Message bien reçu. Je vous recontacte sous 24 heures.",
+    };
+  }
+  return {
+    ok: false,
+    message: data.message || "Une erreur technique a empêché l'envoi du message.",
+  };
+}
 
 export function Contact() {
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [resultMessage, setResultMessage] = useState("");
-  const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
+  const [errors, setErrors] = useState<FieldErrors>({});
+  const pending = useRef(false);
+
+  useEffect(() => {
+    const ctx = modelContext();
+    if (!ctx) return;
+    const controller = new AbortController();
+
+    void ctx
+      .registerTool(
+        {
+          name: "submit_contact",
+          title: "Envoyer le formulaire de contact",
+          description:
+            "Envoie une demande de devis ou d'intervention à Anthony Marcelin (Forge Digitale Solutions) via le formulaire de la page d'accueil. Utiliser uniquement les coordonnées données par le visiteur. L'envoi est réel : le navigateur doit demander confirmation.",
+          annotations: { consequentialHint: true, readOnlyHint: false },
+          inputSchema: {
+            type: "object",
+            properties: {
+              name: { type: "string", description: "Nom du visiteur" },
+              email: { type: "string", description: "E-mail du visiteur" },
+              phone: {
+                type: "string",
+                description: "Téléphone français, par exemple 06 12 34 56 78",
+              },
+              company: {
+                type: "string",
+                description: "Société, si le visiteur en a une",
+              },
+              service: {
+                type: "string",
+                enum: [...CONTACT_SERVICES],
+                description: "Sujet de la demande",
+              },
+              message: { type: "string", description: "Besoin décrit par le visiteur" },
+            },
+            required: ["name", "email", "phone", "message"],
+            additionalProperties: false,
+          },
+          execute: async (args, toolCtx) => {
+            if (pending.current) return "Envoi déjà en cours.";
+            const fields: ContactFields = {
+              name: args.name ?? "",
+              email: args.email ?? "",
+              phone: args.phone ?? "",
+              message: args.message ?? "",
+              company: args.company,
+              service: args.service,
+            };
+            if (!fields.name.trim() || !fields.message.trim()) {
+              return "Nom et message sont obligatoires.";
+            }
+            if (
+              fields.service &&
+              !CONTACT_SERVICES.includes(fields.service as ContactService)
+            ) {
+              return `Sujet inconnu. Choisir parmi : ${CONTACT_SERVICES.join(", ")}.`;
+            }
+            const invalid = fieldErrors(fields);
+            fillContactForm(fields);
+            if (Object.keys(invalid).length > 0) {
+              setErrors(invalid);
+              setStatus("idle");
+              return Object.values(invalid).join(" ");
+            }
+
+            pending.current = true;
+            setErrors({});
+            setStatus("submitting");
+            try {
+              const result = await postContact(fields, toolCtx?.signal);
+              if (result.ok) {
+                setStatus("success");
+                setResultMessage(result.message);
+                const form = document.getElementById("contact-form");
+                if (form instanceof HTMLFormElement) form.reset();
+              } else {
+                setStatus("error");
+                setResultMessage(result.message);
+              }
+              return result.message;
+            } catch (error) {
+              if (error instanceof DOMException && error.name === "AbortError") {
+                setStatus("idle");
+                return "Envoi annulé.";
+              }
+              const message =
+                "La connexion a échoué. Merci de réessayer dans un instant.";
+              setStatus("error");
+              setResultMessage(message);
+              return message;
+            } finally {
+              pending.current = false;
+            }
+          },
+        },
+        { signal: controller.signal },
+      )
+      .catch(() => {});
+
+    return () => controller.abort();
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setErrors({});
+    if (pending.current) return;
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-
-    const email = String(formData.get("email") ?? "").trim();
-    const phone = String(formData.get("phone") ?? "").trim();
-    const newErrors: { email?: string; phone?: string } = {};
-
-    if (!emailRegex.test(email)) {
-      newErrors.email = "Veuillez saisir une adresse e-mail valide.";
-    }
-
-    if (!phoneRegex.test(phone)) {
-      newErrors.phone =
-        "Veuillez saisir un numéro valide, par exemple 06 12 34 56 78.";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    const fields: ContactFields = {
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      message: String(formData.get("message") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      service: String(formData.get("service") ?? ""),
+    };
+    const invalid = fieldErrors(fields);
+    if (Object.keys(invalid).length > 0) {
+      setErrors(invalid);
       setStatus("idle");
       return;
     }
 
-    formData.set("email", email);
-    formData.set("phone", phone);
+    pending.current = true;
+    setErrors({});
     setStatus("submitting");
-
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
+      const result = await postContact(fields);
+      if (result.ok) {
         setStatus("success");
-        setResultMessage(
-          "Message bien reçu. Je vous recontacte sous 24 heures.",
-        );
+        setResultMessage(result.message);
         form.reset();
       } else {
         setStatus("error");
-        setResultMessage(
-          data.message || "Une erreur technique a empêché l'envoi du message.",
-        );
+        setResultMessage(result.message);
       }
     } catch {
       setStatus("error");
       setResultMessage(
         "La connexion a échoué. Merci de réessayer dans un instant.",
       );
+    } finally {
+      pending.current = false;
     }
   }
 
@@ -240,7 +450,7 @@ export function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
                 <input
                   type="hidden"
                   name="access_key"
@@ -369,10 +579,11 @@ export function Contact() {
                       <option value="" disabled>
                         Sélectionnez un sujet
                       </option>
-                      <option value="Demande de Devis Web">Demande de Devis Web</option>
-                      <option value="Montage PC">Montage PC</option>
-                      <option value="Dépannage / Maintenance">Dépannage / Maintenance</option>
-                      <option value="Autre demande">Autre demande</option>
+                      {CONTACT_SERVICES.map((service) => (
+                        <option key={service} value={service}>
+                          {service}
+                        </option>
+                      ))}
                     </select>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-faint">
                       <svg
