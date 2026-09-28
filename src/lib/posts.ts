@@ -9,6 +9,11 @@ import config from "@payload-config";
 
 const postsDirectory = path.join(process.cwd(), "src/posts");
 
+export interface PostFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface PostData {
   id: string;
   title: string;
@@ -17,6 +22,10 @@ export interface PostData {
   lastModified?: string;
   excerpt: string;
   image?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  ogImage?: string;
+  faq?: PostFaqItem[];
   category: string;
   contentHtml?: string;
 }
@@ -32,6 +41,10 @@ type PostDoc = {
   category?: string | null;
   content?: string | null;
   image?: MediaDoc | string | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  ogImage?: MediaDoc | string | null;
+  faq?: { question?: string | null; answer?: string | null }[] | null;
 };
 
 function day(value: string | undefined | null): string {
@@ -50,9 +63,22 @@ async function markdownToHtml(markdown: string): Promise<string> {
   );
 }
 
-function imageUrl(image: PostDoc["image"]): string | undefined {
+function imageUrl(
+  image: MediaDoc | string | null | undefined,
+): string | undefined {
   if (!image || typeof image === "string") return undefined;
   return image.url || undefined;
+}
+
+function faqItems(faq: PostDoc["faq"]): PostFaqItem[] | undefined {
+  if (!faq?.length) return undefined;
+  const items = faq
+    .map((item) => ({
+      question: item.question?.trim() || "",
+      answer: item.answer?.trim() || "",
+    }))
+    .filter((item) => item.question && item.answer);
+  return items.length ? items : undefined;
 }
 
 async function toPostData(doc: PostDoc, withHtml: boolean): Promise<PostData> {
@@ -64,6 +90,10 @@ async function toPostData(doc: PostDoc, withHtml: boolean): Promise<PostData> {
     lastModified: day(doc.updatedAt) || day(doc.publishedAt),
     excerpt: doc.excerpt || "",
     image: imageUrl(doc.image),
+    metaTitle: doc.metaTitle || undefined,
+    metaDescription: doc.metaDescription || undefined,
+    ogImage: imageUrl(doc.ogImage),
+    faq: faqItems(doc.faq),
     category: doc.category || "Web",
     contentHtml: withHtml ? await markdownToHtml(doc.content || "") : undefined,
   };
