@@ -8,6 +8,8 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
   return posts.map((post) => ({

@@ -31,8 +31,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Production (Dokploy)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site runs as a Node server (`next start`), not a static `out/` export. Dokploy builds the `Dockerfile` from `main`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Port **3000** (`-H 0.0.0.0`)
+- Healthcheck: `curl -f http://127.0.0.1:3000/` (homepage returns 200). Swarm FailureAction: rollback
+- Build arg: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (inlined at image build; a runtime env var is not enough)
+
+The GitHub workflow `Mise en ligne OVH` is `workflow_dispatch` only. It does not FTP on push to `main`, so it cannot fight Dokploy after the DNS cutover. Secrets `FTP_*` and `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` stay in GitHub until OVH is switched off.

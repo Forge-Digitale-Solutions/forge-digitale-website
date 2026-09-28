@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.git
+.github
+.cursor
+coverage
+*.log
+.DS_Store
+.env*
+.vercel
+repomix-output*
+docs

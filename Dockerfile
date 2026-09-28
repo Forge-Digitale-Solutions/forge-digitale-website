@@ -1,0 +1,41 @@
+# Forge Digitale Solutions — Node server for Dokploy.
+# Build-arg NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is inlined by Next at image build.
+# Listens on 3000. Swarm healthcheck: curl -f http://127.0.0.1:3000/
+
+FROM node:22-alpine AS deps
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+ARG NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+ENV NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=$NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN npm run build && npm prune --omit=dev
+
+FROM node:22-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+RUN apk add --no-cache curl \
+  && addgroup -g 1001 -S nodejs \
+  && adduser -S -u 1001 -G nodejs nextjs
+
+COPY --from=build --chown=nextjs:nodejs /app/public ./public
+COPY --from=build --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=build --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=build --chown=nextjs:nodejs /app/package.json ./package.json
+COPY --from=build --chown=nextjs:nodejs /app/next.config.ts ./next.config.ts
+COPY --from=build --chown=nextjs:nodejs /app/src/posts ./src/posts
+
+USER nextjs
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
+  CMD curl -f http://127.0.0.1:3000/ || exit 1
+# -H 0.0.0.0: Docker sets HOSTNAME to the container id, which would otherwise
+# make `next start` bind only that name and fail the localhost healthcheck.
+CMD ["node", "node_modules/next/dist/bin/next", "start", "-H", "0.0.0.0", "-p", "3000"]
