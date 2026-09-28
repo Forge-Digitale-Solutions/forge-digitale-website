@@ -8,6 +8,12 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
+function absoluteImage(path: string | undefined): string {
+  if (!path) return `${SITE_URL}/images/og-image.jpg`;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
@@ -26,16 +32,17 @@ export async function generateMetadata({
   const postData = await getPostData(slug);
 
   const articleUrl = `${SITE_URL}/blog/${slug}/`;
-  const articleImage = postData.image
-    ? `${SITE_URL}${postData.image}`
-    : `${SITE_URL}/images/og-image.jpg`;
+  const seoTitle = postData.metaTitle || postData.title;
+  const seoDescription =
+    postData.metaDescription ||
+    postData.excerpt ||
+    `Article sur ${postData.category} - ${postData.title}`;
+  const articleImage = absoluteImage(postData.ogImage || postData.image);
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: postData.title,
-    description:
-      postData.excerpt ||
-      `Article sur ${postData.category} - ${postData.title}`,
+    title: seoTitle,
+    description: seoDescription,
     keywords: [
       postData.title,
       postData.category,
@@ -55,9 +62,8 @@ export async function generateMetadata({
       type: "article",
       locale: "fr_FR",
       url: articleUrl,
-      title: postData.title,
-      description:
-        postData.excerpt || `Article sur ${postData.category}`,
+      title: seoTitle,
+      description: seoDescription,
       siteName: "Forge Digitale Solutions",
       publishedTime: postData.date,
       authors: ["Anthony Marcelin"],
@@ -73,9 +79,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: postData.title,
-      description:
-        postData.excerpt || `Article sur ${postData.category}`,
+      title: seoTitle,
+      description: seoDescription,
       images: [articleImage],
     },
   };
