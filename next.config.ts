@@ -17,6 +17,10 @@ const corsRead = [
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  // Next prepends a priority redirect that adds the slash before user rules,
+  // so `/services` became `/services/` and only then `/`. Own the slash in
+  // `src/proxy.ts` and point legacy sources at the final URL in one hop.
+  skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true,
   },
@@ -82,7 +86,7 @@ const nextConfig: NextConfig = {
     // termination.
     return [
       {
-        source: "/atelier-saint-laurent-medoc",
+        source: "/atelier-saint-laurent-medoc/",
         destination: "/rendez-vous-saint-laurent-medoc/",
         permanent: true,
       },
@@ -97,33 +101,36 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/services",
+        source: "/services/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/pack-agent-ready",
+        source: "/pack-agent-ready/",
         destination: "/services/agent-ready/",
         permanent: true,
       },
       {
-        source: "/about",
+        source: "/about/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/contact",
+        source: "/contact/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/realisations",
+        source: "/realisations/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/:path*.html",
-        destination: "/:path*/",
+        // Keep GSC verification and the Apache 404 document on their .html URL.
+        // `$` is the end of the path, so only those two files are excluded.
+        source:
+          "/:path((?!googlee61c0f8344857e94\\.html\\/?$|404\\.html\\/?$).*)\\.html",
+        destination: "/:path/",
         permanent: true,
       },
     ];
