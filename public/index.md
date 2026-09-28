@@ -1,6 +1,6 @@
 ---
 title: Forge Digitale Solutions | Création Web & Dépannage (Médoc - Gironde)
-description: Création de sites internet sur-mesure et solutions informatiques à Saint-Laurent-Médoc. À partir de 500 € HT.
+description: Création de sites internet sur-mesure et solutions informatiques à Saint-Laurent-Médoc. À partir de 500 € TTC.
 ---
 
 # Forge Digitale Solutions
@@ -9,10 +9,11 @@ Artisanat numérique dans le Médoc. Anthony Marcelin crée des sites web et des
 
 ## Offre
 
-- **Création de site web** : à partir de **500 € HT** — [détail](https://forgedigitalesolutions.com/creation-site-web/)
+- **Création de site web** : à partir de **500 € TTC** — [détail](https://forgedigitalesolutions.com/creation-site-web/)
 - **Maintenance de site** — [détail](https://forgedigitalesolutions.com/maintenance-site-web/)
-- **Installation Linux Mint** (forfait Renaissance 69 €) — [détail](https://forgedigitalesolutions.com/installation-linux/)
-- **Montage PC** (forfait 149 €) — [détail](https://forgedigitalesolutions.com/montage-pc/)
+- **Pack Agent Ready** : à partir de **190 € TTC** — [détail](https://forgedigitalesolutions.com/services/agent-ready/)
+- **Installation Linux Mint** (forfait Renaissance 69 € TTC) — [détail](https://forgedigitalesolutions.com/installation-linux/)
+- **Montage PC** (forfait 149 € TTC) — [détail](https://forgedigitalesolutions.com/montage-pc/)
 
 ## Local
 

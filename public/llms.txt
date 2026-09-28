@@ -1,18 +1,19 @@
 # Forge Digitale Solutions
 
-> Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME du Médoc, du Bassin d'Arcachon et de Bordeaux. Anthony Marcelin, développeur full-stack (titre CDA). Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96. Création de sites à partir de 500 € HT. SIREN 100 857 838.
+> Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME du Médoc, du Bassin d'Arcachon et de Bordeaux. Anthony Marcelin, développeur full-stack (titre CDA). Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96. Création de sites à partir de 500 € TTC. SIREN 100 857 838.
 
 ## Pages principales
 
 - [Accueil](https://forgedigitalesolutions.com/) : services et présentation
-- [Création de site web](https://forgedigitalesolutions.com/creation-site-web/) : sites et apps sur-mesure (à partir de 500 € HT)
+- [Création de site web](https://forgedigitalesolutions.com/creation-site-web/) : sites et apps sur-mesure (à partir de 500 € TTC)
 - [Création de site internet Médoc](https://forgedigitalesolutions.com/creation-site-internet-medoc/) : offre locale Médoc
 - [Site web Bassin d'Arcachon](https://forgedigitalesolutions.com/creation-site-web-bassin-arcachon/) : offre Bassin
 - [Site internet artisan Médoc](https://forgedigitalesolutions.com/site-internet-artisan-medoc/) : artisans et métiers de bouche
 - [Maintenance de site web](https://forgedigitalesolutions.com/maintenance-site-web/) : hébergement, mises à jour, suivi
+- [Pack Agent Ready](https://forgedigitalesolutions.com/services/agent-ready/) : à partir de 190 € TTC. Formules, option site neuf et TVA : sur cette page.
 - [Développeur Médoc](https://forgedigitalesolutions.com/developpeur-medoc/) : interventions locales
-- [Installation Linux](https://forgedigitalesolutions.com/installation-linux/) : Linux Mint / forfait Renaissance (69 €)
-- [Montage PC](https://forgedigitalesolutions.com/montage-pc/) : montage PC sur-mesure (forfait 149 €)
+- [Installation Linux](https://forgedigitalesolutions.com/installation-linux/) : Linux Mint / forfait Renaissance (69 € TTC)
+- [Montage PC](https://forgedigitalesolutions.com/montage-pc/) : montage PC sur-mesure (forfait 149 € TTC)
 - [Rendez-vous atelier](https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/) : prise de rendez-vous
 - [FAQ](https://forgedigitalesolutions.com/faq/) : questions fréquentes
 - [Blog](https://forgedigitalesolutions.com/blog/) : articles web, sécurité, Linux
@@ -47,4 +48,4 @@
 - [Confidentialité](https://forgedigitalesolutions.com/confidentialite/)
 
 <!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended, etc. -->
-<!-- Dernière mise à jour : 2026-09-17 -->
+<!-- Dernière mise à jour : 2026-09-28 -->

@@ -21,12 +21,17 @@
     "Bordeaux"
   ],
   "offers": {
-    "websiteCreationFromEurHt": 500,
-    "note": "Ticket d'entrée création de site web à partir de 500 € HT. TVA non applicable art. 293 B."
+    "websiteCreationFromEurTtc": 500,
+    "agentReadyEssentielEurTtc": 190,
+    "agentReadyCompletEurTtc": 350,
+    "agentReadyOnNewSiteEssentielEurTtc": 90,
+    "agentReadyOnNewSiteCompletEurTtc": 190,
+    "note": "Ticket d'entrée création de site web à partir de 500 € TTC. Pack Agent Ready sur site existant : 190 € TTC (Essentiel) ou 350 € TTC (Complet). Option sur site neuf : +90 € TTC ou +190 € TTC. TVA non applicable art. 293 B."
   },
   "urls": {
     "home": "https://forgedigitalesolutions.com/",
     "creationSiteWeb": "https://forgedigitalesolutions.com/creation-site-web/",
+    "packAgentReady": "https://forgedigitalesolutions.com/services/agent-ready/",
     "faq": "https://forgedigitalesolutions.com/faq/",
     "rendezVous": "https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/",
     "blog": "https://forgedigitalesolutions.com/blog/",
@@ -42,7 +47,7 @@
     "mutations": false,
     "contentType": "application/json"
   },
-  "updated": "2026-09-17",
+  "updated": "2026-09-28",
   "social": {
     "instagram": "https://www.instagram.com/forgedigitalesolutions/",
     "facebook": "https://www.facebook.com/profile.php?id=61577431918424",

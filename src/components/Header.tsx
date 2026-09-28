@@ -10,6 +10,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 const serviceLinks = [
   { name: "Création de site web", href: "/creation-site-web" },
   { name: "Maintenance de site web", href: "/maintenance-site-web" },
+  { name: "Pack Agent Ready", href: "/services/agent-ready" },
   { name: "Développeur dans le Médoc", href: "/developpeur-medoc" },
   { name: "Montage PC", href: "/montage-pc" },
   { name: "Installation Linux", href: "/installation-linux" },

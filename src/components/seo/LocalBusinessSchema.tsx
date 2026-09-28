@@ -131,6 +131,27 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Pack Agent Ready",
+            description: "Rendre un site déjà en ligne lisible par les assistants, avec des règles d'usage. Essentiel 190 € TTC, Complet 350 € TTC. Option sur site neuf : +90 € TTC ou +190 € TTC.",
+            serviceType: "Website agent readiness",
+            areaServed: "Gironde",
+            provider: {
+              "@id": "https://forgedigitalesolutions.com/#business"
+            }
+          },
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "190",
+            priceCurrency: "EUR",
+            description: "Formule Essentiel, prestation seule sur site existant, 190 € TTC. TVA non applicable, article 293 B du CGI.",
+            eligibleRegion: "FR",
+          },
+          url: "https://forgedigitalesolutions.com/services/agent-ready/",
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Montage PC sur mesure",
             description: "Assemblage de PC gaming, workstation ou familial avec optimisation BIOS/XMP et suivi 1 an.",
             serviceType: "Computer Assembly",
@@ -143,7 +164,7 @@ export function LocalBusinessSchema() {
             "@type": "PriceSpecification",
             price: "149",
             priceCurrency: "EUR",
-            description: "Forfait montage complet (client fournit pièces)",
+            description: "Forfait montage complet, 149 € TTC (client fournit pièces). TVA non applicable, article 293 B du CGI.",
             eligibleRegion: "FR",
           },
           url: "https://forgedigitalesolutions.com/montage-pc/",
@@ -164,7 +185,7 @@ export function LocalBusinessSchema() {
             "@type": "PriceSpecification",
             price: "69",
             priceCurrency: "EUR",
-            description: "Forfait complet (client fournit matériel)",
+            description: "Forfait complet, 69 € TTC (client fournit matériel). TVA non applicable, article 293 B du CGI.",
             eligibleRegion: "FR",
           },
           url: "https://forgedigitalesolutions.com/installation-linux/",
@@ -181,6 +202,7 @@ export function LocalBusinessSchema() {
       "Création de site web",
       "Développement d'application",
       "Linux Mint",
+      "Pack Agent Ready",
       "Montage PC",
       "Green IT",
       "Développement web Gironde"

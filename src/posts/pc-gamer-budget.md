@@ -35,7 +35,7 @@ Monter soi-même sa machine est formateur, mais comporte des risques concrets : 
 - l'activation du **profil mémoire (XMP/EXPO)**, sans lequel la RAM tourne en deçà de sa vitesse annoncée ;
 - une **courbe de ventilation** adaptée et une **gestion des câbles** propre.
 
-Mon forfait montage (150 €) couvre l'assemblage complet et ces réglages, pour une machine livrée prête à l'emploi et correctement paramétrée.
+Mon forfait montage (150 € TTC) couvre l'assemblage complet et ces réglages, pour une machine livrée prête à l'emploi et correctement paramétrée.
 
 ---
 

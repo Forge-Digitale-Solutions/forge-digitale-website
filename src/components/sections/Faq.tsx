@@ -26,7 +26,7 @@ const faqData: FaqCategory[] = [
             <p>
               Il n&apos;y a pas de packs. Une vitrine claire, utile, pensée pour
               le téléphone, avec un espace pour mettre à jour le contenu, à
-              partir de 500&nbsp;€.
+              partir de 500&nbsp;€ TTC.
             </p>
             <p>
               Au-delà, le prix dépend de ce que le site doit vraiment faire :
