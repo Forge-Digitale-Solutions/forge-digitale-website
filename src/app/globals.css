@@ -365,27 +365,27 @@
   a {
     color: inherit;
   }
+}
 
-  /* Prose (blog + legal pages) — themed in BOTH themes through
-     Tailwind Typography variables mapped onto the tokens. */
-  .prose {
-    --tw-prose-body: var(--text-soft);
-    --tw-prose-headings: var(--text-strong);
-    --tw-prose-lead: var(--text);
-    --tw-prose-links: var(--link);
-    --tw-prose-bold: var(--text-strong);
-    --tw-prose-counters: var(--text-muted);
-    --tw-prose-bullets: var(--accent);
-    --tw-prose-hr: var(--border);
-    --tw-prose-quotes: var(--text-muted);
-    --tw-prose-quote-borders: var(--accent-line);
-    --tw-prose-captions: var(--text-muted);
-    --tw-prose-code: var(--text);
-    --tw-prose-pre-code: var(--text-strong);
-    --tw-prose-pre-bg: var(--surface-sunken);
-    --tw-prose-th-borders: var(--border-strong);
-    --tw-prose-td-borders: var(--border);
-  }
+/* Graphite only. Unlayered so it beats @tailwindcss/typography gray-700
+   --tw-prose-* (utilities layer). Atelier keeps the plugin defaults. */
+[data-theme="graphite"] .prose {
+  --tw-prose-body: var(--text-soft);
+  --tw-prose-headings: var(--text-strong);
+  --tw-prose-lead: var(--text);
+  --tw-prose-links: var(--link);
+  --tw-prose-bold: var(--text-strong);
+  --tw-prose-counters: var(--text-muted);
+  --tw-prose-bullets: var(--accent);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--text-muted);
+  --tw-prose-quote-borders: var(--accent-line);
+  --tw-prose-captions: var(--text-muted);
+  --tw-prose-code: var(--text);
+  --tw-prose-pre-code: var(--text-strong);
+  --tw-prose-pre-bg: var(--surface-sunken);
+  --tw-prose-th-borders: var(--border-strong);
+  --tw-prose-td-borders: var(--border);
 }
 
 @layer utilities {
