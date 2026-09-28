@@ -147,12 +147,17 @@ async function readMarkdownPost(id: string): Promise<PostData> {
 }
 
 export async function getSortedPostsData(): Promise<PostData[]> {
+  const markdown = readMarkdownList();
   const remote = await payloadPosts();
-  if (remote && remote.length > 0) {
-    const posts = await Promise.all(remote.map((doc) => toPostData(doc, false)));
-    return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
-  }
-  return readMarkdownList();
+  if (!remote?.length) return markdown;
+
+  const payload = await Promise.all(
+    remote.filter((doc) => doc.slug).map((doc) => toPostData(doc, false)),
+  );
+  const bySlug = new Map(markdown.map((post) => [post.id, post]));
+  for (const post of payload) bySlug.set(post.id, post);
+
+  return [...bySlug.values()].sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPostData(id: string): Promise<PostData> {

@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import fs from "node:fs";
-import path from "node:path";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -8,12 +6,6 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/services/agent-ready/`;
 const BLOG_AGENT_READY = "/blog/site-agent-ready/";
-
-function hasBlogAgentReady() {
-  return fs.existsSync(
-    path.join(process.cwd(), "src/posts/site-agent-ready.md"),
-  );
-}
 
 export const metadata: Metadata = {
   title: "Pack Agent Ready : site lisible par les assistants",
@@ -341,16 +333,14 @@ export default function PackAgentReadyPage() {
                 Maintenance de site web
               </Link>
             </li>
-            {hasBlogAgentReady() ? (
-              <li>
-                <Link
-                  href={BLOG_AGENT_READY}
-                  className="text-accent hover:underline"
-                >
-                  Article : rendre un site lisible par les assistants
-                </Link>
-              </li>
-            ) : null}
+            <li>
+              <Link
+                href={BLOG_AGENT_READY}
+                className="text-accent hover:underline"
+              >
+                Article : rendre un site lisible par les assistants
+              </Link>
+            </li>
           </ul>
         </nav>
 
