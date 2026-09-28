@@ -163,7 +163,7 @@ export default function PackAgentReadyPage() {
               <li>
                 Site neuf Forge Digitale Solutions : option ajoutée au devis de
                 création. Le ticket d&apos;entrée d&apos;un site reste à partir
-                de 500&nbsp;€ HT.
+                de 500&nbsp;€ TTC.
               </li>
               <li>
                 Boutique en ligne lourde, application, ou authentification entre
@@ -248,7 +248,7 @@ export default function PackAgentReadyPage() {
               Option sur un site neuf
             </h2>
             <p>
-              Ajout au devis de création (à partir de 500&nbsp;€ HT). Le prix
+              Ajout au devis de création (à partir de 500&nbsp;€ TTC). Le prix
               est plus bas parce que le chantier est déjà ouvert.
             </p>
             <ul className="list-disc pl-5 space-y-2">

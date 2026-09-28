@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/montage-pc/`;
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
   description:
-    "Montage de PC adapté à votre usage et à votre budget, pour le jeu, le travail ou la famille. Vous achetez les pièces, je les assemble et règle tout depuis Saint-Laurent-Médoc, pour la Gironde (récupération sur rendez-vous). Forfait à 149 €.",
+    "Montage de PC adapté à votre usage et à votre budget, pour le jeu, le travail ou la famille. Vous achetez les pièces, je les assemble et règle tout depuis Saint-Laurent-Médoc, pour la Gironde (récupération sur rendez-vous). Forfait à 149 € TTC.",
   keywords: [
     "montage PC Gironde",
     "montage PC gamer Bordeaux",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
     description:
-      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 €, depuis Saint-Laurent-Médoc (récupération sur rendez-vous).",
+      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 € TTC, depuis Saint-Laurent-Médoc (récupération sur rendez-vous).",
     images: [
       {
         url: `${SITE_URL}/blog/pc-build.jpg`,
@@ -60,7 +60,7 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "149",
-    description: "Forfait montage complet (pièces achetées par le client)",
+    description: "Forfait montage complet, 149 € TTC (pièces achetées par le client). TVA non applicable, article 293 B du CGI.",
   },
 };
 
@@ -126,7 +126,7 @@ export default function MontagePcPage() {
             jour le BIOS, j&rsquo;active le profil mémoire (XMP ou EXPO), je règle
             la ventilation pour que ça reste silencieux, et j&rsquo;installe le
             système pour vous la rendre prête à l&rsquo;emploi. Le forfait montage
-            est à 149 €.
+            est à 149 € TTC.
           </p>
 
           <p>

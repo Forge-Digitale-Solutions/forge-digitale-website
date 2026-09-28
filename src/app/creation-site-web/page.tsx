@@ -59,7 +59,7 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "500",
-    description: "Création de site internet, à partir de 500 €",
+    description: "Création de site internet, à partir de 500 € TTC",
   },
 };
 
@@ -129,7 +129,7 @@ export default function CreationSiteWebPage() {
             Si vous voulez aller plus loin une fois le site en ligne, je peux
             aussi m&rsquo;occuper de l&rsquo;hébergement, du nom de domaine et de
             la maintenance. Mais rien n&rsquo;est imposé. Les tarifs commencent
-            à partir de 500 € pour une vitrine, avec un espace pour mettre à
+            à partir de 500 € TTC pour une vitrine, avec un espace pour mettre à
             jour le contenu. Le reste dépend de ce que l&rsquo;on définit
             ensemble. L&rsquo;échange et le devis sont gratuits.
           </p>
@@ -139,7 +139,7 @@ export default function CreationSiteWebPage() {
               Pack Agent Ready
             </Link>{" "}
             s&rsquo;ajoute au devis : +90 € TTC (Essentiel) ou +190 € TTC
-            (Complet). Le ticket d&rsquo;entrée du site reste à partir de 500 € HT.
+            (Complet). Le ticket d&rsquo;entrée du site reste à partir de 500 € TTC.
           </p>
         </div>
 

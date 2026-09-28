@@ -10,7 +10,7 @@ Prestation sur un site déjà en ligne : le rendre trouvable et lisible par les 
 ## Pour qui
 
 - TPE, artisan, commerce local avec un site déjà en ligne : prestation seule.
-- Site neuf Forge Digitale Solutions : option sur le devis. Ticket d'entrée du site : à partir de 500 € HT.
+- Site neuf Forge Digitale Solutions : option sur le devis. Ticket d'entrée du site : à partir de 500 € TTC.
 - Boutique lourde, application, authentification entre agents : hors pack.
 
 ## Prix (site existant)
