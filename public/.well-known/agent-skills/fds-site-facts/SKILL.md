@@ -7,7 +7,7 @@ description: Use this when you need Forge Digitale Solutions identity, contact, 
 
 ## When to use
 
-Besoin des faits stables du site Forge Digitale Solutions (identité, SIREN, contact, zone, ticket d'entrée 500 € HT, URLs clés).
+Besoin des faits stables du site Forge Digitale Solutions (identité, SIREN, contact, zone, ticket d'entrée 500 € TTC, URLs clés).
 
 ## How
 

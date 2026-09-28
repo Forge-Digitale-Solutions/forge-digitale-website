@@ -31,7 +31,7 @@ La compatibilité des fichiers est assurée : `.docx`, `.pdf`, photos et autres 
 
 ## Ce que couvre le forfait Renaissance
 
-Pour ceux qui ne souhaitent pas réaliser l'opération eux-mêmes, je propose une prestation clé en main, le **forfait Renaissance (69 €)**, à Saint-Laurent-Médoc et alentours. Il comprend :
+Pour ceux qui ne souhaitent pas réaliser l'opération eux-mêmes, je propose une prestation clé en main, le **forfait Renaissance (69 € TTC)**, à Saint-Laurent-Médoc et alentours. Il comprend :
 
 - la sauvegarde préalable des fichiers personnels ;
 - le nettoyage de la machine ;

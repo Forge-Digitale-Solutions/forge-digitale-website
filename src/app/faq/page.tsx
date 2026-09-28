@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/faq/`;
 export const metadata: Metadata = {
   title: "FAQ : sites web, montage PC et Linux à Saint-Laurent-Médoc",
   description:
-    "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Saint-Laurent-Médoc, sur rendez-vous.",
+    "Réponses claires sur la création de sites, la maintenance, le montage PC (149 € TTC) et le forfait Renaissance (69 € TTC). Saint-Laurent-Médoc, sur rendez-vous.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "FAQ : sites web, montage PC et Linux à Saint-Laurent-Médoc",
     description:
-      "Réponses claires sur la création de sites, la maintenance, le montage PC (149 €) et le forfait Renaissance (69 €). Saint-Laurent-Médoc, sur rendez-vous.",
+      "Réponses claires sur la création de sites, la maintenance, le montage PC (149 € TTC) et le forfait Renaissance (69 € TTC). Saint-Laurent-Médoc, sur rendez-vous.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const qa = [
   {
     q: "Combien coûte la création d’un site internet ?",
-    a: "Il n’y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, avec un espace pour mettre à jour le contenu, à partir de 500 €. Au-delà, le prix dépend de ce que le site doit vraiment faire : boutique, formulaires avancés, application métier. Le devis est gratuit.",
+    a: "Il n’y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, avec un espace pour mettre à jour le contenu, à partir de 500 € TTC. Au-delà, le prix dépend de ce que le site doit vraiment faire : boutique, formulaires avancés, application métier. Le devis est gratuit.",
   },
   {
     q: "Combien de pages ? Est-ce que je mets à jour tout seul ?",
@@ -53,10 +53,10 @@ const qa = [
   },
   {
     q: "Comment se passe le montage ? Dois-je acheter les pièces ?",
-    a: "Oui : les pièces sont à votre nom (factures et garanties). Forfait 149 €, après récupération de la machine sur rendez-vous.",
+    a: "Oui : les pièces sont à votre nom (factures et garanties). Forfait 149 € TTC, après récupération de la machine sur rendez-vous.",
   },
   {
-    q: "Le forfait 149 € inclut-il Windows ?",
+    q: "Le forfait 149 € TTC inclut-il Windows ?",
     a: "Non. Licence à part, ou Linux.",
   },
   {
@@ -77,7 +77,7 @@ const qa = [
   },
   {
     q: "Pourquoi Linux (Forfait Renaissance) ?",
-    a: "Un PC qui rame n’est pas forcément mort. Linux Mint, 69 €, environ 2 h, plus 1 h de prise en main.",
+    a: "Un PC qui rame n’est pas forcément mort. Linux Mint, 69 € TTC, environ 2 h, plus 1 h de prise en main.",
   },
   {
     q: "Windows 10 n’est plus suivi ?",
@@ -164,6 +164,10 @@ export default function FaqPage() {
               maintenance
             </Link>
             ,{" "}
+            <Link href="/services/agent-ready/" className="text-accent hover:underline">
+              Pack Agent Ready
+            </Link>
+            ,{" "}
             <Link href="/montage-pc/" className="text-accent hover:underline">
               montage PC
             </Link>
@@ -186,7 +190,7 @@ export default function FaqPage() {
               <p>
                 Il n&rsquo;y a pas de packs. Une vitrine claire, utile, pensée
                 pour le téléphone, avec un espace pour mettre à jour le contenu,
-                à partir de 500 €. Au-delà, le prix dépend de ce que le site
+                à partir de 500 € TTC. Au-delà, le prix dépend de ce que le site
                 doit vraiment faire : boutique, formulaires avancés, application
                 métier. Devis gratuit. Voir{" "}
                 <Link href="/creation-site-web/" className="text-accent hover:underline">
@@ -253,7 +257,7 @@ export default function FaqPage() {
             <h2 className="text-2xl font-bold text-text-strong">Montage PC</h2>
             <Qa q="Comment se passe le montage ? Dois-je acheter les pièces ?">
               <p>
-                Oui : pièces à votre nom (factures et garanties). Forfait 149 €,
+                Oui : pièces à votre nom (factures et garanties). Forfait 149 € TTC,
                 après récupération de la machine sur rendez-vous.{" "}
                 <Link href="/montage-pc/" className="text-accent hover:underline">
                   Montage PC
@@ -261,7 +265,7 @@ export default function FaqPage() {
                 .
               </p>
             </Qa>
-            <Qa q="Le forfait 149 € inclut-il Windows ?">
+            <Qa q="Le forfait 149 € TTC inclut-il Windows ?">
               <p>Non. Licence à part, ou Linux.</p>
             </Qa>
             <Qa q="Pourquoi pas un PC tout fait ?">
@@ -288,7 +292,7 @@ export default function FaqPage() {
             <h2 className="text-2xl font-bold text-text-strong">Forfait Renaissance</h2>
             <Qa q="Pourquoi Linux ?">
               <p>
-                Un PC qui rame n&rsquo;est pas forcément mort. Mint, 69 €, environ
+                Un PC qui rame n&rsquo;est pas forcément mort. Mint, 69 € TTC, environ
                 2 h, 1 h de prise en main.{" "}
                 <Link href="/installation-linux/" className="text-accent hover:underline">
                   Installation Linux
@@ -345,8 +349,8 @@ export default function FaqPage() {
           <section className="space-y-6">
             <h2 className="text-2xl font-bold text-text-strong">Devis et paiement</h2>
             <p>
-              Devis gratuit. Montants fermes : à partir de 500 € pour une
-              vitrine, 149 € montage, 69 € Renaissance. Le reste au cas par cas.
+              Devis gratuit. Montants fermes : à partir de 500 € TTC pour une
+              vitrine, 149 € TTC montage, 69 € TTC Renaissance. Le reste au cas par cas.
               Cadre :{" "}
               <Link href="/cgv/" className="text-accent hover:underline">
                 CGV

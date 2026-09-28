@@ -19,6 +19,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CONTACT_SERVICES = [
   "Demande de Devis Web",
+  "Pack Agent Ready",
   "Montage PC",
   "Dépannage / Maintenance",
   "Autre demande",

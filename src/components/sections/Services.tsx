@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section";
-import { Wrench, Code2, ShieldCheck, Cpu } from "lucide-react";
+import { Wrench, Code2, ShieldCheck, Cpu, Bot } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -10,7 +10,7 @@ const services = [
     title: "Création Web & Applications",
     description:
       "Solutions web performantes et développement d'outils métiers pour les professionnels du Médoc.",
-    price: "À partir de 500€",
+    price: "À partir de 500 € TTC",
     href: "/creation-site-web",
     icon: <Code2 className="w-6 h-6 text-on-accent" aria-hidden="true" />,
     bgIcon: "bg-accent",
@@ -36,7 +36,7 @@ const services = [
     title: "Montage PC Sur Mesure",
     description:
       "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
-    price: "Forfait 149€",
+    price: "Forfait 149 € TTC",
     href: "/montage-pc",
     badge: "Offre de Lancement 🚀",
     icon: <Cpu className="w-6 h-6 text-accent" aria-hidden="true" />,
@@ -53,7 +53,7 @@ const services = [
     title: "Forfait Renaissance : Seconde Vie",
     description:
       "Votre ordinateur est lent ? Ne le jetez pas. Je le nettoie et j'installe un système léger pour lui redonner sa rapidité.",
-    price: "Forfait 69€",
+    price: "Forfait 69 € TTC",
     href: "/installation-linux",
     badge: "Tarif 2026 ✨",
     icon: <Wrench className="w-6 h-6 text-on-accent" aria-hidden="true" />,
@@ -66,6 +66,17 @@ const services = [
       "Mise à jour de sécurité",
       "Approche économique et écologique",
     ],
+  },
+  {
+    title: "Pack Agent Ready",
+    description:
+      "Votre site est déjà en ligne. Je le rends lisible par les assistants, avec des règles d'usage claires.",
+    price: "À partir de 190 € TTC",
+    href: "/services/agent-ready",
+    icon: <Bot className="w-6 h-6 text-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent/10",
+    colSpan: "md:col-span-1",
+    features: ["robots.txt et sitemap", "llms.txt", "Compte-rendu"],
   },
 ];
 

@@ -8,7 +8,7 @@ export function FAQSchema() {
         name: "Combien coûte la création d'un site internet ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Il n'y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, avec un espace pour mettre à jour le contenu, à partir de 500 €. Au-delà, le prix dépend de ce que le site doit vraiment faire : boutique, formulaires avancés, application métier. L'étude de votre projet est gratuite.",
+          text: "Il n'y a pas de packs. Une vitrine claire, utile, pensée pour le téléphone, avec un espace pour mettre à jour le contenu, à partir de 500 € TTC. Au-delà, le prix dépend de ce que le site doit vraiment faire : boutique, formulaires avancés, application métier. L'étude de votre projet est gratuite.",
         },
       },
       {

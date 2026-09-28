@@ -28,6 +28,12 @@
           "title": "JSON public lecture seule — identité, contact, offre, URLs"
         },
         {
+          "href": "https://forgedigitalesolutions.com/services/agent-ready/",
+          "type": "text/html",
+          "hreflang": "fr",
+          "title": "Pack Agent Ready"
+        },
+        {
           "href": "https://forgedigitalesolutions.com/#contact",
           "type": "text/html",
           "hreflang": "fr",

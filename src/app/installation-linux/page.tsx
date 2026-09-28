@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/installation-linux/`;
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
   description:
-    "Votre PC est trop ancien pour Windows 11, ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour le relancer, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 €, Médoc et Bassin d'Arcachon.",
+    "Votre PC est trop ancien pour Windows 11, ou Windows 10 n'est plus à jour ? J'installe Linux Mint pour le relancer, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 € TTC, Médoc et Bassin d'Arcachon.",
   keywords: [
     "installation Linux Médoc",
     "passage Windows à Linux",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
     description:
-      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
+      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 € TTC.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-mint.jpg`,
@@ -60,7 +60,7 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "69",
-    description: "Forfait Renaissance : installation Linux Mint clé en main",
+    description: "Forfait Renaissance, 69 € TTC : installation Linux Mint clé en main. TVA non applicable, article 293 B du CGI.",
   },
 };
 
@@ -135,7 +135,7 @@ export default function InstallationLinuxPage() {
             fichiers avant l&rsquo;opération, le nettoyage de la machine,
             l&rsquo;installation de Linux Mint configuré pour ressembler à
             Windows, le réglage des périphériques (Wi-Fi, imprimante, son) et une
-            heure de prise en main avec vous. Le tout pour 69 €, depuis
+            heure de prise en main avec vous. Le tout pour 69 € TTC, depuis
             Saint-Laurent-Médoc, en deux heures environ.
           </p>
 

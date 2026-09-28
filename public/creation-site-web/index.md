@@ -1,13 +1,13 @@
 ---
 title: Création de site web | Forge Digitale Solutions
-description: Sites et applications sur-mesure à partir de 500 € HT. Médoc et Gironde.
+description: Sites et applications sur-mesure à partir de 500 € TTC. Médoc et Gironde.
 ---
 
 # Création de site web
 
 Forge Digitale Solutions conçoit des sites et applications sur-mesure pour TPE, artisans et PME.
 
-- Tarif d'entrée : **à partir de 500 € HT**
+- Tarif d'entrée : **à partir de 500 € TTC**
 - Zone : Médoc, Bassin d'Arcachon, Bordeaux
 - Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96 — [formulaire](https://forgedigitalesolutions.com/#contact)
 
