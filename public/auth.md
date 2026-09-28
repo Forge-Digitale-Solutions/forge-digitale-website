@@ -2,7 +2,7 @@
 
 ## Audience
 
-Agents et humains. Ce domaine est une **vitrine** (site statique) pour Forge Digitale Solutions (Saint-Laurent-Médoc). Raison sociale : EI Anthony Marcelin. Nom commercial : Forge Digitale Solutions.
+Agents et humains. Ce domaine est une **vitrine publique** (site Next.js) pour Forge Digitale Solutions (Saint-Laurent-Médoc). Raison sociale : EI Anthony Marcelin. Nom commercial : Forge Digitale Solutions.
 
 ## Registration
 
