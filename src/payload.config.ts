@@ -8,6 +8,7 @@ import { buildConfig } from "payload";
 import { Media } from "./collections/Media";
 import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
+import { migrations } from "./migrations";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -29,8 +30,12 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI || "",
     },
-    // Single VPS, one operator. Creates tables on boot instead of a migration step.
+    // Dev only. @payloadcms/db-postgres skips push when NODE_ENV=production
+    // or PAYLOAD_MIGRATING=true. Local schema changes still sync on `next dev`.
+    // Production applies src/migrations before listen (scripts/start-with-migrations.sh)
+    // and again on connect via prodMigrations.
     push: true,
+    prodMigrations: migrations,
   }),
   sharp,
   plugins: [
