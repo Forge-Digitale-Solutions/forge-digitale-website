@@ -3,6 +3,7 @@ import { fileURLToPath } from "url";
 import sharp from "sharp";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { mcpPlugin } from "@payloadcms/plugin-mcp";
 import { buildConfig } from "payload";
 import { Media } from "./collections/Media";
 import { Posts } from "./collections/Posts";
@@ -32,4 +33,28 @@ export default buildConfig({
     push: true,
   }),
   sharp,
+  plugins: [
+    mcpPlugin({
+      collections: {
+        posts: {
+          description: "Articles du blog Forge Digitale",
+          enabled: {
+            find: true,
+            create: true,
+            update: true,
+            delete: true,
+          },
+        },
+        media: {
+          description: "Images des articles",
+          enabled: {
+            find: true,
+            create: true,
+            update: true,
+            delete: false,
+          },
+        },
+      },
+    }),
+  ],
 });
