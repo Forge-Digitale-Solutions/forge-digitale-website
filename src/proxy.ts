@@ -13,14 +13,17 @@ function markdownTarget(pathname: string): string | null {
   ];
 
   for (const file of candidates) {
-    const resolved = path.resolve(file);
+    const resolved = path.resolve(/*turbopackIgnore: true*/ file);
     if (
       !resolved.startsWith(PUBLIC_DIR + path.sep) &&
       resolved !== path.join(PUBLIC_DIR, "index.md")
     ) {
       continue;
     }
-    if (fs.existsSync(resolved) && fs.statSync(resolved).isFile()) {
+    if (
+      fs.existsSync(/*turbopackIgnore: true*/ resolved) &&
+      fs.statSync(/*turbopackIgnore: true*/ resolved).isFile()
+    ) {
       const rel = path.relative(PUBLIC_DIR, resolved).split(path.sep).join("/");
       return `/${rel}`;
     }
@@ -60,3 +63,9 @@ export function proxy(request: NextRequest) {
   url.pathname = target;
   return NextResponse.rewrite(url);
 }
+
+export const config = {
+  matcher: [
+    "/((?!_next/static|_next/image|.*\\.(?:jpg|jpeg|png|webp|svg|ico|woff2|css|js)$).*)",
+  ],
+};
