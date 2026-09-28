@@ -33,17 +33,6 @@ const services = [
     features: ["Hébergement & Domaine", "Support & Mises à jour"],
   },
   {
-    title: "Pack Agent Ready",
-    description:
-      "Votre site est déjà en ligne. Je le rends lisible par les assistants, avec des règles d'usage claires.",
-    price: "À partir de 190 € HT",
-    href: "/pack-agent-ready",
-    icon: <Bot className="w-6 h-6 text-accent" aria-hidden="true" />,
-    bgIcon: "bg-accent/10",
-    colSpan: "md:col-span-3",
-    features: ["robots.txt et sitemap", "llms.txt", "Compte-rendu"],
-  },
-  {
     title: "Montage PC Sur Mesure",
     description:
       "Travail, Gaming ou Familial : je définis avec vous la configuration idéale, 100% adaptée à votre besoin et votre budget.",
@@ -77,6 +66,17 @@ const services = [
       "Mise à jour de sécurité",
       "Approche économique et écologique",
     ],
+  },
+  {
+    title: "Pack Agent Ready",
+    description:
+      "Votre site est déjà en ligne. Je le rends lisible par les assistants, avec des règles d'usage claires.",
+    price: "À partir de 190 € HT",
+    href: "/pack-agent-ready",
+    icon: <Bot className="w-6 h-6 text-accent" aria-hidden="true" />,
+    bgIcon: "bg-accent/10",
+    colSpan: "md:col-span-1",
+    features: ["robots.txt et sitemap", "llms.txt", "Compte-rendu"],
   },
 ];
 
