@@ -38,11 +38,14 @@ COPY --from=build --chown=nextjs:nodejs /app/next.config.ts ./next.config.ts
 COPY --from=build --chown=nextjs:nodejs /app/tsconfig.json ./tsconfig.json
 COPY --from=build --chown=nextjs:nodejs /app/src ./src
 COPY --from=build --chown=nextjs:nodejs /app/scripts/import-posts.ts ./scripts/import-posts.ts
+COPY --from=build --chown=nextjs:nodejs /app/scripts/clear-dev-push-marker.mjs ./scripts/clear-dev-push-marker.mjs
+COPY --from=build --chown=nextjs:nodejs /app/scripts/start-with-migrations.sh ./scripts/start-with-migrations.sh
 
 USER nextjs
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
+# migrate runs before next listens; allow the first boot to finish DDL.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
   CMD curl -f http://127.0.0.1:3000/ || exit 1
 # -H 0.0.0.0: Docker sets HOSTNAME to the container id, which would otherwise
 # make `next start` bind only that name and fail the localhost healthcheck.
-CMD ["node", "node_modules/next/dist/bin/next", "start", "-H", "0.0.0.0", "-p", "3000"]
+CMD ["sh", "scripts/start-with-migrations.sh"]
