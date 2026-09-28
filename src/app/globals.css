@@ -367,10 +367,9 @@
   }
 }
 
-/* Prose (blog + legal pages). Unlayered on purpose: @tailwindcss/typography
-   writes gray-700 --tw-prose-* in the components layer, which beats @layer
-   base. These tokens follow [data-theme] (Atelier and Graphite). */
-.prose {
+/* Graphite only. Unlayered so it beats @tailwindcss/typography gray-700
+   --tw-prose-* (utilities layer). Atelier keeps the plugin defaults. */
+[data-theme="graphite"] .prose {
   --tw-prose-body: var(--text-soft);
   --tw-prose-headings: var(--text-strong);
   --tw-prose-lead: var(--text);
