@@ -1,39 +1,29 @@
 name: Mise en ligne OVH
 
+# Prod is the Dokploy Application (Docker build, branch main, `next start` on
+# port 3000) after DNS cutover. This workflow must not FTP on every push to
+# main, or it would overwrite the VPS with a stale static tree.
+#
+# `output: "export"` was removed, so `./out/` is no longer produced. Do not
+# turn the FTP job back on.
+#
+# GitHub secrets are intentionally left in place for the cutover:
+# - NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY — set this as a Docker build ARG in Dokploy
+#   (Next inlines it at build time; a runtime env var is not enough).
+# - FTP_SERVER, FTP_USERNAME, FTP_PASSWORD — still needed only if OVH must be
+#   touched by hand before DNS moves. Remove them once OVH is switched off.
+#
+# workflow_dispatch is a no-op so the file stays visible without deploying.
+
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 4 * * *"
+  workflow_dispatch:
 
 jobs:
   web-deploy:
-    name: Build & Deploy
+    name: FTP OVH désactivé
     runs-on: ubuntu-latest
     steps:
-      - name: Récupération du code
-        uses: actions/checkout@v4
-
-      - name: Installation de Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "npm"
-
-      - name: Installation des dépendances
-        run: npm ci
-
-      - name: Construction du site (Build)
-        run: npm run build
-        env:
-          NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
-
-      - name: 📂 Envoi vers OVH
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: ./www/
+      - name: Rappel — Dokploy sert la prod
+        run: |
+          echo "FTP OVH is disabled. Production is the Dokploy container (next start, port 3000, healthcheck curl http://127.0.0.1:3000/)."
+          echo "Secrets kept in the repo: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY."

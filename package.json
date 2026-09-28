@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "rm -rf out/404 out/feed && node scripts/copy-blog-markdown.mjs",
+    "postbuild": "node scripts/copy-blog-markdown.mjs",
     "start": "next start",
     "lint": "eslint"
   },
