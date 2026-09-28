@@ -43,8 +43,18 @@ function redirectTo(request: NextRequest, pathname: string) {
   return NextResponse.redirect(url, 308);
 }
 
+function isCmsPath(pathname: string): boolean {
+  return (
+    pathname === "/admin" ||
+    pathname.startsWith("/admin/") ||
+    pathname === "/api" ||
+    pathname.startsWith("/api/")
+  );
+}
+
 function normalizePath(request: NextRequest): NextResponse | null {
   const { pathname } = request.nextUrl;
+  if (isCmsPath(pathname)) return null;
   const legacy = legacyTarget(pathname);
   if (legacy && legacy !== pathname) {
     return redirectTo(request, legacy);

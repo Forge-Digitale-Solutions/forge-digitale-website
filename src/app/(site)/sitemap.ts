@@ -1,11 +1,11 @@
 import { MetadataRoute } from "next";
 import { getSortedPostsData } from "@/lib/posts";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://forgedigitalesolutions.com";
-  const posts = getSortedPostsData();
+  const posts = await getSortedPostsData();
 
   const mainRoute = {
     url: `${baseUrl}`,

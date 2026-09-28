@@ -1,3 +1,4 @@
+import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 // `.htaccess` is not read by `next start`. These headers keep the agent-ready
@@ -23,6 +24,15 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true,
+    localPatterns: [{ pathname: "/api/media/file/**" }],
+  },
+  webpack: (webpackConfig) => {
+    webpackConfig.resolve.extensionAlias = {
+      ".cjs": [".cts", ".cjs"],
+      ".js": [".ts", ".tsx", ".js", ".jsx"],
+      ".mjs": [".mts", ".mjs"],
+    };
+    return webpackConfig;
   },
   async headers() {
     return [
@@ -137,4 +147,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig, { devBundleServerPackages: false });

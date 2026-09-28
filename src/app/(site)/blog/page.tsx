@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blog : conseils web, montage PC et Linux dans le Médoc",
   description:
@@ -39,8 +41,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogIndex() {
-  const posts = getSortedPostsData();
+export default async function BlogIndex() {
+  const posts = await getSortedPostsData();
 
   return (
     <div className="min-h-screen bg-bg pt-32 pb-24">

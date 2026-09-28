@@ -8,10 +8,10 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
-export const dynamicParams = false;
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
-  const posts = getSortedPostsData();
+  const posts = await getSortedPostsData();
   return posts.map((post) => ({
     slug: post.id,
   }));

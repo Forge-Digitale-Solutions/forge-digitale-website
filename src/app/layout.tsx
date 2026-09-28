@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Archivo, Spline_Sans_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
-import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
-
 // Archivo variable font with the width (wdth) axis. Body uses the default
 // width; display headings widen to ~125 (the "Expanded" instance) via
 // `font-stretch` in globals.css. Self-hosted by next/font (no Google request).
@@ -93,23 +86,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         ></Script>
       </head>
-      <body className="bg-bg text-text font-sans antialiased">
-        <LocalBusinessSchema />
-        <ThemeProvider
-          attribute="data-theme"
-          defaultTheme="atelier"
-          enableSystem={false}
-          themes={["atelier", "graphite"]}
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          <FloatingWhatsAppButton />
-        </ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

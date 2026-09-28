@@ -1,5 +1,8 @@
 # Forge Digitale Solutions — Node server for Dokploy.
 # Build-arg NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is inlined by Next at image build.
+# Runtime env (Dokploy → Environment, not build args):
+#   DATABASE_URI, PAYLOAD_SECRET, PAYLOAD_PUBLIC_SERVER_URL
+# Mount a volume on /app/media for article images.
 # Listens on 3000. Swarm healthcheck: curl -f http://127.0.0.1:3000/
 
 FROM node:22-alpine AS deps
@@ -23,14 +26,18 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 RUN apk add --no-cache curl \
   && addgroup -g 1001 -S nodejs \
-  && adduser -S -u 1001 -G nodejs nextjs
+  && adduser -S -u 1001 -G nodejs nextjs \
+  && mkdir -p /app/media \
+  && chown nextjs:nodejs /app/media
 
 COPY --from=build --chown=nextjs:nodejs /app/public ./public
 COPY --from=build --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=build --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=build --chown=nextjs:nodejs /app/package.json ./package.json
 COPY --from=build --chown=nextjs:nodejs /app/next.config.ts ./next.config.ts
-COPY --from=build --chown=nextjs:nodejs /app/src/posts ./src/posts
+COPY --from=build --chown=nextjs:nodejs /app/tsconfig.json ./tsconfig.json
+COPY --from=build --chown=nextjs:nodejs /app/src ./src
+COPY --from=build --chown=nextjs:nodejs /app/scripts/import-posts.ts ./scripts/import-posts.ts
 
 USER nextjs
 EXPOSE 3000
