@@ -162,6 +162,13 @@
   }
 }
 
+/* Theme switch: disable default VT crossfade so the JS circle wipe owns it. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 /* ---- ATELIER theme (light, default) ------------------------ */
 :root,
 [data-theme="atelier"] {
