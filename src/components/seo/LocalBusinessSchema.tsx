@@ -146,7 +146,7 @@ export function LocalBusinessSchema() {
             description: "Formule Essentiel, prestation seule sur site existant, 190 € HT. TVA non applicable, article 293 B du CGI.",
             eligibleRegion: "FR",
           },
-          url: "https://forgedigitalesolutions.com/pack-agent-ready/",
+          url: "https://forgedigitalesolutions.com/services/agent-ready/",
         },
         {
           "@type": "Offer",

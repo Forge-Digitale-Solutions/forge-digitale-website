@@ -135,7 +135,7 @@ export default function CreationSiteWebPage() {
           </p>
           <p>
             Sur un site neuf, l&rsquo;option{" "}
-            <Link href="/pack-agent-ready/" className="text-accent hover:underline">
+            <Link href="/services/agent-ready/" className="text-accent hover:underline">
               Pack Agent Ready
             </Link>{" "}
             s&rsquo;ajoute au devis : +90 € HT (Essentiel) ou +190 € HT

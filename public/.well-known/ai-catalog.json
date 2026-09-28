@@ -49,10 +49,10 @@
       ]
     },
     {
-      "identifier": "urn:air:forgedigitalesolutions.com:page:pack-agent-ready",
+      "identifier": "urn:air:forgedigitalesolutions.com:page:services-agent-ready",
       "displayName": "Pack Agent Ready",
       "type": "text/html",
-      "url": "https://forgedigitalesolutions.com/pack-agent-ready/",
+      "url": "https://forgedigitalesolutions.com/services/agent-ready/",
       "representativeQueries": [
         "Prix du Pack Agent Ready Forge Digitale",
         "Rendre un site existant lisible par les assistants"
