@@ -18,7 +18,7 @@ function hasBlogAgentReady() {
 export const metadata: Metadata = {
   title: "Pack Agent Ready : site lisible par les assistants",
   description:
-    "Prestation sur un site déjà en ligne : robots.txt, sitemap, llms.txt et règles d'usage pour les assistants. Essentiel 190 € HT, Complet 350 € HT. Option sur un site neuf.",
+    "Prestation sur un site déjà en ligne : robots.txt, sitemap, llms.txt et règles d'usage pour les assistants. Essentiel 190 € TTC, Complet 350 € TTC. Option sur un site neuf.",
   keywords: [
     "Pack Agent Ready",
     "llms.txt",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Pack Agent Ready : site lisible par les assistants",
     description:
-      "Rendre un site déjà en ligne trouvable et lisible par les assistants, avec des règles d'usage claires. Essentiel 190 € HT, Complet 350 € HT.",
+      "Rendre un site déjà en ligne trouvable et lisible par les assistants, avec des règles d'usage claires. Essentiel 190 € TTC, Complet 350 € TTC.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -54,7 +54,7 @@ const serviceSchema = {
   name: "Pack Agent Ready",
   serviceType: "Mise en conformité technique pour assistants",
   description:
-    "Prestation sur un site déjà en ligne : audit léger, robots.txt, Content Signals, sitemap, llms.txt et compte-rendu. Formule Complet : en-têtes Link et catalogue d'API minimal. Essentiel 190 € HT, Complet 350 € HT. TVA non applicable, article 293 B du CGI.",
+    "Prestation sur un site déjà en ligne : audit léger, robots.txt, Content Signals, sitemap, llms.txt et compte-rendu. Formule Complet : en-têtes Link et catalogue d'API minimal. Essentiel 190 € TTC, Complet 350 € TTC. TVA non applicable, article 293 B du CGI.",
   url: PAGE_URL,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Médoc" },
@@ -71,7 +71,7 @@ const serviceSchema = {
       priceCurrency: "EUR",
       price: "190",
       description:
-        "Prestation seule sur site existant, 190 € HT. TVA non applicable, article 293 B du CGI.",
+        "Prestation seule sur site existant, 190 € TTC. TVA non applicable, article 293 B du CGI.",
     },
     {
       "@type": "Offer",
@@ -79,7 +79,7 @@ const serviceSchema = {
       priceCurrency: "EUR",
       price: "350",
       description:
-        "Prestation seule sur site existant, 350 € HT. TVA non applicable, article 293 B du CGI.",
+        "Prestation seule sur site existant, 350 € TTC. TVA non applicable, article 293 B du CGI.",
     },
   ],
 };
@@ -189,7 +189,7 @@ export default function PackAgentReadyPage() {
                 <h3 className="text-xl font-bold text-text-strong mt-2">
                   Essentiel
                 </h3>
-                <p className="text-2xl font-bold text-accent mt-2">190&nbsp;€ HT</p>
+                <p className="text-2xl font-bold text-accent mt-2">190&nbsp;€ TTC</p>
                 <p className="text-sm mt-4">
                   WordPress, HTML simple, ou un accès FTP / panel suffisant.
                   Délai indicatif : 3 à 5 jours ouvrés après réception des
@@ -203,7 +203,7 @@ export default function PackAgentReadyPage() {
                 <h3 className="text-xl font-bold text-text-strong mt-2">
                   Complet
                 </h3>
-                <p className="text-2xl font-bold text-accent mt-2">350&nbsp;€ HT</p>
+                <p className="text-2xl font-bold text-accent mt-2">350&nbsp;€ TTC</p>
                 <p className="text-sm mt-4">
                   Stack où le serveur, le CDN ou les en-têtes sont accessibles.
                   Délai indicatif : 5 à 8 jours ouvrés.
@@ -252,8 +252,8 @@ export default function PackAgentReadyPage() {
               est plus bas parce que le chantier est déjà ouvert.
             </p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Essentiel : +90&nbsp;€ HT</li>
-              <li>Complet : +190&nbsp;€ HT</li>
+              <li>Essentiel : +90&nbsp;€ TTC</li>
+              <li>Complet : +190&nbsp;€ TTC</li>
             </ul>
             <p>
               Détail de la création :{" "}
@@ -274,12 +274,12 @@ export default function PackAgentReadyPage() {
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 CMS fermé (Wix, Jimdo, Squarespace) sans accès aux fichiers :
-                +100 à +200&nbsp;€ HT, refus du pack, ou conseil seul à
-                150&nbsp;€ HT.
+                +100 à +200&nbsp;€ TTC, refus du pack, ou conseil seul à
+                150&nbsp;€ TTC.
               </li>
               <li>
                 Site multilingue, ou plus de 50 URL à traiter à la main :
-                +100&nbsp;€ HT.
+                +100&nbsp;€ TTC.
               </li>
               <li>
                 Accès admin, DNS ou hébergeur manquants : le délai est

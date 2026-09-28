@@ -71,7 +71,7 @@ const services = [
     title: "Pack Agent Ready",
     description:
       "Votre site est déjà en ligne. Je le rends lisible par les assistants, avec des règles d'usage claires.",
-    price: "À partir de 190 € HT",
+    price: "À partir de 190 € TTC",
     href: "/services/agent-ready",
     icon: <Bot className="w-6 h-6 text-accent" aria-hidden="true" />,
     bgIcon: "bg-accent/10",

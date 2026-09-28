@@ -138,7 +138,7 @@ export default function CreationSiteWebPage() {
             <Link href="/services/agent-ready/" className="text-accent hover:underline">
               Pack Agent Ready
             </Link>{" "}
-            s&rsquo;ajoute au devis : +90 € HT (Essentiel) ou +190 € HT
+            s&rsquo;ajoute au devis : +90 € TTC (Essentiel) ou +190 € TTC
             (Complet). Le ticket d&rsquo;entrée du site reste à partir de 500 € HT.
           </p>
         </div>

@@ -132,7 +132,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Pack Agent Ready",
-            description: "Rendre un site déjà en ligne lisible par les assistants, avec des règles d'usage. Essentiel 190 € HT, Complet 350 € HT. Option sur site neuf : +90 € HT ou +190 € HT.",
+            description: "Rendre un site déjà en ligne lisible par les assistants, avec des règles d'usage. Essentiel 190 € TTC, Complet 350 € TTC. Option sur site neuf : +90 € TTC ou +190 € TTC.",
             serviceType: "Website agent readiness",
             areaServed: "Gironde",
             provider: {
@@ -143,7 +143,7 @@ export function LocalBusinessSchema() {
             "@type": "PriceSpecification",
             price: "190",
             priceCurrency: "EUR",
-            description: "Formule Essentiel, prestation seule sur site existant, 190 € HT. TVA non applicable, article 293 B du CGI.",
+            description: "Formule Essentiel, prestation seule sur site existant, 190 € TTC. TVA non applicable, article 293 B du CGI.",
             eligibleRegion: "FR",
           },
           url: "https://forgedigitalesolutions.com/services/agent-ready/",

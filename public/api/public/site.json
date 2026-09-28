@@ -22,11 +22,11 @@
   ],
   "offers": {
     "websiteCreationFromEurHt": 500,
-    "agentReadyEssentielEurHt": 190,
-    "agentReadyCompletEurHt": 350,
-    "agentReadyOnNewSiteEssentielEurHt": 90,
-    "agentReadyOnNewSiteCompletEurHt": 190,
-    "note": "Ticket d'entrée création de site web à partir de 500 € HT. Pack Agent Ready sur site existant : 190 € HT (Essentiel) ou 350 € HT (Complet). Option sur site neuf : +90 € HT ou +190 € HT. TVA non applicable art. 293 B."
+    "agentReadyEssentielEurTtc": 190,
+    "agentReadyCompletEurTtc": 350,
+    "agentReadyOnNewSiteEssentielEurTtc": 90,
+    "agentReadyOnNewSiteCompletEurTtc": 190,
+    "note": "Ticket d'entrée création de site web à partir de 500 € HT. Pack Agent Ready sur site existant : 190 € TTC (Essentiel) ou 350 € TTC (Complet). Option sur site neuf : +90 € TTC ou +190 € TTC. TVA non applicable art. 293 B."
   },
   "urls": {
     "home": "https://forgedigitalesolutions.com/",

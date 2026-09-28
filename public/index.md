@@ -11,7 +11,7 @@ Artisanat numérique dans le Médoc. Anthony Marcelin crée des sites web et des
 
 - **Création de site web** : à partir de **500 € HT** — [détail](https://forgedigitalesolutions.com/creation-site-web/)
 - **Maintenance de site** — [détail](https://forgedigitalesolutions.com/maintenance-site-web/)
-- **Pack Agent Ready** : à partir de **190 € HT** — [détail](https://forgedigitalesolutions.com/services/agent-ready/)
+- **Pack Agent Ready** : à partir de **190 € TTC** — [détail](https://forgedigitalesolutions.com/services/agent-ready/)
 - **Installation Linux Mint** (forfait Renaissance 69 €) — [détail](https://forgedigitalesolutions.com/installation-linux/)
 - **Montage PC** (forfait 149 €) — [détail](https://forgedigitalesolutions.com/montage-pc/)
 
