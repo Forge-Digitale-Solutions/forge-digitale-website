@@ -7,7 +7,7 @@
 - Montage & maintenance de PC (gamer, bureautique, Renaissance Linux)
 - Services informatiques (dépannage, Linux, etc.)
 
-**Stack technique**: Next.js 16 (static export), React 19, Tailwind CSS 4, TypeScript, Markdown blog.
+**Stack technique**: Next.js 16 (serveur `next start`, Dokploy), React 19, Tailwind CSS 4, TypeScript, Markdown blog.
 
 ---
 
@@ -124,11 +124,11 @@ src/
 # Dev
 npm run dev                # Next.js dev server
 
-# Build + Export statique
-npm run build              # Build + export → out/
+# Build
+npm run build              # Build Next.js (pas d'export out/)
 
 # Test locally
-npm run start              # Serve l'export static
+npm run start              # Serveur Node (next start)
 
 # Lint
 npm run lint               # ESLint check
@@ -137,7 +137,7 @@ npm run lint               # ESLint check
 curl https://forgedigitalesolutions.com/feed
 
 # Vérifier metadata
-head -n 30 out/cgv/index.html  # Voir <head> compiled
+# Après `npm run start` : curl -s http://127.0.0.1:3000/cgv/ | head -n 30
 ```
 
 ---
@@ -207,7 +207,7 @@ image: "/blog/filename.jpg"
 ## ✅ Checklist pré-déploiement (après changements SEO)
 
 1. [ ] Rebuild + test local: `npm run build && npm run start`
-2. [ ] Vérifier sitemap.xml généré (via `out/sitemap.xml`)
+2. [ ] Vérifier sitemap.xml servi (`/sitemap.xml` via `next start`)
 3. [ ] Tester pages légales + blog dans navigateur
 4. [ ] Valider Open Graph sur [ogp.me debugger](https://www.facebook.com/sharer/sharer_internals.php)
 5. [ ] Vérifier schema.org JSON-LD sur [Google Schema Validator](https://validator.schema.org/)
