@@ -62,7 +62,7 @@ async function main() {
       continue;
     }
 
-    let imageId: string | number | undefined;
+    let imageId: number | undefined;
     if (data.image?.startsWith("/")) {
       const filePath = path.join(process.cwd(), "public", data.image);
       if (fs.existsSync(filePath)) {
@@ -75,7 +75,10 @@ async function main() {
       }
     }
 
-    const category = categories.has(data.category || "") ? data.category : "Web";
+    const rawCategory = data.category || "";
+    const category = (
+      categories.has(rawCategory) ? rawCategory : "Web"
+    ) as "Web" | "Hardware" | "Gestion" | "Sécurité";
 
     await payload.create({
       collection: "posts",
