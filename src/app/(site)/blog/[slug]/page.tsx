@@ -10,8 +10,11 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 function absoluteImage(path: string | undefined): string {
   if (!path) return `${SITE_URL}/images/og-image.jpg`;
-  if (path.startsWith("http://") || path.startsWith("https://")) return path;
-  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  const absolute =
+    path.startsWith("http://") || path.startsWith("https://")
+      ? path
+      : `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  return absolute.replace(/(\.[a-z0-9]{2,5})\/+$/i, "$1");
 }
 
 export const dynamic = "force-dynamic";
@@ -102,9 +105,7 @@ export default async function Post({
         description={postData.excerpt || postData.title}
         datePublished={postData.date}
         dateModified={postData.lastModified}
-        image={
-          postData.image ? `https://forgedigitalesolutions.com${postData.image}` : undefined
-        }
+        image={postData.image ? absoluteImage(postData.image) : undefined}
         slug={slug}
         category={postData.category}
       />
