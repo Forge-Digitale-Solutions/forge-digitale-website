@@ -21,7 +21,7 @@ function loadEnvFile(file: string) {
 loadEnvFile(".env.local");
 loadEnvFile(".env");
 
-const postsDirectory = path.join(process.cwd(), "src/posts");
+const postsDirectory = path.join(process.cwd(), "src/posts-archive");
 const categories = new Set(["Web", "Hardware", "Gestion", "Sécurité"]);
 
 function day(value: unknown): string {

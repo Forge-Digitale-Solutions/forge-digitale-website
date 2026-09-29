@@ -6,8 +6,9 @@ import html from "remark-html";
 import remarkGfm from "remark-gfm";
 import { getPayload } from "payload";
 import config from "@payload-config";
+import { notFound } from "next/navigation";
 
-const postsDirectory = path.join(process.cwd(), "src/posts");
+const postsDirectory = path.join(process.cwd(), "src/posts-archive");
 
 export interface PostFaqItem {
   question: string;
@@ -147,22 +148,24 @@ async function readMarkdownPost(id: string): Promise<PostData> {
 }
 
 export async function getSortedPostsData(): Promise<PostData[]> {
-  const markdown = readMarkdownList();
   const remote = await payloadPosts();
-  if (!remote?.length) return markdown;
-
-  const payload = await Promise.all(
-    remote.filter((doc) => doc.slug).map((doc) => toPostData(doc, false)),
-  );
-  const bySlug = new Map(markdown.map((post) => [post.id, post]));
-  for (const post of payload) bySlug.set(post.id, post);
-
-  return [...bySlug.values()].sort((a, b) => (a.date < b.date ? 1 : -1));
+  if (remote?.length) {
+    const payload = await Promise.all(
+      remote.filter((doc) => doc.slug).map((doc) => toPostData(doc, false)),
+    );
+    return payload.sort((a, b) => (a.date < b.date ? 1 : -1));
+  }
+  // Emergency fallback only: archived Markdown if Payload is unavailable
+  return readMarkdownList();
 }
 
 export async function getPostData(id: string): Promise<PostData> {
   const remote = await payloadPosts();
-  const match = remote?.find((doc) => doc.slug === id);
-  if (match) return toPostData(match, true);
+  if (remote?.length) {
+    const match = remote.find((doc) => doc.slug === id);
+    if (!match) notFound();
+    return toPostData(match, true);
+  }
+  // Emergency fallback only: archived Markdown if Payload is unavailable
   return readMarkdownPost(id);
 }
