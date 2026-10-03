@@ -159,6 +159,55 @@ export async function getSortedPostsData(): Promise<PostData[]> {
   return readMarkdownList();
 }
 
+export function formatPostMarkdown(title: string, content: string): string {
+  const heading = title.trim();
+  const body = (content || "").replace(/^\uFEFF/, "").trim();
+  const h1 = `# ${heading}`;
+  if (body === h1 || body.startsWith(`${h1}\n`) || body.startsWith(`${h1}\r\n`)) {
+    return body.endsWith("\n") ? body : `${body}\n`;
+  }
+  return `${h1}\n\n${body}\n`;
+}
+
+export async function getPostMarkdown(id: string): Promise<string | null> {
+  const slug = id.replace(/\.md$/i, "");
+  if (!slug || slug.includes("/") || slug.includes("..") || slug.includes(".")) {
+    return null;
+  }
+
+  if (process.env.DATABASE_URI && process.env.PAYLOAD_SECRET) {
+    try {
+      const payload = await getPayload({ config });
+      const result = await payload.find({
+        collection: "posts",
+        overrideAccess: false,
+        depth: 0,
+        limit: 1,
+        where: { slug: { equals: slug } },
+      });
+      const match = result.docs[0] as PostDoc | undefined;
+      if (!match) return null;
+      const title = (match.h1 || match.title || slug).trim();
+      return formatPostMarkdown(title, match.content || "");
+    } catch (error) {
+      console.error("Payload markdown unavailable, using archive", error);
+    }
+  }
+
+  try {
+    const fileContents = fs.readFileSync(
+      path.join(postsDirectory, `${slug}.md`),
+      "utf8",
+    );
+    const matterResult = matter(fileContents);
+    const data = matterResult.data as { h1?: string; title?: string };
+    const title = (data.h1 || data.title || slug).trim();
+    return formatPostMarkdown(title, matterResult.content || "");
+  } catch {
+    return null;
+  }
+}
+
 export async function getPostData(id: string): Promise<PostData> {
   const remote = await payloadPosts();
   if (remote?.length) {
