@@ -77,6 +77,18 @@ function normalizePath(request: NextRequest): NextResponse | null {
   return null;
 }
 
+
+function blogMarkdownSlug(pathname: string, accept: string): string | null {
+  const match = pathname.match(/^\/blog\/([^/]+?)\/?$/);
+  if (!match) return null;
+  const raw = match[1];
+  const explicit = raw.toLowerCase().endsWith(".md");
+  const slug = explicit ? raw.slice(0, -3) : raw;
+  if (!slug || slug.includes(".")) return null;
+  const wants = explicit || accept.toLowerCase().includes("text/markdown");
+  return wants ? slug : null;
+}
+
 function markdownTarget(pathname: string): string | null {
   const clean = pathname.replace(/^\/+|\/+$/g, "");
   const candidates = [
@@ -120,11 +132,28 @@ export function proxy(request: NextRequest) {
   }
 
   const accept = request.headers.get("accept") ?? "";
+  const blogSlug = blogMarkdownSlug(request.nextUrl.pathname, accept);
+  if (blogSlug) {
+    const url = new URL(request.url);
+    url.pathname = `/api/markdown/blog/${blogSlug}`;
+    return NextResponse.rewrite(url);
+  }
+
+  const { pathname } = request.nextUrl;
+  if (pathname.endsWith(".md")) {
+    const pagePath = `${pathname.slice(0, -3)}/`;
+    const staticMd = markdownTarget(pagePath);
+    if (staticMd && staticMd !== pathname) {
+      const url = new URL(request.url);
+      url.pathname = staticMd;
+      return NextResponse.rewrite(url);
+    }
+  }
+
   if (!accept.toLowerCase().includes("text/markdown")) {
     return NextResponse.next();
   }
 
-  const { pathname } = request.nextUrl;
   if (pathname.endsWith(".md")) {
     return NextResponse.next();
   }
