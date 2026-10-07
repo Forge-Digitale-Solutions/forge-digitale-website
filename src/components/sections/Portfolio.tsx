@@ -45,7 +45,7 @@ const projects: Project[] = [
     image: "/projects/atasoif.webp",
     imageAlt:
       "Écran Ma cave de l’application À ta soif avec suivi des bouteilles",
-    links: [{ label: "Landing", href: "https://atasoif.fr/" }],
+    links: [{ label: "Voir le projet", href: "https://atasoif.fr/" }],
   },
   {
     title: "Médoc Vibes",
@@ -56,7 +56,7 @@ const projects: Project[] = [
     image: "/projects/medocvibes.webp",
     imageAlt:
       "Identité visuelle Médoc Vibes — manger, sortir, bouger",
-    links: [{ label: "Landing", href: "https://medocvibes.fr/" }],
+    links: [{ label: "Voir le projet", href: "https://medocvibes.fr/" }],
   },
   {
     title: "Forge Digitale",
@@ -228,23 +228,6 @@ export function Portfolio() {
                   <p className="text-soft text-sm mb-6 grow">
                     {project.description}
                   </p>
-
-                  {outbound.length > 0 && (
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      {outbound.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-                        >
-                          {link.label}
-                          <ExternalLink size={14} aria-hidden="true" />
-                        </Link>
-                      ))}
-                    </div>
-                  )}
 
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag) => (
