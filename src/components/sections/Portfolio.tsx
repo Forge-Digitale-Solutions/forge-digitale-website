@@ -6,22 +6,7 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-type ProjectLink = {
-  label: string;
-  href: string;
-};
-
-type Project = {
-  title: string;
-  category: string;
-  description: string;
-  tags: string[];
-  image: string;
-  imageAlt: string;
-  links: ProjectLink[];
-};
-
-const projects: Project[] = [
+const projects = [
   {
     title: "Spawnzone",
     category: "Application Mobile",
@@ -31,10 +16,8 @@ const projects: Project[] = [
     image: "/projects/spawnzone.webp",
     imageAlt:
       "Écran Découverte de l’application Spawnzone avec carte des joueurs à proximité",
-    links: [
-      { label: "Landing", href: "https://spawnzone.fr/" },
-      { label: "Stores", href: "https://spawnzone.fr/dl" },
-    ],
+    link: "https://spawnzone.fr/",
+    storeLink: "https://spawnzone.fr/dl",
   },
   {
     title: "À ta soif",
@@ -45,7 +28,7 @@ const projects: Project[] = [
     image: "/projects/atasoif.webp",
     imageAlt:
       "Écran Ma cave de l’application À ta soif avec suivi des bouteilles",
-    links: [{ label: "Voir le projet", href: "https://atasoif.fr/" }],
+    link: "https://atasoif.fr/",
   },
   {
     title: "Médoc Vibes",
@@ -56,7 +39,7 @@ const projects: Project[] = [
     image: "/projects/medocvibes.webp",
     imageAlt:
       "Identité visuelle Médoc Vibes — manger, sortir, bouger",
-    links: [{ label: "Voir le projet", href: "https://medocvibes.fr/" }],
+    link: "https://medocvibes.fr/",
   },
   {
     title: "Forge Digitale",
@@ -67,7 +50,7 @@ const projects: Project[] = [
     image: "/projects/forge.webp",
     imageAlt:
       "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
-    links: [{ label: "Voir le projet", href: "#" }],
+    link: "#",
   },
   {
     title: "La Délicieuse",
@@ -78,9 +61,7 @@ const projects: Project[] = [
     image: "/projects/la-delicieuse.webp",
     imageAlt:
       "Capture d'écran de la boutique en ligne Épicerie Fine La Délicieuse, avec le hero Cave & Spiritueux et les rayons produits",
-    links: [
-      { label: "Voir le projet", href: "https://epiceriefineladelicieuse.fr" },
-    ],
+    link: "https://epiceriefineladelicieuse.fr",
   },
   {
     title: "GoSportNow",
@@ -91,7 +72,7 @@ const projects: Project[] = [
     image: "/projects/gosportnow-og.webp",
     imageAlt:
       "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
-    links: [{ label: "Voir le projet", href: "https://gosportnow.fr" }],
+    link: "https://gosportnow.fr",
   },
   {
     title: "Atelier Hardware",
@@ -102,7 +83,7 @@ const projects: Project[] = [
     image: "/projects/pc.webp",
     imageAlt:
       "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
-    links: [{ label: "Me contacter", href: "/#contact" }],
+    link: "/#contact",
   },
   {
     title: "Charcuterie Campagnarde",
@@ -113,12 +94,7 @@ const projects: Project[] = [
     image: "/projects/charcuterie.webp",
     imageAlt:
       "Capture d'écran du site web Charcuterie Campagnarde avec présentation des produits artisanaux",
-    links: [
-      {
-        label: "Voir le projet",
-        href: "https://charcuterie-campagnarde.pages.dev",
-      },
-    ],
+    link: "https://charcuterie-campagnarde.pages.dev",
   },
   {
     title: "Horizon Vertical Studio",
@@ -129,9 +105,7 @@ const projects: Project[] = [
     image: "/projects/hvs-og.webp",
     imageAlt:
       "Logo Horizon Vertical Studio, studio d'impression murale professionnelle",
-    links: [
-      { label: "Voir le projet", href: "https://horizonverticalstudio.fr" },
-    ],
+    link: "https://horizonverticalstudio.fr",
   },
   {
     title: "Rugby Handi Sud Bassin",
@@ -142,13 +116,9 @@ const projects: Project[] = [
     image: "/projects/rhsb-og.webp",
     imageAlt:
       "Capture d'écran du site web Rugby Handi Sud Bassin, club de rugby fauteuil du Bassin d'Arcachon",
-    links: [{ label: "Voir le projet", href: "https://rhsb.fr" }],
+    link: "https://rhsb.fr",
   },
 ];
-
-function externalLinks(project: Project) {
-  return project.links.filter((link) => link.href.startsWith("http"));
-}
 
 export function Portfolio() {
   return (
@@ -174,75 +144,91 @@ export function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const outbound = externalLinks(project);
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -1 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="group rounded-xl bg-surface-card border border-default overflow-hidden hover:border-strong transition-colors duration-300 flex flex-col h-full"
+            >
+              <div className="h-48 w-full bg-surface-sunken relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.imageAlt}
+                  fill
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover opacity-60 group-hover:opacity-100 group-hover:-translate-y-px transition-all duration-500"
+                />
 
-            return (
-              <motion.div
-                key={project.title}
-                whileHover={{ y: -1 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="group rounded-xl bg-surface-card border border-default overflow-hidden hover:border-strong transition-colors duration-300 flex flex-col h-full"
-              >
-                <div className="h-48 w-full bg-surface-sunken relative overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    priority={index === 0}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:-translate-y-px transition-all duration-500"
-                  />
-
-                  {outbound.length > 0 && (
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 flex-wrap p-4">
-                      {outbound.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${link.label} — ${project.title}`}
-                          className="flex items-center gap-2 px-5 py-2.5 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
-                        >
-                          {link.label}{" "}
-                          <ExternalLink size={16} aria-hidden="true" />
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-6 flex flex-col grow">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <span className="text-accent text-xs font-bold uppercase tracking-wider mb-2 block">
-                        {project.category}
-                      </span>
-                      <h3 className="text-xl font-bold text-text-strong group-hover:text-accent transition-colors">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <p className="text-soft text-sm mb-6 grow">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-medium text-soft bg-surface px-3 py-1 rounded-md border border-default"
+                {project.link.startsWith("http") && (
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 flex-wrap p-4">
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Voir le projet ${project.title}`}
+                      className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
+                    >
+                      Voir le projet{" "}
+                      <ExternalLink size={16} aria-hidden="true" />
+                    </Link>
+                    {"storeLink" in project && project.storeLink && (
+                      <Link
+                        href={project.storeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Ouvrir le store — ${project.title}`}
+                        className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        Store{" "}
+                        <ExternalLink size={16} aria-hidden="true" />
+                      </Link>
+                    )}
+                  </div>
+                )}
+
+                {/* TODO: Décommenter quand les pages projets seront créées pour les autres projets */}
+                {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Link
+                    href={project.link}
+                    aria-label={`Voir le projet ${project.title}`}
+                    className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
+                  >
+                    Voir le projet <ExternalLink size={16} aria-hidden="true" />
+                  </Link>
+                </div> */}
+              </div>
+
+              <div className="p-6 flex flex-col grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <span className="text-accent text-xs font-bold uppercase tracking-wider mb-2 block">
+                      {project.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-text-strong group-hover:text-accent transition-colors">
+                      {project.title}
+                    </h3>
                   </div>
                 </div>
-              </motion.div>
-            );
-          })}
+
+                <p className="text-soft text-sm mb-6 grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="text-xs font-medium text-soft bg-surface px-3 py-1 rounded-md border border-default"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
