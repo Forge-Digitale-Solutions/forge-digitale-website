@@ -8,6 +8,40 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Spawnzone",
+    category: "Application Mobile",
+    description:
+      "App pour trouver des joueurs près de chez soi, sur les mêmes jeux et aux mêmes horaires. Disponible sur l’App Store et Google Play.",
+    tags: ["iOS & Android", "Gaming", "Géolocalisation", "Disponible"],
+    image: "/projects/spawnzone.webp",
+    imageAlt:
+      "Écran Découverte de l’application Spawnzone avec carte des joueurs à proximité",
+    link: "https://spawnzone.fr/",
+    storeLink: "https://spawnzone.fr/dl",
+  },
+  {
+    title: "À ta soif",
+    category: "Application Mobile",
+    description:
+      "Cave numérique pour whisky, rhum, vin et bière : prix, lieu, niveau et notes. Bientôt disponible sur les stores.",
+    tags: ["iOS & Android", "Cave numérique", "Bientôt sur les stores"],
+    image: "/projects/atasoif.webp",
+    imageAlt:
+      "Écran Ma cave de l’application À ta soif avec suivi des bouteilles",
+    link: "https://atasoif.fr/",
+  },
+  {
+    title: "Médoc Vibes",
+    category: "Application Mobile",
+    description:
+      "L’app festif et loisir du Médoc : restos, sorties, marchés, vides-greniers et surf. Bientôt disponible sur les stores.",
+    tags: ["iOS & Android", "Médoc", "Sorties locales", "Bientôt sur les stores"],
+    image: "/projects/medocvibes.webp",
+    imageAlt:
+      "Identité visuelle Médoc Vibes — manger, sortir, bouger",
+    link: "https://medocvibes.fr/",
+  },
+  {
     title: "Forge Digitale",
     category: "Site Vitrine",
     description:
@@ -128,7 +162,7 @@ export function Portfolio() {
                 />
 
                 {project.link.startsWith("http") && (
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 flex-wrap p-4">
                     <Link
                       href={project.link}
                       target="_blank"
@@ -139,6 +173,18 @@ export function Portfolio() {
                       Voir le projet{" "}
                       <ExternalLink size={16} aria-hidden="true" />
                     </Link>
+                    {"storeLink" in project && project.storeLink && (
+                      <Link
+                        href={project.storeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Ouvrir le store — ${project.title}`}
+                        className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
+                      >
+                        Store{" "}
+                        <ExternalLink size={16} aria-hidden="true" />
+                      </Link>
+                    )}
                   </div>
                 )}
 
