@@ -3,7 +3,8 @@
 # Runtime env (Dokploy → Environment, not build args):
 #   DATABASE_URI, PAYLOAD_SECRET, PAYLOAD_PUBLIC_SERVER_URL
 # Mount a volume on /app/media for article images.
-# Listens on 3000. Swarm healthcheck: curl -f http://127.0.0.1:3000/
+# Listens on 3000. Healthcheck: GET /api/health must answer exactly 200
+# (Payload boots and Postgres answers a count). Redirects count as failures.
 
 FROM node:22-alpine AS deps
 WORKDIR /app
@@ -44,8 +45,11 @@ COPY --from=build --chown=nextjs:nodejs /app/scripts/start-with-migrations.sh ./
 USER nextjs
 EXPOSE 3000
 # migrate runs before next listens; allow the first boot to finish DDL.
+# /api/health (no trailing slash, /api is outside the slash normalization)
+# boots Payload and counts posts, 503 if Postgres or Payload fails. The status
+# is compared to 200 because `curl -f` alone treats a 3xx as success.
 HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
-  CMD curl -f http://127.0.0.1:3000/ || exit 1
+  CMD [ "$(curl -s -o /dev/null -w '%{http_code}' --max-time 4 http://127.0.0.1:3000/api/health)" = "200" ] || exit 1
 # -H 0.0.0.0: Docker sets HOSTNAME to the container id, which would otherwise
 # make `next start` bind only that name and fail the localhost healthcheck.
 CMD ["sh", "scripts/start-with-migrations.sh"]
