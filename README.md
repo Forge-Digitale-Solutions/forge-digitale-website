@@ -44,7 +44,7 @@ On every update to `main` (and via `workflow_dispatch`), the **Site GHCR** workf
 3. Calls the Dokploy deploy webhook so the VPS **pulls** the image (no Docker build on the server)
 
 - Port **3000** (`-H 0.0.0.0`)
-- Healthcheck: `curl -f http://127.0.0.1:3000/` (homepage returns 200). Swarm FailureAction: rollback
+- Healthcheck: `GET http://127.0.0.1:3000/api/health` must return exactly 200 (it boots Payload and counts posts; 503 if Postgres or Payload fails, 3 s deadline). The homepage is prerendered and stays 200 with the database down, so it is not a health signal. The Dockerfile `HEALTHCHECK` uses this route; a health check set in Dokploy's Swarm settings overrides the image one and must use the same command. Swarm FailureAction: rollback (configured in Dokploy, not visible from this repo)
 - Build arg (GitHub Actions): `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (inlined at image build; a runtime env var is not enough)
 - Runtime env (Dokploy → Environment): `DATABASE_URI`, `PAYLOAD_SECRET`, `PAYLOAD_PUBLIC_SERVER_URL`, etc.
 
