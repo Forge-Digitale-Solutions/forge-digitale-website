@@ -7,6 +7,8 @@ Site vitrine + blog pour un artisan numérique à Saint-Laurent-Médoc (Gironde)
 
 **Stack** : Next.js 16 (serveur `next start`, Dokploy), React 19, Tailwind CSS 4, TypeScript, blog Markdown.
 
+**Prod** : `feat → dev → merge sur main` déclenche le workflow Site GHCR → image `ghcr.io/forge-digitale-solutions/forge-digitale-website` → Dokploy pull (pas de build Docker sur le VPS). `dev` ne déploie pas.
+
 ---
 
 ## SEO / GEO (état actuel)
@@ -110,4 +112,4 @@ Schema : `areaServed` (villes / zones), pas de `streetAddress` ni de coordonnée
 
 ---
 
-**Dernière mise à jour** : 28 septembre 2026
+**Dernière mise à jour** : 3 octobre 2026
