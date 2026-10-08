@@ -13,6 +13,21 @@ updates:
     open-pull-requests-limit: 3
     commit-message:
       prefix: "chore(deps)"
+    # Majeures refusées le 8 oct 2026 (PR #83) : à faire à la main, une par
+    # une, avec tests. Les mineures et patchs de ces paquets restent proposés.
+    ignore:
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
+      - dependency-name: graphql
+        update-types: ["version-update:semver-major"]
+      - dependency-name: lucide-react
+        update-types: ["version-update:semver-major"]
+      - dependency-name: framer-motion
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
     groups:
       npm-minor-patch:
         update-types:
