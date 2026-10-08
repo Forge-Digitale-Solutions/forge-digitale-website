@@ -1,29 +1,68 @@
-name: Mise en ligne OVH
+name: Site GHCR
 
-# Prod is the Dokploy Application (Docker build, branch main, `next start` on
-# port 3000) after DNS cutover. This workflow must not FTP on every push to
-# main, or it would overwrite the VPS with a stale static tree.
-#
-# `output: "export"` was removed, so `./out/` is no longer produced. Do not
-# turn the FTP job back on.
-#
-# GitHub secrets are intentionally left in place for the cutover:
-# - NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY — set this as a Docker build ARG in Dokploy
-#   (Next inlines it at build time; a runtime env var is not enough).
-# - FTP_SERVER, FTP_USERNAME, FTP_PASSWORD — still needed only if OVH must be
-#   touched by hand before DNS moves. Remove them once OVH is switched off.
-#
-# workflow_dispatch is a no-op so the file stays visible without deploying.
+# Prod image: build on GitHub, push to GHCR, then Dokploy pulls.
+# Trigger only when main moves (merge dev → main). Not on dev / feat/*.
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE: ghcr.io/forge-digitale-solutions/forge-digitale-website
+
 jobs:
-  web-deploy:
-    name: FTP OVH désactivé
+  build-and-push:
+    name: Build and push
     runs-on: ubuntu-latest
     steps:
-      - name: Rappel — Dokploy sert la prod
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set image tags
+        id: meta
         run: |
-          echo "FTP OVH is disabled. Production is the Dokploy container (next start, port 3000, healthcheck curl http://127.0.0.1:3000/)."
-          echo "Secrets kept in the repo: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY."
+          sha="${GITHUB_SHA::7}"
+          echo "tags=${IMAGE}:latest,${IMAGE}:${sha}" >> "$GITHUB_OUTPUT"
+          echo "package_url=${IMAGE}:latest" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          build-args: |
+            NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Trigger Dokploy deploy
+        env:
+          DOKPLOY_DEPLOY_WEBHOOK: ${{ secrets.DOKPLOY_DEPLOY_WEBHOOK }}
+          PACKAGE_URL: ${{ steps.meta.outputs.package_url }}
+        run: |
+          if [ -z "$DOKPLOY_DEPLOY_WEBHOOK" ]; then
+            echo "::warning::DOKPLOY_DEPLOY_WEBHOOK secret is missing; image was pushed but Dokploy was not notified."
+            exit 0
+          fi
+          curl -fsS -X POST "$DOKPLOY_DEPLOY_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -H "x-github-event: registry_package" \
+            -d "{\"registry_package\":{\"package_version\":{\"package_url\":\"${PACKAGE_URL}\"}}}"

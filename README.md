@@ -31,12 +31,28 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Production (Dokploy)
+## Production (Dokploy + GHCR)
 
-The site runs as a Node server (`next start`), not a static `out/` export. Dokploy builds the `Dockerfile` from `main`.
+The site runs as a Node server (`next start`), not a static `out/` export.
+
+Git flow: `feat/<name>` → `dev` → merge onto `main` (prod). Updates to `dev` or feature branches do **not** deploy production.
+
+On every update to `main` (and via `workflow_dispatch`), the **Site GHCR** workflow:
+
+1. Builds the [`Dockerfile`](Dockerfile) on GitHub Actions
+2. Pushes `ghcr.io/forge-digitale-solutions/forge-digitale-website:latest` (and a short SHA tag)
+3. Calls the Dokploy deploy webhook so the VPS **pulls** the image (no Docker build on the server)
 
 - Port **3000** (`-H 0.0.0.0`)
 - Healthcheck: `curl -f http://127.0.0.1:3000/` (homepage returns 200). Swarm FailureAction: rollback
-- Build arg: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (inlined at image build; a runtime env var is not enough)
+- Build arg (GitHub Actions): `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (inlined at image build; a runtime env var is not enough)
+- Runtime env (Dokploy → Environment): `DATABASE_URI`, `PAYLOAD_SECRET`, `PAYLOAD_PUBLIC_SERVER_URL`, etc.
 
-The GitHub workflow `Mise en ligne OVH` is `workflow_dispatch` only. It does not FTP on push to `main`, so it cannot fight Dokploy after the DNS cutover. Secrets `FTP_*` and `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` stay in GitHub until OVH is switched off.
+GitHub secrets:
+
+- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` — required at image build
+- `DOKPLOY_DEPLOY_WEBHOOK` — Dokploy application webhook URL (Deployments tab)
+
+Dokploy Docker provider: image `ghcr.io/forge-digitale-solutions/forge-digitale-website:latest`, registry `ghcr.io`. For a private GHCR package, set username + PAT (`read:packages`). If the package is public, pull works without a PAT.
+
+Copy the application webhook URL from Dokploy → Deployments into `DOKPLOY_DEPLOY_WEBHOOK` so Actions can notify Dokploy after each image push.
