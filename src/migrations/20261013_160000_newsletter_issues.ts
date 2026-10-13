@@ -4,9 +4,9 @@ export async function up({ db }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
    CREATE TABLE "newsletter_issues" (
   	"id" serial PRIMARY KEY NOT NULL,
-  	"date" timestamp(3) with time zone,
-  	"subject" varchar,
-  	"web_url" varchar,
+  	"date" timestamp(3) with time zone NOT NULL,
+  	"subject" varchar NOT NULL,
+  	"web_url" varchar NOT NULL,
   	"updated_at" timestamp(3) with time zone DEFAULT now() NOT NULL,
   	"created_at" timestamp(3) with time zone DEFAULT now() NOT NULL
   );
