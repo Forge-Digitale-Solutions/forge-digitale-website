@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -294,53 +295,59 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-text-strong font-bold mb-6">Réseaux Sociaux</h4>
-            <div className="flex gap-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61577431918424"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Page Facebook de Forge Digitale Solutions"
-                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-              >
-                <Facebook size={24} aria-hidden="true" />
-              </a>
-              <a
-                href="https://www.instagram.com/forgedigitalesolutions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Compte Instagram de Forge Digitale Solutions"
-                className="inline-flex items-center justify-center text-soft hover:opacity-80 focus-visible:outline-1 focus-visible:outline-accent rounded transition-opacity"
-              >
-                <Image
-                  src="/instagram.svg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="size-6"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/anthony-marcelin/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Profil LinkedIn d'Anthony Marcelin"
-                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-              >
-                <Linkedin size={24} aria-hidden="true" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/forge-digitale-solutions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Page LinkedIn de Forge Digitale Solutions"
-                className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                title="LinkedIn Entreprise"
-              >
-                <Linkedin size={24} aria-hidden="true" />
-              </a>
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-text-strong font-bold mb-4">Newsletter</h4>
+              <NewsletterForm variant="footer" />
+            </div>
+            <div>
+              <h4 className="text-text-strong font-bold mb-4">Réseaux</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577431918424"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Page Facebook de Forge Digitale Solutions"
+                  className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  <Facebook size={24} aria-hidden="true" />
+                </a>
+                <a
+                  href="https://www.instagram.com/forgedigitalesolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Compte Instagram de Forge Digitale Solutions"
+                  className="inline-flex items-center justify-center text-soft hover:opacity-80 focus-visible:outline-1 focus-visible:outline-accent rounded transition-opacity"
+                >
+                  <Image
+                    src="/instagram.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className="size-6"
+                    aria-hidden="true"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anthony-marcelin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil LinkedIn d'Anthony Marcelin"
+                  className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  <Linkedin size={24} aria-hidden="true" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/forge-digitale-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Page LinkedIn de Forge Digitale Solutions"
+                  className="text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                  title="LinkedIn Entreprise"
+                >
+                  <Linkedin size={24} aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
