@@ -18,5 +18,20 @@ export const Media: CollectionConfig = {
       type: "text",
       required: true,
     },
+    {
+      name: "creditName",
+      label: "Nom du photographe",
+      type: "text",
+    },
+    {
+      name: "creditUrl",
+      label: "URL profil photographe",
+      type: "text",
+    },
+    {
+      name: "sourceUrl",
+      label: "URL page photo",
+      type: "text",
+    },
   ],
 };

@@ -15,6 +15,12 @@ export interface PostFaqItem {
   answer: string;
 }
 
+export interface ImageCredit {
+  name: string;
+  profileUrl?: string;
+  photoUrl?: string;
+}
+
 export interface PostData {
   id: string;
   title: string;
@@ -23,6 +29,8 @@ export interface PostData {
   lastModified?: string;
   excerpt: string;
   image?: string;
+  imageAlt?: string;
+  imageCredit?: ImageCredit;
   metaTitle?: string;
   metaDescription?: string;
   ogImage?: string;
@@ -31,7 +39,13 @@ export interface PostData {
   contentHtml?: string;
 }
 
-type MediaDoc = { url?: string | null };
+type MediaDoc = {
+  url?: string | null;
+  alt?: string | null;
+  creditName?: string | null;
+  creditUrl?: string | null;
+  sourceUrl?: string | null;
+};
 type PostDoc = {
   slug?: string | null;
   title?: string | null;
@@ -41,10 +55,10 @@ type PostDoc = {
   excerpt?: string | null;
   category?: string | null;
   content?: string | null;
-  image?: MediaDoc | string | null;
+  image?: MediaDoc | number | string | null;
   metaTitle?: string | null;
   metaDescription?: string | null;
-  ogImage?: MediaDoc | string | null;
+  ogImage?: MediaDoc | number | string | null;
   faq?: { question?: string | null; answer?: string | null }[] | null;
 };
 
@@ -64,11 +78,39 @@ async function markdownToHtml(markdown: string): Promise<string> {
   );
 }
 
-function imageUrl(
-  image: MediaDoc | string | null | undefined,
-): string | undefined {
-  if (!image || typeof image === "string") return undefined;
-  return image.url || undefined;
+function asMedia(image: PostDoc["image"]): MediaDoc | undefined {
+  if (!image || typeof image === "string" || typeof image === "number") {
+    return undefined;
+  }
+  return image;
+}
+
+function imageUrl(image: PostDoc["image"]): string | undefined {
+  return asMedia(image)?.url || undefined;
+}
+
+function imageAlt(image: PostDoc["image"]): string | undefined {
+  const alt = asMedia(image)?.alt?.trim();
+  return alt || undefined;
+}
+
+function imageCredit(image: PostDoc["image"]): ImageCredit | undefined {
+  const media = asMedia(image);
+  const name = media?.creditName?.trim();
+  if (!name) return undefined;
+  const profileUrl = media?.creditUrl?.trim() || undefined;
+  const photoUrl = media?.sourceUrl?.trim() || undefined;
+  return { name, profileUrl, photoUrl };
+}
+
+export function formatImageCreditMarkdown(credit: ImageCredit): string {
+  const name = credit.profileUrl
+    ? `[${credit.name}](${credit.profileUrl})`
+    : credit.name;
+  const unsplash = credit.photoUrl
+    ? `[Unsplash](${credit.photoUrl})`
+    : "Unsplash";
+  return `Photo : ${name} sur ${unsplash}`;
 }
 
 function faqItems(faq: PostDoc["faq"]): PostFaqItem[] | undefined {
@@ -91,6 +133,8 @@ async function toPostData(doc: PostDoc, withHtml: boolean): Promise<PostData> {
     lastModified: day(doc.updatedAt) || day(doc.publishedAt),
     excerpt: doc.excerpt || "",
     image: imageUrl(doc.image),
+    imageAlt: imageAlt(doc.image),
+    imageCredit: imageCredit(doc.image),
     metaTitle: doc.metaTitle || undefined,
     metaDescription: doc.metaDescription || undefined,
     ogImage: imageUrl(doc.ogImage),
@@ -159,14 +203,30 @@ export async function getSortedPostsData(): Promise<PostData[]> {
   return readMarkdownList();
 }
 
-export function formatPostMarkdown(title: string, content: string): string {
+export function formatPostMarkdown(
+  title: string,
+  content: string,
+  credit?: ImageCredit,
+): string {
   const heading = title.trim();
   const body = (content || "").replace(/^\uFEFF/, "").trim();
   const h1 = `# ${heading}`;
+  let markdown: string;
   if (body === h1 || body.startsWith(`${h1}\n`) || body.startsWith(`${h1}\r\n`)) {
-    return body.endsWith("\n") ? body : `${body}\n`;
+    markdown = body;
+  } else {
+    markdown = `${h1}\n\n${body}`;
   }
-  return `${h1}\n\n${body}\n`;
+  if (credit) {
+    const creditLine = formatImageCreditMarkdown(credit);
+    const rest = markdown.startsWith(h1)
+      ? markdown.slice(h1.length).replace(/^\r?\n*/, "")
+      : markdown;
+    markdown = rest
+      ? `${h1}\n\n${creditLine}\n\n${rest}`
+      : `${h1}\n\n${creditLine}`;
+  }
+  return markdown.endsWith("\n") ? markdown : `${markdown}\n`;
 }
 
 export async function getPostMarkdown(id: string): Promise<string | null> {
@@ -181,14 +241,18 @@ export async function getPostMarkdown(id: string): Promise<string | null> {
       const result = await payload.find({
         collection: "posts",
         overrideAccess: false,
-        depth: 0,
+        depth: 1,
         limit: 1,
         where: { slug: { equals: slug } },
       });
       const match = result.docs[0] as PostDoc | undefined;
       if (!match) return null;
       const title = (match.h1 || match.title || slug).trim();
-      return formatPostMarkdown(title, match.content || "");
+      return formatPostMarkdown(
+        title,
+        match.content || "",
+        imageCredit(match.image),
+      );
     } catch (error) {
       console.error("Payload markdown unavailable, using archive", error);
     }
