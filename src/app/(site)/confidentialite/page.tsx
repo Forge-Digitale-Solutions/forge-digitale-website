@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Politique de Confidentialité | Forge Digitale Solutions",
   description:
-    "Politique de confidentialité et RGPD de Forge Digitale Solutions. Aucun cookie publicitaire, analytics éthique Umami, Web3Forms sécurisé.",
+    "Politique de confidentialité RGPD : Umami sans cookie, Web3Forms, newsletter Brevo. Aucun cookie publicitaire.",
   robots: {
     index: true,
     follow: true,
@@ -123,7 +123,38 @@ export default function Confidentialite() {
         </section>
 
         <section className="mb-10">
-          <h2>5. Durée de conservation</h2>
+          <h2>5. Newsletter</h2>
+          <p>
+            <strong>Finalité :</strong> vous envoyer par email les nouveautés de
+            Forge Digitale Solutions (articles, nouveaux services), uniquement si
+            vous vous êtes inscrit.
+          </p>
+          <p>
+            <strong>Base légale :</strong> votre consentement, confirmé par
+            double opt-in (email de confirmation).
+          </p>
+          <p>
+            <strong>Donnée collectée :</strong> votre adresse email uniquement.
+          </p>
+          <p>
+            <strong>Sous-traitant :</strong> Brevo (Sendinblue SAS), service
+            d&apos;emailing qui héberge la liste et envoie les messages.
+          </p>
+          <p>
+            <strong>Désinscription :</strong> un lien de désinscription figure en
+            bas de chaque email.
+          </p>
+          <p>
+            <strong>Conservation :</strong> l&apos;adresse est conservée tant que
+            vous restez inscrit. Après désinscription, elle est conservée avec le
+            statut &quot;désinscrit&quot; afin de ne jamais vous réinscrire par
+            erreur. Vous pouvez demander son effacement complet à tout moment
+            (voir Vos droits).
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2>6. Durée de conservation</h2>
           <p>
             Vos données de contact sont conservées pendant la durée nécessaire
             au traitement de votre demande. Si vous devenez client (achat de
@@ -134,7 +165,7 @@ export default function Confidentialite() {
         </section>
 
         <section className="mb-10">
-          <h2>6. Vos Droits</h2>
+          <h2>7. Vos Droits</h2>
           <p>
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
             rectification et de suppression de vos données. Pour l&apos;exercer,
@@ -143,6 +174,15 @@ export default function Confidentialite() {
             <a href="mailto:contact@forgedigitalesolutions.com">
               contact@forgedigitalesolutions.com
             </a>
+          </p>
+          <p>
+            Ce droit couvre aussi l&apos;effacement complet de votre adresse de
+            la liste newsletter, y compris après désinscription, sur simple
+            demande à{" "}
+            <a href="mailto:contact@forgedigitalesolutions.com">
+              contact@forgedigitalesolutions.com
+            </a>
+            .
           </p>
         </section>
       </div>
