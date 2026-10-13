@@ -25,8 +25,9 @@ export default function NewsletterMerciPage() {
           Inscription confirmée
         </h1>
         <p className="text-soft leading-relaxed">
-          Merci. Vous recevrez un email à chaque nouvel article, pas plus. Vous
-          pourrez vous désinscrire en un clic depuis n&apos;importe quel envoi.
+          Merci. Vous recevrez un email pour les nouveautés de Forge Digitale
+          Solutions : articles et nouveaux services. Désinscription en un clic
+          depuis n&apos;importe quel envoi.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
           <Link href="/blog/" className="btn-primary px-6 py-3">

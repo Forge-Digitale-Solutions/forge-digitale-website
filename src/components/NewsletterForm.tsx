@@ -72,7 +72,7 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
     <div className={isArticle ? "space-y-3" : "space-y-2"}>
       {isArticle && (
         <p className="text-text-strong font-bold text-sm">
-          Recevoir les prochains articles
+          Recevoir les nouveautés de Forge Digitale Solutions
         </p>
       )}
 
