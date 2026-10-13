@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getPayload } from "payload";
 import config from "@payload-config";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
