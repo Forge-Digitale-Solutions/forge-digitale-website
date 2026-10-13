@@ -140,7 +140,8 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
         </div>
 
         <p className="text-xs text-faint leading-snug">
-          Un email à chaque nouvel article, pas plus. Désinscription en un clic.{" "}
+          Les nouveautés de Forge Digitale Solutions par email : articles, nouveaux
+          services. Désinscription en un clic.{" "}
           <Link
             href="/confidentialite/"
             className="underline hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
