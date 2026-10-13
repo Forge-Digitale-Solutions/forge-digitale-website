@@ -118,9 +118,8 @@ export default async function NewsletterPage() {
             Newsletter
           </h1>
           <p className="text-muted text-lg leading-relaxed">
-            Les nouveautés de Forge Digitale Solutions par email : nouveaux
-            articles et nouveaux services. Nous n&apos;écrivons que lorsqu&apos;il y a
-            du nouveau, sans calendrier fixe.
+            Les nouveautés de Forge Digitale Solutions par email, une fois par
+            mois : nouveaux articles et nouveaux services.
           </p>
         </div>
 
@@ -143,7 +142,7 @@ export default async function NewsletterPage() {
                   className="border-b border-default pb-6 last:border-0 last:pb-0"
                 >
                   <p className="text-sm text-faint mb-1">{issue.dateLabel}</p>
-                  <p className="text-text-strong font-medium mb-2">
+                  <p className="text-text-strong font-medium mb-2 break-words">
                     {issue.subject}
                   </p>
                   <a
