@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -190,7 +191,11 @@ export default async function Post({
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
         />
 
-        <div className="mt-16 pt-8 border-t border-default">
+        <div className="mt-12 pt-8 border-t border-default max-w-md">
+          <NewsletterForm variant="article" />
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-default">
           <h3 className="text-text-strong font-bold mb-4">
             Une question sur cet article ?
           </h3>
