@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Newsletter | Forge Digitale Solutions",
+  title: "Newsletter",
   description:
     "Inscrivez-vous à la newsletter de Forge Digitale Solutions et consultez les anciens numéros : nouveaux articles et nouveaux services.",
   robots: {
