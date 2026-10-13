@@ -143,15 +143,45 @@ export default async function Post({
             <p>Par Anthony Marcelin</p>
           </div>
           {postData.image && (
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-              <Image
-                src={postData.image}
-                alt={postData.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <figure>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                <Image
+                  src={postData.image}
+                  alt={postData.imageAlt || postData.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              {postData.imageCredit && (
+                <figcaption className="mt-2 text-sm text-faint">
+                  Photo :{" "}
+                  {postData.imageCredit.profileUrl ? (
+                    <a
+                      href={postData.imageCredit.profileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {postData.imageCredit.name}
+                    </a>
+                  ) : (
+                    postData.imageCredit.name
+                  )}{" "}
+                  sur{" "}
+                  {postData.imageCredit.photoUrl ? (
+                    <a
+                      href={postData.imageCredit.photoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Unsplash
+                    </a>
+                  ) : (
+                    "Unsplash"
+                  )}
+                </figcaption>
+              )}
+            </figure>
           )}
         </header>
 
