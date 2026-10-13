@@ -296,7 +296,7 @@ export function Footer() {
           </div>
 
           <div className="space-y-6">
-            <div>
+            <div id="newsletter" className="scroll-mt-24">
               <h4 className="text-text-strong font-bold mb-4">Newsletter</h4>
               <NewsletterForm variant="footer" />
             </div>
