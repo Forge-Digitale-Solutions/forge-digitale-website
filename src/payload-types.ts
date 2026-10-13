@@ -173,6 +173,9 @@ export interface User {
 export interface Media {
   id: number;
   alt: string;
+  creditName?: string | null;
+  creditUrl?: string | null;
+  sourceUrl?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -409,6 +412,9 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  creditName?: T;
+  creditUrl?: T;
+  sourceUrl?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
