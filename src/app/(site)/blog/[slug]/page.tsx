@@ -102,7 +102,9 @@ export default async function Post({
     <article className="min-h-screen bg-bg pt-32 pb-24">
       <ArticleSchema
         title={postData.title}
-        description={postData.excerpt || postData.title}
+        description={
+          postData.metaDescription || postData.excerpt || postData.title
+        }
         datePublished={postData.date}
         dateModified={postData.lastModified}
         image={postData.image ? absoluteImage(postData.image) : undefined}
