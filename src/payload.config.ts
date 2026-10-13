@@ -60,6 +60,15 @@ export default buildConfig({
             delete: false,
           },
         },
+        "newsletter-issues": {
+          description: "Numéros de newsletter (archive /newsletter/)",
+          enabled: {
+            find: true,
+            create: true,
+            update: true,
+            delete: false,
+          },
+        },
       },
     }),
   ],
