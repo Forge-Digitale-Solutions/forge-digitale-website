@@ -6,6 +6,7 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { mcpPlugin } from "@payloadcms/plugin-mcp";
 import { buildConfig } from "payload";
 import { Media } from "./collections/Media";
+import { NewsletterIssues } from "./collections/NewsletterIssues";
 import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
 import { migrations } from "./migrations";
@@ -19,7 +20,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Posts],
+  collections: [Users, Media, Posts, NewsletterIssues],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || "http://localhost:3000",
@@ -52,6 +53,15 @@ export default buildConfig({
         },
         media: {
           description: "Images des articles",
+          enabled: {
+            find: true,
+            create: true,
+            update: true,
+            delete: false,
+          },
+        },
+        "newsletter-issues": {
+          description: "Numéros de newsletter (archive /newsletter/)",
           enabled: {
             find: true,
             create: true,

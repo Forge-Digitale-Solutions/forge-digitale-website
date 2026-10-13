@@ -11,7 +11,7 @@ import {
 } from "@/lib/newsletter";
 
 type NewsletterFormProps = {
-  variant?: "footer" | "article";
+  variant?: "footer" | "article" | "page";
 };
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -67,12 +67,18 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
   }
 
   const isArticle = variant === "article";
+  const isPage = variant === "page";
 
   return (
-    <div className={isArticle ? "space-y-3" : "space-y-2"}>
+    <div className={isArticle || isPage ? "space-y-3" : "space-y-2"}>
       {isArticle && (
         <p className="text-text-strong font-bold text-sm">
           Recevoir les nouveautés de Forge Digitale Solutions
+        </p>
+      )}
+      {isPage && (
+        <p className="text-text-strong font-bold text-sm">
+          S&apos;inscrire à la newsletter
         </p>
       )}
 
