@@ -8,51 +8,6 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Spawnzone",
-    category: "Application Mobile",
-    description:
-      "App pour trouver des joueurs près de chez soi, sur les mêmes jeux et aux mêmes horaires. Disponible sur l’App Store et Google Play.",
-    tags: ["iOS & Android", "Gaming", "Géolocalisation", "Disponible"],
-    image: "/projects/spawnzone.webp",
-    imageAlt:
-      "Écran Découverte de l’application Spawnzone avec carte des joueurs à proximité",
-    link: "https://spawnzone.fr/",
-    storeLink: "https://spawnzone.fr/dl",
-  },
-  {
-    title: "À ta soif",
-    category: "Application Mobile",
-    description:
-      "Cave numérique pour whisky, rhum, vin et bière : prix, lieu, niveau et notes. Bientôt disponible sur les stores.",
-    tags: ["iOS & Android", "Cave numérique", "Bientôt sur les stores"],
-    image: "/projects/atasoif.webp",
-    imageAlt:
-      "Écran Ma cave de l’application À ta soif avec suivi des bouteilles",
-    link: "https://atasoif.fr/",
-  },
-  {
-    title: "Médoc Vibes",
-    category: "Application Mobile",
-    description:
-      "L’app festif et loisir du Médoc : restos, sorties, marchés, vides-greniers et surf. Bientôt disponible sur les stores.",
-    tags: ["iOS & Android", "Médoc", "Sorties locales", "Bientôt sur les stores"],
-    image: "/projects/medocvibes.webp",
-    imageAlt:
-      "Identité visuelle Médoc Vibes — manger, sortir, bouger",
-    link: "https://medocvibes.fr/",
-  },
-  {
-    title: "Forge Digitale",
-    category: "Site Vitrine",
-    description:
-      "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
-    tags: ["Chargement Instantané", "Design Unique", "Optimisé Google"],
-    image: "/projects/forge.webp",
-    imageAlt:
-      "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
-    link: "#",
-  },
-  {
     title: "La Délicieuse",
     category: "E-commerce",
     description:
@@ -62,28 +17,6 @@ const projects = [
     imageAlt:
       "Capture d'écran de la boutique en ligne Épicerie Fine La Délicieuse, avec le hero Cave & Spiritueux et les rayons produits",
     link: "https://epiceriefineladelicieuse.fr",
-  },
-  {
-    title: "GoSportNow",
-    category: "Application Mobile",
-    description:
-      "Application de mise en relation pour sportifs pour iOs et Android. Design moderne, interface intuitive et fonctionnalités sur-mesure pour les passionnés de sport.",
-    tags: ["Application Mobile", "Compte Utilisateur", "Carte Interactive"],
-    image: "/projects/gosportnow-og.webp",
-    imageAlt:
-      "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
-    link: "https://gosportnow.fr",
-  },
-  {
-    title: "Atelier Hardware",
-    category: "Montage PC",
-    description:
-      "Assemblage manuel de précision. Cable Management et ventilation optimisée pour un silence total.",
-    tags: ["Silencieux", "Performance", "Esthétique Soignée"],
-    image: "/projects/pc.webp",
-    imageAlt:
-      "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
-    link: "/#contact",
   },
   {
     title: "Charcuterie Campagnarde",
@@ -117,6 +50,73 @@ const projects = [
     imageAlt:
       "Capture d'écran du site web Rugby Handi Sud Bassin, club de rugby fauteuil du Bassin d'Arcachon",
     link: "https://rhsb.fr",
+  },
+  {
+    title: "Spawnzone",
+    category: "Application Mobile",
+    description:
+      "App pour trouver des joueurs près de chez soi, sur les mêmes jeux et aux mêmes horaires. Disponible sur l’App Store et Google Play.",
+    tags: ["iOS & Android", "Gaming", "Géolocalisation", "Disponible"],
+    image: "/projects/spawnzone.webp",
+    imageAlt:
+      "Écran Découverte de l’application Spawnzone avec carte des joueurs à proximité",
+    link: "https://spawnzone.fr/",
+    storeLink: "https://spawnzone.fr/dl",
+  },
+  {
+    title: "Médoc Vibes",
+    category: "Application Mobile",
+    description:
+      "L’app festif et loisir du Médoc : restos, sorties, marchés, vides-greniers et surf. Bientôt disponible sur les stores.",
+    tags: ["iOS & Android", "Médoc", "Sorties locales", "Bientôt sur les stores"],
+    image: "/projects/medocvibes.webp",
+    imageAlt:
+      "Identité visuelle Médoc Vibes — manger, sortir, bouger",
+    link: "https://medocvibes.fr/",
+  },
+  {
+    title: "À ta soif",
+    category: "Application Mobile",
+    description:
+      "Cave numérique pour whisky, rhum, vin et bière : prix, lieu, niveau et notes. Bientôt disponible sur les stores.",
+    tags: ["iOS & Android", "Cave numérique", "Bientôt sur les stores"],
+    image: "/projects/atasoif.webp",
+    imageAlt:
+      "Écran Ma cave de l’application À ta soif avec suivi des bouteilles",
+    link: "https://atasoif.fr/",
+  },
+  {
+    title: "GoSportNow",
+    category: "Application Mobile",
+    description:
+      "Application de mise en relation pour sportifs pour iOs et Android. Design moderne, interface intuitive et fonctionnalités sur-mesure pour les passionnés de sport.",
+    tags: ["Application Mobile", "Compte Utilisateur", "Carte Interactive"],
+    image: "/projects/gosportnow-og.webp",
+    imageAlt:
+      "Maquette de l'application mobile GoSportNow montrant l'interface de mise en relation pour sportifs",
+    link: "https://gosportnow.fr",
+  },
+  {
+    title: "Forge Digitale",
+    category: "Site Vitrine",
+    description:
+      "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
+    tags: ["Chargement Instantané", "Design Unique", "Optimisé Google"],
+    image: "/projects/forge.webp",
+    imageAlt:
+      "Capture d'écran du site web Forge Digitale Solutions avec design moderne et identité visuelle dorée",
+    link: "#",
+  },
+  {
+    title: "Atelier Hardware",
+    category: "Montage PC",
+    description:
+      "Assemblage manuel de précision. Cable Management et ventilation optimisée pour un silence total.",
+    tags: ["Silencieux", "Performance", "Esthétique Soignée"],
+    image: "/projects/pc.webp",
+    imageAlt:
+      "Photo d'un PC sur mesure assemblé avec soin, montrant le cable management et les composants",
+    link: "/#contact",
   },
 ];
 
