@@ -1,6 +1,14 @@
-# Forge Digitale Solutions
+import { NextResponse } from "next/server";
+import { getPayload } from "payload";
+import config from "@payload-config";
 
-> Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME du Médoc, du Bassin d'Arcachon et de Bordeaux. Anthony Marcelin, développeur full-stack (titre CDA). Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96. Création de sites à partir de 500 € TTC. SIREN 100 857 838.
+export const revalidate = 3600;
+
+const SITE_URL = "https://forgedigitalesolutions.com";
+
+const STATIC_BODY = `# Forge Digitale Solutions
+
+> Artisanat numérique à Saint-Laurent-Médoc (33112, Gironde). Création de sites web et d'applications pour TPE, artisans et PME du Médoc, du Bassin d'Arcachon et de Bordeaux. Anthony Marcelin, développeur full-stack (titre CDA). Contact : contact@forgedigitalesolutions.com, 06 45 65 96 96. Création de sites à partir de 500 € TTC. SIREN 100 857 838.
 
 ## Pages principales
 
@@ -29,7 +37,7 @@
 
 - [llms.txt](https://forgedigitalesolutions.com/llms.txt)
 - [Sitemap](https://forgedigitalesolutions.com/sitemap.xml)
-- [API catalog](https://forgedigitalesolutions.com/.well-known/api-catalog) : RFC 9727 — aucune API REST publique
+- [API catalog](https://forgedigitalesolutions.com/.well-known/api-catalog) : RFC 9727, aucune API REST publique
 - [site.json](https://forgedigitalesolutions.com/api/public/site.json) : JSON public lecture seule (identité, contact, offre)
 - [auth.md](https://forgedigitalesolutions.com/auth.md) : pas d'enregistrement agent / pas d'OAuth public
 - [Agent skills](https://forgedigitalesolutions.com/.well-known/agent-skills/index.json) : index skills lecture seule
@@ -38,7 +46,7 @@
 ## Capacités agents (honnête)
 
 - Pas de serveur MCP public, pas de carte A2A, pas d'OAuth agent.
-- Contenu lisible via HTML, llms.txt, et négociation `Accept: text/markdown`.
+- Contenu lisible via HTML, llms.txt, et négociation \`Accept: text/markdown\`.
 - Contact humain uniquement pour devis et interventions.
 
 ## Légal
@@ -49,3 +57,62 @@
 
 <!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended, etc. -->
 <!-- Dernière mise à jour : 2026-09-28 -->
+`;
+
+const plainHeaders = {
+  "Content-Type": "text/plain; charset=utf-8",
+};
+
+type BlogListDoc = {
+  slug?: string | null;
+  title?: string | null;
+  metaDescription?: string | null;
+  excerpt?: string | null;
+};
+
+async function blogSection(): Promise<string | null> {
+  if (!process.env.DATABASE_URI || !process.env.PAYLOAD_SECRET) return null;
+  try {
+    const payload = await getPayload({ config });
+    const result = await payload.find({
+      collection: "posts",
+      overrideAccess: false,
+      depth: 0,
+      limit: 200,
+      sort: "-publishedAt",
+    });
+    const docs = result.docs as BlogListDoc[];
+    if (!docs.length) return null;
+
+    const lines = ["## Blog", ""];
+    for (const doc of docs) {
+      const slug = doc.slug?.trim();
+      if (!slug) continue;
+      const title = (doc.title || slug).trim();
+      const description = (
+        doc.metaDescription ||
+        doc.excerpt ||
+        ""
+      ).trim();
+      const htmlUrl = `${SITE_URL}/blog/${slug}/`;
+      const mdUrl = `${SITE_URL}/blog/${slug}.md`;
+      lines.push(
+        `- [${title}](${htmlUrl}): ${description || title}`,
+      );
+      lines.push(`  - Markdown: ${mdUrl}`);
+    }
+    if (lines.length <= 2) return null;
+    return lines.join("\n");
+  } catch (error) {
+    console.error("llms.txt blog section unavailable", error);
+    return null;
+  }
+}
+
+export async function GET() {
+  const blog = await blogSection();
+  const body = blog
+    ? `${STATIC_BODY.trimEnd()}\n\n${blog}\n`
+    : `${STATIC_BODY.trimEnd()}\n`;
+  return new NextResponse(body, { status: 200, headers: plainHeaders });
+}
