@@ -30,6 +30,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const newsletterRoute = {
+    url: `${baseUrl}/newsletter`,
+    lastModified: new Date("2026-10-13"),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  };
+
   const servicePages = [
     { route: "/creation-site-web", lastModified: "2026-09-07" },
     { route: "/developpeur-medoc", lastModified: "2026-06-02" },
@@ -64,6 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     mainRoute,
     ...servicePages,
     blogRoute,
+    newsletterRoute,
     ...legalRoutes,
     ...blogRoutes,
   ].map((r) => ({ ...r, url: r.url.endsWith("/") ? r.url : `${r.url}/` }));

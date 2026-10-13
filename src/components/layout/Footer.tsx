@@ -299,6 +299,14 @@ export function Footer() {
             <div id="newsletter" className="scroll-mt-24">
               <h4 className="text-text-strong font-bold mb-4">Newsletter</h4>
               <NewsletterForm variant="footer" />
+              <p className="mt-3 text-xs text-faint">
+                <Link
+                  href="/newsletter/"
+                  className="underline hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Anciens numéros
+                </Link>
+              </p>
             </div>
             <div>
               <h4 className="text-text-strong font-bold mb-4">Réseaux</h4>
