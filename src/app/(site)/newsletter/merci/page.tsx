@@ -5,7 +5,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Inscription confirmée | Forge Digitale Solutions",
+  title: "Inscription confirmée",
   description:
     "Merci pour votre inscription à la newsletter de Forge Digitale Solutions.",
   robots: {
