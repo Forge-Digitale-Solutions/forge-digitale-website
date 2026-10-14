@@ -8,7 +8,7 @@ const PAGE_URL = `${SITE_URL}/creation-site-internet-medoc/`;
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Création de site internet dans le Médoc | Anthony Marcelin",
+    absolute: "Création de site internet dans le Médoc | Forge Digitale Solutions",
   },
   description:
     "Anthony Marcelin, développeur indépendant à Saint-Laurent-Médoc. Sites internet pour TPE, vitrine à partir de 500 € TTC, un interlocuteur. Devis gratuit.",
