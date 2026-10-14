@@ -4,7 +4,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Politique de Confidentialité | Forge Digitale Solutions",
+  title: "Politique de Confidentialité",
   description:
     "Politique de confidentialité RGPD : Umami sans cookie, Web3Forms, newsletter Brevo. Aucun cookie publicitaire.",
   robots: {

@@ -4,7 +4,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mentions Légales | Forge Digitale Solutions",
+  title: "Mentions Légales",
   description:
     "Mentions légales de Forge Digitale Solutions. Coordonnées SIREN, hébergeur, propriété intellectuelle et responsabilité civile professionnelle.",
   robots: {

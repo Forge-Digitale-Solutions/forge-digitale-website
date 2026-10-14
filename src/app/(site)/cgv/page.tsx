@@ -4,7 +4,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Conditions Générales de Vente | Forge Digitale Solutions",
+  title: "Conditions Générales de Vente",
   description:
     "Conditions générales de vente de Forge Digitale Solutions. Services web et hardware, tarifs, paiement, garanties et mentions légales.",
   robots: {
