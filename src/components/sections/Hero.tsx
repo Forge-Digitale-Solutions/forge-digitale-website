@@ -6,13 +6,27 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const trust = ["Site Web & App", "Montage PC", "Maintenance Locale"];
 
-export function Hero() {
+type LatestPostLink = {
+  id: string;
+  title: string;
+};
+
+export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
   return (
     <section
       className="relative overflow-hidden pt-32 pb-24 md:pt-44"
       aria-label="Section d'accueil"
     >
       <div className="container mx-auto px-4 md:px-6">
+        {latestPost ? (
+          <Link
+            href={`/blog/${latestPost.id}/`}
+            className="fds-eyebrow mb-6 block max-w-full truncate"
+          >
+            Nouvel article · {latestPost.title} →
+          </Link>
+        ) : null}
+
         <div className="relative">
           {/* Signature gesture: visible column grid + registration crosshairs */}
           <div
