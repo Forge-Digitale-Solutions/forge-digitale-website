@@ -1,5 +1,4 @@
-export const NEWSLETTER_SUCCESS_MESSAGE =
-  "Vérifiez votre boîte mail pour confirmer votre inscription";
+export const NEWSLETTER_SUCCESS_MESSAGE = "Merci pour votre inscription !";
 
 export const NEWSLETTER_INVALID_EMAIL_MESSAGE =
   "Veuillez saisir une adresse e-mail valide.";
