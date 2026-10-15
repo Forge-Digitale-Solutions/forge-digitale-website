@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 /* ============================================================
-   FORGE DIGITALE — FUNKTION design system
+   FORGE DIGITALE - FUNKTION design system
    Tokens inlined from docs/Forge Digitale Design System-3.
    Two themes: Atelier (light, default) + Graphite (dark),
    switched via [data-theme] on <html> (driven by next-themes).
@@ -54,7 +54,7 @@
   --info: #4e6273;
   --info-tint: rgba(78, 98, 115, 0.14);
 
-  /* Type scale (1.250) — namespaced so it cannot override Tailwind's
+  /* Type scale (1.250) - namespaced so it cannot override Tailwind's
      built-in text-* utility scale. Families are provided by next/font.
      Display reuses the Archivo variable font; the "Expanded" look comes
      from the wdth axis (font-stretch on display elements below). */

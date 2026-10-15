@@ -11,7 +11,7 @@ La réforme de la facturation électronique démarre le 1er septembre 2026, mais
 
 Cette nuance compte pour un artisan : il faut choisir une plateforme de réception dès 2026, sans pour autant abandonner immédiatement ses habitudes d'émission. Voici le calendrier sans jargon inutile.
 
-*Source : [impots.gouv.fr – Je passe à la facturation électronique](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique)*
+*Source : [impots.gouv.fr - Je passe à la facturation électronique](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique)*
 
 ## Qui est concerné, franchise de TVA comprise
 
@@ -21,7 +21,7 @@ La distinction juridique est subtile mais décisive : ne pas **facturer** la TVA
 
 Sont donc concernées toutes les entreprises établies en France et assujetties à la TVA : sociétés, professions libérales, auto-entrepreneurs, artisans, commerçants, qu'ils facturent la TVA ou non.
 
-*Source : [impots.gouv.fr – Je facture sans TVA, suis-je concerné ?](https://www.impots.gouv.fr/professionnel/questions/je-nemets-pas-de-facture-ou-je-facture-sans-tva-suis-je-concerne-par-la)*
+*Source : [impots.gouv.fr - Je facture sans TVA, suis-je concerné ?](https://www.impots.gouv.fr/professionnel/questions/je-nemets-pas-de-facture-ou-je-facture-sans-tva-suis-je-concerne-par-la)*
 
 ## Un calendrier en deux temps
 
@@ -35,7 +35,7 @@ La réforme distingue deux obligations : **recevoir** une facture électronique,
 
 La conséquence pratique est souvent mal comprise. Une micro-entreprise a jusqu'à septembre 2027 pour **émettre** ses propres factures. Mais dès septembre 2026, elle doit pouvoir en **recevoir** de ses fournisseurs. L'échéance de 2026 la concerne donc bien, même si son calendrier d'émission est plus tardif.
 
-*Source : [impots.gouv.fr – Je découvre la facturation électronique](https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique)*
+*Source : [impots.gouv.fr - Je découvre la facturation électronique](https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique)*
 
 ## Ce qui change concrètement
 
@@ -45,7 +45,7 @@ Deux changements en découlent. D'abord, la facture ne transite plus de boîte m
 
 À noter : cette obligation de facture structurée vaut pour les transactions **entre professionnels établis en France** (le B2B). Pour les ventes aux particuliers et à l'étranger, c'est un mécanisme distinct, le **e-reporting**, qui impose seulement de transmettre les données de transaction, sans facture électronique normalisée.
 
-*Source : [economie.gouv.fr – Tout savoir sur la facturation électronique](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises)*
+*Source : [economie.gouv.fr - Tout savoir sur la facturation électronique](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises)*
 
 ## Une plateforme agréée devient nécessaire
 
@@ -55,7 +55,7 @@ Pour transmettre et recevoir des factures, l'entreprise doit donc choisir une **
 
 Les tarifs et les services varient selon les opérateurs. Le bon choix n'est pas forcément l'offre la plus riche : pour une petite structure, il faut surtout vérifier la réception, l'émission à partir de 2027, l'export des données et l'assistance en cas de changement d'outil.
 
-*Source : [impots.gouv.fr – Facturation électronique et plateformes agréées](https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees)*
+*Source : [impots.gouv.fr - Facturation électronique et plateformes agréées](https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees)*
 
 ## Comment s'y préparer dès maintenant
 
@@ -68,7 +68,7 @@ L'échéance de 2026 paraît lointaine, mais la mise en conformité tient en que
 
 La réforme demande surtout de choisir un outil et de tester la réception avant l'échéance. Une fois ce point réglé, la transition vers l'émission électronique pourra se préparer progressivement jusqu'en 2027 pour les petites structures. Sur le même terrain de la dématérialisation, mieux vaut aussi sécuriser dès maintenant [l'acceptation des devis par mail ou SMS](/blog/devis-sms-mail-valeur-juridique/), avant même la facture.
 
-*Source : [impots.gouv.fr – La facturation électronique, qu'est-ce que ça change pour moi ?](https://www.impots.gouv.fr/facturation-electronique-qu-est-ce-que-ca-change-pour-moi)*
+*Source : [impots.gouv.fr - La facturation électronique, qu'est-ce que ça change pour moi ?](https://www.impots.gouv.fr/facturation-electronique-qu-est-ce-que-ca-change-pour-moi)*
 
 ---
 

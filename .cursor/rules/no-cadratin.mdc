@@ -1,0 +1,14 @@
+---
+description: Interdiction des tirets cadratin et demi-cadratin sur le site
+alwaysApply: true
+---
+
+# Typographie : pas de cadratin
+
+Sur ce site (copy UI, blog, pages légales, alt, aria-label, JSON-LD, markdown public) :
+
+- Interdit : tiret cadratin `—` (U+2014)
+- Interdit : tiret demi-cadratin `–` (U+2013)
+- Autorisé : tiret ASCII `-`, virgule, deux-points, parenthèses
+
+Ne jamais en introduire, même dans les commentaires de code destinés à être copiés en prose.

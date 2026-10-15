@@ -1,6 +1,6 @@
 ---
 name: fds-read-llms
-description: Use this when you need a markdown index of Forge Digitale Solutions public pages — fetch llms.txt.
+description: Use this when you need a markdown index of Forge Digitale Solutions public pages - fetch llms.txt.
 ---
 
 # Lire llms.txt FDS

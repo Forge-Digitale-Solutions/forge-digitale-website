@@ -1,4 +1,4 @@
-# Forge Digitale Solutions — Node server for Dokploy.
+# Forge Digitale Solutions - Node server for Dokploy.
 # Build-arg NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is inlined by Next at image build.
 # Runtime env (Dokploy → Environment, not build args):
 #   DATABASE_URI, PAYLOAD_SECRET, PAYLOAD_PUBLIC_SERVER_URL

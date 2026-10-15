@@ -9,7 +9,7 @@ interface BreadcrumbSchemaProps {
 
 /**
  * Emits a BreadcrumbList JSON-LD script for SEO (rich results).
- * Server component — no visual output, just structured data.
+ * Server component - no visual output, just structured data.
  */
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   const schema = {

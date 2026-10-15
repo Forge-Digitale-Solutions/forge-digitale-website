@@ -11,7 +11,7 @@ Une [fiche Google](/blog/fiche-google-artisans/) bien remplie attire le regard. 
 
 Beaucoup de professionnels du Médoc font un travail apprécié mais affichent trois ou quatre avis, parfois anciens. La cause est rarement la qualité du service : ils ne pensent simplement pas à proposer ce retour à leurs clients. Sans demande claire et facile à suivre, peu de personnes prennent spontanément le temps d'écrire.
 
-*Source : [BrightLocal – Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)*
+*Source : [BrightLocal - Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)*
 
 ## Pourquoi le nombre et la fraîcheur comptent
 
@@ -19,7 +19,7 @@ Une note de 4,8 sur 150 avis inspire généralement plus confiance qu'un 5,0 sur
 
 L'objectif n'est pas d'atteindre une note parfaite. Ce qui construit la confiance, c'est un ensemble crédible : des retours authentiques, étalés dans le temps, et des réponses du professionnel.
 
-*Source : [Google – Conseils pour améliorer votre classement local](https://support.google.com/business/answer/7091?hl=fr)*
+*Source : [Google - Conseils pour améliorer votre classement local](https://support.google.com/business/answer/7091?hl=fr)*
 
 ## Comment demander un avis, simplement
 
@@ -34,7 +34,7 @@ Quelques méthodes qui marchent pour une petite entreprise :
 
 Le point commun de ces approches : réduire l'effort demandé au client. Plus le chemin vers le formulaire est court, plus le taux de retour est élevé.
 
-*Source : [Google – Règles sur les faux avis et la manipulation des notes](https://support.google.com/business/answer/7400114)*
+*Source : [Google - Règles sur les faux avis et la manipulation des notes](https://support.google.com/business/answer/7400114)*
 
 ## La ligne rouge : les faux avis
 
@@ -44,7 +44,7 @@ En droit français, diffuser ou faire diffuser de faux avis constitue une pratiq
 
 Au-delà de la sanction, le risque est réputationnel. Les faux avis se repèrent : formulations génériques, comptes sans historique, pics soudains d'évaluations cinq étoiles. Un client qui flaire la manœuvre perd confiance d'un coup, et la plateforme peut supprimer les avis, voire la fiche. Le jeu n'en vaut pas la peine quand une sollicitation honnête donne de meilleurs résultats sur la durée.
 
-*Source : [SignalConso – Faux avis clients en ligne](https://signal.conso.gouv.fr/fr/actualites/faux-avis)*
+*Source : [SignalConso - Faux avis clients en ligne](https://signal.conso.gouv.fr/fr/actualites/faux-avis)*
 
 ## Répondre aux avis, y compris aux mauvais
 

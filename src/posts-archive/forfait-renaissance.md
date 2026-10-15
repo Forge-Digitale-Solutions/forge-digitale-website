@@ -11,7 +11,7 @@ Le **support de Windows 10 a pris fin le 14 octobre 2025** : Microsoft ne fourni
 
 Microsoft propose une année supplémentaire de mises à jour de sécurité étendues (ESU) jusqu'au 13 octobre 2026. L'une des options pour les particuliers consiste à rester connecté avec le compte Microsoft utilisé lors de l'inscription ; après une période pouvant aller jusqu'à 60 jours sans cette connexion, les mises à jour sont interrompues jusqu'à une nouvelle inscription. Cette rallonge reste temporaire. Beaucoup de machines encore fonctionnelles ne remplissent par ailleurs pas les prérequis de Windows 11 (TPM 2.0 et processeur pris en charge). D'où la question : remplacer l'ordinateur, ou prolonger l'existant autrement ?
 
-*Sources : [Microsoft – Fin du support de Windows 10](https://www.microsoft.com/fr-fr/windows/end-of-support), [Microsoft – Mises à jour de sécurité étendues](https://www.microsoft.com/fr-fr/windows/extended-security-updates)*
+*Sources : [Microsoft - Fin du support de Windows 10](https://www.microsoft.com/fr-fr/windows/end-of-support), [Microsoft - Mises à jour de sécurité étendues](https://www.microsoft.com/fr-fr/windows/extended-security-updates)*
 
 ## Une troisième voie : Linux Mint
 

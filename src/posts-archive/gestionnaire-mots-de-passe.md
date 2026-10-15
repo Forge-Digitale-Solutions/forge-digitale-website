@@ -11,7 +11,7 @@ Boîte mail, banque, impôts, Ameli, réseaux sociaux, sites marchands : un usag
 
 Le constat est mesurable : dans le rapport d'activité 2024 de Cybermalveillance.gouv.fr, le **piratage de compte est la deuxième menace la plus signalée par les particuliers, en progression de 47 %** sur un an. Chez les professionnels, il représente environ un cinquième des demandes d'assistance.
 
-*Source : [Cybermalveillance.gouv.fr – Rapport d'activité 2024](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/rapport-activite-2024)*
+*Source : [Cybermalveillance.gouv.fr - Rapport d'activité 2024](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/rapport-activite-2024)*
 
 ## Pourquoi la réutilisation est le vrai problème
 
@@ -31,7 +31,7 @@ La CNIL a actualisé sa recommandation sur les mots de passe en 2022 (délibéra
 
 Et surtout : un mot de passe **différent pour chaque service**. C'est cette dernière exigence qui rend le gestionnaire indispensable, car elle est intenable de mémoire.
 
-*Source : [CNIL – Mots de passe : recommandations pour maîtriser sa sécurité](https://www.cnil.fr/fr/mots-de-passe-recommandations-pour-maitriser-sa-securite)*
+*Source : [CNIL - Mots de passe : recommandations pour maîtriser sa sécurité](https://www.cnil.fr/fr/mots-de-passe-recommandations-pour-maitriser-sa-securite)*
 
 ## Le gestionnaire de mots de passe : un coffre-fort chiffré
 

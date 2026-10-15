@@ -9,11 +9,11 @@ Artisanat numérique dans le Médoc. Anthony Marcelin crée des sites web et des
 
 ## Offre
 
-- **Création de site web** : à partir de **500 € TTC** — [détail](https://forgedigitalesolutions.com/creation-site-web/)
-- **Maintenance de site** — [détail](https://forgedigitalesolutions.com/maintenance-site-web/)
-- **Pack Agent Ready** : à partir de **190 € TTC** — [détail](https://forgedigitalesolutions.com/services/agent-ready/)
-- **Installation Linux Mint** (forfait Renaissance 69 € TTC) — [détail](https://forgedigitalesolutions.com/installation-linux/)
-- **Montage PC** (forfait 149 € TTC) — [détail](https://forgedigitalesolutions.com/montage-pc/)
+- **Création de site web** : à partir de **500 € TTC** - [détail](https://forgedigitalesolutions.com/creation-site-web/)
+- **Maintenance de site** - [détail](https://forgedigitalesolutions.com/maintenance-site-web/)
+- **Pack Agent Ready** : à partir de **190 € TTC** - [détail](https://forgedigitalesolutions.com/services/agent-ready/)
+- **Installation Linux Mint** (forfait Renaissance 69 € TTC) - [détail](https://forgedigitalesolutions.com/installation-linux/)
+- **Montage PC** (forfait 149 € TTC) - [détail](https://forgedigitalesolutions.com/montage-pc/)
 
 ## Local
 
@@ -33,6 +33,6 @@ Artisanat numérique dans le Médoc. Anthony Marcelin crée des sites web et des
 - Index : [llms.txt](https://forgedigitalesolutions.com/llms.txt)
 - Sitemap : [sitemap.xml](https://forgedigitalesolutions.com/sitemap.xml)
 - Catalogue : [/.well-known/api-catalog](https://forgedigitalesolutions.com/.well-known/api-catalog)
-- Pas d'API REST publique, pas de MCP, pas d'OAuth agent — voir [auth.md](https://forgedigitalesolutions.com/auth.md)
+- Pas d'API REST publique, pas de MCP, pas d'OAuth agent - voir [auth.md](https://forgedigitalesolutions.com/auth.md)
 
 Saint-Laurent-Médoc. Un interlocuteur. Des sites utiles, pas des classements promis.

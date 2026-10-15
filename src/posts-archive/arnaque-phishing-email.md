@@ -11,7 +11,7 @@ L'hameçonnage (*phishing* en anglais) consiste à usurper l'identité d'un orga
 
 Sa force ne tient pas à la sophistication, souvent rudimentaire, mais à la mise en scène : un logo officiel, un ton administratif et un motif crédible suffisent à faire baisser la garde.
 
-*Source : [Cybermalveillance.gouv.fr – Rapport d'activité 2024](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/rapport-activite-2024)*
+*Source : [Cybermalveillance.gouv.fr - Rapport d'activité 2024](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/rapport-activite-2024)*
 
 ## Comment fonctionne une attaque
 

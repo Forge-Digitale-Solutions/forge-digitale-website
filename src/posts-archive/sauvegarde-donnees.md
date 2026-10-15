@@ -29,7 +29,7 @@ La copie hors site répond à un risque souvent négligé : un incendie, un dég
 
 **Les rançongiciels.** Ces logiciels chiffrent les fichiers et en monnaient le déblocage. L'ANSSI les classe parmi les principales menaces visant les entreprises et les collectivités dans son *Panorama de la cybermenace*. Face à eux, une sauvegarde hors ligne et récente est le moyen le plus sûr de repartir sans payer la rançon.
 
-*Source : [ANSSI – Panorama de la cybermenace](https://www.cyber.gouv.fr/)*
+*Source : [ANSSI - Panorama de la cybermenace](https://www.cyber.gouv.fr/)*
 
 **L'erreur humaine.** Supprimer un dossier, écraser un fichier, formater le mauvais disque : avec une sauvegarde récente, l'incident est mineur ; sans, il est définitif.
 
