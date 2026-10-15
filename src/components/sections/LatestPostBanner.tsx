@@ -7,22 +7,21 @@ export async function LatestPostBanner() {
 
   return (
     <aside
-      className="border-y border-default bg-bg"
+      className="border-t border-default"
       aria-label="Dernier article du blog"
     >
-      <div className="container mx-auto flex h-9 items-center justify-between gap-4 px-4 text-xs text-faint md:px-6">
+      <div className="flex h-10 items-center justify-between gap-4 text-[15px] text-text-strong md:text-base">
         <Link
           href={`/blog/${post.id}/`}
-          className="min-w-0 truncate hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+          className="flex min-w-0 items-center gap-2 hover:opacity-90 focus-visible:outline-1 focus-visible:outline-accent rounded transition-opacity"
         >
-          Nouveau sur le blog :{" "}
-          <span className="text-soft">{post.title}</span>
-          {" → "}
-          Lire
+          <span className="shrink-0 text-accent">Nouveau</span>
+          <span className="min-w-0 truncate font-medium">{post.title}</span>
+          <span className="shrink-0 text-accent">Lire →</span>
         </Link>
         <Link
           href="/blog/"
-          className="shrink-0 hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+          className="hidden shrink-0 text-soft hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors sm:inline"
         >
           Tous les articles
         </Link>

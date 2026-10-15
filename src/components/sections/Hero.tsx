@@ -1,12 +1,13 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const trust = ["Site Web & App", "Montage PC", "Maintenance Locale"];
 
-export function Hero() {
+export function Hero({ children }: { children?: ReactNode }) {
   return (
     <section
       className="relative overflow-hidden pt-32 pb-24 md:pt-44"
@@ -95,6 +96,10 @@ export function Hero() {
                 />
               </Link>
             </motion.div>
+
+            {children ? (
+              <div className="mt-6 min-h-10">{children}</div>
+            ) : null}
 
             <motion.ul
               initial={{ opacity: 0 }}

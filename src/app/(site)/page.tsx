@@ -17,8 +17,9 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-bg">
-      <Hero />
-      <LatestPostBanner />
+      <Hero>
+        <LatestPostBanner />
+      </Hero>
       <GridDivider />
       <Services />
       <GridDivider />
