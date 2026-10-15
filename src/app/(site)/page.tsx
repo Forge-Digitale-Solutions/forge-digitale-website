@@ -1,5 +1,6 @@
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
+import { LatestPostBanner } from "@/components/sections/LatestPostBanner";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
@@ -9,12 +10,15 @@ import { Reviews } from "@/components/sections/Reviews";
 import { GridDivider } from "@/components/ui/section";
 import { getGoogleReviews } from "@/lib/google-reviews";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const reviewsData = await getGoogleReviews();
 
   return (
     <div className="min-h-screen bg-bg">
       <Hero />
+      <LatestPostBanner />
       <GridDivider />
       <Services />
       <GridDivider />

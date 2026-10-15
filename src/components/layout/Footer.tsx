@@ -1,12 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { getFooterPostLinks } from "@/lib/posts";
 
-export function Footer() {
+export async function Footer() {
   const currentYear = new Date().getFullYear();
+  const footerPosts = await getFooterPostLinks();
 
   return (
     <footer className="bg-bg border-t border-default pt-16 pb-8">
@@ -84,6 +84,7 @@ export function Footer() {
                 >
                   Développeur dans le Médoc
                 </Link>
+              </li>
               <li>
                 <Link
                   href="/faq/"
@@ -125,7 +126,6 @@ export function Footer() {
                   Création site internet Médoc
                 </Link>
               </li>
-              </li>
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
@@ -150,78 +150,16 @@ export function Footer() {
                   Le Blog Tech
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/blog/arnaque-phishing-email/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Arnaque phishing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/croissance-web/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Croissance web
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/fiche-google-artisans/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Fiche Google artisans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/gestionnaire-mots-de-passe/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Gestionnaire de mots de passe
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/sauvegarde-automatique-linux/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Sauvegarde Linux
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/sauvegarde-donnees/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Sauvegarde des données
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/site-web-ou-reseaux-sociaux/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Site web ou réseaux
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/whatsapp-business-artisans-commercants/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  WhatsApp Business
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/facturation-electronique/"
-                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-                >
-                  Facturation électronique
-                </Link>
-              </li>
+              {footerPosts.map((post) => (
+                <li key={post.id}>
+                  <Link
+                    href={`/blog/${post.id}/`}
+                    className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
               <li>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a

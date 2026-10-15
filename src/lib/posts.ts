@@ -1,12 +1,20 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { cache } from "react";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { notFound } from "next/navigation";
+
+export type PostLink = {
+  id: string;
+  title: string;
+};
+
+export const FOOTER_PINNED_POST_ID = "devis-sms-mail-valeur-juridique";
 
 const postsDirectory = path.join(process.cwd(), "src/posts-archive");
 
@@ -191,7 +199,7 @@ async function readMarkdownPost(id: string): Promise<PostData> {
   };
 }
 
-export async function getSortedPostsData(): Promise<PostData[]> {
+export const getSortedPostsData = cache(async (): Promise<PostData[]> => {
   const remote = await payloadPosts();
   if (remote?.length) {
     const payload = await Promise.all(
@@ -201,6 +209,35 @@ export async function getSortedPostsData(): Promise<PostData[]> {
   }
   // Emergency fallback only: archived Markdown if Payload is unavailable
   return readMarkdownList();
+});
+
+function toPostLink(post: PostData): PostLink {
+  return { id: post.id, title: post.title };
+}
+
+export async function getLatestPostLink(): Promise<PostLink | null> {
+  const posts = await getSortedPostsData();
+  const first = posts[0];
+  if (!first?.id || !first.title) return null;
+  return toPostLink(first);
+}
+
+export async function getFooterPostLinks(
+  pinnedId: string = FOOTER_PINNED_POST_ID,
+  latestCount: number = 3,
+): Promise<PostLink[]> {
+  const posts = await getSortedPostsData();
+  const links: PostLink[] = [];
+  const pinned = posts.find((post) => post.id === pinnedId);
+  if (pinned?.id && pinned.title) {
+    links.push(toPostLink(pinned));
+  }
+  const latest = posts
+    .filter((post) => post.id !== pinnedId && post.id && post.title)
+    .slice(0, latestCount)
+    .map(toPostLink);
+  links.push(...latest);
+  return links;
 }
 
 export function formatPostMarkdown(

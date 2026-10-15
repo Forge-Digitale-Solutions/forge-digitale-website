@@ -5,6 +5,8 @@ import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import "../globals.css";
 
+export const dynamic = "force-dynamic";
+
 export default function SiteLayout({
   children,
 }: Readonly<{
