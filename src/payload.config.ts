@@ -9,6 +9,10 @@ import { Media } from "./collections/Media";
 import { NewsletterIssues } from "./collections/NewsletterIssues";
 import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
+import {
+  uploadMediaFromUrlHandler,
+  uploadMediaFromUrlParameters,
+} from "./mcp/uploadMediaFromUrl";
 import { migrations } from "./migrations";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -69,6 +73,18 @@ export default buildConfig({
             delete: false,
           },
         },
+      },
+      mcp: {
+        tools: [
+          {
+            name: "uploadMediaFromUrl",
+            description:
+              "Upload an image into the media collection from an HTTPS URL or base64. Returns id, url, and filename. Requires media create on the MCP API key.",
+            // zod/v3 schemas; cast avoids TS2589 against plugin-mcp's ZodRawShape.
+            parameters: uploadMediaFromUrlParameters as never,
+            handler: uploadMediaFromUrlHandler,
+          },
+        ],
       },
     }),
   ],
