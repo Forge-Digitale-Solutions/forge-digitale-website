@@ -19,6 +19,7 @@ export interface ImageCredit {
   name: string;
   profileUrl?: string;
   photoUrl?: string;
+  isUnsplash: boolean;
 }
 
 export interface PostData {
@@ -100,13 +101,19 @@ function imageCredit(image: PostDoc["image"]): ImageCredit | undefined {
   if (!name) return undefined;
   const profileUrl = media?.creditUrl?.trim() || undefined;
   const photoUrl = media?.sourceUrl?.trim() || undefined;
-  return { name, profileUrl, photoUrl };
+  const isUnsplash = [media?.creditUrl, media?.sourceUrl].some((url) =>
+    url?.toLowerCase().includes("unsplash.com"),
+  );
+  return { name, profileUrl, photoUrl, isUnsplash };
 }
 
 export function formatImageCreditMarkdown(credit: ImageCredit): string {
   const name = credit.profileUrl
     ? `[${credit.name}](${credit.profileUrl})`
     : credit.name;
+  if (!credit.isUnsplash) {
+    return `Photo : ${name}`;
+  }
   const unsplash = credit.photoUrl
     ? `[Unsplash](${credit.photoUrl})`
     : "Unsplash";
