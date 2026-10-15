@@ -10,7 +10,7 @@ import { Reviews } from "@/components/sections/Reviews";
 import { GridDivider } from "@/components/ui/section";
 import { getGoogleReviews } from "@/lib/google-reviews";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export default async function Home() {
   const reviewsData = await getGoogleReviews();
