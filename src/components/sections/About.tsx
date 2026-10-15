@@ -23,7 +23,7 @@ export function About() {
           >
             <div>
               <SectionHeading
-                index="04"
+                index="05"
                 eyebrow="À propos"
                 align="left"
                 titleId="about-heading"
