@@ -45,4 +45,4 @@ La mise en place dépend surtout du nombre de prestations et des règles de plan
 
 Pour un artisan ou un commerçant du Médoc, le résultat se mesure simplement : nombre de réservations en dehors des horaires, appels évités et taux d'absence. Si vous voulez intégrer un système de rendez-vous à votre présence en ligne, [parlons-en](/#contact) : le choix de l'outil dépend de votre métier et de votre façon de travailler.
 
-*Source : [Doctolib – Statistiques annuelles sur les rendez-vous non honorés](https://about.doctolib.fr/news/doctolib-actualise-ses-statistiques-annuelles-sur-les-rendez-vous-non-honores/)*
+*Source : [Doctolib - Statistiques annuelles sur les rendez-vous non honorés](https://about.doctolib.fr/news/doctolib-actualise-ses-statistiques-annuelles-sur-les-rendez-vous-non-honores/)*

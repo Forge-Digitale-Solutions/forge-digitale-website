@@ -1,6 +1,6 @@
 ---
 name: fds-public-pages
-description: Use this when answering about FDS website creation, FAQ, rendez-vous, or blog — open the matching public URL.
+description: Use this when answering about FDS website creation, FAQ, rendez-vous, or blog - open the matching public URL.
 ---
 
 # Pages publiques FDS

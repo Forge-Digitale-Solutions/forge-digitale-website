@@ -25,7 +25,7 @@ Ces chiffres parlent d'une présence en ligne complète, pas d'un effet automati
 
 L'explication est simple : un site bien référencé reste accessible en continu. Il présente l'activité, les réalisations et les coordonnées à toute heure, y compris lorsque l'atelier est fermé, là où une fiche d'annuaire se limite à un numéro.
 
-*Source : [Afnic – étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
+*Source : [Afnic - étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
 
 ## Au-delà des chiffres : la crédibilité
 

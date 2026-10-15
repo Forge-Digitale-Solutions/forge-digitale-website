@@ -9,7 +9,7 @@ image: "/blog/fiche-google.jpg"
 
 Pour une entreprise locale, la recherche en ligne précède désormais le contact. Selon l'enquête *Local Consumer Review Survey* de BrightLocal, 98 % des consommateurs ont utilisé internet pour s'informer sur une entreprise locale (contre 90 % en 2019), et 97 % consultent les avis en ligne. Avant même de disposer d'un site, l'outil le plus efficace pour exister dans ces recherches est gratuit : la **fiche Google**, officiellement *Google Business Profile*.
 
-*Source : [BrightLocal – Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)*
+*Source : [BrightLocal - Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)*
 
 ## De quoi s'agit-il
 
@@ -48,7 +48,7 @@ Le contenu pèse sur le classement comme sur le taux de contact. Quelques points
 - **L'exhaustivité** : description, services, zone desservie. Google met en avant les fiches complètes.
 - **Les avis** : y répondre, même brièvement, renforce la crédibilité, en particulier pour un avis négatif, où une réponse posée rassure les futurs clients.
 
-*Source : [Google – Conseils pour améliorer votre classement local](https://support.google.com/business/answer/7091?hl=fr)*
+*Source : [Google - Conseils pour améliorer votre classement local](https://support.google.com/business/answer/7091?hl=fr)*
 
 ## La limite de l'exercice
 

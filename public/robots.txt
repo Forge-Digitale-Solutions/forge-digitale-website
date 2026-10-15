@@ -1,5 +1,5 @@
-# Content Signals Policy — https://contentsignals.org (CC0)
-# search | ai-input | ai-train — yes = allowed, no = not allowed for that use.
+# Content Signals Policy - https://contentsignals.org (CC0)
+# search | ai-input | ai-train - yes = allowed, no = not allowed for that use.
 
 User-Agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no

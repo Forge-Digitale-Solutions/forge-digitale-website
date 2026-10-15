@@ -16,7 +16,7 @@ Je m’appelle Anthony Marcelin. Je crée des sites depuis Saint-Laurent-Médoc.
 
 Ce billet n’est pas « ne faites jamais appel à un référenceur ». Google dit lui-même qu’un bon expert peut aider. C’est une checklist avant de signer.
 
-*Source : [Google Search Central – Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
+*Source : [Google Search Central - Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
 
 ## Ce que le presta doit pouvoir montrer
 
@@ -26,7 +26,7 @@ Ce billet n’est pas « ne faites jamais appel à un référenceur ». Google d
 
 **Un mode de mesure.** Clics, impressions, pages vues dans la Search. Pas un classement magique dans un outil opaque « approuvé par Google » (Google n’approuve pas ces outils).
 
-*Source : [Google Search Central – Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
+*Source : [Google Search Central - Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
 
 ## Comment lire clics et impressions (sans se faire mentir)
 
@@ -41,7 +41,7 @@ Une hausse d’impressions sans clics, ce n’est pas forcément une victoire. U
 
 Les totaux du graphique et du tableau peuvent différer selon qu’on agrège par site ou par page. Ce n’est pas forcément de la triche : c’est le fonctionnement du rapport. Exigez la même vue avant et après.
 
-*Source : [Aide Search Console – Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
+*Source : [Aide Search Console - Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
 
 ## Ce qui doit vous faire reculer
 
@@ -51,15 +51,15 @@ Les totaux du graphique et du tableau peuvent différer selon qu’on agrège pa
 
 **Techniques qui ressemblent à du spam.** Remplir des pages de villes, créer des pages quasi identiques pour chaque commune, acheter des liens pour « monter », masquer du texte. Ces pratiques sont dans les règles Google sur le spam. Elles peuvent faire baisser le site, ou le faire disparaître des résultats.
 
-*Source : [Google Search Central – Règles concernant le spam](https://developers.google.com/search/docs/essentials/spam-policies?hl=fr)*
-*Source : [Google Search Central – Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
+*Source : [Google Search Central - Règles concernant le spam](https://developers.google.com/search/docs/essentials/spam-policies?hl=fr)*
+*Source : [Google Search Central - Avez-vous besoin d’un référenceur ?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=fr)*
 
 ## Si on touche au local (fiche Google)
 
 Pour un artisan ou un commerce, la fiche Google n’est pas un détail. Elle doit représenter l’activité telle qu’elle est : adresse si vous accueillez du public, zone de service si vous n’accueillez pas. Un presta qui invente une vitrine ou une adresse pour « mieux ranker » joue avec les règles de représentation.
 
-*Source : [Google – Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
-*Source : [Google – Gérer les zones desservies](https://support.google.com/business/answer/9157481?hl=fr)*
+*Source : [Google - Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
+*Source : [Google - Gérer les zones desservies](https://support.google.com/business/answer/9157481?hl=fr)*
 
 ## Avant de payer : cinq questions
 

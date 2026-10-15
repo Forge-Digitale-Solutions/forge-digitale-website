@@ -250,7 +250,7 @@ export default function CGV() {
             <br />
             C/O Centre d’Affaires Stéphanois SAS
             <br />
-            IMMEUBLE L’HORIZON – ESPLANADE DE FRANCE
+            IMMEUBLE L’HORIZON - ESPLANADE DE FRANCE
             <br />
             3, RUE J. CONSTANT MILLERET
             <br />

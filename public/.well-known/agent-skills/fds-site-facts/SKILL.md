@@ -1,6 +1,6 @@
 ---
 name: fds-site-facts
-description: Use this when you need Forge Digitale Solutions identity, contact, service area, or entry pricing — fetch the public read-only JSON.
+description: Use this when you need Forge Digitale Solutions identity, contact, service area, or entry pricing - fetch the public read-only JSON.
 ---
 
 # FDS site facts (lecture seule)

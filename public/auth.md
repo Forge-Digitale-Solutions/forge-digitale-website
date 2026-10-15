@@ -1,4 +1,4 @@
-# auth.md — Forge Digitale Solutions
+# auth.md - Forge Digitale Solutions
 
 ## Audience
 
@@ -36,8 +36,8 @@ Pas de serveur MCP public, pas de carte A2A, pas d'outils WebMCP. Voir `/.well-k
 
 ## Capacités liées (lecture seule)
 
-- `GET /api/public/site.json` — faits site
-- `GET /llms.txt` — index markdown
+- `GET /api/public/site.json` - faits site
+- `GET /llms.txt` - index markdown
 - `Accept: text/markdown` sur l'accueil (et pages avec `.md`)
 - Skills découverte : `/.well-known/agent-skills/index.json`
 - ARD : `/.well-known/ai-catalog.json`

@@ -16,7 +16,7 @@ Je m’appelle Anthony Marcelin. Je crée des sites depuis Saint-Laurent-Médoc.
 
 Voici comment je lis ces chiffres.
 
-*Source : [Aide Search Console – Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
+*Source : [Aide Search Console - Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
 
 ## Les quatre métriques
 
@@ -28,7 +28,7 @@ Voici comment je lis ces chiffres.
 
 **Position moyenne.** Moyenne de la meilleure position de votre site (ou de la page) quand il a reçu une impression. Ce n’est pas « vous êtes toujours 4e ». Une même requête peut vous placer autrement selon le lieu, l’appareil ou l’historique. Google le dit : ne tirez pas de conclusion hâtive sur un numéro seul.
 
-*Source : [Aide Search Console – Que sont les impressions, les clics et la position ?](https://support.google.com/webmasters/answer/7042828?hl=fr)*
+*Source : [Aide Search Console - Que sont les impressions, les clics et la position ?](https://support.google.com/webmasters/answer/7042828?hl=fr)*
 
 ## Graphique et tableau : pourquoi les totaux divergent
 
@@ -40,7 +40,7 @@ Quand on vous montre une capture, demandez la même vue (même période, même f
 
 Les données les plus récentes peuvent être **préliminaires** (ligne en pointillés) : elles bougent encore quelques heures.
 
-*Source : [Aide Search Console – Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
+*Source : [Aide Search Console - Rapport sur les performances](https://support.google.com/webmasters/answer/7576553?hl=fr)*
 
 ## Ce que ces chiffres ne disent pas
 
@@ -50,7 +50,7 @@ Une hausse d’impressions sans clics n’est pas une victoire commerciale. Une 
 
 Si un presta vous vend un classement magique à partir de ces seuls totaux, relisez la checklist : [On m’a proposé du référencement : que vérifier avant de payer](/blog/referencement-verifier-avant-de-payer/).
 
-*Source : [Google Search Central – Bien débuter en référencement naturel](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr)*
+*Source : [Google Search Central - Bien débuter en référencement naturel](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr)*
 
 ## Comment je m’en sers sur un site
 

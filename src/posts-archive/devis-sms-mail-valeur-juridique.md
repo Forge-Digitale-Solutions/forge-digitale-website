@@ -18,7 +18,7 @@ Dans le bâtiment et le dépannage, le devis est même obligatoire dès qu'un pa
 
 Dès que le client accepte (« bon pour travaux », « j'accepte le devis », ou une formule claire équivalente), le document engage les deux côtés : périmètre, délai, prix. C'est l'acceptation qui compte, pas le papier en soi.
 
-*Source : [economie.gouv.fr – Devis obligatoire](https://www.economie.gouv.fr/entreprises/gerer-sa-comptabilite-et-ses-demarches/devis-obligatoire-comment-ca-marche)*
+*Source : [economie.gouv.fr - Devis obligatoire](https://www.economie.gouv.fr/entreprises/gerer-sa-comptabilite-et-ses-demarches/devis-obligatoire-comment-ca-marche)*
 
 ## Un SMS ou un mail peut valoir acceptation
 
@@ -32,7 +32,7 @@ Depuis 2016, l'article 1366 du code civil donne à l'écrit électronique la mê
 
 Concrètement : pour un chantier courant, un SMS clair et conservé suffit souvent. Sur un montant élevé ou un devis complexe, mieux vaut une preuve plus solide : signature électronique, ou au minimum une formule d'acceptation précise.
 
-*Source : [Légifrance – Article 1366 du code civil](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042461)*
+*Source : [Légifrance - Article 1366 du code civil](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042461)*
 
 ## Le piège classique : les travaux en plus sur un « ok »
 

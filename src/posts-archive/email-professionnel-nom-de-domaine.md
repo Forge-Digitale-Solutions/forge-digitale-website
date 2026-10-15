@@ -13,7 +13,7 @@ Un client reçoit un devis. En haut du message, l'expéditeur : `jardin.dupont33
 
 La cohérence entre le site, le domaine et l'adresse email ne remplace pas la réputation, mais elle évite une question inutile au moment de recevoir un devis : « Est-ce bien la bonne entreprise ? » L'étude Afnic *Réussir avec le web* 2025 montre que 90 % des TPE-PME ayant un site possèdent leur propre nom de domaine. Utiliser ce même domaine pour la messagerie prolonge naturellement cette identité dans les échanges quotidiens.
 
-*Source : [Afnic – étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
+*Source : [Afnic - étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
 
 Le mécanisme est simple : une adresse générique ne prouve rien. N'importe qui peut créer un `gmail.com` ou un `outlook.fr` en deux minutes, y compris une personne mal intentionnée. Une adresse rattachée à un domaine, en revanche, suppose qu'on a réservé et configuré ce domaine pour son activité. Dans un contexte où l'hameçonnage rend les gens méfiants face aux emails, ce gage de sérieux pèse de plus en plus.
 

@@ -50,8 +50,8 @@ On every update to `main` (and via `workflow_dispatch`), the **Site GHCR** workf
 
 GitHub secrets:
 
-- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` — required at image build
-- `DOKPLOY_DEPLOY_WEBHOOK` — Dokploy application webhook URL (Deployments tab)
+- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` - required at image build
+- `DOKPLOY_DEPLOY_WEBHOOK` - Dokploy application webhook URL (Deployments tab)
 
 Dokploy Docker provider: image `ghcr.io/forge-digitale-solutions/forge-digitale-website:latest`, registry `ghcr.io`. For a private GHCR package, set username + PAT (`read:packages`). If the package is public, pull works without a PAT.
 

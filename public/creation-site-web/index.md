@@ -9,6 +9,6 @@ Forge Digitale Solutions conçoit des sites et applications sur-mesure pour TPE,
 
 - Tarif d'entrée : **à partir de 500 € TTC**
 - Zone : Médoc, Bassin d'Arcachon, Bordeaux
-- Contact : contact@forgedigitalesolutions.com — 06 45 65 96 96 — [formulaire](https://forgedigitalesolutions.com/#contact)
+- Contact : contact@forgedigitalesolutions.com - 06 45 65 96 96 - [formulaire](https://forgedigitalesolutions.com/#contact)
 
 Plus de détail : [https://forgedigitalesolutions.com/creation-site-web/](https://forgedigitalesolutions.com/creation-site-web/)

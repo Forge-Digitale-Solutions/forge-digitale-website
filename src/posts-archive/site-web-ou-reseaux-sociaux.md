@@ -27,7 +27,7 @@ Le site permet aussi ce qu'un fil d'actualité interdit : présenter ses prestat
 
 Les chiffres récents invitent à ne pas opposer les canaux. L'étude Afnic *Réussir avec le web* 2025 relève que 64 % des TPE-PME utilisent les réseaux sociaux et 61 % disposent d'un site. Les entreprises établies depuis plus de trois ans combinent encore plus souvent les deux. Le sujet n'est donc pas de choisir un camp, mais de donner un rôle clair à chaque outil.
 
-*Source : [Afnic – étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
+*Source : [Afnic - étude « Réussir avec le web » 2025](https://www.afnic.fr/wp-media/uploads/2026/02/Etude-Afnic-Reussir-Avec-le-Web-2025.pdf)*
 
 La raison est simple : un site rassure là où l'absence de site fait douter. Un professionnel qui n'existe que sur un réseau social peut sembler informel, voire difficile à distinguer d'un particulier qui bricole en marge. Un site à son nom envoie le signal contraire : une entreprise installée, joignable, qui prend son activité au sérieux. Pour un devis de plusieurs milliers d'euros, ce gage de sérieux pèse souvent autant que le bouche-à-oreille.
 

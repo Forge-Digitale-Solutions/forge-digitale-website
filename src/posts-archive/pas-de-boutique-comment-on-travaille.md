@@ -20,8 +20,8 @@ Pour un site, on n’a pas besoin de se voir dans un local. On démarre au tél�
 
 Si un rendez-vous en personne aide, on le place dans un lieu public : un café, un open space, un créneau calé. Pas chez moi. Pas « à l’adresse Google » : ma fiche est une zone de service, sans rue affichée.
 
-*Source : [Google – Gérer les zones desservies (établissements de services de proximité)](https://support.google.com/business/answer/9157481?hl=fr)*
-*Source : [Google – Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
+*Source : [Google - Gérer les zones desservies (établissements de services de proximité)](https://support.google.com/business/answer/9157481?hl=fr)*
+*Source : [Google - Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
 
 Le détail (zone, créneaux, récupération PC) est sur [comment on se voit](/rendez-vous-saint-laurent-medoc/).
 
@@ -35,7 +35,7 @@ Sans créneau, pas de dépôt. Sans rendez-vous, pas de passage.
 
 Je suis en entreprise individuelle. L’adresse sert au cadre légal et au courrier. Ce n’est pas une vitrine où entrer. Travailler depuis son domicile sans recevoir de clients, c’est un cas prévu : ce n’est pas un magasin ouvert.
 
-*Source : [Service Public Entreprendre – Domicilier son entreprise individuelle et son activité](https://entreprendre.service-public.fr/vosdroits/F2160)*
+*Source : [Service Public Entreprendre - Domicilier son entreprise individuelle et son activité](https://entreprendre.service-public.fr/vosdroits/F2160)*
 
 ## Ce que ça change pour vous
 

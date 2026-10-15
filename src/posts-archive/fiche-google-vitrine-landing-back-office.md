@@ -14,7 +14,7 @@ La fiche Google est en place. Horaires, téléphone, zone ou adresse. Les gens v
 
 Je m’appelle Anthony Marcelin. Je crée des sites depuis Saint-Laurent-Médoc. Je vois souvent le même flou chez des artisans et des petites structures : on mélange vitrine, landing et outil interne. Trois formats. Trois usages. Ce billet les sépare.
 
-*Source : [Google – Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
+*Source : [Google - Consignes pour représenter son établissement](https://support.google.com/business/answer/3038177?hl=fr)*
 
 ## La fiche Google n’est pas un site
 
@@ -22,8 +22,8 @@ La fiche décrit l’établissement tel qu’il est : nom, catégorie, adresse o
 
 Service Public le dit autrement : beaucoup de clients regardent le web avant d’acheter ou de choisir un pro. Un site reste un levier de visibilité, même sans boutique en ligne.
 
-*Source : [Service Public Entreprendre – Faire connaître son entreprise](https://entreprendre.service-public.fr/vosdroits/F36189)*
-*Source : [Google – Gérer les zones desservies](https://support.google.com/business/answer/9157481?hl=fr)*
+*Source : [Service Public Entreprendre - Faire connaître son entreprise](https://entreprendre.service-public.fr/vosdroits/F36189)*
+*Source : [Google - Gérer les zones desservies](https://support.google.com/business/answer/9157481?hl=fr)*
 
 ## Site vitrine
 
@@ -49,7 +49,7 @@ Service Public le dit autrement : beaucoup de clients regardent le web avant d�
 
 **Ce que ce n’est pas.** Une page marketing. Le back-office ne doit en général pas rivaliser avec la vitrine dans les résultats de recherche. Google le rappelle : pas de secret pour « être premier » ; l’utile et le clair comptent plus qu’un jargon de classement.
 
-*Source : [Google Search Central – Bien débuter en référencement naturel](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr)*
+*Source : [Google Search Central - Bien débuter en référencement naturel](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr)*
 
 ## Comment trancher (grille rapide)
 
