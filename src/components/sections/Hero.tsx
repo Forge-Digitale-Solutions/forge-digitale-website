@@ -32,91 +32,94 @@ export function Hero({ children }: { children?: ReactNode }) {
             <span className="fds-reg left-full top-full" />
           </div>
 
-          {/* Same left rail as other sections (container px-4/md:px-6 only). */}
-          <div className="relative max-w-4xl pt-12 md:pt-16">
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="fds-eyebrow mb-6"
-            >
-              01 / Créateur de sites · Médoc
-            </motion.p>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
-              className="font-display text-2xl font-bold uppercase leading-[1.04] tracking-tight text-text-strong text-balance sm:text-4xl md:text-5xl"
-            >
-              L&rsquo;Artisanat Numérique{" "}
-              <span className="text-accent">au service du Médoc</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              className="mt-6 max-w-xl text-md leading-relaxed text-soft"
-            >
-              <strong className="font-semibold text-text-strong">
-                Création de sites web et d&rsquo;applications sur-mesure
-              </strong>
-              , maintenance, montage PC et installation Linux. Développeur
-              indépendant dans le{" "}
-              <strong className="font-semibold text-text-strong">Médoc</strong>, au
-              service des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25, ease: "easeOut" }}
-              className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
-            >
-              <Link
-                href="/#contact"
-                className="group btn-primary h-12 px-7 tracking-wide focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+          <div className="relative grid gap-10 pt-12 md:pt-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:items-center lg:gap-12">
+            <div className="min-w-0 max-w-4xl">
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="fds-eyebrow mb-6"
               >
-                <span className="mr-2">Lancer mon projet</span>
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
+                01 / Créateur de sites · Médoc
+              </motion.p>
 
-              <Link
-                href="/#services"
-                className="group inline-flex h-12 items-center justify-center rounded-md border border-strong bg-transparent px-7 font-medium text-soft transition-colors hover:bg-surface hover:text-text-strong focus-visible:bg-surface focus-visible:text-text-strong focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
+                className="font-display text-2xl font-bold uppercase leading-[1.04] tracking-tight text-text-strong text-balance sm:text-4xl md:text-5xl"
               >
-                Voir les services
-                <ChevronRight
-                  className="ml-2 h-4 w-4 text-muted transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </motion.div>
+                L&rsquo;Artisanat Numérique{" "}
+                <span className="text-accent">au service du Médoc</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+                className="mt-6 max-w-xl text-md leading-relaxed text-soft"
+              >
+                <strong className="font-semibold text-text-strong">
+                  Création de sites web et d&rsquo;applications sur-mesure
+                </strong>
+                , maintenance, montage PC et installation Linux. Développeur
+                indépendant dans le{" "}
+                <strong className="font-semibold text-text-strong">Médoc</strong>, au
+                service des pros et particuliers du Bassin d&rsquo;Arcachon à Bordeaux.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.25, ease: "easeOut" }}
+                className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+              >
+                <Link
+                  href="/#contact"
+                  className="group btn-primary h-12 px-7 tracking-wide focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                >
+                  <span className="mr-2">Lancer mon projet</span>
+                  <ArrowRight
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </Link>
+
+                <Link
+                  href="/#services"
+                  className="group inline-flex h-12 items-center justify-center rounded-md border border-strong bg-transparent px-7 font-medium text-soft transition-colors hover:bg-surface hover:text-text-strong focus-visible:bg-surface focus-visible:text-text-strong focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                >
+                  Voir les services
+                  <ChevronRight
+                    className="ml-2 h-4 w-4 text-muted transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </Link>
+              </motion.div>
+
+              <motion.ul
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.4 }}
+                className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-default pt-6"
+              >
+                {trust.map((label) => (
+                  <li
+                    key={label}
+                    className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-soft"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-accent" aria-hidden="true" />
+                    {label}
+                  </li>
+                ))}
+              </motion.ul>
+            </div>
 
             {children ? (
-              <div className="mt-6 min-h-10">{children}</div>
+              <div className="min-w-0 w-full max-w-[380px] lg:justify-self-end">
+                {children}
+              </div>
             ) : null}
-
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.4 }}
-              className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-default pt-6"
-            >
-              {trust.map((label) => (
-                <li
-                  key={label}
-                  className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-soft"
-                >
-                  <CheckCircle2 className="h-4 w-4 text-accent" aria-hidden="true" />
-                  {label}
-                </li>
-              ))}
-            </motion.ul>
           </div>
         </div>
       </div>

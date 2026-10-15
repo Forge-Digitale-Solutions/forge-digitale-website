@@ -14,6 +14,12 @@ export type PostLink = {
   title: string;
 };
 
+export type LatestPostLink = PostLink & {
+  date: string;
+  image?: string;
+  imageAlt?: string;
+};
+
 export const FOOTER_PINNED_POST_ID = "devis-sms-mail-valeur-juridique";
 
 const postsDirectory = path.join(process.cwd(), "src/posts-archive");
@@ -215,11 +221,21 @@ function toPostLink(post: PostData): PostLink {
   return { id: post.id, title: post.title };
 }
 
-export async function getLatestPostLink(): Promise<PostLink | null> {
+function toLatestPostLink(post: PostData): LatestPostLink {
+  return {
+    id: post.id,
+    title: post.title,
+    date: post.date,
+    image: post.image,
+    imageAlt: post.imageAlt,
+  };
+}
+
+export async function getLatestPostLink(): Promise<LatestPostLink | null> {
   const posts = await getSortedPostsData();
   const first = posts[0];
-  if (!first?.id || !first.title) return null;
-  return toPostLink(first);
+  if (!first?.id || !first.title || !first.date) return null;
+  return toLatestPostLink(first);
 }
 
 export async function getFooterPostLinks(
