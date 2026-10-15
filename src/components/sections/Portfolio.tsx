@@ -97,6 +97,17 @@ const projects = [
     link: "https://gosportnow.fr",
   },
   {
+    title: "Anthony Marcelin",
+    category: "CV / Portfolio",
+    description:
+      "CV vivant pour une présentation originale : parcours, projets et stack sur un site perso FR/EN — plus qu’un PDF figé.",
+    tags: ["Site Personnel", "FR / EN", "CV interactif"],
+    image: "/projects/anthony-marcelin.webp",
+    imageAlt:
+      "Capture du portfolio Anthony Marcelin, développeur fullstack",
+    link: "https://anthonymarcelin.com",
+  },
+  {
     title: "Forge Digitale",
     category: "Site Vitrine",
     description:
