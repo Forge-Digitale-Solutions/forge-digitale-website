@@ -283,7 +283,7 @@ export function Faq() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16">
           <SectionHeading
-            index="05"
+            index="06"
             eyebrow="FAQ"
             titleId="faq-heading"
             title={

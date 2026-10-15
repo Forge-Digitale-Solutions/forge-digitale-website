@@ -521,3 +521,12 @@
 body[data-lightbox-open] [data-floating-ui] {
   visibility: hidden;
 }
+
+.fds-badge-new {
+  background: #1f1d1a;
+  color: #f5f2ea;
+}
+[data-theme="graphite"] .fds-badge-new {
+  background: var(--accent);
+  color: var(--on-accent);
+}
