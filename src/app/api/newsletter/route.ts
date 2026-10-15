@@ -7,8 +7,6 @@ import {
 
 export const dynamic = "force-dynamic";
 
-const SITE_URL = "https://forgedigitalesolutions.com";
-
 type NewsletterBody = {
   email?: unknown;
   website?: unknown;
@@ -27,6 +25,35 @@ function isDuplicateContact(status: number, body: string): boolean {
     lower.includes("already exists") ||
     lower.includes("contact already")
   );
+}
+
+async function sendWelcomeEmail(
+  apiBase: string,
+  apiKey: string,
+  email: string,
+  templateId: number,
+): Promise<void> {
+  const response = await fetch(`${apiBase}/v3/smtp/email`, {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "api-key": apiKey,
+    },
+    body: JSON.stringify({
+      templateId,
+      to: [{ email }],
+    }),
+  });
+
+  if (!response.ok) {
+    const responseText = await response.text();
+    console.error(
+      "Newsletter: welcome email failed",
+      response.status,
+      responseText,
+    );
+  }
 }
 
 export async function POST(request: Request) {
@@ -55,18 +82,15 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.BREVO_API_KEY;
   const listId = Number(process.env.BREVO_LIST_ID);
-  const templateId = Number(process.env.BREVO_DOI_TEMPLATE_ID);
+  const welcomeTemplateRaw = process.env.BREVO_WELCOME_TEMPLATE_ID;
+  const welcomeTemplateId = welcomeTemplateRaw
+    ? Number(welcomeTemplateRaw)
+    : NaN;
   const apiBase = (
     process.env.BREVO_API_BASE || "https://api.brevo.com"
   ).replace(/\/$/, "");
 
-  if (
-    !apiKey ||
-    !Number.isFinite(listId) ||
-    listId <= 0 ||
-    !Number.isFinite(templateId) ||
-    templateId <= 0
-  ) {
+  if (!apiKey || !Number.isFinite(listId) || listId <= 0) {
     console.error("Newsletter: missing or invalid Brevo environment variables");
     return Response.json(
       { ok: false, message: NEWSLETTER_ERROR_MESSAGE },
@@ -74,44 +98,58 @@ export async function POST(request: Request) {
     );
   }
 
-  const siteUrl = (
-    process.env.PAYLOAD_PUBLIC_SERVER_URL || SITE_URL
-  ).replace(/\/$/, "");
-  const redirectionUrl = `${siteUrl}/newsletter/merci/`;
-
   try {
-    const response = await fetch(
-      `${apiBase}/v3/contacts/doubleOptinConfirmation`,
-      {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-          "api-key": apiKey,
-        },
-        body: JSON.stringify({
-          email,
-          includeListIds: [listId],
-          templateId,
-          redirectionUrl,
-        }),
+    const response = await fetch(`${apiBase}/v3/contacts`, {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        "api-key": apiKey,
       },
-    );
+      body: JSON.stringify({
+        email,
+        listIds: [listId],
+        updateEnabled: true,
+      }),
+    });
 
-    if (response.ok || response.status === 204) {
-      return successResponse();
+    const contactOk =
+      response.ok ||
+      response.status === 201 ||
+      response.status === 204;
+
+    if (!contactOk) {
+      const responseText = await response.text();
+      if (!isDuplicateContact(response.status, responseText)) {
+        console.error("Newsletter: Brevo error", response.status, responseText);
+        return Response.json(
+          { ok: false, message: NEWSLETTER_ERROR_MESSAGE },
+          { status: 503 },
+        );
+      }
     }
 
-    const responseText = await response.text();
-    if (isDuplicateContact(response.status, responseText)) {
-      return successResponse();
+    if (
+      welcomeTemplateRaw &&
+      Number.isFinite(welcomeTemplateId) &&
+      welcomeTemplateId > 0
+    ) {
+      try {
+        await sendWelcomeEmail(apiBase, apiKey, email, welcomeTemplateId);
+      } catch (error) {
+        console.error("Newsletter: welcome email unavailable", error);
+      }
+    } else if (welcomeTemplateRaw) {
+      console.warn(
+        "Newsletter: BREVO_WELCOME_TEMPLATE_ID is invalid; skipping welcome email",
+      );
+    } else {
+      console.warn(
+        "Newsletter: BREVO_WELCOME_TEMPLATE_ID missing; skipping welcome email",
+      );
     }
 
-    console.error("Newsletter: Brevo error", response.status, responseText);
-    return Response.json(
-      { ok: false, message: NEWSLETTER_ERROR_MESSAGE },
-      { status: 503 },
-    );
+    return successResponse();
   } catch (error) {
     console.error("Newsletter: Brevo unavailable", error);
     return Response.json(

@@ -130,8 +130,8 @@ export default function Confidentialite() {
             vous vous êtes inscrit.
           </p>
           <p>
-            <strong>Base légale :</strong> votre consentement, confirmé par
-            double opt-in (email de confirmation).
+            <strong>Base légale :</strong> votre consentement, recueilli lors
+            de l&apos;inscription à la newsletter.
           </p>
           <p>
             <strong>Donnée collectée :</strong> votre adresse email uniquement.

@@ -5,7 +5,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Inscription confirmée",
+  title: "Merci pour votre inscription",
   description:
     "Merci pour votre inscription à la newsletter de Forge Digitale Solutions.",
   robots: {
@@ -22,10 +22,10 @@ export default function NewsletterMerciPage() {
     <div className="min-h-screen bg-bg pt-32 pb-24 px-4">
       <div className="container mx-auto max-w-xl text-center space-y-6">
         <h1 className="text-3xl md:text-4xl font-bold text-text-strong">
-          Inscription confirmée
+          Merci pour votre inscription
         </h1>
         <p className="text-soft leading-relaxed">
-          Merci. Vous recevrez un email pour les nouveautés de Forge Digitale
+          Vous recevrez un email pour les nouveautés de Forge Digitale
           Solutions : articles et nouveaux services. Désinscription en un clic
           depuis n&apos;importe quel envoi.
         </p>
