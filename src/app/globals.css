@@ -517,3 +517,7 @@
     width: 65%;
   }
 }
+
+body[data-lightbox-open] [data-floating-ui] {
+  visibility: hidden;
+}

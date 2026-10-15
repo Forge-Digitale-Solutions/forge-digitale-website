@@ -67,6 +67,7 @@ export function ArticleLightbox({ children }: { children: ReactNode }) {
     const previousPaddingRight = body.style.paddingRight;
 
     body.style.overflow = "hidden";
+    body.setAttribute("data-lightbox-open", "");
     if (scrollbarWidth > 0) {
       body.style.paddingRight = `${scrollbarWidth}px`;
     }
@@ -74,6 +75,7 @@ export function ArticleLightbox({ children }: { children: ReactNode }) {
     return () => {
       body.style.overflow = previousOverflow;
       body.style.paddingRight = previousPaddingRight;
+      body.removeAttribute("data-lightbox-open");
     };
   }, [active]);
 
@@ -168,7 +170,7 @@ export function ArticleLightbox({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-label={active.alt}
-            className="article-lightbox-overlay fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4"
+            className="article-lightbox-overlay fixed inset-0 z-[1000] flex items-center justify-center bg-black/85 p-4"
             onClick={onOverlayClick}
           >
             <button
@@ -176,7 +178,7 @@ export function ArticleLightbox({ children }: { children: ReactNode }) {
               type="button"
               aria-label="Fermer"
               onClick={close}
-              className="absolute top-4 right-4 z-[101] flex h-11 w-11 items-center justify-center rounded-md bg-white/10 text-white hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="absolute top-4 right-4 z-[1001] flex h-11 w-11 items-center justify-center rounded-md bg-white/10 text-white hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <X size={22} aria-hidden="true" />
             </button>
