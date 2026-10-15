@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { ArticleLightbox } from "@/components/blog/ArticleLightbox";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
@@ -120,101 +121,100 @@ export default async function Post({
         ]}
       />
 
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <Link
-          href="/blog/"
-          className="inline-flex items-center text-muted hover:text-accent transition-colors mb-8 text-sm group"
-        >
-          <ArrowLeft
-            size={16}
-            aria-hidden="true"
-            className="mr-2 transition-transform group-hover:-translate-x-1"
-          />
-          Retour au blog
-        </Link>
-
-        <header className="mb-12">
-          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
-            {postData.category}
-          </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-            {postData.h1 || postData.title}
-          </h1>
-          <div className="flex items-center gap-4 text-faint text-sm border-l-2 border-accent pl-4 mb-8">
-            <p>Publié le {postData.date}</p>
-            <span>•</span>
-            <p>Par Anthony Marcelin</p>
-          </div>
-          {postData.image && (
-            <figure>
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-                <Image
-                  src={postData.image}
-                  alt={postData.imageAlt || postData.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              {postData.imageCredit && (
-                <figcaption className="mt-2 text-sm text-faint">
-                  Photo :{" "}
-                  {postData.imageCredit.profileUrl ? (
-                    <a
-                      href={postData.imageCredit.profileUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {postData.imageCredit.name}
-                    </a>
-                  ) : (
-                    postData.imageCredit.name
-                  )}
-                  {postData.imageCredit.isUnsplash && (
-                    <>
-                      {" "}
-                      sur{" "}
-                      {postData.imageCredit.photoUrl ? (
-                        <a
-                          href={postData.imageCredit.photoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Unsplash
-                        </a>
-                      ) : (
-                        "Unsplash"
-                      )}
-                    </>
-                  )}
-                </figcaption>
-              )}
-            </figure>
-          )}
-        </header>
-
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
-        />
-
-        <div className="mt-12 pt-8 border-t border-default max-w-md">
-          <NewsletterForm variant="article" />
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-default">
-          <h3 className="text-text-strong font-bold mb-4">
-            Une question sur cet article ?
-          </h3>
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a
-            href="/#contact"
-            className="btn-primary px-6 py-3"
+      <ArticleLightbox>
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+          <Link
+            href="/blog/"
+            className="inline-flex items-center text-muted hover:text-accent transition-colors mb-8 text-sm group"
           >
-            Contactez La Forge
-          </a>
+            <ArrowLeft
+              size={16}
+              aria-hidden="true"
+              className="mr-2 transition-transform group-hover:-translate-x-1"
+            />
+            Retour au blog
+          </Link>
+
+          <header className="mb-12">
+            <span className="text-accent font-bold tracking-widest uppercase text-xs mb-4 block">
+              {postData.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
+              {postData.h1 || postData.title}
+            </h1>
+            <div className="flex items-center gap-4 text-faint text-sm border-l-2 border-accent pl-4 mb-8">
+              <p>Publié le {postData.date}</p>
+              <span>•</span>
+              <p>Par Anthony Marcelin</p>
+            </div>
+            {postData.image && (
+              <figure>
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src={postData.image}
+                    alt={postData.imageAlt || postData.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {postData.imageCredit && (
+                  <figcaption className="mt-2 text-sm text-faint">
+                    Photo :{" "}
+                    {postData.imageCredit.profileUrl ? (
+                      <a
+                        href={postData.imageCredit.profileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {postData.imageCredit.name}
+                      </a>
+                    ) : (
+                      postData.imageCredit.name
+                    )}
+                    {postData.imageCredit.isUnsplash && (
+                      <>
+                        {" "}
+                        sur{" "}
+                        {postData.imageCredit.photoUrl ? (
+                          <a
+                            href={postData.imageCredit.photoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Unsplash
+                          </a>
+                        ) : (
+                          "Unsplash"
+                        )}
+                      </>
+                    )}
+                  </figcaption>
+                )}
+              </figure>
+            )}
+          </header>
+
+          <div
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
+          />
+
+          <div className="mt-12 pt-8 border-t border-default max-w-md">
+            <NewsletterForm variant="article" />
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-default">
+            <h3 className="text-text-strong font-bold mb-4">
+              Une question sur cet article ?
+            </h3>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a href="/#contact" className="btn-primary px-6 py-3">
+              Contactez La Forge
+            </a>
+          </div>
         </div>
-      </div>
+      </ArticleLightbox>
     </article>
   );
 }
