@@ -500,3 +500,20 @@
     overflow-wrap: anywhere;
   }
 }
+
+/* Images dans le corps des articles : largeur moyenne, centrées.
+   La couverture (next/image, hors .prose) n'est pas concernée. */
+.prose img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .prose img {
+    width: 65%;
+  }
+}
