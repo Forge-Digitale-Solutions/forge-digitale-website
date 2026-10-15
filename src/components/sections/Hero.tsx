@@ -6,13 +6,40 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const trust = ["Site Web & App", "Montage PC", "Maintenance Locale"];
 
-export function Hero() {
+type LatestPostLink = {
+  id: string;
+  title: string;
+};
+
+export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
   return (
     <section
       className="relative overflow-hidden pt-32 pb-24 md:pt-44"
       aria-label="Section d'accueil"
     >
       <div className="container mx-auto px-4 md:px-6">
+        {latestPost ? (
+          <div className="mb-6 flex items-center gap-3 border-y border-strong py-2.5 text-sm">
+            <Link
+              href={`/blog/${latestPost.id}/`}
+              className="group flex min-w-0 flex-1 items-center gap-3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              <span className="shrink-0 rounded-full fds-badge-new px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em]">
+                Nouveau
+              </span>
+              <span className="min-w-0 truncate font-semibold text-text-strong group-hover:underline underline-offset-4">
+                {latestPost.title}
+              </span>
+            </Link>
+            <Link
+              href="/blog/"
+              className="hidden shrink-0 font-mono text-xs uppercase tracking-[0.12em] text-accent hover:text-accent-strong sm:inline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              Lire tous les articles →
+            </Link>
+          </div>
+        ) : null}
+
         <div className="relative">
           {/* Signature gesture: visible column grid + registration crosshairs */}
           <div

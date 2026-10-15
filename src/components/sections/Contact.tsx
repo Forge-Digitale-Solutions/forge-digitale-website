@@ -311,7 +311,7 @@ export function Contact() {
             className="space-y-8"
           >
             <SectionHeading
-              index="06"
+              index="07"
               eyebrow="Contact"
               align="left"
               titleId="contact-heading"

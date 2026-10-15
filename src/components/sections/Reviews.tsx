@@ -90,7 +90,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
           className="mb-16"
         >
           <SectionHeading
-            index="07"
+            index="08"
             eyebrow="Avis clients"
             titleId="reviews-heading"
             title={
