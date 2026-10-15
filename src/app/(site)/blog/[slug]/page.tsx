@@ -169,18 +169,23 @@ export default async function Post({
                     </a>
                   ) : (
                     postData.imageCredit.name
-                  )}{" "}
-                  sur{" "}
-                  {postData.imageCredit.photoUrl ? (
-                    <a
-                      href={postData.imageCredit.photoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Unsplash
-                    </a>
-                  ) : (
-                    "Unsplash"
+                  )}
+                  {postData.imageCredit.isUnsplash && (
+                    <>
+                      {" "}
+                      sur{" "}
+                      {postData.imageCredit.photoUrl ? (
+                        <a
+                          href={postData.imageCredit.photoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Unsplash
+                        </a>
+                      ) : (
+                        "Unsplash"
+                      )}
+                    </>
                   )}
                 </figcaption>
               )}
