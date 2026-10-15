@@ -71,7 +71,7 @@ const projects = [
     tags: ["iOS & Android", "Médoc", "Sorties locales", "Bientôt sur les stores"],
     image: "/projects/medocvibes.webp",
     imageAlt:
-      "Identité visuelle Médoc Vibes — manger, sortir, bouger",
+      "Identité visuelle Médoc Vibes : manger, sortir, bouger",
     link: "https://medocvibes.fr/",
   },
   {
@@ -100,7 +100,7 @@ const projects = [
     title: "Anthony Marcelin",
     category: "CV / Portfolio",
     description:
-      "CV vivant pour une présentation originale : parcours, projets et stack sur un site perso FR/EN — plus qu’un PDF figé.",
+      "CV vivant pour une présentation originale : parcours, projets et stack sur un site perso FR/EN, plus qu’un PDF figé.",
     tags: ["Site Personnel", "FR / EN", "CV interactif"],
     image: "/projects/anthony-marcelin.webp",
     imageAlt:
@@ -189,7 +189,7 @@ export function Portfolio() {
                         href={project.storeLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`Ouvrir le store — ${project.title}`}
+                        aria-label={`Ouvrir le store pour ${project.title}`}
                         className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
                       >
                         Store{" "}
