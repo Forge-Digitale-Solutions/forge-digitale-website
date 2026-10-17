@@ -210,7 +210,7 @@ export default async function Post({
             </h3>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#contact" className="btn-primary px-6 py-3">
-              Contactez La Forge
+              Contactez Forge Digitale Solutions
             </a>
           </div>
         </div>
