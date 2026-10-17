@@ -113,7 +113,7 @@ async function postContact(
 
   const formData = new FormData();
   formData.set("access_key", accessKey);
-  formData.set("subject", "Nouveau contact - Site Web La Forge");
+  formData.set("subject", "Nouveau contact - Site Web Forge Digitale Solutions");
   formData.set("from_name", "Site Web");
   formData.set("name", fields.name.trim());
   formData.set("email", fields.email.trim());
@@ -464,7 +464,7 @@ export function Contact() {
                 <input
                   type="hidden"
                   name="subject"
-                  value="Nouveau contact - Site Web La Forge"
+                  value="Nouveau contact - Site Web Forge Digitale Solutions"
                 />
                 <input type="hidden" name="from_name" value="Site Web" />
                 <input
