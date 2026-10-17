@@ -42,7 +42,7 @@
 - Métadonnées dynamiques améliorées:
   - Open Graph image: réutilise l'image de l'article si dispo
   - Twitter Card: summary_large_image
-  - Keywords: title + category + blog + Forge Digitale + Médoc
+  - Keywords: title + category + blog + Forge Digitale Solutions + Médoc
   
 - **RSS Feed** (`/feed` route): 
   - XML standard Atom/RSS 2.0

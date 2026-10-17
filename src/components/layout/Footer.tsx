@@ -261,9 +261,10 @@ export function Footer() {
                   aria-hidden="true"
                 />
                 <span>
-                  6 rue Saint-Julien
+                  Saint-Laurent-Médoc (33) · Intervention dans le Médoc, le
+                  Bassin d&rsquo;Arcachon et Bordeaux
                   <br />
-                  33112 Saint-Laurent-Médoc
+                  Du lundi au vendredi, de 8 h 30 à 18 h
                 </span>
               </li>
               <li className="flex items-center gap-3">
