@@ -383,6 +383,9 @@ export function Contact() {
                   <p className="text-text-strong text-lg font-medium">
                     Saint-Laurent-Médoc (33112)
                   </p>
+                  <p className="text-soft text-sm mt-1">
+                    Du lundi au vendredi, de 8 h 30 à 18 h
+                  </p>
                 </div>
               </div>
             </div>

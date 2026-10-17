@@ -16,7 +16,7 @@ export function FAQSchema() {
         name: "Et après la mise en ligne ? Proposez-vous de la maintenance ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Oui, je propose une formule de maintenance clé en main qui inclut l'hébergement, le renouvellement du nom de domaine, les sauvegardes et la sécurité. Selon vos besoins, nous définissons un forfait mensuel d'heures incluses pour les modifications courantes.",
+          text: "La maintenance se décide au devis, selon ce que vous voulez. Soit je vous livre le site et vous gérez vous-même l'hébergement et les mises à jour. Soit je m'en occupe : la maintenance et l'hébergement sont alors facturés chaque mois, comme prévu au devis.",
         },
       },
       {

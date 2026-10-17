@@ -108,7 +108,7 @@ const projects = [
     link: "https://anthonymarcelin.com",
   },
   {
-    title: "Forge Digitale",
+    title: "Forge Digitale Solutions",
     category: "Site Vitrine",
     description:
       "La preuve par l'exemple : un site ultra-rapide, pensé pour le référencement local et doté d'une identité visuelle forte.",
