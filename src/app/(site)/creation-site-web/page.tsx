@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -142,6 +143,48 @@ export default function CreationSiteWebPage() {
             (Complet). Le ticket d&rsquo;entrée du site reste à partir de 500 € TTC.
           </p>
         </div>
+
+        <section
+          className="mt-12 p-6 rounded-lg bg-surface-card border border-default"
+          aria-labelledby="exemple-demonstration"
+        >
+          <span className="inline-block mb-3 px-2 py-1 rounded text-xs font-mono font-bold uppercase tracking-widest text-accent border border-default">
+            Démo fictive
+          </span>
+          <h2
+            id="exemple-demonstration"
+            className="text-2xl font-bold text-text-strong mb-4"
+          >
+            Exemple de démonstration (artisan fictif)
+          </h2>
+          <Image
+            src="/projects/demo-couvreur-medoc-fictif.webp"
+            alt="Capture du haut de page d'un site de démonstration pour un couvreur fictif du Médoc : titre, bouton de demande de devis et numéro de téléphone"
+            width={1280}
+            height={800}
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="w-full h-auto rounded-md border border-default mb-4"
+          />
+          <div className="space-y-3 text-soft leading-relaxed">
+            <p>
+              Ce site de démonstration présente un couvreur fictif du Médoc :
+              l&rsquo;entreprise, les coordonnées et les photos ne correspondent
+              à aucun client réel.
+            </p>
+            <p>
+              Vous y voyez ce que je présente à un artisan au début d&rsquo;un
+              projet : la structure de la page, l&rsquo;appel à l&rsquo;action
+              pour demander un devis et la zone d&rsquo;intervention.
+            </p>
+          </div>
+          <a
+            href="https://medoc-33-renov.vercel.app/"
+            className="mt-4 inline-flex items-center gap-2 text-accent hover:underline"
+          >
+            Voir la démo fictive
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </section>
 
         <p className="mt-10 text-lg text-soft leading-relaxed">
             Pour une vitrine TPE dans le Médoc (ordre de prix, déroulement,
