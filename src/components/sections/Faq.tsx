@@ -44,29 +44,10 @@ const faqData: FaqCategory[] = [
           "Et après la mise en ligne ? Proposez-vous de la maintenance ?",
         answer: (
           <div className="space-y-4">
-            <p>
-              <strong>
-                Oui. Je ne vous accompagne pas seulement lors de la création,
-                mais pour l&apos;ensemble de votre projet.
-              </strong>
-            </p>
-            <p>
-              Je propose une formule de maintenance <strong>clé en main</strong>{" "}
-              pour votre sérénité :
-            </p>
+            <p>La maintenance se décide au devis, selon ce que vous voulez.</p>
             <ul className="list-disc pl-5 space-y-2 text-soft">
-              <li>
-                <strong>Technique :</strong> Je gère l&apos;hébergement, le
-                renouvellement du nom de domaine, les sauvegardes et la
-                sécurité. Vous n&apos;avez rien à faire.
-              </li>
-              <li>
-                <strong>Évolutivité (Crédit Temps) :</strong> Selon vos besoins,
-                je définis avec vous un forfait mensuel d&apos;heures incluses.
-                Cela vous permet de me demander des modifications (changer un
-                texte, ajouter une photo, poster une actualité) sans avoir à
-                refaire un devis à chaque fois.
-              </li>
+              <li>Soit je vous livre le site et vous gérez vous-même l&apos;hébergement et les mises à jour.</li>
+              <li>Soit je m&apos;en occupe : la maintenance et l&apos;hébergement sont alors facturés chaque mois, comme prévu au devis.</li>
             </ul>
           </div>
         ),

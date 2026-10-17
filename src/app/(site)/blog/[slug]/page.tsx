@@ -52,7 +52,7 @@ export async function generateMetadata({
       postData.title,
       postData.category,
       "blog",
-      "Forge Digitale",
+      "Forge Digitale Solutions",
       "Médoc",
     ],
     authors: [{ name: "Anthony Marcelin" }],

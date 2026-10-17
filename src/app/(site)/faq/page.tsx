@@ -45,7 +45,7 @@ const qa = [
   },
   {
     q: "Et après la mise en ligne ?",
-    a: "Oui, si vous le voulez. Hébergement, domaine, mises à jour, sauvegardes, sécurité : au cas par cas. Pas de forfait mensuel unique.",
+    a: "La maintenance se décide au devis, selon ce que vous voulez. Soit je vous livre le site et vous gérez vous-même l'hébergement et les mises à jour. Soit je m'en occupe : la maintenance et l'hébergement sont alors facturés chaque mois, comme prévu au devis.",
   },
   {
     q: "Vous maintenez un site que vous n’avez pas créé ?",
@@ -232,9 +232,7 @@ export default function FaqPage() {
             <h2 className="text-2xl font-bold text-text-strong">Maintenance</h2>
             <Qa q="Et après la mise en ligne ?">
               <p>
-                Oui si vous le voulez. Hébergement, domaine, mises à jour,
-                sauvegardes, sécurité : au cas par cas. Pas de forfait mensuel
-                unique.{" "}
+                La maintenance se décide au devis, selon ce que vous voulez. Soit je vous livre le site et vous gérez vous-même l&rsquo;hébergement et les mises à jour. Soit je m&rsquo;en occupe : la maintenance et l&rsquo;hébergement sont alors facturés chaque mois, comme prévu au devis.{" "}
                 <Link href="/maintenance-site-web/" className="text-accent hover:underline">
                   Maintenance de site
                 </Link>{" "}

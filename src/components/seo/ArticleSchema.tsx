@@ -44,7 +44,7 @@ export function ArticleSchema({
       "@type": "WebPage",
       "@id": articleUrl,
     },
-    keywords: [category, "Forge Digitale", "blog"].filter(Boolean).join(", "),
+    keywords: [category, "Forge Digitale Solutions", "blog"].filter(Boolean).join(", "),
   };
 
   return (

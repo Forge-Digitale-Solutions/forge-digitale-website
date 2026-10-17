@@ -47,7 +47,7 @@ export default buildConfig({
     mcpPlugin({
       collections: {
         posts: {
-          description: "Articles du blog Forge Digitale",
+          description: "Articles du blog Forge Digitale Solutions",
           enabled: {
             find: true,
             create: true,

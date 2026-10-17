@@ -8,7 +8,6 @@ export function LocalBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": "https://forgedigitalesolutions.com/#business",
     name: "Forge Digitale Solutions",
-    alternateName: "La Forge Digitale",
     legalName: "EI Anthony Marcelin",
     description: "Sites web sur mesure et développement pour artisans et PME du Médoc. Développeur à Saint-Laurent-Médoc.",
     url: "https://forgedigitalesolutions.com/",
