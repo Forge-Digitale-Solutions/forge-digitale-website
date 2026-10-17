@@ -148,9 +148,8 @@ export default function CreationSiteInternetMedocPage() {
             avoir compris le besoin, pas au forfait.
           </p>
           <p>
-            Après la mise en ligne : hébergement, nom de domaine, mises à jour,
-            sauvegardes. Seulement si vous le voulez, au cas par cas. Pas de
-            forfait mensuel unique. Le détail est dans la{" "}
+            Après la mise en ligne : la maintenance se décide au devis, selon ce que vous voulez. Soit je vous livre le site et vous gérez vous-même l&rsquo;hébergement et les mises à jour. Soit je m&rsquo;en occupe : la maintenance et l&rsquo;hébergement sont alors facturés chaque mois, comme prévu au devis.
+            Le détail est dans la{" "}
             <Link href="/faq/" className="text-accent hover:underline">
               FAQ
             </Link>
@@ -234,8 +233,9 @@ export default function CreationSiteInternetMedocPage() {
           <p>
             <strong>Vous vous occupez de tout après ?</strong>
             <br />
-            Si vous le demandez. Maintenance au cas par cas, pas un abonnement
-            inventé. Sinon je vous laisse autonome, si le site est prévu pour.
+            Si vous le demandez : la maintenance et l&rsquo;hébergement sont alors
+            facturés chaque mois, comme prévu au devis. Sinon vous gérez
+            vous-même, si le site est prévu pour.
           </p>
           <p>
             <strong>C&rsquo;est long ?</strong>

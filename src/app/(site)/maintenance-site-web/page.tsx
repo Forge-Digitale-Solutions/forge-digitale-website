@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
   description:
-    "Maintenance, hébergement, mises à jour et sauvegardes : au cas par cas, sans forfait mensuel unique. Sites déjà en ligne acceptés après diagnostic.",
+    "La maintenance se décide au devis : vous gérez vous-même, ou je m'en occupe avec une facturation mensuelle prévue au devis. Sites déjà en ligne acceptés après diagnostic.",
   keywords: [
     "maintenance site web Médoc",
     "hébergement site internet Gironde",
@@ -110,32 +110,22 @@ export default function MaintenanceSiteWebPage() {
           </p>
 
           <p>
-            Selon vos besoins, on peut aussi prévoir un volume d&rsquo;heures pour
-            les modifications courantes : changer un texte, ajouter une photo,
-            mettre à jour vos horaires ou vos tarifs. Vous me dites, je
-            m&rsquo;en charge. L&rsquo;idée est simple : vous vous concentrez sur
-            votre activité, je m&rsquo;occupe de la partie technique.
-          </p>
-
-          <p>
-            La maintenance se définit au cas par cas, en fonction de votre site et
-            de ce dont vous avez vraiment besoin. On en discute et je vous fais une
-            proposition claire, sans engagement caché.
+            La maintenance se décide au devis, selon ce que vous voulez. Soit je vous livre le site et vous gérez vous-même l&rsquo;hébergement et les mises à jour. Soit je m&rsquo;en occupe : la maintenance et l&rsquo;hébergement sont alors facturés chaque mois, comme prévu au devis.
           </p>
         </div>
 
-          <h2 className="text-2xl font-bold text-text-strong pt-4">Ce qui est inclus, typiquement</h2>
+          <h2 className="text-2xl font-bold text-text-strong pt-4">Si je m&rsquo;en occupe, typiquement</h2>
           <p>
             Hébergement et suivi du nom de domaine, mises à jour techniques,
             sauvegardes régulières, un œil sur la dispo et la sécu, un
             interlocuteur unique. Les petits textes, photos ou horaires se
             facturent à l&rsquo;heure, sur devis.
           </p>
-          <h2 className="text-2xl font-bold text-text-strong pt-4">Hors forfait (sauf mention)</h2>
+          <h2 className="text-2xl font-bold text-text-strong pt-4">Hors maintenance (sauf mention au devis)</h2>
           <p>
             Refonte, nouvelles rubriques, fonctions métier, contenus longs
             rédigés par moi, récupération après casse sans sauvegarde
-            antérieure, déplacements (devis). Pas de prix mensuel unique.
+            antérieure, déplacements : sur devis à part.
           </p>
           <p>
             Sites déjà en ligne : oui, après accès admin / hébergeur / DNS et

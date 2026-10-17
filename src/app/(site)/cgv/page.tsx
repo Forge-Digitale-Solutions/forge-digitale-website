@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/cgv/`,
     title: "Conditions Générales de Vente - Forge Digitale Solutions",
     description:
-      "CGV Forge Digitale. Création web, montage PC, forfait Renaissance. En vigueur depuis le 07 février 2026.",
+      "CGV Forge Digitale Solutions. Création web, montage PC, forfait Renaissance. En vigueur depuis le 07 février 2026.",
     siteName: "Forge Digitale Solutions",
     images: [
       {

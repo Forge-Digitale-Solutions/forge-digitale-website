@@ -24,7 +24,7 @@ const services = [
   {
     title: "Gestion & Suivi",
     description:
-      "Votre site clé en main : hébergement, nom de domaine et maintenance inclus. Concentrez-vous sur votre activité.",
+      "La maintenance se décide au devis : vous gérez vous-même l'hébergement et les mises à jour, ou je m'en occupe, facturé chaque mois comme prévu au devis.",
     price: "Sur devis",
     href: "/maintenance-site-web",
     icon: <ShieldCheck className="w-6 h-6 text-accent" aria-hidden="true" />,
