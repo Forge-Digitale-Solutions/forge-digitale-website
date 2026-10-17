@@ -49,7 +49,7 @@ export default async function BlogIndex() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-2xl mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-text-strong mb-6 tracking-tight">
-            Le Blog de <span className="text-accent">La Forge.</span>
+            Le Blog de <span className="text-accent">Forge Digitale Solutions.</span>
           </h1>
           <p className="text-muted text-lg">
             Décryptage tech, conseils hardware et coulisses du développement
