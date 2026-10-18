@@ -144,6 +144,14 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-soft">
               <li>
                 <Link
+                  href="/outils/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Nos outils
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blog/"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >

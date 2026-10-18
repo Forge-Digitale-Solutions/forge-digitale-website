@@ -24,6 +24,7 @@ const STATIC_BODY = `# Forge Digitale Solutions
 - [Montage PC](https://forgedigitalesolutions.com/montage-pc/) : montage PC sur-mesure (forfait 149 € TTC)
 - [Rendez-vous atelier](https://forgedigitalesolutions.com/rendez-vous-saint-laurent-medoc/) : prise de rendez-vous
 - [FAQ](https://forgedigitalesolutions.com/faq/) : questions fréquentes
+- [Nos outils](https://forgedigitalesolutions.com/outils/) : logiciels édités par Forge Digitale Solutions
 - [Blog](https://forgedigitalesolutions.com/blog/) : articles web, sécurité, Linux
 - [Contact / devis](https://forgedigitalesolutions.com/#contact) : formulaire, téléphone, e-mail
 
