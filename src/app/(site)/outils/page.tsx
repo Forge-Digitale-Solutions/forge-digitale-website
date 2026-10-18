@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -9,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/outils/`;
 
 const PAGE_TITLE = "Nos outils";
 const PAGE_DESCRIPTION =
-  "Les outils conçus par Forge Digitale Solutions. Grilla vérifie la conformité RGAA et l'accessibilité d'un site, dans le cadre de l'European Accessibility Act.";
+  "Les outils conçus par Forge Digitale Solutions, à commencer par Grilla pour auditer l'accessibilité d'un site selon le RGAA.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     description: PAGE_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/blog/croissance-web.jpg`,
+        url: `${SITE_URL}/outils/og-outils.jpg`,
         width: 1200,
         height: 630,
         alt: "Outils conçus par Forge Digitale Solutions",
@@ -95,27 +96,48 @@ export default function OutilsPage() {
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {products.map((product) => (
-            <li key={product.id}>
-              <article className="flex h-full flex-col rounded-xl border border-default bg-surface-card p-8 transition-colors hover:border-strong">
-                {product.placeholder ? (
-                  <p className="fds-eyebrow mb-3">Texte provisoire</p>
+            <li
+              key={product.id}
+              className={product.image ? "md:col-span-2" : undefined}
+            >
+              <article className="flex h-full flex-col overflow-hidden rounded-xl border border-default bg-surface-card transition-colors hover:border-strong">
+                {product.image ? (
+                  <figure>
+                    <Image
+                      src={product.image.src}
+                      alt={product.image.alt}
+                      width={product.image.width}
+                      height={product.image.height}
+                      sizes="(max-width: 768px) 100vw, 960px"
+                      className="h-auto w-full"
+                      priority
+                    />
+                    <figcaption className="border-t border-default px-8 py-2 text-sm text-muted">
+                      Site fictif de démonstration
+                    </figcaption>
+                  </figure>
                 ) : null}
-                <h2 className="text-2xl font-bold text-text-strong">
-                  {product.name}
-                </h2>
-                <p className="mt-3 flex-1 leading-relaxed text-soft">
-                  {product.description}
-                </p>
-                <a
-                  href={withProductUtm(product.url)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Découvrir ${product.name} (nouvelle fenêtre)`}
-                  className="btn-primary mt-6 w-fit gap-2 px-6 py-3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-                >
-                  Découvrir
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                <div className="flex flex-1 flex-col p-8">
+                  {product.placeholder ? (
+                    <p className="fds-eyebrow mb-3">Texte provisoire</p>
+                  ) : null}
+                  <h2 className="text-2xl font-bold text-text-strong">
+                    {product.name}
+                  </h2>
+                  <p className="mt-3 flex-1 leading-relaxed text-soft">
+                    {product.description}
+                  </p>
+                  <a
+                    href={withProductUtm(product.url)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Découvrir ${product.name} (nouvelle fenêtre)`}
+                    className="btn-primary mt-6 w-fit gap-2 px-6 py-3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                  >
+                    Découvrir
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
               </article>
             </li>
           ))}

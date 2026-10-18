@@ -1,15 +1,20 @@
+export type ProductImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 export type Product = {
   id: string;
   name: string;
-  /**
-   * Card copy. Placeholder until the final text is provided.
-   * Do not add a price. Do not promise a free trial.
-   */
+  /** Card copy. Do not add a price. Do not promise a free trial. */
   description: string;
-  /** True until `description` is replaced with the final copy. */
+  /** Shows the provisional-copy badge while true. */
   placeholder: boolean;
   /** Product site, without tracking parameters. */
   url: string;
+  image?: ProductImage;
 };
 
 const PRODUCT_UTM = {
@@ -36,8 +41,14 @@ export const products: Product[] = [
     id: "grilla",
     name: "Grilla",
     description:
-      "Grilla vérifie la conformité RGAA et l'accessibilité d'un site, dans le cadre de l'European Accessibility Act.",
-    placeholder: true,
+      "Grilla aide à auditer l'accessibilité d'un site selon le RGAA, critère par critère, en vue de l'European Accessibility Act. L'IA propose un verdict, c'est l'auditeur qui décide.",
+    placeholder: false,
     url: "https://grilla.fr",
+    image: {
+      src: "/outils/grilla-exemple.webp",
+      alt: "Rapport d'audit Grilla sur un site fictif de démonstration",
+      width: 1600,
+      height: 1000,
+    },
   },
 ];
