@@ -17,6 +17,7 @@ const serviceLinks = [
 ];
 
 const navLinks = [
+  { name: "Nos outils", href: "/outils" },
   { name: "Réalisations", href: "/#realisations" },
   { name: "Blog", href: "/blog" },
   { name: "À Propos", href: "/#about" },

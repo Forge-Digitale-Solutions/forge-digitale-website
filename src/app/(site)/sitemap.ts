@@ -49,6 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { route: "/creation-site-web-bassin-arcachon", lastModified: "2026-09-08" },
     { route: "/site-internet-artisan-medoc", lastModified: "2026-09-08" },
     { route: "/creation-site-internet-medoc", lastModified: "2026-09-07" },
+    { route: "/outils", lastModified: "2026-10-18" },
   ].map(
     ({ route, lastModified }) => ({
       url: `${baseUrl}${route}`,
