@@ -89,7 +89,7 @@ export default function OutilsPage() {
             Nos outils
           </h1>
           <p className="text-lg text-soft leading-relaxed">
-            Forge Digitale Solutions conçoit ses propres outils. Vous trouvez
+            Forge Digitale Solutions conçoit ses propres outils. Vous trouverez
             ici les logiciels que nous éditons, avec un lien vers chaque site.
           </p>
         </header>
