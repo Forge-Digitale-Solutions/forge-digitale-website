@@ -9,6 +9,7 @@ import {
   NEWSLETTER_SUCCESS_MESSAGE,
   isValidEmail,
 } from "@/lib/newsletter";
+import { track } from "@/lib/track";
 
 type NewsletterFormProps = {
   variant?: "footer" | "article" | "page";
@@ -52,6 +53,7 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
       };
 
       if (data.ok) {
+        track("newsletter-submit", { place: variant });
         setStatus("success");
         setMessage(data.message || NEWSLETTER_SUCCESS_MESSAGE);
         setEmail("");

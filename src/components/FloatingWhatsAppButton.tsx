@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
+import { track, umamiAttrs } from "@/lib/track";
 
 const WHATSAPP_NUMBER = "33645659696";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -59,6 +60,7 @@ export function FloatingWhatsAppButton() {
             additionalProperties: false,
           },
           execute: async ({ message }) => {
+            track("whatsapp-click", { place: "assistant" });
             const url = whatsAppUrl(message);
             const opened = window.open(url, "_blank", "noopener,noreferrer");
             if (!opened) return `Fenêtre bloquée. Lien : ${url}`;
@@ -77,6 +79,7 @@ export function FloatingWhatsAppButton() {
   return (
     <a
       href={WHATSAPP_URL}
+      {...umamiAttrs("whatsapp-click", { place: "floating" })}
       target="_blank"
       rel="noopener noreferrer"
       data-floating-ui

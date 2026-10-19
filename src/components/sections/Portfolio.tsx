@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/section";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { umamiAttrs } from "@/lib/track";
 
 const projects = [
   {
@@ -176,6 +177,10 @@ export function Portfolio() {
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 flex-wrap p-4">
                     <Link
                       href={project.link}
+                      {...umamiAttrs("project-click", {
+                        project: project.title,
+                        kind: "site",
+                      })}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Voir le projet ${project.title}`}
@@ -187,6 +192,10 @@ export function Portfolio() {
                     {"storeLink" in project && project.storeLink && (
                       <Link
                         href={project.storeLink}
+                        {...umamiAttrs("project-click", {
+                          project: project.title,
+                          kind: "store",
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Ouvrir le store pour ${project.title}`}
