@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 
+// Parent of every site route except /blog. A loading boundary streams
+// HTTP 200 before notFound(), which turns an unknown article into a soft 404.
+
 export default function Loading() {
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
