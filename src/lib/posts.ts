@@ -150,6 +150,12 @@ async function toPostData(doc: PostDoc, withHtml: boolean): Promise<PostData> {
   };
 }
 
+function newestFirst(a: PostDoc, b: PostDoc): number {
+  const byPublished = (b.publishedAt || "").localeCompare(a.publishedAt || "");
+  if (byPublished !== 0) return byPublished;
+  return (b.updatedAt || "").localeCompare(a.updatedAt || "");
+}
+
 async function payloadPosts(): Promise<PostDoc[] | null> {
   if (!process.env.DATABASE_URI || !process.env.PAYLOAD_SECRET) return null;
   try {
@@ -161,7 +167,7 @@ async function payloadPosts(): Promise<PostDoc[] | null> {
       limit: 200,
       sort: "-publishedAt",
     });
-    return result.docs as PostDoc[];
+    return (result.docs as PostDoc[]).sort(newestFirst);
   } catch (error) {
     console.error("Payload posts unavailable, using Markdown", error);
     return null;
@@ -184,7 +190,7 @@ function readMarkdownList(): PostData[] {
       };
     });
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 }
 
 async function readMarkdownPost(id: string): Promise<PostData> {
@@ -203,7 +209,7 @@ export async function getSortedPostsData(): Promise<PostData[]> {
     const payload = await Promise.all(
       remote.filter((doc) => doc.slug).map((doc) => toPostData(doc, false)),
     );
-    return payload.sort((a, b) => (a.date < b.date ? 1 : -1));
+    return payload;
   }
   // Emergency fallback only: archived Markdown if Payload is unavailable
   return readMarkdownList();
