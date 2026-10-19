@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/rendez-vous-saint-laurent-medoc/`;
@@ -93,12 +94,17 @@ export default function RendezVousPage() {
           <p>
             Forge Digitale Solutions - Anthony Marcelin (EI) - 6 rue
             Saint-Julien, 33112 Saint-Laurent-Médoc -{" "}
-            <a href="tel:+33645659696" className="text-accent hover:underline">
+            <a
+              href="tel:+33645659696"
+              {...umamiAttrs("phone-click", { place: "inline" })}
+              className="text-accent hover:underline"
+            >
               06 45 65 96 96
             </a>{" "}
             -{" "}
             <a
               href="mailto:contact@forgedigitalesolutions.com"
+              {...umamiAttrs("email-click", { place: "inline" })}
               className="text-accent hover:underline"
             >
               contact@forgedigitalesolutions.com
@@ -124,12 +130,17 @@ export default function RendezVousPage() {
 
         <section className="mt-12 pt-8 border-t border-default">
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-            <Link href="/#contact" className="btn-primary gap-2 px-6 py-3">
+            <Link
+              href="/#contact"
+              {...umamiAttrs("quote-click", { place: "cta" })}
+              className="btn-primary gap-2 px-6 py-3"
+            >
               Me contacter
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <a
               href="tel:+33645659696"
+              {...umamiAttrs("phone-click", { place: "cta" })}
               className="text-accent hover:underline self-center"
             >
               06 45 65 96 96

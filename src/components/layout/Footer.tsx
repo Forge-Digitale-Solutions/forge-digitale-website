@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { umamiAttrs } from "@/lib/track";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -243,6 +244,7 @@ export function Footer() {
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
                   href="/#contact"
+                  {...umamiAttrs("quote-click", { place: "footer" })}
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
                   Demander un Devis
@@ -283,6 +285,7 @@ export function Footer() {
                 />
                 <a
                   href="tel:+33645659696"
+                  {...umamiAttrs("phone-click", { place: "footer" })}
                   className="hover:text-text-strong transition-colors"
                 >
                   06 45 65 96 96
@@ -296,6 +299,7 @@ export function Footer() {
                 />
                 <a
                   href="mailto:contact@forgedigitalesolutions.com"
+                  {...umamiAttrs("email-click", { place: "footer" })}
                   className="hover:text-text-strong transition-colors break-all"
                 >
                   contact@forgedigitalesolutions.com

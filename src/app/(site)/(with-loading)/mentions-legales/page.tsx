@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -78,7 +79,10 @@ export default function MentionsLegales() {
               </li>
               <li>
                 <strong>Email :</strong>{" "}
-                <a href="mailto:contact@forgedigitalesolutions.com">
+                <a
+                  href="mailto:contact@forgedigitalesolutions.com"
+                  {...umamiAttrs("email-click", { place: "legal" })}
+                >
                   contact@forgedigitalesolutions.com
                 </a>
               </li>
@@ -137,7 +141,10 @@ export default function MentionsLegales() {
               Conformément à la loi « informatique et libertés » et au RGPD,
               vous pouvez exercer votre droit d&apos;accès, de rectification et
               de suppression des données vous concernant en contactant :{" "}
-              <a href="mailto:contact@forgedigitalesolutions.com">
+              <a
+                href="mailto:contact@forgedigitalesolutions.com"
+                {...umamiAttrs("email-click", { place: "legal" })}
+              >
                 contact@forgedigitalesolutions.com
               </a>
               .

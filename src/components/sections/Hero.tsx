@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
+import { umamiAttrs } from "@/lib/track";
 
 const trust = ["Site Web & App", "Montage PC", "Maintenance Locale"];
 
@@ -102,6 +103,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             >
               <Link
                 href="/#contact"
+                {...umamiAttrs("quote-click", { place: "hero" })}
                 className="group btn-primary h-12 px-7 tracking-wide focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               >
                 <span className="mr-2">Lancer mon projet</span>

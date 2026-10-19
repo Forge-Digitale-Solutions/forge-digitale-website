@@ -1,5 +1,8 @@
 # Forge Digitale Solutions - Node server for Dokploy.
-# Build-arg NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is inlined by Next at image build.
+# Build args inlined by Next at image build (a runtime env var is not enough):
+#   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+#   NEXT_PUBLIC_UMAMI_URL
+#   NEXT_PUBLIC_UMAMI_WEBSITE_ID
 # Runtime env (Dokploy → Environment, not build args):
 #   DATABASE_URI, PAYLOAD_SECRET, PAYLOAD_PUBLIC_SERVER_URL
 # Mount a volume on /app/media for article images.
@@ -16,7 +19,11 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ARG NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+ARG NEXT_PUBLIC_UMAMI_URL
+ARG NEXT_PUBLIC_UMAMI_WEBSITE_ID
 ENV NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=$NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+ENV NEXT_PUBLIC_UMAMI_URL=$NEXT_PUBLIC_UMAMI_URL
+ENV NEXT_PUBLIC_UMAMI_WEBSITE_ID=$NEXT_PUBLIC_UMAMI_WEBSITE_ID
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build && npm prune --omit=dev
 

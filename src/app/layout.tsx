@@ -19,6 +19,14 @@ const splineMono = Spline_Sans_Mono({
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
+const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL?.trim();
+const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim();
+
+function umamiScriptSrc(url: string): string {
+  const trimmed = url.replace(/\/+$/, "");
+  return trimmed.endsWith("/script.js") ? trimmed : `${trimmed}/script.js`;
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -75,12 +83,14 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <Script
-          defer
-          src="https://stats.forgedigitalesolutions.com/script.js"
-          data-website-id="e45a87dd-4a11-425c-9ff7-779a722575ba"
-          strategy="afterInteractive"
-        ></Script>
+        {process.env.NODE_ENV === "production" && umamiUrl && umamiWebsiteId ? (
+          <Script
+            defer
+            src={umamiScriptSrc(umamiUrl)}
+            data-website-id={umamiWebsiteId}
+            strategy="afterInteractive"
+          />
+        ) : null}
       </head>
       <body>{children}</body>
     </html>
