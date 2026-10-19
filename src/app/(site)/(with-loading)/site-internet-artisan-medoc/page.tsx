@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/site-internet-artisan-medoc/`;
@@ -227,18 +228,27 @@ export default function ArtisanPage() {
 
           <h2 className="text-2xl font-bold text-text-strong">Me joindre</h2>
           <p>
-            <a href="tel:+33645659696" className="text-accent hover:underline">
+            <a
+              href="tel:+33645659696"
+              {...umamiAttrs("phone-click", { place: "inline" })}
+              className="text-accent hover:underline"
+            >
               06 45 65 96 96
             </a>{" "}
             ·{" "}
             <a
               href="mailto:contact@forgedigitalesolutions.com"
+              {...umamiAttrs("email-click", { place: "inline" })}
               className="text-accent hover:underline"
             >
               contact@forgedigitalesolutions.com
             </a>{" "}
             ·{" "}
-            <Link href="/#contact" className="text-accent hover:underline">
+            <Link
+              href="/#contact"
+              {...umamiAttrs("quote-click", { place: "inline" })}
+              className="text-accent hover:underline"
+            >
               formulaire
             </Link>
             . Détail prestation :{" "}
@@ -253,7 +263,11 @@ export default function ArtisanPage() {
         </div>
 
         <section className="mt-12 pt-8 border-t border-default">
-          <Link href="/#contact" className="btn-primary gap-2 px-6 py-3">
+          <Link
+            href="/#contact"
+            {...umamiAttrs("quote-click", { place: "cta" })}
+            className="btn-primary gap-2 px-6 py-3"
+          >
             Demander un devis
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>

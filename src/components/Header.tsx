@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { umamiAttrs } from "@/lib/track";
 
 const serviceLinks = [
   { name: "Création de site web", href: "/creation-site-web" },
@@ -158,6 +159,7 @@ export function Header() {
 
             <Link
               href="/#contact"
+              {...umamiAttrs("quote-click", { place: "header" })}
               className="btn-primary py-2.5 px-6 text-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               Demander un devis
@@ -242,6 +244,7 @@ export function Header() {
             ))}
             <Link
               href="/#contact"
+              {...umamiAttrs("quote-click", { place: "header-mobile" })}
               onClick={closeMobile}
               className="btn-primary w-full py-3 text-center mt-4 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >

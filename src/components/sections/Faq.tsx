@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SectionHeading } from "@/components/ui/section";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { track } from "@/lib/track";
 
 type FaqItem = {
   question: string;
@@ -252,7 +253,13 @@ export function Faq() {
 
   const toggleItem = (catIndex: number, itemIndex: number) => {
     const key = `${catIndex}-${itemIndex}`;
-    setOpenItem(openItem === key ? null : key);
+    if (openItem === key) {
+      setOpenItem(null);
+      return;
+    }
+    const question = faqData[catIndex]?.items[itemIndex]?.question;
+    if (question) track("faq-open", { question });
+    setOpenItem(key);
   };
 
   return (

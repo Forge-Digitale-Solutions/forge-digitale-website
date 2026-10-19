@@ -45,12 +45,14 @@ On every update to `main` (and via `workflow_dispatch`), the **Site GHCR** workf
 
 - Port **3000** (`-H 0.0.0.0`)
 - Healthcheck: `GET http://127.0.0.1:3000/api/health` must return exactly 200 (it boots Payload and counts posts; 503 if Postgres or Payload fails, 3 s deadline). The homepage is prerendered and stays 200 with the database down, so it is not a health signal. The Dockerfile `HEALTHCHECK` uses this route; a health check set in Dokploy's Swarm settings overrides the image one and must use the same command. Swarm FailureAction: rollback (configured in Dokploy, not visible from this repo)
-- Build arg (GitHub Actions): `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (inlined at image build; a runtime env var is not enough)
+- Build args (GitHub Actions, inlined at image build; a runtime env var is not enough): `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`, `NEXT_PUBLIC_UMAMI_URL`, `NEXT_PUBLIC_UMAMI_WEBSITE_ID`
 - Runtime env (Dokploy → Environment): `DATABASE_URI`, `PAYLOAD_SECRET`, `PAYLOAD_PUBLIC_SERVER_URL`, etc.
 
 GitHub secrets:
 
 - `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` - required at image build
+- `NEXT_PUBLIC_UMAMI_URL` - Umami origin, required at image build (see `docs/analytics.md`)
+- `NEXT_PUBLIC_UMAMI_WEBSITE_ID` - Umami website id, required at image build
 - `DOKPLOY_DEPLOY_WEBHOOK` - Dokploy application webhook URL (Deployments tab)
 
 Dokploy Docker provider: image `ghcr.io/forge-digitale-solutions/forge-digitale-website:latest`, registry `ghcr.io`. For a private GHCR package, set username + PAT (`read:packages`). If the package is public, pull works without a PAT.
