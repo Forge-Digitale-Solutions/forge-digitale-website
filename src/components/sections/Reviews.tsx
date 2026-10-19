@@ -6,6 +6,7 @@ import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import type { PlaceInfo } from "@/lib/google-reviews";
+import { umamiAttrs } from "@/lib/track";
 
 const SWIPE_THRESHOLD = 50;
 
@@ -233,6 +234,7 @@ export function Reviews({ data }: { data: PlaceInfo | null }) {
         >
           <a
             href={googleUrl}
+            {...umamiAttrs("reviews-click")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent hover:text-text-strong transition-colors text-sm font-medium"
