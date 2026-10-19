@@ -6,7 +6,6 @@ import html from "remark-html";
 import remarkGfm from "remark-gfm";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import { notFound } from "next/navigation";
 
 const postsDirectory = path.join(process.cwd(), "src/posts-archive");
 
@@ -279,13 +278,25 @@ export async function getPostMarkdown(id: string): Promise<string | null> {
   }
 }
 
-export async function getPostData(id: string): Promise<PostData> {
+export async function getPostData(id: string): Promise<PostData | null> {
   const remote = await payloadPosts();
   if (remote?.length) {
     const match = remote.find((doc) => doc.slug === id);
-    if (!match) notFound();
+    if (!match) return null;
     return toPostData(match, true);
   }
   // Emergency fallback only: archived Markdown if Payload is unavailable
-  return readMarkdownPost(id);
+  try {
+    return await readMarkdownPost(id);
+  } catch (error) {
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      (error as NodeJS.ErrnoException).code === "ENOENT"
+    ) {
+      return null;
+    }
+    throw error;
+  }
 }

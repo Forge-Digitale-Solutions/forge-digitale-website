@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { ArticleLightbox } from "@/components/blog/ArticleLightbox";
@@ -35,6 +36,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const postData = await getPostData(slug);
+  if (!postData) notFound();
 
   const articleUrl = `${SITE_URL}/blog/${slug}/`;
   const seoTitle = postData.metaTitle || postData.title;
@@ -99,6 +101,7 @@ export default async function Post({
   const { slug } = await params;
 
   const postData = await getPostData(slug);
+  if (!postData) notFound();
 
   return (
     <article className="min-h-screen bg-bg pt-32 pb-24">
