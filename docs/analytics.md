@@ -8,14 +8,14 @@ Aucun événement ne contient de nom, d'e-mail, de téléphone, de message, ni d
 
 ## Configuration
 
-Variables lues au **build** de l'image Docker. Une variable posée seulement au runtime sur Dokploy n'est pas vue par le script.
+Variables lues au **build** de l'image Docker, donc dans les **secrets GitHub Actions** (déjà créés : `NEXT_PUBLIC_UMAMI_URL`, `NEXT_PUBLIC_UMAMI_WEBSITE_ID`). Dokploy ne les lit pas : il tire l'image déjà construite. Les variables Dokploy (`DATABASE_URI`, `PAYLOAD_SECRET`, `PAYLOAD_PUBLIC_SERVER_URL`) restent celles du runtime.
 
 | Variable | Contenu |
 | --- | --- |
 | `NEXT_PUBLIC_UMAMI_URL` | Origine Umami, par exemple `https://stats.forgedigitalesolutions.com`. Si la valeur finit déjà par `/script.js`, elle est prise telle quelle. |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Identifiant du site dans Umami (`data-website-id`). |
 
-Secrets GitHub Actions du workflow Site GHCR, passés en build-args. Valeurs déjà publiques dans le HTML actuel :
+Valeurs déjà publiques dans le HTML actuel, recopiées dans les secrets GitHub :
 
 - `NEXT_PUBLIC_UMAMI_URL` = `https://stats.forgedigitalesolutions.com`
 - `NEXT_PUBLIC_UMAMI_WEBSITE_ID` = `e45a87dd-4a11-425c-9ff7-779a722575ba`
@@ -27,10 +27,10 @@ Le script est absent si `NODE_ENV` n'est pas `production`, ou si une des deux va
 ## Où c'est branché
 
 - Clics sur un lien ou un bouton posé dans le code : attribut `data-umami-event` (et `data-umami-event-<propriété>`). Umami les lit tout seul.
-- Liens `tel:`, `mailto:` et `/#contact` écrits dans le Markdown d'un article : un seul écouteur de clic (`UmamiAutoLinks`) appelle `track()` avec `place` = `content`. Les liens déjà marqués sont ignorés, donc pas de double compte.
+- Liens `tel:`, `mailto:`, `/#contact` et `tally.so` dans le HTML affiché (Markdown ou article Payload) : un seul écouteur de clic (`UmamiAutoLinks`). Rien à configurer dans Payload. Les liens déjà marqués sont ignorés, donc pas de double compte.
 - Succès après une réponse serveur : `track()` dans `src/lib/track.ts`.
 
-Il n'y a pas de lien Tally sur ce site. Le rendez-vous passe par le bouton Calendly (`appointment-click`).
+Le bouton Calendly reste `appointment-click`. Un lien vers un questionnaire Tally, où qu'il soit écrit, est `tally-click`.
 
 ## Événements
 
@@ -110,6 +110,29 @@ Une fois par chargement de page, quand un repère placé à 75 % du corps de l'a
 
 - `slug` : identifiant de l'article, par exemple `croissance-web`
 
+### `project-click`
+
+Bouton « Voir le projet » (et « Store » quand il existe) sur une réalisation. L'URL du projet n'est pas envoyée.
+
+- `project` : titre, par exemple `La Délicieuse`
+- `kind` : `site` ou `store`
+
+### `reviews-click`
+
+Lien « Voir tous les avis sur Google ». Pas d'URL, pas d'identifiant Google.
+
+### `faq-open`
+
+Ouverture d'une question dans la FAQ de l'accueil. La fermeture ne compte pas.
+
+- `question` : le libellé de la question
+
+### `tally-click`
+
+Clic sur un lien `tally.so` (page, article, contenu Payload). L'URL complète n'est pas envoyée.
+
+- `form` : identifiant public du formulaire, le dernier segment du chemin (`https://tally.so/r/abc` donne `abc`). La query string est ignorée.
+
 ## Vues à créer dans Umami
 
 Filtrer par nom d'événement. Pour le détail, découper sur la propriété ou sur l'URL de la page.
@@ -123,6 +146,10 @@ Filtrer par nom d'événement. Pour le détail, découper sur la propriété ou 
 - Newsletter : `newsletter-submit`, découpage `place`
 - Outils : `tool-click`, découpage `product`
 - Lectures : `article-read`, découpage `slug`
+- Réalisations : `project-click`, découpage `project`
+- Avis Google : `reviews-click`
+- Objections : `faq-open`, découpage `question`
+- Questionnaire Tally : `tally-click`, découpage `form`
 
 ## Poids
 

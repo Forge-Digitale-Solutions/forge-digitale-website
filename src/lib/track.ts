@@ -8,6 +8,10 @@ export const UMAMI_EVENTS = [
   "newsletter-submit",
   "tool-click",
   "article-read",
+  "project-click",
+  "reviews-click",
+  "faq-open",
+  "tally-click",
 ] as const;
 
 export type UmamiEvent = (typeof UMAMI_EVENTS)[number];
