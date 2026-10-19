@@ -11,7 +11,9 @@ import { GridDivider } from "@/components/ui/section";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { getSortedPostsData } from "@/lib/posts";
 
-export const revalidate = 300;
+// The image build has no database, so a prerender would freeze the banner
+// on the Markdown archive. Read Payload on each request instead.
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const [reviewsData, posts] = await Promise.all([
