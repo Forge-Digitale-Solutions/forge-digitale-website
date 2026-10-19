@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
+import { track, umamiAttrs } from "@/lib/track";
 
 const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,6 +27,14 @@ const CONTACT_SERVICES = [
 ] as const;
 
 type ContactService = (typeof CONTACT_SERVICES)[number];
+
+function trackContactSuccess(service?: string) {
+  if (service && CONTACT_SERVICES.includes(service as ContactService)) {
+    track("contact-submit", { service });
+    return;
+  }
+  track("contact-submit");
+}
 
 type ContactFields = {
   name: string;
@@ -218,6 +227,7 @@ export function Contact() {
             try {
               const result = await postContact(fields, toolCtx?.signal);
               if (result.ok) {
+                trackContactSuccess(fields.service);
                 setStatus("success");
                 setResultMessage(result.message);
                 const form = document.getElementById("contact-form");
@@ -276,6 +286,7 @@ export function Contact() {
     try {
       const result = await postContact(fields);
       if (result.ok) {
+        trackContactSuccess(fields.service);
         setStatus("success");
         setResultMessage(result.message);
         form.reset();
@@ -342,6 +353,7 @@ export function Contact() {
                   </p>
                   <a
                     href="tel:+33645659696"
+                    {...umamiAttrs("phone-click", { place: "contact" })}
                     className="text-text-strong hover:text-accent transition-colors text-lg font-medium"
                   >
                     06 45 65 96 96
@@ -362,6 +374,7 @@ export function Contact() {
                   </p>
                   <a
                     href="mailto:contact@forgedigitalesolutions.com"
+                    {...umamiAttrs("email-click", { place: "contact" })}
                     className="text-text-strong hover:text-accent transition-colors text-lg font-medium break-all block"
                   >
                     contact@forgedigitalesolutions.com

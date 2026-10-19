@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -69,10 +70,11 @@ export default function Confidentialite() {
             profilage.
           </p>
           <p>
-            Umami collecte uniquement des données anonymes et agrégées (pages
-            visitées, pays d&apos;origine approximatif, type d&apos;appareil).
-            Ces données sont hébergées sur notre propre infrastructure et ne
-            quittent jamais nos serveurs.
+            Umami compte les pages visitées et des actions anonymes (appel,
+            e-mail, bouton de devis, envoi du formulaire, lecture d&apos;un
+            article). Il enregistre aussi le pays approximatif et le type
+            d&apos;appareil. Aucun nom, e-mail, numéro ou contenu de message
+            n&apos;est transmis. Ces données restent sur notre serveur.
             <strong>
               {" "}
               Aucun bandeau de consentement n&apos;est requis
@@ -171,7 +173,10 @@ export default function Confidentialite() {
             rectification et de suppression de vos données. Pour l&apos;exercer,
             contactez-nous simplement à :
             <br />
-            <a href="mailto:contact@forgedigitalesolutions.com">
+            <a
+              href="mailto:contact@forgedigitalesolutions.com"
+              {...umamiAttrs("email-click", { place: "legal" })}
+            >
               contact@forgedigitalesolutions.com
             </a>
           </p>
@@ -179,7 +184,10 @@ export default function Confidentialite() {
             Ce droit couvre aussi l&apos;effacement complet de votre adresse de
             la liste newsletter, y compris après désinscription, sur simple
             demande à{" "}
-            <a href="mailto:contact@forgedigitalesolutions.com">
+            <a
+              href="mailto:contact@forgedigitalesolutions.com"
+              {...umamiAttrs("email-click", { place: "legal" })}
+            >
               contact@forgedigitalesolutions.com
             </a>
             .

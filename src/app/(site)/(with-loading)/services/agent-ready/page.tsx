@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/services/agent-ready/`;
@@ -313,7 +314,11 @@ export default function PackAgentReadyPage() {
               </Link>
             </li>
             <li>
-              <Link href="/#contact" className="text-accent hover:underline">
+              <Link
+                href="/#contact"
+                {...umamiAttrs("quote-click", { place: "inline" })}
+                className="text-accent hover:underline"
+              >
                 Contact et devis
               </Link>
             </li>
@@ -348,7 +353,11 @@ export default function PackAgentReadyPage() {
           <p className="text-soft mb-6">
             Un site à rendre lisible par les assistants ? Écrivez-moi.
           </p>
-          <Link href="/#contact" className="btn-primary gap-2 px-6 py-3">
+          <Link
+            href="/#contact"
+            {...umamiAttrs("quote-click", { place: "cta" })}
+            className="btn-primary gap-2 px-6 py-3"
+          >
             Demander un devis
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>

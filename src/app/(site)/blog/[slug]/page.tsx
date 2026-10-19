@@ -8,6 +8,8 @@ import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { ArticleLightbox } from "@/components/blog/ArticleLightbox";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { ArticleReadMarker } from "@/components/blog/ArticleReadMarker";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 
@@ -198,10 +200,13 @@ export default async function Post({
             )}
           </header>
 
-          <div
-            className="prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
-          />
+          <div className="relative">
+            <div
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
+            />
+            <ArticleReadMarker slug={slug} />
+          </div>
 
           <div className="mt-12 pt-8 border-t border-default max-w-md">
             <NewsletterForm variant="article" />
@@ -212,7 +217,11 @@ export default async function Post({
               Une question sur cet article ?
             </h3>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a href="/#contact" className="btn-primary px-6 py-3">
+            <a
+              href="/#contact"
+              {...umamiAttrs("quote-click", { place: "cta" })}
+              className="btn-primary px-6 py-3"
+            >
               Contactez Forge Digitale Solutions
             </a>
           </div>

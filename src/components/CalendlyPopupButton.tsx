@@ -3,6 +3,7 @@
 import Script from "next/script";
 import { CalendarDays, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
+import { umamiAttrs } from "@/lib/track";
 
 declare global {
   interface Window {
@@ -56,6 +57,7 @@ export function CalendlyPopupButton() {
       <div className="space-y-3">
         <a
           href={CALENDLY_URL}
+          {...umamiAttrs("appointment-click", { place: "contact" })}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
