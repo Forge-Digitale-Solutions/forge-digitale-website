@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
+import { UmamiAutoLinks } from "@/components/UmamiAutoLinks";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import "../globals.css";
 
@@ -26,6 +27,7 @@ export default function SiteLayout({
           <Footer />
         </div>
         <FloatingWhatsAppButton />
+        <UmamiAutoLinks />
       </ThemeProvider>
     </>
   );

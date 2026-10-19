@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/creation-site-web/`;
@@ -225,6 +226,7 @@ export default function CreationSiteWebPage() {
           </p>
           <Link
             href="/#contact"
+            {...umamiAttrs("quote-click", { place: "cta" })}
             className="btn-primary gap-2 px-6 py-3"
           >
             Demander un devis gratuit

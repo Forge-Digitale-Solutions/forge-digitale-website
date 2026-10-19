@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/faq/`;
@@ -176,7 +177,11 @@ export default function FaqPage() {
               forfait Renaissance
             </Link>
             . Pour un échange :{" "}
-            <Link href="/#contact" className="text-accent hover:underline">
+            <Link
+              href="/#contact"
+              {...umamiAttrs("quote-click", { place: "inline" })}
+              className="text-accent hover:underline"
+            >
               me contacter
             </Link>
             .
@@ -320,18 +325,27 @@ export default function FaqPage() {
             <Qa q="Sans rendez-vous ?">
               <p>
                 Non.{" "}
-                <a href="tel:+33645659696" className="text-accent hover:underline">
+                <a
+                  href="tel:+33645659696"
+                  {...umamiAttrs("phone-click", { place: "inline" })}
+                  className="text-accent hover:underline"
+                >
                   06 45 65 96 96
                 </a>
                 ,{" "}
                 <a
                   href="mailto:contact@forgedigitalesolutions.com"
+                  {...umamiAttrs("email-click", { place: "inline" })}
                   className="text-accent hover:underline"
                 >
                   contact@forgedigitalesolutions.com
                 </a>{" "}
                 ou{" "}
-                <Link href="/#contact" className="text-accent hover:underline">
+                <Link
+                  href="/#contact"
+                  {...umamiAttrs("quote-click", { place: "inline" })}
+                  className="text-accent hover:underline"
+                >
                   le formulaire
                 </Link>
                 .
@@ -363,11 +377,19 @@ export default function FaqPage() {
             Une question qui n&rsquo;est pas là ? Écrivez-moi ou appelez.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/#contact" className="btn-primary gap-2 px-6 py-3">
+            <Link
+              href="/#contact"
+              {...umamiAttrs("quote-click", { place: "cta" })}
+              className="btn-primary gap-2 px-6 py-3"
+            >
               Me contacter
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
-            <a href="tel:+33645659696" className="text-accent hover:underline self-center">
+            <a
+              href="tel:+33645659696"
+              {...umamiAttrs("phone-click", { place: "cta" })}
+              className="text-accent hover:underline self-center"
+            >
               06 45 65 96 96
             </a>
           </div>

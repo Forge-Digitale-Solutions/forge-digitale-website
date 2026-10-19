@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { products, withProductUtm } from "@/lib/products";
+import { umamiAttrs } from "@/lib/track";
 
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/outils/`;
@@ -127,10 +128,11 @@ export default function OutilsPage() {
                   <p className="mt-3 flex-1 leading-relaxed text-soft">
                     {product.description}
                   </p>
-                  <a
-                    href={withProductUtm(product.url)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <a
+                  href={withProductUtm(product.url)}
+                  {...umamiAttrs("tool-click", { product: product.id })}
+                  target="_blank"
+                  rel="noopener noreferrer"
                     aria-label={`Découvrir ${product.name} (nouvelle fenêtre)`}
                     className="btn-primary mt-6 w-fit gap-2 px-6 py-3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
