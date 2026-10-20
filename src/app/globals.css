@@ -1,18 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ============================================================
-   FORGE DIGITALE - FUNKTION design system
-   Tokens inlined from docs/Forge Digitale Design System-3.
-   Two themes: Atelier (light, default) + Graphite (dark),
-   switched via [data-theme] on <html> (driven by next-themes).
-   Font families come from next/font (--font-display /
-   --font-text / --font-mono), declared in layout.tsx.
-   ============================================================ */
-
-/* ---- Raw tokens: palettes, scale, effects, motion ---------- */
 :root {
-  /* Champagne aluminium (matte signal) */
   --champagne-100: #e4dcc8;
   --champagne-200: #d3c8a9;
   --champagne-300: #c2b596;
@@ -21,7 +10,6 @@
   --champagne-600: #7e6f44;
   --champagne-700: #6f6038;
 
-  /* Warm aluminium neutrals (light base) */
   --alu-0: #ffffff;
   --alu-50: #fbfaf6;
   --alu-100: #f4f2ec;
@@ -36,7 +24,6 @@
   --alu-900: #3a382f;
   --alu-950: #26241f;
 
-  /* Graphite (anodized dark) */
   --graphite-950: #141310;
   --graphite-900: #1b1a16;
   --graphite-850: #211f1a;
@@ -44,7 +31,6 @@
   --graphite-750: #33302a;
   --graphite-700: #403c34;
 
-  /* Semantic status */
   --success: #5f7a4e;
   --success-tint: rgba(95, 122, 78, 0.14);
   --warning: #b07f2e;
@@ -54,10 +40,7 @@
   --info: #4e6273;
   --info-tint: rgba(78, 98, 115, 0.14);
 
-  /* Type scale (1.250) - namespaced so it cannot override Tailwind's
-     built-in text-* utility scale. Families are provided by next/font.
-     Display reuses the Archivo variable font; the "Expanded" look comes
-     from the wdth axis (font-stretch on display elements below). */
+  /* `--text-*` inside @theme would override Tailwind's text-* utilities. */
   --font-display: var(--font-text);
   --font-body: var(--font-text);
   --font-eyebrow: var(--font-mono);
@@ -90,7 +73,6 @@
   --ls-engrave: 0.16em;
   --ls-wide: 0.2em;
 
-  /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -112,7 +94,6 @@
   --section-y: clamp(4rem, 9vw, 8rem);
   --stack-gap: var(--space-5);
 
-  /* Shapes: tight radii, borders */
   --radius-xs: 1px;
   --radius-sm: 2px;
   --radius-md: 3px;
@@ -124,7 +105,6 @@
   --border-mid: 1.5px;
   --border-thick: 2px;
 
-  /* Warm, low shadows */
   --shadow-xs: 0 1px 0 rgba(38, 36, 31, 0.05);
   --shadow-sm: 0 1px 2px rgba(38, 36, 31, 0.08);
   --shadow-md: 0 6px 18px -10px rgba(38, 36, 31, 0.22);
@@ -133,7 +113,6 @@
   --hairline-bottom: 0 1px 0 var(--hairline);
   --ring: 0 0 0 2px var(--focus-ring);
 
-  /* Motion */
   --dur-instant: 80ms;
   --dur-fast: 140ms;
   --dur-base: 220ms;
@@ -169,7 +148,6 @@
   mix-blend-mode: normal;
 }
 
-/* ---- ATELIER theme (light, default) ------------------------ */
 :root,
 [data-theme="atelier"] {
   color-scheme: light;
@@ -213,7 +191,6 @@
   --selection-bg: rgba(111, 96, 56, 0.22);
 }
 
-/* ---- GRAPHITE theme (dark) --------------------------------- */
 [data-theme="graphite"] {
   color-scheme: dark;
 
@@ -305,7 +282,6 @@
 }
 
 @layer base {
-  /* Themed default border color (replaces the old border-white/10) */
   *,
   ::before,
   ::after {
@@ -347,13 +323,9 @@
     color: var(--text-strong);
     letter-spacing: var(--ls-display);
     line-height: var(--lh-tight);
-    /* Safety net: long expanded-uppercase French words must never force
-       horizontal overflow on narrow screens. */
     overflow-wrap: break-word;
   }
 
-  /* "Expanded" display width via the Archivo wdth axis. Applies to all
-     headings and any element using the .font-display utility (e.g. logo). */
   h1,
   h2,
   h3,
@@ -389,7 +361,6 @@
 }
 
 @layer utilities {
-  /* Names kept (call sites unchanged), bodies redefined with tokens */
   .glass {
     background: var(--surface-overlay);
     border-bottom: 1px solid var(--border);
@@ -397,13 +368,6 @@
     -webkit-backdrop-filter: blur(8px);
   }
 
-  /* Gold is no longer a gradient: flat champagne (brand rule) */
-  .text-gold-gradient {
-    color: var(--accent);
-  }
-
-  /* Primary action button: graphite on light, champagne on dark
-     (via --btn-primary-* tokens). Champagne stays a signal, not a fill. */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -423,7 +387,6 @@
     transform: var(--press-sink);
   }
 
-  /* Engraved mono eyebrow (technical labels) */
   .fds-eyebrow {
     font-family: var(--font-mono);
     font-size: var(--fds-text-xs);
@@ -433,7 +396,6 @@
     color: var(--accent);
   }
 
-  /* Technical reference label (mono, faint, wide tracking) */
   .fds-ref {
     font-family: var(--font-mono);
     font-size: var(--fds-text-2xs);
@@ -442,9 +404,6 @@
     color: var(--text-faint);
   }
 
-  /* ---- SIGNATURE GESTURE: visible column grid + registration marks ----
-     Wrap a region in .fds-grid; drop .fds-reg crosshair spans at the
-     intersections you want marked. The structure is the ornament. */
   .fds-grid {
     position: relative;
     --fds-cols: 4;
@@ -501,8 +460,6 @@
   }
 }
 
-/* Images dans le corps des articles : largeur moyenne, centrées.
-   La couverture (next/image, hors .prose) n'est pas concernée. */
 .prose img {
   display: block;
   width: 100%;

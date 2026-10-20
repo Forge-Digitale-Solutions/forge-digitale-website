@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Archivo, Spline_Sans_Mono } from "next/font/google";
-// Archivo variable font with the width (wdth) axis. Body uses the default
-// width; display headings widen to ~125 (the "Expanded" instance) via
-// `font-stretch` in globals.css. Self-hosted by next/font (no Google request).
+
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],

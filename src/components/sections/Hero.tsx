@@ -42,7 +42,6 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
         ) : null}
 
         <div className="relative">
-          {/* Signature gesture: visible column grid + registration crosshairs */}
           <div
             aria-hidden
             className="fds-grid absolute inset-0 border border-default"
@@ -59,7 +58,6 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             <span className="fds-reg left-full top-full" />
           </div>
 
-          {/* Same left rail as other sections (container px-4/md:px-6 only). */}
           <div className="relative max-w-4xl pt-12 md:pt-16">
             <motion.p
               initial={{ opacity: 0, y: 12 }}

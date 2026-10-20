@@ -2,28 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { legacyRedirects } from "@/lib/legacy-redirects";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
-// Final URLs for legacy paths. Checked with and without a trailing slash so
-// `/services` does not stop at `/services/` before the next.config 308.
-// Keep in sync with the sources in `next.config.ts`.
-const LEGACY_REDIRECTS: Record<string, string> = {
-  "/services": "/",
-  "/pack-agent-ready": "/services/agent-ready/",
-  "/about": "/",
-  "/contact": "/",
-  "/realisations": "/",
-  "/atelier-saint-laurent-medoc": "/rendez-vous-saint-laurent-medoc/",
-  "/atelier-saint-laurent-medoc.html": "/rendez-vous-saint-laurent-medoc/",
-  "/atelier-saint-laurent-medoc/index.html":
-    "/rendez-vous-saint-laurent-medoc/",
-};
-
 function legacyTarget(pathname: string): string | null {
-  if (LEGACY_REDIRECTS[pathname]) return LEGACY_REDIRECTS[pathname];
+  if (legacyRedirects[pathname]) return legacyRedirects[pathname];
   if (pathname.length > 1 && pathname.endsWith("/")) {
-    return LEGACY_REDIRECTS[pathname.slice(0, -1)] ?? null;
+    return legacyRedirects[pathname.slice(0, -1)] ?? null;
   }
   return null;
 }

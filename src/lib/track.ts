@@ -26,7 +26,6 @@ declare global {
   }
 }
 
-/** Calls Umami when the script is present. Never throws. */
 export function track(
   event: UmamiEvent,
   data?: Record<string, string | number>,
@@ -42,7 +41,6 @@ export function track(
   }
 }
 
-/** Attributes Umami reads on click. No extra listener. */
 export function umamiAttrs(
   event: UmamiEvent,
   data?: Record<string, string | number>,
