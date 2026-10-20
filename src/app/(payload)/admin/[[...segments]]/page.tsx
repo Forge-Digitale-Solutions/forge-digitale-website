@@ -1,4 +1,3 @@
-/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. MODIFY AT YOUR OWN RISK. */
 import type { Metadata } from "next";
 
 import config from "@payload-config";

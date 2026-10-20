@@ -207,17 +207,6 @@ export function Portfolio() {
                     )}
                   </div>
                 )}
-
-                {/* TODO: Décommenter quand les pages projets seront créées pour les autres projets */}
-                {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Link
-                    href={project.link}
-                    aria-label={`Voir le projet ${project.title}`}
-                    className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-sm hover:bg-accent hover:text-on-accent focus-visible:bg-accent focus-visible:text-on-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors shadow-md"
-                  >
-                    Voir le projet <ExternalLink size={16} aria-hidden="true" />
-                  </Link>
-                </div> */}
               </div>
 
               <div className="p-6 flex flex-col grow">

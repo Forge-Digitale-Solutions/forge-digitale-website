@@ -85,6 +85,7 @@ export function Footer() {
                 >
                   Développeur dans le Médoc
                 </Link>
+              </li>
               <li>
                 <Link
                   href="/faq/"
@@ -126,16 +127,14 @@ export function Footer() {
                   Création site internet Médoc
                 </Link>
               </li>
-              </li>
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
+                <Link
                   href="/#realisations"
                   aria-label="Voir les réalisations et projets complétés"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
                   Réalisations
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -232,23 +231,21 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
+                <Link
                   href="/#about"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
                   À Propos
-                </a>
+                </Link>
               </li>
               <li>
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a
+                <Link
                   href="/#contact"
                   {...umamiAttrs("quote-click", { place: "footer" })}
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >
                   Demander un Devis
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

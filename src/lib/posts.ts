@@ -211,7 +211,6 @@ export async function getSortedPostsData(): Promise<PostData[]> {
     );
     return payload;
   }
-  // Emergency fallback only: archived Markdown if Payload is unavailable
   return readMarkdownList();
 }
 
@@ -291,7 +290,6 @@ export async function getPostData(id: string): Promise<PostData | null> {
     if (!match) return null;
     return toPostData(match, true);
   }
-  // Emergency fallback only: archived Markdown if Payload is unavailable
   try {
     return await readMarkdownPost(id);
   } catch (error) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type MouseEvent } from "react";
+import { useSyncExternalStore, type MouseEvent } from "react";
 import { flushSync } from "react-dom";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
@@ -13,7 +13,14 @@ function supportsViewTransition() {
   return typeof document.startViewTransition === "function";
 }
 
-/** Circular reveal from the toggle (Grafikart-style), using our theme tokens. */
+function subscribeMounted() {
+  return () => {};
+}
+
+function useMounted() {
+  return useSyncExternalStore(subscribeMounted, () => true, () => false);
+}
+
 async function switchThemeWithCircle(
   button: HTMLElement,
   apply: () => void,
@@ -47,22 +54,14 @@ async function switchThemeWithCircle(
   );
 }
 
-// Manual light/dark toggle. Default theme is "atelier" (light); the choice
-// is persisted by next-themes. System preference is intentionally ignored.
 export function ThemeToggle({ className = "" }: { className?: string }) {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  // Avoid hydration mismatch: theme is only known on the client. This is the
-  // standard next-themes mount guard; the one-shot setState is intentional.
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => setMounted(true), []);
+  const mounted = useMounted();
 
   const base =
     "inline-flex h-9 w-9 items-center justify-center rounded-md border border-default text-soft transition-colors hover:text-accent hover:border-strong focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2";
 
   if (!mounted) {
-    // Same-size placeholder to keep layout stable before mount.
     return <span aria-hidden className={`${base} ${className}`} />;
   }
 

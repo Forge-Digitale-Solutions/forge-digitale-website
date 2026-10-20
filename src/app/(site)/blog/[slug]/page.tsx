@@ -216,14 +216,13 @@ export default async function Post({
             <h3 className="text-text-strong font-bold mb-4">
               Une question sur cet article ?
             </h3>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a
+            <Link
               href="/#contact"
               {...umamiAttrs("quote-click", { place: "cta" })}
               className="btn-primary px-6 py-3"
             >
               Contactez Forge Digitale Solutions
-            </a>
+            </Link>
           </div>
         </div>
       </ArticleLightbox>
