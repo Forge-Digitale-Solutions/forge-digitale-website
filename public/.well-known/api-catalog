@@ -14,7 +14,7 @@
           "href": "https://forgedigitalesolutions.com/llms.txt",
           "type": "text/plain",
           "hreflang": "fr",
-          "title": "Vue LLM — Forge Digitale Solutions"
+          "title": "Vue LLM : Forge Digitale Solutions"
         },
         {
           "href": "https://forgedigitalesolutions.com/sitemap.xml",
@@ -25,7 +25,7 @@
           "href": "https://forgedigitalesolutions.com/api/public/site.json",
           "type": "application/json",
           "hreflang": "fr",
-          "title": "JSON public lecture seule — identité, contact, offre, URLs"
+          "title": "JSON public lecture seule : identité, contact, offre, URLs"
         },
         {
           "href": "https://forgedigitalesolutions.com/services/agent-ready/",
@@ -62,7 +62,7 @@
         {
           "href": "https://forgedigitalesolutions.com/api/public/site.json",
           "type": "application/json",
-          "title": "Ressource JSON publique GET — pas d'API mutable"
+          "title": "Ressource JSON publique GET : pas d'API mutable"
         },
         {
           "href": "https://forgedigitalesolutions.com/.well-known/api-catalog",

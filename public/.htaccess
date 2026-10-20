@@ -10,7 +10,7 @@ RewriteEngine On
 </IfModule>
 
 <IfModule mod_rewrite.c>
-  # Markdown negotiation (Accept: text/markdown) — before DirectoryIndex HTML
+  # Markdown negotiation (Accept: text/markdown): before DirectoryIndex HTML
   RewriteCond %{HTTP:Accept} text/markdown [NC]
   RewriteCond %{REQUEST_URI} ^/$ [OR]
   RewriteCond %{REQUEST_URI} ^/index\.html$
