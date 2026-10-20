@@ -40,6 +40,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Cadratin
+        run: npm run check:cadratin
+
       - name: Types
         run: npx tsc --noEmit
 
