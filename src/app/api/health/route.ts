@@ -3,10 +3,10 @@ import config from "@payload-config";
 
 export const dynamic = "force-dynamic";
 
-// Docker HEALTHCHECK target (see Dockerfile). The homepage is prerendered, so
-// it stays 200 even when Postgres or Payload is down. This route boots
-// Payload and runs one cheap count, and answers 503 on any failure or after
-// the deadline. The body never carries error details.
+// Docker HEALTHCHECK target (see Dockerfile). The homepage still answers 200
+// from the Markdown archive when Payload is down. This route boots Payload
+// and runs one cheap count, and answers 503 on any failure or after the
+// deadline. The body never carries error details.
 const DEADLINE_MS = 3000;
 
 const headers = { "Cache-Control": "no-store" };

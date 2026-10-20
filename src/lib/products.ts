@@ -8,7 +8,6 @@ export type ProductImage = {
 export type Product = {
   id: string;
   name: string;
-  /** Card copy. Do not add a price. Do not promise a free trial. */
   description: string;
   placeholder: boolean;
   url: string;

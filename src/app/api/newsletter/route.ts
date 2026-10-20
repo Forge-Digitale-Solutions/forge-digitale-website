@@ -67,7 +67,6 @@ export async function POST(request: Request) {
     );
   }
 
-  // Honeypot: filled by bots -> fake success, never call Brevo
   if (typeof body.website === "string" && body.website.trim() !== "") {
     return successResponse();
   }

@@ -37,10 +37,11 @@ export function track(
     if (data) tracker.track(event, data);
     else tracker.track(event);
   } catch {
-    // A blocked or broken tracker must not break the page.
+    return;
   }
 }
 
+/** Umami records a click on data-umami-event. No extra listener. */
 export function umamiAttrs(
   event: UmamiEvent,
   data?: Record<string, string | number>,
