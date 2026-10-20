@@ -7,10 +7,6 @@ interface BreadcrumbSchemaProps {
   items: BreadcrumbSchemaItem[];
 }
 
-/**
- * Emits a BreadcrumbList JSON-LD script for SEO (rich results).
- * Server component - no visual output, just structured data.
- */
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   const schema = {
     "@context": "https://schema.org",

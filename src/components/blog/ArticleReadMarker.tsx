@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { track } from "@/lib/track";
 
-/** Fires article-read once, when 75% of the article body reaches the viewport. */
 export function ArticleReadMarker({ slug }: { slug: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 

@@ -10,9 +10,7 @@ export type Product = {
   name: string;
   /** Card copy. Do not add a price. Do not promise a free trial. */
   description: string;
-  /** Shows the provisional-copy badge while true. */
   placeholder: boolean;
-  /** Product site, without tracking parameters. */
   url: string;
   image?: ProductImage;
 };
@@ -23,7 +21,6 @@ const PRODUCT_UTM = {
   utm_campaign: "nos-outils",
 } as const;
 
-/** Append the referral parameters used on /outils/. */
 export function withProductUtm(url: string): string {
   const target = new URL(url);
   for (const [key, value] of Object.entries(PRODUCT_UTM)) {
@@ -32,10 +29,6 @@ export function withProductUtm(url: string): string {
   return target.toString();
 }
 
-/**
- * Products shown on /outils/, in display order.
- * Add an object here to publish another product.
- */
 export const products: Product[] = [
   {
     id: "grilla",

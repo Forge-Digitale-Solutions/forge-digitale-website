@@ -1,10 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// Fails if an em dash or en dash (or the usual HTML entities) appears in
-// source. The typography rule documents the forbidden characters and is the
-// only exempt file. See .cursor/rules/no-cadratin.mdc.
-
 const root = process.cwd();
 
 const SKIP_DIRS = new Set([
