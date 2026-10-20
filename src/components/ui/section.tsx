@@ -1,8 +1,5 @@
 import type { ReactNode } from "react";
 
-// Mono, numbered section eyebrow + display heading (FUNKTION identity).
-// Technical numbering like "01 / SERVICES" sits above the title.
-// Left-aligned: the catalog / atelier rail, not a marketing center stack.
 export function SectionHeading({
   index,
   eyebrow,
@@ -57,8 +54,6 @@ export function SectionHeading({
   );
 }
 
-// Full-width calibration separator: a hairline carrying registration
-// crosshairs at the column intersections. The grid becomes the ornament.
 export function GridDivider() {
   return (
     <div aria-hidden className="container mx-auto px-4 md:px-6">

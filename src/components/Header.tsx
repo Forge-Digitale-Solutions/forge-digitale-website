@@ -40,7 +40,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close the desktop dropdown on outside click or Escape
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -74,7 +73,6 @@ export function Header() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          {/* Logo Section */}
           <Link
             href="/"
             className="flex items-center gap-3 group"
@@ -100,9 +98,7 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            {/* Services dropdown */}
             <div ref={servicesRef} className="relative">
               <button
                 type="button"
@@ -166,7 +162,6 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Mobile actions */}
           <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <button
@@ -182,7 +177,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -192,7 +186,6 @@ export function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 w-full bg-surface-raised border-b border-default lg:hidden flex flex-col p-6 gap-2 shadow-lg"
           >
-            {/* Services accordion */}
             <button
               type="button"
               onClick={() => setMobileServicesOpen((v) => !v)}

@@ -1,5 +1,6 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
+import { legacyRedirectRules } from "./src/lib/legacy-redirects";
 
 // `.htaccess` is not read by `next start`. These headers keep the agent-ready
 // signals that Apache used to send on every response (OVH static export).
@@ -91,50 +92,10 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    // Path 301s that lived in public/.htaccess. www / HTTP→HTTPS stay on the
-    // reverse proxy (Dokploy / Traefik): doing them here loops behind TLS
-    // termination.
+    // www and HTTP to HTTPS stay on Dokploy / Traefik. Doing them here loops
+    // behind TLS termination.
     return [
-      {
-        source: "/atelier-saint-laurent-medoc/",
-        destination: "/rendez-vous-saint-laurent-medoc/",
-        permanent: true,
-      },
-      {
-        source: "/atelier-saint-laurent-medoc.html",
-        destination: "/rendez-vous-saint-laurent-medoc/",
-        permanent: true,
-      },
-      {
-        source: "/atelier-saint-laurent-medoc/index.html",
-        destination: "/rendez-vous-saint-laurent-medoc/",
-        permanent: true,
-      },
-      {
-        source: "/services/",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/pack-agent-ready/",
-        destination: "/services/agent-ready/",
-        permanent: true,
-      },
-      {
-        source: "/about/",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/contact/",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/realisations/",
-        destination: "/",
-        permanent: true,
-      },
+      ...legacyRedirectRules(),
       {
         // Keep GSC verification and the Apache 404 document on their .html URL.
         // `$` is the end of the path, so only those two files are excluded.

@@ -66,8 +66,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // trailingSlash: true -> le sitemap doit matcher les canonical (slash final)
-  // /newsletter/merci/ est volontairement exclu (page de remerciement, noindex)
   return [
     mainRoute,
     ...servicePages,

@@ -16,7 +16,6 @@ function eventFor(href: string): UmamiEvent | null {
   return null;
 }
 
-/** Public form id only. Query string is dropped (it can carry a token). */
 function tallyForm(href: string): string | null {
   let url: URL;
   try {
@@ -29,10 +28,6 @@ function tallyForm(href: string): string | null {
   return url.pathname.split("/").filter(Boolean).pop() ?? "form";
 }
 
-/**
- * One click listener for unmarked tel, mailto, contact and Tally links
- * (article Markdown or Payload HTML). Marked links are left to Umami.
- */
 export function UmamiAutoLinks() {
   useEffect(() => {
     function onClick(event: MouseEvent) {

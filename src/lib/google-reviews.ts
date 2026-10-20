@@ -4,7 +4,7 @@ export type GoogleReview = {
   rating: number;
   text: string;
   relativeTime: string;
-  date?: string; // ISO date - si présent, le relatif est recalculé dynamiquement
+  date?: string;
 };
 
 export type PlaceInfo = {
