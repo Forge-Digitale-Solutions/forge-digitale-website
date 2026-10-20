@@ -10,6 +10,7 @@
     "start": "next start",
     "start:prod": "sh scripts/start-with-migrations.sh",
     "lint": "eslint",
+    "check:cadratin": "node scripts/check-no-cadratin.mjs",
     "payload": "payload",
     "migrate": "payload migrate",
     "migrate:create": "payload migrate:create",

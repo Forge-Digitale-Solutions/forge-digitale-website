@@ -12,3 +12,5 @@ Sur ce site (copy UI, blog, pages légales, alt, aria-label, JSON-LD, markdown p
 - Autorisé : tiret ASCII `-`, virgule, deux-points, parenthèses
 
 Ne jamais en introduire, même dans les commentaires de code destinés à être copiés en prose.
+
+Contrôle : `npm run check:cadratin` (CI sur les PR vers dev et main). Seul ce fichier peut citer les caractères interdits.
