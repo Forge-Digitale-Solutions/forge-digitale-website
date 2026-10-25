@@ -60,9 +60,11 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
         return;
       }
 
+      track("newsletter-error", { code: String(response.status) });
       setStatus("error");
       setMessage(data.message || NEWSLETTER_ERROR_MESSAGE);
     } catch {
+      track("newsletter-error", { code: "network" });
       setStatus("error");
       setMessage(NEWSLETTER_ERROR_MESSAGE);
     }

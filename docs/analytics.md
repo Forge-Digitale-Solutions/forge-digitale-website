@@ -98,6 +98,24 @@ Inscription newsletter, succès seulement. L'e-mail n'est pas envoyé.
 
 - `place` : `footer`, `article` ou `page`
 
+### `contact-error`
+
+Échec d'envoi du formulaire de contact (réponse API ou erreur réseau). Aucun message saisi ni donnée personnelle.
+
+- `code` : `config` (clé Web3Forms absente), `submit` (réponse refusée avec HTTP 2xx), code HTTP sinon, ou `network`
+
+### `newsletter-error`
+
+Échec d'inscription newsletter (réponse non OK ou erreur réseau). L'e-mail n'est pas envoyé.
+
+- `code` : code HTTP de la réponse, ou `network`
+
+### `grilla-click`
+
+Clic sur un lien vers `grilla.fr` dans le corps d'un article de blog (HTML Markdown ou Payload). Les liens déjà marqués `data-umami-event` sont ignorés.
+
+- `slug` : identifiant de l'article, par exemple `croissance-web`
+
 ### `tool-click`
 
 Lien « Découvrir » d'une carte sur `/outils/`. L'URL du produit (et ses paramètres UTM) n'est pas envoyée.
@@ -143,7 +161,9 @@ Filtrer par nom d'événement. Pour le détail, découper sur la propriété ou 
 - Intention de devis : `quote-click`, découpage `place` et URL
 - Rendez-vous : `appointment-click`
 - WhatsApp : `whatsapp-click`, découpage `place`
-- Newsletter : `newsletter-submit`, découpage `place`
+- Newsletter : `newsletter-submit`, découpage `place` ; échecs : `newsletter-error`, découpage `code`
+- Contact : échecs `contact-error`, découpage `code`
+- Grilla (blog) : `grilla-click`, découpage `slug`
 - Outils : `tool-click`, découpage `product`
 - Lectures : `article-read`, découpage `slug`
 - Réalisations : `project-click`, découpage `project`

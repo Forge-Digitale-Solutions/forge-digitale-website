@@ -16,6 +16,23 @@ function eventFor(href: string): UmamiEvent | null {
   return null;
 }
 
+function isGrillaHref(href: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(href, window.location.origin);
+  } catch {
+    return false;
+  }
+  const host = url.hostname.toLowerCase();
+  return host === "grilla.fr" || host.endsWith(".grilla.fr");
+}
+
+function blogArticleSlug(): string | null {
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  if (parts[0] !== "blog" || !parts[1]) return null;
+  return parts[1];
+}
+
 function tallyForm(href: string): string | null {
   let url: URL;
   try {
@@ -37,6 +54,11 @@ export function UmamiAutoLinks() {
       if (!link || link.hasAttribute("data-umami-event")) return;
       const href = link.getAttribute("href");
       if (!href) return;
+      if (isGrillaHref(href)) {
+        const slug = blogArticleSlug();
+        if (slug) track("grilla-click", { slug });
+        return;
+      }
       const form = tallyForm(href);
       if (form) {
         track("tally-click", { form });
