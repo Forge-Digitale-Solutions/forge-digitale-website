@@ -108,15 +108,22 @@ function fillContactForm(fields: ContactFields) {
   }
 }
 
+type ContactPostResult = {
+  ok: boolean;
+  message: string;
+  errorCode?: string;
+};
+
 async function postContact(
   fields: ContactFields,
   signal?: AbortSignal,
-): Promise<{ ok: boolean; message: string }> {
+): Promise<ContactPostResult> {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
   if (!accessKey) {
     return {
       ok: false,
       message: "Le formulaire n'est pas configuré. Écrivez à contact@forgedigitalesolutions.com.",
+      errorCode: "config",
     };
   }
 
@@ -144,10 +151,16 @@ async function postContact(
       message: "Message bien reçu. Je vous recontacte sous 24 heures.",
     };
   }
+  const errorCode = response.ok ? "submit" : String(response.status);
   return {
     ok: false,
     message: data.message || "Une erreur technique a empêché l'envoi du message.",
+    errorCode,
   };
+}
+
+function trackContactError(code: string) {
+  track("contact-error", { code });
 }
 
 export function Contact() {
@@ -233,6 +246,7 @@ export function Contact() {
                 const form = document.getElementById("contact-form");
                 if (form instanceof HTMLFormElement) form.reset();
               } else {
+                trackContactError(result.errorCode ?? "submit");
                 setStatus("error");
                 setResultMessage(result.message);
               }
@@ -242,6 +256,7 @@ export function Contact() {
                 setStatus("idle");
                 return "Envoi annulé.";
               }
+              trackContactError("network");
               const message =
                 "La connexion a échoué. Merci de réessayer dans un instant.";
               setStatus("error");
@@ -291,10 +306,12 @@ export function Contact() {
         setResultMessage(result.message);
         form.reset();
       } else {
+        trackContactError(result.errorCode ?? "submit");
         setStatus("error");
         setResultMessage(result.message);
       }
     } catch {
+      trackContactError("network");
       setStatus("error");
       setResultMessage(
         "La connexion a échoué. Merci de réessayer dans un instant.",
