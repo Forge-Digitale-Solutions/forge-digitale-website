@@ -17,10 +17,10 @@
     "import:posts": "node --import tsx scripts/import-posts.ts"
   },
   "dependencies": {
-    "@payloadcms/db-postgres": "^3.91.0",
-    "@payloadcms/next": "^3.91.0",
-    "@payloadcms/plugin-mcp": "^3.91.0",
-    "@payloadcms/richtext-lexical": "^3.91.0",
+    "@payloadcms/db-postgres": "^3.92.0",
+    "@payloadcms/next": "^3.92.0",
+    "@payloadcms/plugin-mcp": "^3.92.0",
+    "@payloadcms/richtext-lexical": "^3.92.0",
     "@payloadcms/ui": "^3.90.2",
     "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
