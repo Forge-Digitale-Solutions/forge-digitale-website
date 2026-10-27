@@ -30,6 +30,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const gameplaydevLegalRoutes = [
+    "/gameplaydev-planner/conditions-utilisation",
+    "/gameplaydev-planner/confidentialite",
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date("2026-10-26"),
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+  }));
+
   const newsletterRoute = {
     url: `${baseUrl}/newsletter`,
     lastModified: new Date("2026-10-13"),
@@ -72,6 +82,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogRoute,
     newsletterRoute,
     ...legalRoutes,
+    ...gameplaydevLegalRoutes,
     ...blogRoutes,
   ].map((r) => ({ ...r, url: r.url.endsWith("/") ? r.url : `${r.url}/` }));
 }
