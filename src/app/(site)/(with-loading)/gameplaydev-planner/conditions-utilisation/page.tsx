@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Conditions d'utilisation de GamePlayDev Planner, outil interne de Forge Digitale Solutions pour publier sur le compte TikTok @gameplaydevhw.",
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   alternates: {

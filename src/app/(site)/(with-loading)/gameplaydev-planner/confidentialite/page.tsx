@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Politique de confidentialité de GamePlayDev Planner : données TikTok (open_id, profil, jetons), finalité de publication, conservation et droits RGPD.",
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   alternates: {
