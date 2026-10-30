@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blog : conseils web, montage PC et Linux dans le Médoc",
   description:
-    "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc et le Bassin d'Arcachon.",
+    "Articles concrets : sites web, montage PC, sécurité informatique et Linux. Conseils d'un développeur indépendant dans le Médoc et le Bassin d'Arcachon.",
   keywords: [
     "blog informatique Médoc",
     "conseils site web Gironde",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/`,
     title: "Blog : conseils web, montage PC et Linux dans le Médoc",
     description:
-      "Articles concrets sur la création de sites web, le montage PC, la sécurité informatique et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc.",
+      "Articles concrets sur la création de sites web, le montage PC, la sécurité et le passage à Linux. Conseils d'un développeur indépendant dans le Médoc.",
     siteName: "Forge Digitale Solutions",
     images: [
       {

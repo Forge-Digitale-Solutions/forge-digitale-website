@@ -10,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/maintenance-site-web/`;
 export const metadata: Metadata = {
   title: "Maintenance de site web et hébergement dans le Médoc",
   description:
-    "La maintenance se décide au devis : vous gérez vous-même, ou je m'en occupe avec une facturation mensuelle prévue au devis. Sites déjà en ligne acceptés après diagnostic.",
+    "La maintenance se décide au devis : vous gérez vous-même, ou je m'en occupe, facturation mensuelle au devis. Sites déjà en ligne acceptés après diagnostic.",
   keywords: [
     "maintenance site web Médoc",
     "hébergement site internet Gironde",
