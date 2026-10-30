@@ -126,6 +126,10 @@ export default function ZoneInterventionPage() {
             <Link href="/site-internet-artisan-medoc/" className={linkClass}>
               site internet pour artisan dans le Médoc
             </Link>
+            . Pour une application ou un outil sur mesure, voir la page{" "}
+            <Link href="/developpeur-medoc/" className={linkClass}>
+              développeur web indépendant dans le Médoc
+            </Link>
             .
           </p>
 
@@ -215,8 +219,9 @@ export default function ZoneInterventionPage() {
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong>La création</strong> : chiffrée au devis selon ce que le
-              site doit faire, puis payée une fois. L&rsquo;article{" "}
+              <strong>La création</strong> : à partir de 500 € TTC pour un
+              site une page, puis sur devis selon ce que le site doit faire,
+              payée une fois. L&rsquo;article{" "}
               <Link href="/blog/prix-site-internet-artisan/" className={linkClass}>
                 prix d&rsquo;un site internet d&rsquo;artisan
               </Link>{" "}
