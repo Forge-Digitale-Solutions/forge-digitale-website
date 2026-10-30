@@ -18,6 +18,7 @@ const STATIC_BODY = `# Forge Digitale Solutions
 - [Site web Bassin d'Arcachon](https://forgedigitalesolutions.com/creation-site-web-bassin-arcachon/) : offre Bassin
 - [Site internet artisan Médoc](https://forgedigitalesolutions.com/site-internet-artisan-medoc/) : artisans et métiers de bouche
 - [Maintenance de site web](https://forgedigitalesolutions.com/maintenance-site-web/) : hébergement, mises à jour, suivi
+- [Zone d'intervention](https://forgedigitalesolutions.com/zone-intervention/) : Médoc, Bassin d'Arcachon, Bordeaux, modes de rendez-vous et horaires
 - [Pack Agent Ready](https://forgedigitalesolutions.com/services/agent-ready/) : à partir de 190 € TTC. Formules, option site neuf et TVA : sur cette page.
 - [Développeur Médoc](https://forgedigitalesolutions.com/developpeur-medoc/) : interventions locales
 - [Installation Linux](https://forgedigitalesolutions.com/installation-linux/) : Linux Mint / forfait Renaissance (69 € TTC)
@@ -57,7 +58,7 @@ const STATIC_BODY = `# Forge Digitale Solutions
 - [Confidentialité](https://forgedigitalesolutions.com/confidentialite/)
 
 <!-- Robots IA autorisés : GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended, etc. -->
-<!-- Dernière mise à jour : 2026-09-28 -->
+<!-- Dernière mise à jour : 2026-10-30 -->
 `;
 
 const plainHeaders = {

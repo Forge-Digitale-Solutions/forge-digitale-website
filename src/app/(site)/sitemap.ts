@@ -41,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { route: "/creation-site-web", lastModified: "2026-09-07" },
     { route: "/developpeur-medoc", lastModified: "2026-06-02" },
     { route: "/maintenance-site-web", lastModified: "2026-08-23" },
+    { route: "/zone-intervention", lastModified: "2026-10-30" },
     { route: "/services/agent-ready", lastModified: "2026-09-28" },
     { route: "/installation-linux", lastModified: "2026-09-07" },
     { route: "/montage-pc", lastModified: "2026-09-07" },
