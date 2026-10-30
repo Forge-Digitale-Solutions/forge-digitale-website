@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/site-internet-artisan-medoc/`;
 
 const TITLE = "Site internet pour artisan et commerçant dans le Médoc";
 const DESCRIPTION =
-  "Site vitrine pour artisans et commerces du Médoc. Exemple Charcuterie Campagnarde. À partir de 500 € TTC, devis sans catalogue. Site et fiche Google, chacun son rôle.";
+  "Vitrine pour artisans, commerces du Médoc. Ex. Charcuterie Campagnarde. À partir de 500 € TTC, devis sans catalogue. Site et fiche Google, chacun son rôle.";
 
 export const metadata: Metadata = {
   title: TITLE,
