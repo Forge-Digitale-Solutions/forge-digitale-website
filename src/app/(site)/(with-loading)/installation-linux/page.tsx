@@ -10,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/installation-linux/`;
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
   description:
-    "PC trop ancien pour Windows 11, ou Windows 10 plus à jour ? Installation Linux Mint depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 € TTC.",
+    "PC trop ancien pour Windows 11 ? Installation de Linux Mint dans le Médoc et sur le Bassin d'Arcachon, forfait Renaissance à 69 € TTC.",
   keywords: [
     "installation Linux Médoc",
     "passage Windows à Linux",
