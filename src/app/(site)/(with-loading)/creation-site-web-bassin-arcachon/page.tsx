@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/creation-site-web-bassin-arcachon/`;
 
 const TITLE = "Création de site web sur le Bassin d’Arcachon";
 const DESCRIPTION =
-  "Site internet pour association ou commerce du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 € TTC. Travail depuis Saint-Laurent-Médoc.";
+  "Site pour association ou commerce du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 € TTC, depuis Saint-Laurent-Médoc.";
 
 export const metadata: Metadata = {
   title: TITLE,

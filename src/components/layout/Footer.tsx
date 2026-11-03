@@ -14,9 +14,9 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-16">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-text-strong">
+            <h2 className="text-2xl font-bold text-text-strong">
               Forge <span className="text-accent">Digitale Solutions</span>
-            </h3>
+            </h2>
             <p className="text-soft text-sm leading-relaxed">
               Création de sites internet dans le Médoc.
               <br />
@@ -30,7 +30,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-text-strong font-bold mb-6">Services</h4>
+            <h3 className="text-text-strong font-bold mb-6">Services</h3>
             <ul className="space-y-3 text-sm text-soft">
               <li>
                 <Link
@@ -140,7 +140,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-text-strong font-bold mb-6">Liens Utiles</h4>
+            <h3 className="text-text-strong font-bold mb-6">Liens Utiles</h3>
             <ul className="space-y-3 text-sm text-soft">
               <li>
                 <Link
@@ -259,7 +259,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-text-strong font-bold mb-6">Contact</h4>
+            <h3 className="text-text-strong font-bold mb-6">Contact</h3>
             <ul className="space-y-4 text-sm text-soft">
               <li className="flex items-start gap-3">
                 <MapPin
@@ -307,7 +307,7 @@ export function Footer() {
 
           <div className="space-y-6">
             <div id="newsletter" className="scroll-mt-24">
-              <h4 className="text-text-strong font-bold mb-4">Newsletter</h4>
+              <h3 className="text-text-strong font-bold mb-4">Newsletter</h3>
               <NewsletterForm variant="footer" />
               <p className="mt-3 text-xs text-faint">
                 <Link
@@ -319,7 +319,7 @@ export function Footer() {
               </p>
             </div>
             <div>
-              <h4 className="text-text-strong font-bold mb-4">Réseaux</h4>
+              <h3 className="text-text-strong font-bold mb-4">Réseaux</h3>
               <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com/profile.php?id=61577431918424"

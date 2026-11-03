@@ -11,7 +11,7 @@ const BLOG_AGENT_READY = "/blog/site-agent-ready/";
 export const metadata: Metadata = {
   title: "Pack Agent Ready : site lisible par les assistants",
   description:
-    "Prestation sur un site déjà en ligne : robots.txt, sitemap, llms.txt et règles d'usage pour les assistants. Essentiel 190 € TTC, Complet 350 € TTC. Option sur un site neuf.",
+    "Prestation sur un site déjà en ligne : robots.txt, sitemap, llms.txt, règles d'usage. Essentiel 190 € TTC, Complet 350 € TTC. Option sur un site neuf.",
   keywords: [
     "Pack Agent Ready",
     "llms.txt",

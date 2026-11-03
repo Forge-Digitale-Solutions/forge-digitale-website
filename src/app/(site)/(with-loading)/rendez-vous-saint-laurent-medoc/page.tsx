@@ -92,8 +92,8 @@ export default function RendezVousPage() {
             zone de service, sans rue.
           </p>
           <p>
-            Forge Digitale Solutions - Anthony Marcelin (EI) - 6 rue
-            Saint-Julien, 33112 Saint-Laurent-Médoc -{" "}
+            Forge Digitale Solutions - Anthony Marcelin (EI) - Médoc, Bassin
+            d&rsquo;Arcachon, Bordeaux -{" "}
             <a
               href="tel:+33645659696"
               {...umamiAttrs("phone-click", { place: "inline" })}
@@ -109,8 +109,7 @@ export default function RendezVousPage() {
             >
               contact@forgedigitalesolutions.com
             </a>
-            . L&rsquo;adresse sert au courrier et au cadre légal, pas comme une
-            vitrine où entrer.
+            .
           </p>
           <p>
             Zone : Médoc, Bassin d&rsquo;Arcachon, Bordeaux, environ 50 km.

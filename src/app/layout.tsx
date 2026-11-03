@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Forge Digitale Solutions",
   },
   description:
-    "Expert numérique en Gironde. Création de sites internet sur-mesure et solutions informatiques (Dépannage, Linux, PC Gamer). Basé à Saint-Laurent-Médoc, partenaire des pros du Bassin d'Arcachon à Bordeaux.",
+    "Expert numérique en Gironde : sites internet sur-mesure, dépannage, Linux et PC gamer. Basé à Saint-Laurent-Médoc, du Bassin d'Arcachon à Bordeaux.",
   keywords: [
     "Informaticien Saint-Laurent-Médoc",
     "Création site web Médoc",

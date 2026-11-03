@@ -11,7 +11,7 @@ const PAGE_URL = `${SITE_URL}/creation-site-web/`;
 export const metadata: Metadata = {
   title: "Création de site web et d'application dans le Médoc",
   description:
-    "Développeur indépendant dans le Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite. Devis gratuit en Gironde.",
+    "Développeur indépendant dans le Médoc, je crée des sites et des applications adaptés à votre métier, sans formule toute faite. Devis gratuit en Gironde.",
   keywords: [
     "création site web Médoc",
     "créateur site internet Gironde",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Création de site web et d'application dans le Médoc",
     description:
-      "Développeur indépendant dans le Médoc, je crée des sites internet et des applications adaptés à votre métier. On part de votre besoin, pas d'une formule toute faite.",
+      "Développeur indépendant dans le Médoc : sites internet et applications adaptés à votre métier. Pas de formule toute faite, on part de votre besoin.",
     images: [
       {
         url: `${SITE_URL}/blog/croissance-web.jpg`,
