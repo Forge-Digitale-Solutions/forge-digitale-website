@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Conditions d'utilisation - GamePlayDev Planner",
   description:
-    "Conditions d'utilisation de GamePlayDev Planner, outil interne de Forge Digitale Solutions pour publier sur le compte TikTok @gameplaydevhw.",
+    "Conditions d'utilisation de GamePlayDev Planner, outil interne de Forge Digitale Solutions pour déposer des brouillons sur le compte TikTok @gameplaydevhw.",
   robots: {
     index: false,
     follow: true,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title:
       "Conditions d'utilisation - GamePlayDev Planner - Forge Digitale Solutions",
     description:
-      "Outil interne réservé au compte TikTok @gameplaydevhw. Connexion via TikTok Login Kit, publication via la Content Posting API.",
+      "Outil interne réservé au compte TikTok @gameplaydevhw. Connexion via TikTok Login Kit, dépôt de brouillons via la Content Posting API.",
     siteName: "Forge Digitale Solutions",
     images: [
       {
@@ -44,7 +44,7 @@ export default function GamePlayDevConditions() {
           Conditions d&apos;utilisation
         </h1>
         <p className="lead text-lg text-soft">
-          GamePlayDev Planner. Dernière mise à jour : 26 octobre 2026
+          GamePlayDev Planner. Dernière mise à jour : 4 novembre 2026
         </p>
 
         <section className="mb-10">
@@ -55,11 +55,15 @@ export default function GamePlayDevConditions() {
             <strong>Forge Digitale Solutions</strong> (EI Anthony Marcelin).
           </p>
           <p>
-            Cet outil publie, sur le compte TikTok{" "}
-            <strong>@gameplaydevhw</strong>, les vidéos des applications de
-            l&apos;éditeur, notamment Spawnzone. La connexion au compte passe
-            par <strong>TikTok Login Kit</strong>. La mise en ligne des vidéos
-            passe par la <strong>Content Posting API</strong> de TikTok.
+            Cet outil dépose en brouillon, dans la boîte de réception du
+            compte TikTok <strong>@gameplaydevhw</strong>, les vidéos des
+            applications de l&apos;éditeur, notamment Spawnzone. La connexion
+            passe par <strong>TikTok Login Kit</strong> (scopes{" "}
+            <strong>user.info.basic</strong> et{" "}
+            <strong>video.upload</strong>). Le dépôt passe par la{" "}
+            <strong>Content Posting API</strong>, en mode inbox. La
+            publication se fait ensuite à la main dans l&apos;application
+            TikTok.
           </p>
         </section>
 
@@ -102,8 +106,8 @@ export default function GamePlayDevConditions() {
           <p>
             GamePlayDev Planner est réservé à l&apos;éditeur, pour le seul
             compte TikTok <strong>@gameplaydevhw</strong>. L&apos;outil
-            n&apos;est pas proposé au public et ne constitue pas un service de
-            publication pour des tiers.
+            n&apos;est pas proposé au public. Il dépose des brouillons
+            uniquement sur le compte de l&apos;éditeur.
           </p>
         </section>
 
@@ -111,9 +115,11 @@ export default function GamePlayDevConditions() {
           <h2>4. Accès via la connexion TikTok</h2>
           <p>
             L&apos;accès à l&apos;outil se fait par la connexion TikTok (TikTok
-            Login Kit). L&apos;autorisation accordée permet d&apos;identifier le
-            compte connecté et de publier des vidéos sur ce compte, dans la
-            limite des autorisations demandées.
+            Login Kit). L&apos;autorisation accordée permet d&apos;afficher le
+            compte connecté (<strong>user.info.basic</strong>) et de déposer
+            des vidéos en brouillon dans sa boîte de réception (<strong>video.upload</strong>). Le profil affiché n&apos;est pas conservé. Les jetons sont
+            stockés de façon chiffrée. L&apos;outil ne demande pas
+            l&apos;autorisation de publier.
           </p>
         </section>
 
@@ -147,11 +153,12 @@ export default function GamePlayDevConditions() {
         </section>
 
         <section className="mb-10">
-          <h2>6. Contenu publié</h2>
+          <h2>6. Contenu déposé</h2>
           <p>
             Les vidéos envoyées par l&apos;outil, y compris celles des
-            applications de l&apos;éditeur telles que Spawnzone, sont publiées
-            sous la seule responsabilité de l&apos;éditeur.
+            applications de l&apos;éditeur telles que Spawnzone, sont déposées
+            en brouillon sous la seule responsabilité de l&apos;éditeur. La
+            mise en ligne reste manuelle dans l&apos;application TikTok.
           </p>
           <p>
             L&apos;éditeur est responsable du contenu, des droits nécessaires à
