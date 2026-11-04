@@ -5,7 +5,10 @@
 #   NEXT_PUBLIC_UMAMI_WEBSITE_ID
 # Runtime env (Dokploy → Environment, not build args):
 #   DATABASE_URI, PAYLOAD_SECRET, PAYLOAD_PUBLIC_SERVER_URL
+#   TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_REDIRECT_URI
+#   TIKTOK_ADMIN_SECRET, TIKTOK_TOKEN_ENC_KEY
 # Mount a volume on /app/media for article images.
+# TikTok tokens are sealed under /app/media/.tiktok (not a public media file).
 # Listens on 3000. Healthcheck: GET /api/health must answer exactly 200
 # (Payload boots and Postgres answers a count). Redirects count as failures.
 
@@ -48,6 +51,7 @@ COPY --from=build --chown=nextjs:nodejs /app/src ./src
 COPY --from=build --chown=nextjs:nodejs /app/scripts/import-posts.ts ./scripts/import-posts.ts
 COPY --from=build --chown=nextjs:nodejs /app/scripts/clear-dev-push-marker.mjs ./scripts/clear-dev-push-marker.mjs
 COPY --from=build --chown=nextjs:nodejs /app/scripts/start-with-migrations.sh ./scripts/start-with-migrations.sh
+COPY --from=build --chown=nextjs:nodejs /app/scripts/tiktok-inbox-draft.ts ./scripts/tiktok-inbox-draft.ts
 
 USER nextjs
 EXPOSE 3000
