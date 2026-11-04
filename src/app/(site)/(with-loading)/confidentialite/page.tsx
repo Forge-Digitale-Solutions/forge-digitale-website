@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Politique de Confidentialité",
   description:
-    "Politique de confidentialité RGPD : Umami sans cookie, Web3Forms, newsletter Brevo. Aucun cookie publicitaire.",
+    "Politique de confidentialité RGPD : Umami sans cookie, Web3Forms, newsletter Brevo, connexion TikTok interne. Aucun cookie publicitaire.",
   robots: {
     index: true,
     follow: true,
@@ -151,12 +151,54 @@ export default function Confidentialite() {
             vous restez inscrit. Après désinscription, elle est conservée avec le
             statut &quot;désinscrit&quot; afin de ne jamais vous réinscrire par
             erreur. Vous pouvez demander son effacement complet à tout moment
-            (voir Vos droits).
+            (voir la section 8).
           </p>
         </section>
 
         <section className="mb-10">
-          <h2>6. Durée de conservation</h2>
+          <h2>6. Connexion TikTok (outil interne)</h2>
+          <p>
+            <strong>Finalité :</strong> Forge Digitale Solutions utilise
+            l&apos;API TikTok (Login Kit et Content Posting API) uniquement
+            pour déposer des vidéos en brouillon sur ses propres comptes
+            TikTok. La publication se fait ensuite manuellement depuis
+            l&apos;application TikTok. Cet outil n&apos;est pas ouvert au
+            public et aucun visiteur du site n&apos;y a accès.
+          </p>
+          <p>
+            <strong>Données reçues de TikTok :</strong> l&apos;identifiant du
+            compte connecté, son nom d&apos;affichage et son avatar
+            (autorisation user.info.basic), utilisés uniquement pour afficher
+            le compte connecté, sans être conservés, et un jeton d&apos;accès
+            permettant l&apos;envoi de vidéos en brouillon (autorisation
+            video.upload). Aucune donnée d&apos;autres utilisateurs TikTok
+            n&apos;est collectée.
+          </p>
+          <p>
+            <strong>Conservation :</strong> le jeton d&apos;accès et le jeton
+            de renouvellement sont stockés de façon chiffrée sur notre
+            serveur, conservés tant que la connexion est active et supprimés
+            dès sa révocation. Ces données ne sont ni vendues ni transmises à
+            des tiers.
+          </p>
+          <p>
+            <strong>Révocation :</strong> l&apos;accès peut être retiré à tout
+            moment depuis l&apos;application TikTok (Paramètres et
+            confidentialité, puis Sécurité et autorisations, puis Applications
+            et services), ou sur demande à{" "}
+            <a
+              href="mailto:contact@forgedigitalesolutions.com"
+              {...umamiAttrs("email-click", { place: "legal" })}
+            >
+              contact@forgedigitalesolutions.com
+            </a>
+            . Ces données sont aussi soumises aux conditions d&apos;utilisation
+            et à la politique de confidentialité de TikTok.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2>7. Durée de conservation</h2>
           <p>
             Vos données de contact sont conservées pendant la durée nécessaire
             au traitement de votre demande. Si vous devenez client (achat de
@@ -167,7 +209,7 @@ export default function Confidentialite() {
         </section>
 
         <section className="mb-10">
-          <h2>7. Vos Droits</h2>
+          <h2>8. Vos Droits</h2>
           <p>
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
             rectification et de suppression de vos données. Pour l&apos;exercer,

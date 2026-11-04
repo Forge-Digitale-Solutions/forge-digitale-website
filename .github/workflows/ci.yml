@@ -43,6 +43,9 @@ jobs:
       - name: Cadratin
         run: npm run check:cadratin
 
+      - name: Tests
+        run: npm test
+
       - name: Types
         run: npx tsc --noEmit
 
