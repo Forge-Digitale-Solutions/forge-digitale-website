@@ -10,6 +10,8 @@
     "start": "next start",
     "start:prod": "sh scripts/start-with-migrations.sh",
     "lint": "eslint",
+    "test": "tsx --test src/lib/tiktok/pkce.test.ts src/lib/tiktok/oauth.test.ts src/lib/tiktok/chunking.test.ts src/lib/tiktok/crypto.test.ts src/lib/tiktok/revoke.test.ts src/lib/tiktok/verification.test.ts",
+    "tiktok:inbox": "tsx scripts/tiktok-inbox-draft.ts",
     "check:cadratin": "node scripts/check-no-cadratin.mjs",
     "payload": "payload",
     "migrate": "payload migrate",

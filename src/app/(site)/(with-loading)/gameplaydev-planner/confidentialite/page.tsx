@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Confidentialité - GamePlayDev Planner",
   description:
-    "Politique de confidentialité de GamePlayDev Planner : données TikTok (open_id, profil, jetons), finalité de publication, conservation et droits RGPD.",
+    "Politique de confidentialité de GamePlayDev Planner : profil TikTok affiché sans conservation, jetons chiffrés, dépôt de brouillons, droits RGPD.",
   robots: {
     index: false,
     follow: true,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title:
       "Confidentialité - GamePlayDev Planner - Forge Digitale Solutions",
     description:
-      "Données obtenues via TikTok Login Kit, utilisées uniquement pour publier les vidéos de l'éditeur sur @gameplaydevhw.",
+      "Données obtenues via TikTok Login Kit pour déposer des brouillons sur @gameplaydevhw. Profil non conservé, jetons chiffrés.",
     siteName: "Forge Digitale Solutions",
     images: [
       {
@@ -44,7 +44,7 @@ export default function GamePlayDevConfidentialite() {
           Politique de Confidentialité
         </h1>
         <p className="lead text-lg text-soft">
-          GamePlayDev Planner. Dernière mise à jour : 26 octobre 2026
+          GamePlayDev Planner. Dernière mise à jour : 4 novembre 2026
         </p>
 
         <section className="mb-10">
@@ -107,17 +107,21 @@ export default function GamePlayDevConfidentialite() {
           </p>
           <ul className="list-disc pl-4 space-y-2">
             <li>
-              l&apos;identifiant <strong>open_id</strong> ;
-            </li>
-            <li>
-              les informations de profil de base renvoyées avec le scope{" "}
+              l&apos;identifiant <strong>open_id</strong>, le nom
+              d&apos;affichage et l&apos;avatar renvoyés avec le scope{" "}
               <strong>user.info.basic</strong> ;
             </li>
             <li>
               les <strong>jetons d&apos;accès</strong> et les{" "}
-              <strong>jetons de rafraîchissement</strong>.
+              <strong>jetons de rafraîchissement</strong>, liés au scope{" "}
+              <strong>video.upload</strong>.
             </li>
           </ul>
+          <p>
+            L&apos;identifiant, le nom d&apos;affichage et l&apos;avatar servent
+            uniquement à afficher le compte connecté. Ils ne sont pas
+            conservés.
+          </p>
           <p>Les scopes demandés sont uniquement :</p>
           <ul className="list-disc pl-4 space-y-2">
             <li>
@@ -126,18 +130,18 @@ export default function GamePlayDevConfidentialite() {
             <li>
               <strong>video.upload</strong>
             </li>
-            <li>
-              <strong>video.publish</strong>
-            </li>
           </ul>
         </section>
 
         <section className="mb-10">
           <h2>4. Finalité</h2>
           <p>
-            Ces données servent à une seule finalité : publier les vidéos de
-            l&apos;éditeur (applications telles que Spawnzone) sur le compte
-            TikTok <strong>@gameplaydevhw</strong>, via la Content Posting API.
+            Ces données servent à une seule finalité : déposer en brouillon,
+            dans la boîte de réception TikTok du compte{" "}
+            <strong>@gameplaydevhw</strong>, les vidéos de l&apos;éditeur
+            (applications telles que Spawnzone). L&apos;envoi passe par la
+            Content Posting API, en mode inbox. La légende et la mise en ligne
+            se font ensuite à la main dans l&apos;application TikTok.
           </p>
           <p>
             Elles ne sont pas utilisées pour de la publicité, de la prospection
@@ -149,8 +153,9 @@ export default function GamePlayDevConfidentialite() {
           <h2>5. Stockage des jetons</h2>
           <p>
             Les jetons d&apos;accès et de rafraîchissement sont stockés de
-            manière sécurisée, uniquement pour maintenir la connexion nécessaire
-            à la publication.
+            façon chiffrée (AES-256-GCM) sur le serveur, uniquement pour
+            maintenir la connexion nécessaire au dépôt des brouillons. Le
+            profil affiché n&apos;est pas enregistré.
           </p>
         </section>
 
@@ -159,8 +164,8 @@ export default function GamePlayDevConfidentialite() {
           <p>
             Ces données ne sont ni vendues, ni louées, ni cédées. Elles ne sont
             pas partagées avec des tiers autres que TikTok, contacté uniquement
-            pour authentifier le compte et publier les vidéos demandées par
-            l&apos;éditeur.
+            pour authentifier le compte et déposer les vidéos en brouillon,
+            à la demande de l&apos;éditeur.
           </p>
           <p>
             TikTok traite les échanges avec ses services selon sa propre{" "}
@@ -178,18 +183,20 @@ export default function GamePlayDevConfidentialite() {
         <section className="mb-10">
           <h2>7. Durée de conservation</h2>
           <p>
-            Les données listées ci-dessus, y compris les jetons, sont conservées
-            jusqu&apos;à la révocation de l&apos;autorisation TikTok. Après cette
-            révocation, elles ne sont plus conservées pour la publication.
+            Les jetons sont conservés tant que la connexion est active. Ils
+            sont supprimés dès la révocation de l&apos;autorisation TikTok. Le
+            profil affiché (identifiant, nom, avatar) n&apos;est pas conservé.
           </p>
         </section>
 
         <section className="mb-10">
           <h2>8. Révocation</h2>
           <p>
-            L&apos;accès accordé à GamePlayDev Planner peut être révoqué à tout
-            moment depuis les réglages TikTok du compte connecté. La révocation
-            retire l&apos;autorisation d&apos;utiliser les jetons pour publier.
+            L&apos;accès accordé à GamePlayDev Planner peut être retiré depuis
+            l&apos;outil (action Déconnecter, qui révoque le jeton auprès de
+            TikTok puis l&apos;efface) ou depuis les réglages TikTok du compte
+            connecté. La révocation retire l&apos;autorisation d&apos;envoyer
+            des brouillons.
           </p>
         </section>
 

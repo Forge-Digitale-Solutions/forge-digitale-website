@@ -158,6 +158,6 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|.*\\.(?:jpg|jpeg|png|webp|svg|ico|woff2|css|js)$).*)",
+    "/((?!_next/static|_next/image|api/tiktok|.*\\.(?:jpg|jpeg|png|webp|svg|ico|woff2|css|js)$).*)",
   ],
 };
