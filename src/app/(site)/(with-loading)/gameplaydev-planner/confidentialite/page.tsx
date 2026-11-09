@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `${SITE_URL}${PATH}`,
+    canonical: null,
   },
   openGraph: {
     type: "website",
