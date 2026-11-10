@@ -10,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/rendez-vous-saint-laurent-medoc/`;
 export const metadata: Metadata = {
   title: "Rendez-vous à Saint-Laurent-Médoc",
   description:
-    "Indépendant à Saint-Laurent-Médoc. Sites en visio ou téléphone. RDV en lieu public. Récupération PC sur rendez-vous. Médoc, Bassin, Bordeaux (~50 km).",
+    "Indépendant à Saint-Laurent-Médoc. Sites en visio ou téléphone. RDV en lieu public. Récupération PC sur rendez-vous. Médoc, Bassin d'Arcachon et Bordeaux.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Rendez-vous à Saint-Laurent-Médoc",
     description:
-      "Indépendant à Saint-Laurent-Médoc. Sites en visio ou téléphone. RDV en lieu public. Récupération PC sur rendez-vous. Médoc, Bassin, Bordeaux (~50 km).",
+      "Indépendant à Saint-Laurent-Médoc. Sites en visio ou téléphone. RDV en lieu public. Récupération PC sur rendez-vous. Médoc, Bassin d'Arcachon et Bordeaux.",
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -112,7 +112,7 @@ export default function RendezVousPage() {
             .
           </p>
           <p>
-            Zone : Médoc, Bassin d&rsquo;Arcachon, Bordeaux, environ 50 km.
+            Zone : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
             Déplacements exceptionnels, sur devis.
           </p>
         </div>
