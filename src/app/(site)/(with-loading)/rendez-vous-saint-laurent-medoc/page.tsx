@@ -113,7 +113,6 @@ export default function RendezVousPage() {
           </p>
           <p>
             Zone : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
-            Déplacements exceptionnels, sur devis.
           </p>
         </div>
 
