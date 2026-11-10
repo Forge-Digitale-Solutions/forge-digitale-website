@@ -86,7 +86,7 @@ const qa = [
   },
   {
     q: "Intervenez-vous à domicile ?",
-    a: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Déplacements exceptionnels, devis, environ 50 km (Médoc, Bassin, Bordeaux).",
+    a: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Médoc, Bassin d'Arcachon et Bordeaux.",
   },
   {
     q: "Sans rendez-vous ?",
@@ -318,8 +318,7 @@ export default function FaqPage() {
               <p>
                 Je ne reçois pas le public chez moi. Pour le web : visio,
                 téléphone, ou RDV en lieu public. Pour un PC : récupération sur
-                rendez-vous. Déplacements exceptionnels, devis, environ 50 km
-                (Médoc, Bassin, Bordeaux).
+                rendez-vous. Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
               </p>
             </Qa>
             <Qa q="Sans rendez-vous ?">

@@ -190,8 +190,7 @@ export default function BassinPage() {
             .
           </p>
           <p>
-            Zone habituelle : Médoc, Bassin d&rsquo;Arcachon, Bordeaux, environ
-            50 km. Déplacements exceptionnels, sur devis.
+            Zone habituelle : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
