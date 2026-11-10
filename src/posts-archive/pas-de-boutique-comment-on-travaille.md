@@ -47,4 +47,4 @@ Je ne promets pas une place sur Google. Je promets un mode de travail lisible : 
 
 Appelez le 06 45 65 96 96, écrivez à contact@forgedigitalesolutions.com, ou [le formulaire](/#contact). On fixe d’abord le besoin, ensuite le créneau s’il y en a un.
 
-Saint-Laurent-Médoc. Médoc, Bassin, Bordeaux, environ 50 km. Déplacements exceptionnels, sur devis.
+Saint-Laurent-Médoc. Médoc, Bassin d’Arcachon et Bordeaux.

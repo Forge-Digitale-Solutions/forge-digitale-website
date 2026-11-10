@@ -48,7 +48,7 @@ export function FAQSchema() {
         name: "Intervenez-vous à domicile ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Déplacements exceptionnels, sur devis (Médoc, Bassin d'Arcachon et Bordeaux).",
+          text: "Je ne reçois pas le public chez moi. Pour le web : visio, téléphone, ou RDV en lieu public. Pour un PC : récupération sur rendez-vous. Médoc, Bassin d'Arcachon et Bordeaux.",
         },
       },
     ],

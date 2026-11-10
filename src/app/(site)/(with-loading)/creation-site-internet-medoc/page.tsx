@@ -135,8 +135,7 @@ export default function CreationSiteInternetMedocPage() {
           <p>
             Un site internet se fait très bien à distance. Le rendez-vous
             physique est l&rsquo;exception. Si on se voit, c&rsquo;est RDV en
-            lieu public ou visio, ou dans un rayon d&rsquo;environ 50 km, sur
-            devis.
+            lieu public ou visio : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">
@@ -180,7 +179,7 @@ export default function CreationSiteInternetMedocPage() {
           </p>
           <p>
             Je travaille depuis Saint-Laurent-Médoc. Médoc, Bassin
-            d&rsquo;Arcachon, Bordeaux, dans un rayon d&rsquo;environ 50 km.
+            d&rsquo;Arcachon et Bordeaux.
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">

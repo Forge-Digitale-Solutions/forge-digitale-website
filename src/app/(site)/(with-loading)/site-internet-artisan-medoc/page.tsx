@@ -182,8 +182,7 @@ export default function ArtisanPage() {
             .
           </p>
           <p>
-            Zone : Saint-Laurent-Médoc, Médoc, Bassin d&rsquo;Arcachon, Bordeaux,
-            environ 50 km.
+            Zone : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
           </p>
 
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
