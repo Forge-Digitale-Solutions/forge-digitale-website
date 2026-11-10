@@ -239,8 +239,8 @@ const faqData: FaqCategory[] = [
             On calcule un créneau pour le{" "}
             <strong>dépôt et la récupération du matériel</strong>.
             <br />
-            Les déplacements sont exceptionnels, devis, environ 50 km (Médoc,
-            Bassin, Bordeaux).
+            Les déplacements sont exceptionnels, sur devis (Médoc, Bassin
+            d&apos;Arcachon et Bordeaux).
           </p>
         ),
       },
