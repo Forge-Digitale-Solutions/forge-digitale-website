@@ -12,7 +12,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
+import { AppointmentButton } from "@/components/AppointmentButton";
 import { track, umamiAttrs } from "@/lib/track";
 
 const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
@@ -445,7 +445,7 @@ export function Contact() {
                 vous convient.
               </p>
 
-              <CalendlyPopupButton />
+              <AppointmentButton />
             </motion.div>
           </motion.div>
 

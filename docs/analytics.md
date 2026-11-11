@@ -30,7 +30,7 @@ Le script est absent si `NODE_ENV` n'est pas `production`, ou si une des deux va
 - Liens `tel:`, `mailto:`, `/#contact` et `tally.so` dans le HTML affiché (Markdown ou article Payload) : un seul écouteur de clic (`UmamiAutoLinks`). Rien à configurer dans Payload. Les liens déjà marqués sont ignorés, donc pas de double compte.
 - Succès après une réponse serveur : `track()` dans `src/lib/track.ts`.
 
-Le bouton Calendly reste `appointment-click`. Un lien vers un questionnaire Tally, où qu'il soit écrit, est `tally-click`.
+Le bouton de rendez-vous reste `appointment-click`. Un lien vers un questionnaire Tally, où qu'il soit écrit, est `tally-click`.
 
 ## Événements
 
@@ -82,7 +82,7 @@ Liens vers `/#contact` (devis, contact, diagnostic).
 
 ### `appointment-click`
 
-Bouton Calendly de la section contact. L'URL Calendly n'est pas envoyée.
+Bouton de rendez-vous de la section contact. L'URL de réservation n'est pas envoyée.
 
 - `place` : `contact`
 
