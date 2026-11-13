@@ -196,7 +196,14 @@ export default function CreationSiteInternetMedocPage() {
               murale. L&rsquo;activité, une galerie, entreprises et particuliers.
             </li>
             <li>
-              <strong>Rugby Handi Sud Bassin</strong>, à La Teste-de-Buch : site
+              <strong>
+                <Link
+                  href="/creation-site-web-bassin-arcachon/"
+                  className="text-accent hover:underline"
+                >
+                  Rugby Handi Sud Bassin
+                </Link>
+              </strong>, à La Teste-de-Buch : site
               associatif, avec un back-office pour que les bénévoles mettent à
               jour eux-mêmes.
             </li>
