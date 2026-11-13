@@ -94,7 +94,13 @@ export default function DeveloppeurMedocPage() {
           <p>
             Je suis Anthony Marcelin. Je développe des sites internet et
             des applications depuis le Médoc, pour les professionnels de la
-            Gironde et du Bassin d&rsquo;Arcachon. Pas une agence, mais un
+            Gironde et du{" "}
+            <Link
+              href="/creation-site-web-bassin-arcachon/"
+              className="text-accent hover:underline"
+            >
+              Bassin d&rsquo;Arcachon
+            </Link>. Pas une agence, mais un
             développeur qui prend votre projet du début à la fin.
           </p>
 

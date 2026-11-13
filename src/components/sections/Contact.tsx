@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section";
 import {
@@ -408,7 +409,12 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-faint font-medium uppercase tracking-wide">
-                    Zone
+                    <Link
+                      href="/zone-intervention/"
+                      className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                    >
+                      Zone d&apos;intervention
+                    </Link>
                   </p>
                   <p className="text-text-strong text-lg font-medium">
                     Saint-Laurent-Médoc (33112)

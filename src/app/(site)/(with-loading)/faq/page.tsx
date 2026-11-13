@@ -318,7 +318,10 @@ export default function FaqPage() {
               <p>
                 Je ne reçois pas le public chez moi. Pour le web : visio,
                 téléphone, ou RDV en lieu public. Pour un PC : récupération sur
-                rendez-vous. Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
+                rendez-vous.{" "}
+                <Link href="/zone-intervention/" className="text-accent hover:underline">
+                  Médoc, Bassin d&rsquo;Arcachon et Bordeaux
+                </Link>.
               </p>
             </Qa>
             <Qa q="Sans rendez-vous ?">

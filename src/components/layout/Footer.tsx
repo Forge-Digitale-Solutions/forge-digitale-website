@@ -105,6 +105,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/zone-intervention/"
+                  className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+                >
+                  Zone d&apos;intervention
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/creation-site-web-bassin-arcachon/"
                   className="hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
                 >

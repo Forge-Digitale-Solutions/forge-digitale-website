@@ -101,8 +101,14 @@ export default function CreationSiteWebPage() {
           <p>
             Je suis Anthony Marcelin, développeur indépendant installé dans
             le Médoc. Je crée des sites internet et des applications pour les
-            professionnels et les particuliers de la région, jusqu&rsquo;au Bassin
-            d&rsquo;Arcachon et à Bordeaux. Vous n&rsquo;avez pas affaire à une
+            professionnels et les particuliers de la région, jusqu&rsquo;au{" "}
+            <Link
+              href="/creation-site-web-bassin-arcachon/"
+              className="text-accent hover:underline"
+            >
+              Bassin d&rsquo;Arcachon
+            </Link>{" "}
+            et à Bordeaux. Vous n&rsquo;avez pas affaire à une
             agence avec une chaîne d&rsquo;intermédiaires : la personne qui vous
             répond est celle qui développe votre projet.
           </p>
