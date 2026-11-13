@@ -30,6 +30,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const estranRoutes = ["/estran/confidentialite", "/estran/assistance"].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date("2026-11-13"),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    }),
+  );
+
   const newsletterRoute = {
     url: `${baseUrl}/newsletter`,
     lastModified: new Date("2026-10-13"),
@@ -73,6 +82,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogRoute,
     newsletterRoute,
     ...legalRoutes,
+    ...estranRoutes,
     ...blogRoutes,
   ].map((r) => ({ ...r, url: r.url.endsWith("/") ? r.url : `${r.url}/` }));
 }
