@@ -8,7 +8,7 @@ const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/developpeur-medoc/`;
 
 export const metadata: Metadata = {
-  title: "Développeur web indépendant dans le Médoc et le Bassin d'Arcachon",
+  title: "Développeur web indépendant dans le Médoc",
   description:
     "Anthony Marcelin, développeur web indépendant au Médoc. Sites et applications sur-mesure en Gironde, un seul interlocuteur du devis à la mise en ligne.",
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: PAGE_URL,
     siteName: "Forge Digitale Solutions",
-    title: "Développeur web indépendant dans le Médoc et le Bassin d'Arcachon",
+    title: "Développeur web indépendant dans le Médoc",
     description:
       "Anthony Marcelin, développeur web indépendant dans le Médoc. Sites et applications sur-mesure pour les pros de Gironde, du devis à la mise en ligne.",
     images: [

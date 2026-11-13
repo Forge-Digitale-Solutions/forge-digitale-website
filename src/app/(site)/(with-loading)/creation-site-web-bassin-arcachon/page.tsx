@@ -7,9 +7,9 @@ import { umamiAttrs } from "@/lib/track";
 const SITE_URL = "https://forgedigitalesolutions.com";
 const PAGE_URL = `${SITE_URL}/creation-site-web-bassin-arcachon/`;
 
-const TITLE = "Création de site web sur le Bassin d’Arcachon";
+const TITLE = "Création de site internet à Arcachon et sur le Bassin";
 const DESCRIPTION =
-  "Site pour association ou commerce du Bassin. Exemple : Rugby Handi Sud Bassin à La Teste. Vitrine à partir de 500 € TTC, depuis Saint-Laurent-Médoc.";
+  "Création de site internet à Arcachon et sur le Bassin d’Arcachon. Vitrine claire, lisible sur téléphone, pour une association ou un commerce.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -81,29 +81,25 @@ export default function BassinPage() {
         </nav>
 
         <h1 className="text-3xl md:text-5xl font-bold text-text-strong mb-6 leading-tight">
-          Création de site web sur le Bassin d&rsquo;Arcachon
+          Création de site internet sur le Bassin d&rsquo;Arcachon
         </h1>
 
         <div className="space-y-6 text-lg text-soft leading-relaxed">
           <p>
-            Je m&rsquo;appelle Anthony Marcelin. Je crée des sites internet
-            depuis Saint-Laurent-Médoc, pour des projets sur le Bassin
-            d&rsquo;Arcachon aussi. Un seul interlocuteur : moi. Passionné de
-            technique depuis vingt ans, titulaire du titre professionnel de
-            Concepteur Développeur d&rsquo;Applications.
-          </p>
-          <p>
-            Si vous êtes une association, un commerce ou un studio du Bassin et
-            que vous voulez un site clair, lisible sur téléphone, sans passer
-            par une agence anonyme, cette page est pour vous. Le détail général
-            de la prestation est sur{" "}
+            Je crée des sites internet pour les associations, les commerces et
+            les studios d&rsquo;Arcachon et du Bassin. Un site clair, lisible
+            sur téléphone, que vous pouvez mettre à jour sans dépendre
+            d&rsquo;un prestataire à chaque ligne. Un seul interlocuteur : moi,
+            Anthony Marcelin, titulaire du titre professionnel de Concepteur
+            Développeur d&rsquo;Applications. Le détail général de la prestation
+            est sur la page{" "}
             <Link
               href="/creation-site-web/"
               className="text-accent hover:underline"
             >
               création de site web
             </Link>
-            . Ici, l&rsquo;ancrage, c&rsquo;est le Bassin et un projet déjà
+            . Ici, l&rsquo;ancrage, c&rsquo;est le Bassin, et un projet déjà
             livré à La Teste-de-Buch.
           </p>
 
