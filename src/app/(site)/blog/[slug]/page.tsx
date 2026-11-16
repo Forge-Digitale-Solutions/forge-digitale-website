@@ -4,9 +4,11 @@ import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ArticleLightbox } from "@/components/blog/ArticleLightbox";
+import { PostFaq } from "@/components/blog/PostFaq";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
-import { ArticleLightbox } from "@/components/blog/ArticleLightbox";
+import { PostFaqSchema } from "@/components/seo/PostFaqSchema";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { ArticleReadMarker } from "@/components/blog/ArticleReadMarker";
 import { umamiAttrs } from "@/lib/track";
@@ -125,6 +127,7 @@ export default async function Post({
           { name: postData.title, url: `${SITE_URL}/blog/${slug}/` },
         ]}
       />
+      <PostFaqSchema items={postData.faq} />
 
       <ArticleLightbox>
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
@@ -207,6 +210,8 @@ export default async function Post({
             />
             <ArticleReadMarker slug={slug} />
           </div>
+
+          <PostFaq items={postData.faq} />
 
           <div className="mt-12 pt-8 border-t border-default max-w-md">
             <NewsletterForm variant="article" />
