@@ -6,6 +6,7 @@ import html from "remark-html";
 import remarkGfm from "remark-gfm";
 import { getPayload } from "payload";
 import config from "@payload-config";
+import { normalizeFaq } from "./faq-page";
 
 const postsDirectory = path.join(process.cwd(), "src/posts-archive");
 
@@ -59,7 +60,7 @@ type PostDoc = {
   metaTitle?: string | null;
   metaDescription?: string | null;
   ogImage?: MediaDoc | number | string | null;
-  faq?: { question?: string | null; answer?: string | null }[] | null;
+  faq?: { question?: unknown; answer?: unknown }[] | null;
 };
 
 function day(value: string | undefined | null): string {
@@ -120,13 +121,7 @@ export function formatImageCreditMarkdown(credit: ImageCredit): string {
 }
 
 function faqItems(faq: PostDoc["faq"]): PostFaqItem[] | undefined {
-  if (!faq?.length) return undefined;
-  const items = faq
-    .map((item) => ({
-      question: item.question?.trim() || "",
-      answer: item.answer?.trim() || "",
-    }))
-    .filter((item) => item.question && item.answer);
+  const items = normalizeFaq(faq);
   return items.length ? items : undefined;
 }
 
