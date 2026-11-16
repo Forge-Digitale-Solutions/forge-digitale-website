@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Création de site web sur le Bassin d’Arcachon, Forge Digitale Solutions",
+        alt: "Création de site internet sur le Bassin d’Arcachon",
       },
     ],
   },

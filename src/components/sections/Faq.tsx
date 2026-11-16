@@ -239,7 +239,7 @@ const faqData: FaqCategory[] = [
             On calcule un créneau pour le{" "}
             <strong>dépôt et la récupération du matériel</strong>.
             <br />
-            Médoc, Bassin d&apos;Arcachon et Bordeaux.
+            Zone : le Médoc, le Bassin d&rsquo;Arcachon et Bordeaux.
           </p>
         ),
       },
