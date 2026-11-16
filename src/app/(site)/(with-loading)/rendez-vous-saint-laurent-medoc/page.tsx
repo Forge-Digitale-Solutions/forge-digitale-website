@@ -112,7 +112,7 @@ export default function RendezVousPage() {
             .
           </p>
           <p>
-            Zone : Médoc, Bassin d&rsquo;Arcachon et Bordeaux.
+            Zone : le Médoc, le Bassin d&rsquo;Arcachon et Bordeaux.
           </p>
         </div>
 
