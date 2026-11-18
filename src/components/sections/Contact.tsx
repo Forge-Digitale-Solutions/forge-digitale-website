@@ -144,7 +144,17 @@ async function postContact(
     body: formData,
     signal,
   });
-  const data = (await response.json()) as { success?: boolean; message?: string };
+  let data: { success?: boolean; message?: string };
+  try {
+    data = (await response.json()) as { success?: boolean; message?: string };
+  } catch {
+    // Réponse non JSON (page anti-robot, proxy) : à distinguer d'une coupure réseau.
+    return {
+      ok: false,
+      message: "Une erreur technique a empêché l'envoi du message. Écrivez à contact@forgedigitalesolutions.com.",
+      errorCode: `bad-response-${response.status}`,
+    };
+  }
 
   if (data.success) {
     return {
