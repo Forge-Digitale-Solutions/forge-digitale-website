@@ -18,7 +18,7 @@ Site vitrine + blog pour un artisan numérique à Saint-Laurent-Médoc (Gironde)
 
 Chaîne : tech lead (Timoty) → sous-dev du repo → orchestrateur Orca → workers. Le sous-dev agit comme un humain devant Orca : il ne code pas lui-même, il pilote.
 
-1. **Ticket prêt** : issue GitHub avec contexte, critères d'acceptation et étiquette `ready-for-agents`. Sinon, le tech lead complète avant de lancer.
+1. **Ticket prêt** : le tech lead donne au sous-dev une demande précise (contexte, résultat attendu, critères de fin).
 2. **Branche** : depuis `dev` à jour, nommée `feat/<sujet>` ou `fix/<sujet>`.
 3. **Orchestrateur** : le sous-dev ouvre une session Orca sur orca-serv (`~/orca/projects/forge-digitale-website`) avec Claude Opus 5.5, effort `medium`, et lui donne le ticket. Mode d'emploi Orca : `orca agent-context` et `orca skills get orchestration --full`.
 4. **Plan puis délégation** : l'orchestrateur écrit un plan court, puis délègue le code aux workers Orca : DeepSeek V4.1 Flash via OpenCode (`opencode-go/deepseek-v4.1-flash`) par défaut ; Mistral (Codestral) ou Antigravity en renfort. Jamais DeepSeek V4 Pro. pstack (`$pstack-<nom>`) seulement si le ticket le demande.
