@@ -380,6 +380,7 @@ export function Footer() {
 
         <div className="border-t border-default pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-faint">
           <p>© {currentYear} Forge Digitale Solutions. Tous droits réservés.</p>
+          <p>Prix nets : TVA non applicable, art. 293 B du CGI.</p>
           <div className="flex gap-6">
             <Link
               href="/cgv"

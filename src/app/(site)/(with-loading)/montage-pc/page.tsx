@@ -10,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/montage-pc/`;
 export const metadata: Metadata = {
   title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
   description:
-    "Montage de PC selon usage et budget (jeu, travail, famille). Vous achetez les pièces, j'assemble et règle. Gironde, sur rendez-vous. Forfait à 149 € TTC.",
+    "Montage de PC selon usage et budget (jeu, travail, famille). Vous achetez les pièces, j'assemble et règle. Gironde, sur rendez-vous. Forfait à 149 €.",
   keywords: [
     "montage PC Gironde",
     "montage PC gamer Bordeaux",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Montage PC sur-mesure en Gironde (gamer, bureautique)",
     description:
-      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 € TTC, Médoc, sur rendez-vous.",
+      "Montage de PC adapté à votre usage et votre budget. Vous achetez les pièces, je les assemble et règle tout. Forfait à 149 €, Médoc, sur rendez-vous.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-build.jpg`,
@@ -61,7 +61,7 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "149",
-    description: "Forfait montage complet, 149 € TTC (pièces achetées par le client). TVA non applicable, article 293 B du CGI.",
+    description: "Forfait montage complet, 149 € (pièces achetées par le client). TVA non applicable, article 293 B du CGI.",
   },
 };
 
@@ -127,7 +127,7 @@ export default function MontagePcPage() {
             jour le BIOS, j&rsquo;active le profil mémoire (XMP ou EXPO), je règle
             la ventilation pour que ça reste silencieux, et j&rsquo;installe le
             système pour vous la rendre prête à l&rsquo;emploi. Le forfait montage
-            est à 149 € TTC.
+            est à 149 €.
           </p>
 
           <p>
