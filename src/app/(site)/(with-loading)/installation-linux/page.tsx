@@ -10,7 +10,7 @@ const PAGE_URL = `${SITE_URL}/installation-linux/`;
 export const metadata: Metadata = {
   title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
   description:
-    "PC trop ancien pour Windows 11 ? Installation de Linux Mint dans le Médoc et sur le Bassin d'Arcachon, forfait Renaissance à 69 € TTC.",
+    "PC trop ancien pour Windows 11 ? Installation de Linux Mint dans le Médoc et sur le Bassin d'Arcachon, forfait Renaissance à 69 €.",
   keywords: [
     "installation Linux Médoc",
     "passage Windows à Linux",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Forge Digitale Solutions",
     title: "Installation Linux : redonner vie à un vieux PC dans le Médoc",
     description:
-      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 € TTC.",
+      "J'installe Linux Mint pour relancer un PC devenu lent ou abandonné par Windows, depuis Saint-Laurent-Médoc. Forfait Renaissance à 69 €.",
     images: [
       {
         url: `${SITE_URL}/blog/pc-mint.jpg`,
@@ -61,7 +61,7 @@ const serviceSchema = {
     "@type": "Offer",
     priceCurrency: "EUR",
     price: "69",
-    description: "Forfait Renaissance, 69 € TTC : installation Linux Mint clé en main. TVA non applicable, article 293 B du CGI.",
+    description: "Forfait Renaissance, 69 € : installation Linux Mint clé en main. TVA non applicable, article 293 B du CGI.",
   },
 };
 
@@ -136,7 +136,7 @@ export default function InstallationLinuxPage() {
             fichiers avant l&rsquo;opération, le nettoyage de la machine,
             l&rsquo;installation de Linux Mint configuré pour ressembler à
             Windows, le réglage des périphériques (Wi-Fi, imprimante, son) et une
-            heure de prise en main avec vous. Le tout pour 69 € TTC, depuis
+            heure de prise en main avec vous. Le tout pour 69 €, depuis
             Saint-Laurent-Médoc, en deux heures environ.
           </p>
 

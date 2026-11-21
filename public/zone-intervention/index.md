@@ -42,7 +42,7 @@ Du lundi au vendredi, de 8 h 30 à 18 h. Vous pouvez me joindre par téléphone,
 
 ## Ce qui se décide au devis
 
-- **La création** : à partir de 500 € TTC pour un site une page, puis sur devis selon ce que le site doit faire, payée une fois. L'article [prix d'un site internet d'artisan](/blog/prix-site-internet-artisan/) explique comment lire un devis et donne un exemple de forfait.
+- **La création** : à partir de 500 € pour un site une page, puis sur devis selon ce que le site doit faire, payée une fois. L'article [prix d'un site internet d'artisan](/blog/prix-site-internet-artisan/) explique comment lire un devis et donne un exemple de forfait.
 - **La maintenance et l'hébergement** : au devis, sans montant standard. Soit vous gérez vous-même le site et l'hébergement, soit je m'en occupe et ils sont facturés chaque mois, comme prévu au devis (page [maintenance de site web](/maintenance-site-web/)).
 - **Être trouvé dans sa commune** : un site clair et une fiche Google bien remplie aident vos clients à vous trouver. Je ne promets pas de position dans Google. L'article sur la [fiche Google des artisans](/blog/fiche-google-artisans/) explique comment la régler.
 

@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/site-internet-artisan-medoc/`;
 
 const TITLE = "Site internet pour artisan et commerçant dans le Médoc";
 const DESCRIPTION =
-  "Site vitrine pour artisans et commerces du Médoc, comme la Charcuterie Campagnarde. À partir de 500 € TTC, puis sur devis.";
+  "Site vitrine pour artisans et commerces du Médoc, comme la Charcuterie Campagnarde. À partir de 500 €, puis sur devis.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -188,7 +188,7 @@ export default function ArtisanPage() {
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
           <p>
             Une vitrine claire, avec un espace pour mettre à jour le contenu, à
-            partir de 500 € TTC. Devis après un échange. Pas de catalogue de
+            partir de 500 €. Devis après un échange. Pas de catalogue de
             formules.
           </p>
           <p>
