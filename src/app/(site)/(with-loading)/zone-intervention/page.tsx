@@ -219,7 +219,7 @@ export default function ZoneInterventionPage() {
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong>La création</strong> : à partir de 500 € pour un
+              <strong>La création</strong> : à partir de 500 € TTC pour un
               site une page, puis sur devis selon ce que le site doit faire,
               payée une fois. L&rsquo;article{" "}
               <Link href="/blog/prix-site-internet-artisan/" className={linkClass}>

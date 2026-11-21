@@ -192,7 +192,7 @@ export default function BassinPage() {
           <h2 className="text-2xl font-bold text-text-strong">Budget</h2>
           <p>
             Une vitrine claire, avec un espace pour mettre à jour le contenu,
-            commence à partir de 500 €. Le devis suit ce que le site doit
+            commence à partir de 500 € TTC. Le devis suit ce que le site doit
             vraiment faire. L&rsquo;échange et le devis sont gratuits.
           </p>
           <p>

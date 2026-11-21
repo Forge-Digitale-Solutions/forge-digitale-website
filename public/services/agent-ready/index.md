@@ -1,6 +1,6 @@
 ---
 title: Pack Agent Ready | Forge Digitale Solutions
-description: Site existant lisible par les assistants. Essentiel 190 €, Complet 350 €. Option site neuf +90 € ou +190 €.
+description: Site existant lisible par les assistants. Essentiel 190 € TTC, Complet 350 € TTC. Option site neuf +90 € ou +190 € TTC.
 ---
 
 # Pack Agent Ready
@@ -10,15 +10,15 @@ Prestation sur un site déjà en ligne : le rendre trouvable et lisible par les 
 ## Pour qui
 
 - TPE, artisan, commerce local avec un site déjà en ligne : prestation seule.
-- Site neuf Forge Digitale Solutions : option sur le devis. Ticket d'entrée du site : à partir de 500 €.
+- Site neuf Forge Digitale Solutions : option sur le devis. Ticket d'entrée du site : à partir de 500 € TTC.
 - Boutique lourde, application, authentification entre agents : hors pack.
 
 ## Prix (site existant)
 
 TVA non applicable, article 293 B du CGI.
 
-- Essentiel : **190 €** (3 à 5 jours ouvrés après accès)
-- Complet : **350 €** (5 à 8 jours ouvrés)
+- Essentiel : **190 € TTC** (3 à 5 jours ouvrés après accès)
+- Complet : **350 € TTC** (5 à 8 jours ouvrés)
 
 ### Essentiel
 
@@ -34,13 +34,13 @@ Refonte, rédaction, fiche Google, publicité, Markdown complet du site, DNS-AID
 
 ## Option sur un site neuf FDS
 
-- Essentiel : **+90 €**
-- Complet : **+190 €**
+- Essentiel : **+90 € TTC**
+- Complet : **+190 € TTC**
 
 ## Majorations, dites avant devis
 
-- CMS fermé sans accès fichiers : +100 à +200 €, refus, ou conseil seul 150 €.
-- Multilingue ou plus de 50 URL à la main : +100 €.
+- CMS fermé sans accès fichiers : +100 à +200 € TTC, refus, ou conseil seul 150 € TTC.
+- Multilingue ou plus de 50 URL à la main : +100 € TTC.
 - Accès manquants : délai suspendu, devis gelé 30 jours.
 
 ## Déroulement
