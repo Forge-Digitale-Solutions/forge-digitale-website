@@ -6,7 +6,7 @@ export const UMAMI_EVENTS = [
   "quote-click",
   "appointment-click",
   "whatsapp-click",
-  "newsletter-submit",
+  "newsletter-signup",
   "newsletter-error",
   "grilla-click",
   "tool-click",

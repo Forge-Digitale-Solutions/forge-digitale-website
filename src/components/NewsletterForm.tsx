@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useId, useState, type FormEvent } from "react";
 import { Loader2 } from "lucide-react";
 import {
+  NEWSLETTER_CONSENT_MESSAGE,
   NEWSLETTER_ERROR_MESSAGE,
   NEWSLETTER_INVALID_EMAIL_MESSAGE,
   NEWSLETTER_SUCCESS_MESSAGE,
@@ -21,8 +22,10 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
   const formId = useId();
   const emailId = `${formId}-email`;
   const honeypotId = `${formId}-website`;
+  const consentId = `${formId}-consent`;
   const [email, setEmail] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -38,6 +41,12 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
       return;
     }
 
+    if (!consent) {
+      setStatus("error");
+      setMessage(NEWSLETTER_CONSENT_MESSAGE);
+      return;
+    }
+
     setStatus("submitting");
     setMessage("");
 
@@ -45,7 +54,7 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
       const response = await fetch("/api/newsletter/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email: trimmed, website: honeypot }),
+        body: JSON.stringify({ email: trimmed, website: honeypot, consent }),
       });
       const data = (await response.json()) as {
         ok?: boolean;
@@ -53,7 +62,7 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
       };
 
       if (data.ok) {
-        track("newsletter-submit", { place: variant });
+        track("newsletter-signup", { place: variant });
         setStatus("success");
         setMessage(data.message || NEWSLETTER_SUCCESS_MESSAGE);
         setEmail("");
@@ -150,16 +159,39 @@ export function NewsletterForm({ variant = "footer" }: NewsletterFormProps) {
         </div>
 
         <p className="text-xs text-faint leading-snug">
-          Les nouveautés de Forge Digitale Solutions par email : articles, nouveaux
-          services. Désinscription en un clic.{" "}
-          <Link
-            href="/confidentialite/"
-            className="underline hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
-          >
-            Voir la politique de confidentialité
-          </Link>
-          .
+          Un mail par mois : conseils concrets pour le site et la visibilité des
+          artisans et commerçants du Médoc, du Bassin et de Bordeaux.
         </p>
+
+        <div className="flex items-start gap-2">
+          <input
+            id={consentId}
+            name="consent"
+            type="checkbox"
+            required
+            checked={consent}
+            onChange={(e) => {
+              setConsent(e.target.checked);
+              if (status === "error" && message === NEWSLETTER_CONSENT_MESSAGE) {
+                setStatus("idle");
+                setMessage("");
+              }
+            }}
+            disabled={status === "submitting" || status === "success"}
+            className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
+          />
+          <label htmlFor={consentId} className="text-xs text-faint leading-snug">
+            J&apos;accepte de recevoir la newsletter de Forge Digitale Solutions.
+            Confirmation par e-mail, désinscription en un clic.{" "}
+            <Link
+              href="/confidentialite/"
+              className="underline hover:text-accent focus-visible:text-accent focus-visible:outline-1 focus-visible:outline-accent rounded transition-colors"
+            >
+              Politique de confidentialité
+            </Link>
+            .
+          </label>
+        </div>
 
         {status === "success" && (
           <p
