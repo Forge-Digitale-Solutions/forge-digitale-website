@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { notifyPublication } from "./hooks/notifyPublication";
 
 export const Posts: CollectionConfig = {
   slug: "posts",
@@ -18,6 +19,9 @@ export const Posts: CollectionConfig = {
   },
   versions: {
     drafts: true,
+  },
+  hooks: {
+    afterChange: [notifyPublication],
   },
   fields: [
     {
