@@ -80,7 +80,7 @@ export function Header() {
           >
             <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm border border-default transition-transform group-hover:scale-105">
               <Image
-                src="/logos/Logo1rond.png"
+                src="/logos/logo-96.webp"
                 alt="Forge Digitale Solutions"
                 fill
                 className="object-cover"
