@@ -96,11 +96,11 @@ export function About() {
           >
             <div className="relative aspect-square rounded-xl overflow-hidden border border-default shadow-lg bg-surface-card">
               <Image
-                src="/images/about_picture.jpg"
+                src="/images/about_picture.webp"
                 alt="Anthony Marcelin, créateur de sites à Saint-Laurent-Médoc"
                 fill
+                sizes="(min-width: 1024px) 384px, 100vw"
                 className="object-cover"
-                priority
               />
             </div>
 

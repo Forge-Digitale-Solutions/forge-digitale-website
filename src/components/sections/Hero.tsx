@@ -60,7 +60,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
 
           <div className="relative max-w-4xl pt-12 md:pt-16">
             <motion.p
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="fds-eyebrow mb-6"
@@ -69,7 +69,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             </motion.p>
 
             <motion.h1
-              initial={{ opacity: 0, y: 24 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
               className="font-display text-2xl font-bold uppercase leading-[1.04] tracking-tight text-text-strong text-balance sm:text-4xl md:text-5xl"
@@ -79,7 +79,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
               className="mt-6 max-w-xl text-md leading-relaxed text-soft"
@@ -94,7 +94,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25, ease: "easeOut" }}
               className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
@@ -124,7 +124,7 @@ export function Hero({ latestPost }: { latestPost?: LatestPostLink | null }) {
             </motion.div>
 
             <motion.ul
-              initial={{ opacity: 0 }}
+              initial={false}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.4 }}
               className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-default pt-6"
